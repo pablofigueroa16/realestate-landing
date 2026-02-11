@@ -39,11 +39,10 @@ export default function UnitTypesSection() {
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
           <div className="max-w-xl">
             <h2 className="text-4xl md:text-5xl font-medium text-gray-900 mb-6">
-              Unit Types
+              Formatos de inversión inmobiliaria
             </h2>
             <p className="text-gray-500 text-lg leading-relaxed">
-              The project combines several formats, allowing investors to choose the
-              option that best fits different investment strategies.
+              Selecciona entre distintos tipos de unidades off-plan en Dubái según rentabilidad, plazo y objetivo de inversión.
             </p>
           </div>
           
