@@ -22,7 +22,7 @@ export default function Hero() {
             playsInline
             className="w-full h-full object-cover"
           >
-            <source src="/video_hero.mp4" type="video/mp4" />
+            <source src="/VIDEOHERO.mp4" type="video/mp4" />
           </video>
           {/* Subtle gradient overlay for text readability */}
           <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/20 to-black/20 z-10"></div>
