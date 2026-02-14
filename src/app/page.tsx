@@ -4,6 +4,7 @@ import AboutSection from "@/components/AboutSection";
 import LocationSection from "@/components/LocationSection";
 import UnitTypesSection from "@/components/UnitTypesSection";
 import PresentationSection from "@/components/PresentationSection";
+import DevelopersSection from "@/components/DevelopersSection";
 import WhyChooseSection from "@/components/WhyChooseSection";
 import Footer from "@/components/Footer";
 
@@ -17,6 +18,7 @@ export default function Home() {
       <UnitTypesSection />
       <PresentationSection />
       <WhyChooseSection />
+      <DevelopersSection />
       <Footer />
     </main>
   );

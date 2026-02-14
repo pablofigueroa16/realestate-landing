@@ -1,4 +1,3 @@
-import { Download } from "lucide-react";
 
 export default function PresentationSection() {
   return (
@@ -6,7 +5,7 @@ export default function PresentationSection() {
       <div className="w-full h-full bg-white rounded-[3rem] shadow-sm border border-gray-100 flex flex-col items-center justify-center text-center p-8 md:p-12 relative overflow-hidden">
         
         {/* Subtle decorative background gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-gray-50/50 pointer-events-none"></div>
+        <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-gray-50/50 pointer-events-none"></div>
 
         <div className="relative z-10 max-w-2xl mx-auto">
           <p className="text-xs font-bold tracking-[0.2em] text-gray-400 uppercase mb-6">
