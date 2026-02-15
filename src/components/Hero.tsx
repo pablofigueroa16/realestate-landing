@@ -88,7 +88,7 @@ export default function Hero() {
               <span className="text-2xl font-medium">30%</span>
               <Clock className="text-white/60" size={18} />
             </div>
-            <p className="text-xs text-white/80 leading-relaxed">
+            <p className="text-base text-white/80 leading-relaxed">
               Pago inicial. Plan de cuotas hasta 30 meses
             </p>
           </div>
@@ -99,7 +99,7 @@ export default function Hero() {
               <span className="text-2xl font-medium">1%</span>
               <TrendingUp className="text-white/60" size={18} />
             </div>
-            <p className="text-xs text-white/80 leading-relaxed">
+            <p className="text-base text-white/80 leading-relaxed">
               Mensual. Pie inicial del 20%
             </p>
           </div>
