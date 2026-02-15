@@ -8,7 +8,7 @@ import Image from "next/image";
 function ProjectImageCarousel({ images, alt, badgeText }: { images: string[]; alt: string; badgeText: string }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
-  const [imgError, setImgError] = useState<Record<string, boolean>>({});
+  const [imgStatus, setImgStatus] = useState<Record<string, 'retry' | 'error'>>({});
 
   const nextImage = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -21,7 +21,17 @@ function ProjectImageCarousel({ images, alt, badgeText }: { images: string[]; al
   };
 
   const handleImageError = (imgSrc: string) => {
-    setImgError(prev => ({ ...prev, [imgSrc]: true }));
+    setImgStatus((prev) => {
+      const current = prev[imgSrc];
+      if (!current) {
+        // First failure: retry with unoptimized
+        return { ...prev, [imgSrc]: "retry" };
+      } else if (current === "retry") {
+        // Second failure: show error
+        return { ...prev, [imgSrc]: "error" };
+      }
+      return prev;
+    });
   };
 
   return (
@@ -45,7 +55,7 @@ function ProjectImageCarousel({ images, alt, badgeText }: { images: string[]; al
                 idx === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"
             }`}
         >
-            {imgError[img] ? (
+            {imgStatus[img] === "error" ? (
                 <div className="w-full h-full flex flex-col items-center justify-center bg-gray-200 text-gray-400">
                     <ImageOff size={32} />
                     <span className="text-xs mt-2">Image not found</span>
@@ -58,6 +68,7 @@ function ProjectImageCarousel({ images, alt, badgeText }: { images: string[]; al
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover"
                     priority={idx === 0} // Prioritize loading the first image
+                    unoptimized={imgStatus[img] === "retry"}
                     onError={() => handleImageError(img)}
                 />
             )}
