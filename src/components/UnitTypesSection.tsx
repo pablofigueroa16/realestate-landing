@@ -9,7 +9,6 @@ function ProjectImageCarousel({ images, alt, badgeText }: { images: string[]; al
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
   const [imgError, setImgError] = useState<Record<string, boolean>>({});
-  const [unoptimizedImages, setUnoptimizedImages] = useState<Record<string, boolean>>({});
 
   const nextImage = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -22,13 +21,7 @@ function ProjectImageCarousel({ images, alt, badgeText }: { images: string[]; al
   };
 
   const handleImageError = (imgSrc: string) => {
-    if (!unoptimizedImages[imgSrc]) {
-      // First try loading unoptimized (bypassing Next.js optimization)
-      setUnoptimizedImages((prev) => ({ ...prev, [imgSrc]: true }));
-    } else {
-      // If it fails even unoptimized, show error placeholder
-      setImgError((prev) => ({ ...prev, [imgSrc]: true }));
-    }
+    setImgError(prev => ({ ...prev, [imgSrc]: true }));
   };
 
   return (
@@ -65,7 +58,6 @@ function ProjectImageCarousel({ images, alt, badgeText }: { images: string[]; al
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover"
                     priority={idx === 0} // Prioritize loading the first image
-                    unoptimized={unoptimizedImages[img]}
                     onError={() => handleImageError(img)}
                 />
             )}
@@ -118,11 +110,11 @@ export default function UnitTypesSection() {
       description: "Exclusiva comunidad residencial waterfront de lujo desarrollada por Sobha Realty, ubicada en el corazón de Dubái.",
       size: "Off-plan",
       images: [
-        "https://real-state-landing.s3.us-east-1.amazonaws.com/propiedades/PROYECTO1/Community_Street_View.webp",
         "https://real-state-landing.s3.us-east-1.amazonaws.com/propiedades/PROYECTO1/Amenities_Street_View.webp",
-        "https://real-state-landing.s3.us-east-1.amazonaws.com/propiedades/PROYECTO1/Skate_Park.webp",
-        "https://real-state-landing.s3.us-east-1.amazonaws.com/propiedades/PROYECTO1/Garden.webp",
         "https://real-state-landing.s3.us-east-1.amazonaws.com/propiedades/PROYECTO1/Community_Podium.webp",
+        "https://real-state-landing.s3.us-east-1.amazonaws.com/propiedades/PROYECTO1/Community_Street_View.webp",
+        "https://real-state-landing.s3.us-east-1.amazonaws.com/propiedades/PROYECTO1/Garden.webp",
+        "https://real-state-landing.s3.us-east-1.amazonaws.com/propiedades/PROYECTO1/Skate_Park.webp"
       ],
       alt: "Sobha Hartland II",
     },
@@ -131,10 +123,10 @@ export default function UnitTypesSection() {
       description: "Complejo residencial y de uso mixto ubicado sobre Sheikh Zayed Road, compuesto por seis torres interconectadas.",
       size: "Off-plan",
       images: [
+        "https://real-state-landing.s3.us-east-1.amazonaws.com/propiedades/PROYECTO2/1.webp",
         "https://real-state-landing.s3.us-east-1.amazonaws.com/propiedades/PROYECTO2/2.webp",
         "https://real-state-landing.s3.us-east-1.amazonaws.com/propiedades/PROYECTO2/3.webp",
         "https://real-state-landing.s3.us-east-1.amazonaws.com/propiedades/PROYECTO2/4.webp",
-        "https://real-state-landing.s3.us-east-1.amazonaws.com/propiedades/PROYECTO2/1.webp",
         "https://real-state-landing.s3.us-east-1.amazonaws.com/propiedades/PROYECTO2/5.webp",
       ],
       alt: "Sobha Central",
@@ -170,11 +162,11 @@ export default function UnitTypesSection() {
       description: "Mega desarrollo residencial y lifestyle inspirado en Venecia, ubicado en Dubai South, que redefine la vida junto al agua.",
       size: "Off-plan",
       images: [
-        "https://real-state-landing.s3.us-east-1.amazonaws.com/propiedades/PROYECTO5/4_AV_Boulevard_View.webp",
+        "https://real-state-landing.s3.us-east-1.amazonaws.com/propiedades/PROYECTO5/1_23770800_AZIZI_Balcony_20230908.webp",
         "https://real-state-landing.s3.us-east-1.amazonaws.com/propiedades/PROYECTO5/2_A001_C1.webp",
         "https://real-state-landing.s3.us-east-1.amazonaws.com/propiedades/PROYECTO5/3_AM04_Boulevard.webp",
-        "https://real-state-landing.s3.us-east-1.amazonaws.com/propiedades/PROYECTO5/5_AZIZI_VENICE_BATHROOM_VIEW.webp",
-        "https://real-state-landing.s3.us-east-1.amazonaws.com/propiedades/PROYECTO5/1_23770800_AZIZI_Balcony_20230908.webp",
+        "https://real-state-landing.s3.us-east-1.amazonaws.com/propiedades/PROYECTO5/4_AV_Boulevard_View.webp",
+        "https://real-state-landing.s3.us-east-1.amazonaws.com/propiedades/PROYECTO5/5_AZIZI_VENICE_BATHROOM_VIEW.webp"
       ],
       alt: "Azizi Venice",
     },
@@ -183,11 +175,11 @@ export default function UnitTypesSection() {
       description: "Colección exclusiva de mansiones ultra lujo frente a la laguna cristalina en Dubai South, dentro de Azizi Venice.",
       size: "Off-plan",
       images: [
-        "https://real-state-landing.s3.us-east-1.amazonaws.com/propiedades/PROYECTO6/3_G_Bedroom.webp",
-        "https://real-state-landing.s3.us-east-1.amazonaws.com/propiedades/PROYECTO6/4_Formal_Living.webp",
-        "https://real-state-landing.s3.us-east-1.amazonaws.com/propiedades/PROYECTO6/10_Basement.webp",
         "https://real-state-landing.s3.us-east-1.amazonaws.com/propiedades/PROYECTO6/1_Hall_Foyer.webp",
         "https://real-state-landing.s3.us-east-1.amazonaws.com/propiedades/PROYECTO6/2_Men_Mejlis.webp",
+        "https://real-state-landing.s3.us-east-1.amazonaws.com/propiedades/PROYECTO6/3_G_Bedroom.webp",
+        "https://real-state-landing.s3.us-east-1.amazonaws.com/propiedades/PROYECTO6/4_Formal_Living.webp",
+        "https://real-state-landing.s3.us-east-1.amazonaws.com/propiedades/PROYECTO6/10_Basement.webp"
       ],
       alt: "Azizi Monaco Mansions",
     },
