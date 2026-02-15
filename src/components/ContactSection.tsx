@@ -16,13 +16,13 @@ export default function ContactSection() {
             </h2>
             <p className="text-emerald-100 text-lg mb-8 max-w-md leading-relaxed">
               Contact our team of experts today to start your journey towards
-              owning a piece of paradise in Bali. We're here to answer all your
+              owning a piece of paradise in Bali. We&apos;re here to answer all your
               questions.
             </p>
 
             <div className="space-y-6">
               <div className="flex items-center gap-4 bg-white/5 p-4 rounded-xl border border-white/5 hover:bg-white/10 transition-colors">
-                <div className="w-12 h-12 rounded-full bg-emerald-500/20 flex items-center justify-center flex-shrink-0 text-emerald-300">
+                <div className="w-12 h-12 rounded-full bg-emerald-500/20 flex items-center justify-center shrink-0 text-emerald-300">
                   <svg
                     className="w-6 h-6"
                     fill="none"
@@ -44,7 +44,7 @@ export default function ContactSection() {
               </div>
 
               <div className="flex items-center gap-4 bg-white/5 p-4 rounded-xl border border-white/5 hover:bg-white/10 transition-colors">
-                <div className="w-12 h-12 rounded-full bg-emerald-500/20 flex items-center justify-center flex-shrink-0 text-emerald-300">
+                <div className="w-12 h-12 rounded-full bg-emerald-500/20 flex items-center justify-center shrink-0 text-emerald-300">
                   <svg
                     className="w-6 h-6"
                     fill="none"

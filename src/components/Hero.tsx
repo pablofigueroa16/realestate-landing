@@ -49,17 +49,20 @@ export default function Hero() {
 
           {/* Center Navigation Pill */}
           <nav className="hidden md:flex items-center gap-6 bg-white/10 backdrop-blur-md border border-white/10 rounded-full px-6 py-2.5 text-sm font-medium text-white/90">
-            <Link href="#about" className="hover:text-white transition-colors">
-              About the Project
+            <Link href="#nosotros" className="hover:text-white transition-colors">
+              Nosotros
             </Link>
-            <Link href="#units" className="hover:text-white transition-colors">
-              Unit Types
+            <Link href="#proyectos" className="hover:text-white transition-colors">
+              Proyectos
+            </Link>
+            <Link href="#unidades" className="hover:text-white transition-colors">
+              Unidades
             </Link>
             <Link href="#video" className="hover:text-white transition-colors">
               Video
             </Link>
-            <Link href="#contact" className="hover:text-white transition-colors">
-              Contacts
+            <Link href="#contacto" className="hover:text-white transition-colors">
+              Contacto
             </Link>
           </nav>
 

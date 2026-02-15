@@ -21,13 +21,13 @@ export default function AboutSection() {
 
   return (
     <section
-      id="about"
+      id="nosotros"
       className="lg:h-screen w-full flex items-center justify-center bg-gray-50 py-20 lg:py-0 overflow-hidden"
     >
       <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center h-full">
         {/* Left Column: Text & Benefits */}
-        <div className="flex flex-col justify-center h-full max-w-xl">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium text-gray-900 mb-8 leading-tight">
+        <div className="px-4 flex flex-col justify-center h-full max-w-xl">
+          <h2 className="text-4xl md:text-5xl lg:text-5xl font-medium text-gray-900 mb-8 leading-tight">
              ¿POR QUÉ INVERTIR EN DUBÁI? 
           </h2>
           

@@ -9,7 +9,7 @@ export default function LocationSection() {
   const projects = [
     {
       area: "BUSINESS BAY",
-      title: "Prime Location — Dubai Water Canal",
+      title: "Dubai Water Canal",
       description:
         "One River Point está ubicado en el corazón de Business Bay, sobre una parcela única frente al Dubai Water Canal. Una de las zonas más dinámicas de Dubái, combinando estilo de vida cosmopolita, conexión directa con Downtown y un alto potencial de valorización a largo plazo.",
       features: [
@@ -23,7 +23,7 @@ export default function LocationSection() {
     },
     {
       area: "ISLA AL MARJAN · RAS AL KHAIMAH",
-      title: "Beachfront Living — Luxury Island Resort",
+      title: "Luxury Island Resort",
       description:
         "Costa Mare está ubicado frente al mar en Isla Al Marjan, uno de los destinos costeros más exclusivos y con mayor proyección de crecimiento en Emiratos Árabes Unidos. Un desarrollo icónico que combina vida estilo resort, sostenibilidad, tecnología inteligente y acceso directo a la playa.",
       features: [
@@ -37,7 +37,7 @@ export default function LocationSection() {
     },
     {
       area: "UPTOWN DUBAI",
-      title: "Urban Lifestyle — The New Heart of Uptown",
+      title: "The New Heart of Uptown",
       description:
         "Mercer House está ubicado en Uptown Dubai, uno de los distritos urbanos de nueva generación más ambiciosos de la ciudad. Un proyecto icónico que combina diseño contemporáneo, bienestar, entretenimiento y una vibrante vida urbana, posicionándose como el nuevo punto de encuentro residencial y social de Dubái.",
       features: [
@@ -52,7 +52,7 @@ export default function LocationSection() {
     },
     {
       area: "SHEIKH ZAYED ROAD · DUBÁI",
-      title: "Live at the Center — Urban Connectivity Redefined",
+      title: "Urban Connectivity Redefined",
       description:
         "Sobha Central se ubica directamente sobre Sheikh Zayed Road, la arteria más importante de Dubái. Un desarrollo de uso mixto compuesto por seis torres residenciales interconectadas, diseñado para quienes buscan vivir, trabajar e invertir en el verdadero centro del movimiento urbano de la ciudad.",
       features: [
@@ -66,7 +66,7 @@ export default function LocationSection() {
     },
     {
       area: "MBR CITY · NAD AL SHEBA · DUBÁI",
-      title: "Luxury Waterfront Living — Nature at the Heart of the City",
+      title: "Nature at the Heart of the City",
       description:
         "Sobha Hartland II es una comunidad residencial waterfront de lujo de más de 8 millones de pies cuadrados, ubicada estratégicamente cerca del centro de Dubái. Un desarrollo icónico que combina lagunas, playas artificiales, amplias áreas verdes y residencias de alto nivel, ofreciendo un equilibrio perfecto entre naturaleza, exclusividad y conexión urbana.",
       features: [
@@ -81,7 +81,7 @@ export default function LocationSection() {
     },
     {
       area: "SHEIKH MOHAMMED BIN ZAYED ROAD · DUBÁI",
-      title: "A Statement of Style — The Italian Soul of Dubai",
+      title: "The Italian Soul of Dubai",
       description:
         "Azizi Milan es una ciudad dentro de la ciudad, inspirada en el estilo de vida, la moda y la arquitectura de Milán. Ubicado estratégicamente sobre Sheikh Mohammed Bin Zayed Road, este master development combina residencias, retail, oficinas, cultura, bienestar y entretenimiento en una comunidad autosuficiente, sostenible y de nueva generación.",
       features: [
@@ -106,7 +106,7 @@ export default function LocationSection() {
   const currentProject = projects[currentIndex];
 
   return (
-    <section className="p-3 md:p-4 min-h-screen w-full flex flex-col box-border">
+    <section id="proyectos" className="p-3 md:p-4 min-h-screen w-full flex flex-col box-border">
       <div className="relative flex-grow rounded-[2.5rem] overflow-hidden flex items-center transition-all duration-500">
         {/* Background Image with Dark Overlay */}
         <div className="absolute inset-0 z-0">

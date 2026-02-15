@@ -3,18 +3,18 @@ import { Mail, Phone, Building2, ArrowRight } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="h-screen w-full bg-gray-50 flex flex-col justify-between p-4 md:p-6 overflow-hidden">
+    <footer id="contacto" className="h-screen w-full bg-gray-50 flex flex-col justify-between p-4 md:p-6 overflow-hidden">
       {/* Contact Card */}
       <div className="flex-grow w-full bg-white rounded-[3rem] shadow-sm p-8 md:p-12 lg:p-20 flex flex-col justify-center mb-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 h-full">
           {/* Left Column: Info */}
           <div className="flex flex-col justify-center">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium text-gray-900 mb-8">
-              Contact Us
+              Contáctanos
             </h2>
             <p className="text-gray-500 text-lg leading-relaxed mb-12 max-w-md font-light">
-              Let us help you find a property that will be not only a profitable
-              asset, but also a place of energy, inspiration, and growth.
+              Permítenos ayudarte a encontrar una propiedad que no solo sea un activo rentable, 
+              sino también un lugar de energía, inspiración y crecimiento.
             </p>
 
             <div className="space-y-8">
@@ -24,7 +24,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="text-xs text-gray-400 uppercase tracking-wider mb-1">
-                    Email
+                    Correo electrónico
                   </p>
                   <p className="text-gray-900 font-medium text-lg">
                     office@estetico.estate
@@ -38,7 +38,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="text-xs text-gray-400 uppercase tracking-wider mb-1">
-                    Phone
+                    Teléfono
                   </p>
                   <p className="text-gray-900 font-medium text-lg">
                     +62 812 3983 8440
@@ -54,21 +54,21 @@ export default function Footer() {
               <div className="grid grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-xs font-bold text-gray-400 uppercase tracking-widest">
-                    First Name
+                    Nombre
                   </label>
                   <input
                     type="text"
-                    placeholder="John"
+                    placeholder="Juan"
                     className="w-full bg-gray-50 border-none rounded-xl px-4 py-3 text-gray-900 placeholder-gray-300 focus:ring-2 focus:ring-gray-900 transition-all"
                   />
                 </div>
                 <div className="space-y-2">
                   <label className="text-xs font-bold text-gray-400 uppercase tracking-widest">
-                    Last Name
+                    Apellido
                   </label>
                   <input
                     type="text"
-                    placeholder="Doe"
+                    placeholder="Pérez"
                     className="w-full bg-gray-50 border-none rounded-xl px-4 py-3 text-gray-900 placeholder-gray-300 focus:ring-2 focus:ring-gray-900 transition-all"
                   />
                 </div>
@@ -76,18 +76,18 @@ export default function Footer() {
 
               <div className="space-y-2">
                 <label className="text-xs font-bold text-gray-400 uppercase tracking-widest">
-                  Email
+                  Correo electrónico
                 </label>
                 <input
                   type="email"
-                  placeholder="john@example.com"
+                  placeholder="juan@ejemplo.com"
                   className="w-full bg-gray-50 border-none rounded-xl px-4 py-3 text-gray-900 placeholder-gray-300 focus:ring-2 focus:ring-gray-900 transition-all"
                 />
               </div>
 
               <div className="space-y-2">
                 <label className="text-xs font-bold text-gray-400 uppercase tracking-widest">
-                  Phone
+                  Teléfono
                 </label>
                 <input
                   type="tel"
@@ -97,7 +97,7 @@ export default function Footer() {
               </div>
 
               <button className="w-full bg-black text-white rounded-xl py-4 font-medium flex items-center justify-center gap-2 hover:bg-gray-800 transition-colors mt-4">
-                Get project presentation
+                Recibir presentación del proyecto
                 <ArrowRight size={18} />
               </button>
             </form>
@@ -115,17 +115,20 @@ export default function Footer() {
         </div>
 
         <nav className="flex gap-8 mb-4 md:mb-0 text-xs font-medium uppercase tracking-wide">
-          <Link href="#about" className="hover:text-gray-900 transition-colors">
-            About
+          <Link href="#nosotros" className="hover:text-gray-900 transition-colors">
+            Nosotros
           </Link>
-          <Link href="#units" className="hover:text-gray-900 transition-colors">
-            Unit Types
+          <Link href="#proyectos" className="hover:text-gray-900 transition-colors">
+            Proyectos
+          </Link>
+          <Link href="#unidades" className="hover:text-gray-900 transition-colors">
+            Unidades
           </Link>
           <Link href="#video" className="hover:text-gray-900 transition-colors">
             Video
           </Link>
-          <Link href="#contact" className="hover:text-gray-900 transition-colors">
-            Contacts
+          <Link href="#contacto" className="hover:text-gray-900 transition-colors">
+            Contacto
           </Link>
         </nav>
 
