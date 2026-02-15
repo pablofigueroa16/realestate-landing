@@ -1,0 +1,10 @@
+- [x] Navbar component created and renders properly.
+- [x] Navbar is sticky/fixed at the top of the viewport.
+- [x] Scroll detection updates Navbar background/opacity correctly.
+- [x] Mobile hamburger menu opens and closes smoothly.
+- [x] Mobile menu closes automatically when a link is clicked.
+- [x] Mobile menu closes when clicking outside or pressing Escape (handled by full screen overlay).
+- [x] Keyboard navigation works for both desktop and mobile menus.
+- [x] Navigation links use smooth scrolling behavior.
+- [x] Hero component updated to use the new Navbar component.
+- [x] Visual consistency maintained with the original design.

@@ -1,17 +1,20 @@
+"use client";
+
 import Link from "next/link";
 import {
   ArrowRight,
-  Phone,
-  Instagram,
-  ArrowUpRight,
   Clock,
   TrendingUp,
-  Building2,
 } from "lucide-react";
+import { useSmoothScroll } from "@/hooks/useSmoothScroll";
+import Navbar from "./Navbar";
 
 export default function Hero() {
+  const { scrollToId } = useSmoothScroll();
+
   return (
-    <section className="p-3 md:p-4 h-screen w-full flex flex-col box-border overflow-hidden">
+    <section id="inicio" className="p-3 md:p-4 h-screen w-full flex flex-col box-border overflow-hidden">
+      <Navbar />
       <div className="relative flex-grow rounded-[2rem] overflow-hidden flex flex-col">
         {/* Background Video */}
         <div className="absolute inset-0 z-0">
@@ -35,54 +38,6 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Top Navigation Bar */}
-        <div className="relative z-50 flex flex-col md:flex-row justify-between items-center px-6 py-4 md:px-8 md:py-5">
-          {/* Logo */}
-          <div className="flex items-center gap-2 text-white mb-2 md:mb-0">
-            <div className="w-8 h-8 border border-white rounded-lg flex items-center justify-center">
-              <Building2 size={16} />
-            </div>
-            <span className="text-xl font-serif font-bold tracking-wide">
-              Estetico.
-            </span>
-          </div>
-
-          {/* Center Navigation Pill */}
-          <nav className="hidden md:flex items-center gap-6 bg-white/10 backdrop-blur-md border border-white/10 rounded-full px-6 py-2.5 text-sm font-medium text-white/90">
-            <Link href="#nosotros" className="hover:text-white transition-colors">
-              Nosotros
-            </Link>
-            <Link href="#proyectos" className="hover:text-white transition-colors">
-              Proyectos
-            </Link>
-            <Link href="#unidades" className="hover:text-white transition-colors">
-              Unidades
-            </Link>
-            <Link href="#video" className="hover:text-white transition-colors">
-              Video
-            </Link>
-            <Link href="#contacto" className="hover:text-white transition-colors">
-              Contacto
-            </Link>
-          </nav>
-
-          {/* Right Actions */}
-          <div className="flex items-center gap-2 mt-2 md:mt-0">
-            <button className="w-9 h-9 rounded-full bg-white/10 backdrop-blur-md border border-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors">
-              <Instagram size={16} />
-            </button>
-            <button className="w-9 h-9 rounded-full bg-white/10 backdrop-blur-md border border-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors">
-              <Phone size={16} />
-            </button>
-            <button className="flex items-center gap-2 bg-white text-black pl-4 pr-1.5 py-1.5 rounded-full font-medium text-xs hover:bg-gray-100 transition-colors group">
-              Agendar consultoria
-              <div className="w-7 h-7 bg-black rounded-full flex items-center justify-center text-white group-hover:bg-gray-800 transition-colors">
-                <ArrowUpRight size={14} />
-              </div>
-            </button>
-          </div>
-        </div>
-
         {/* Main Content */}
         <div className="relative z-40 flex-grow flex flex-col justify-center px-6 md:px-12 lg:px-20 -mt-8">
           <div className="max-w-4xl">
@@ -92,7 +47,7 @@ export default function Hero() {
               </span>
             </div>
             
-            <h1 className="text-4xl md:text-6xl lg:text-7xl text-white font-medium leading-[1.1] mb-6">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl text-white font-serif font-medium leading-[1.1] mb-6">
               Invierte en bienes raíces en Dubái de forma segura, rentable y 100% guiada
             </h1>
 
@@ -101,16 +56,26 @@ export default function Hero() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-                <button className="group flex items-center gap-3 bg-white text-black pl-6 pr-1.5 py-2 rounded-full text-base font-medium hover:bg-gray-100 transition-all hover:scale-105 active:scale-95 w-fit">
+                <Link 
+                  href="#proyectos"
+                  onClick={(e) => scrollToId(e, "#proyectos")}
+                  scroll={false}
+                  className="group flex items-center gap-3 bg-white text-black pl-6 pr-1.5 py-2 rounded-full text-base font-medium hover:bg-gray-100 transition-all hover:scale-105 active:scale-95 w-fit"
+                >
                   Ver oportunidades de inversión
                   <div className="w-9 h-9 bg-black rounded-full flex items-center justify-center text-white group-hover:bg-gray-800 transition-colors">
                     <ArrowRight size={18} />
                   </div>
-                </button>
+                </Link>
                 
-                <button className="group flex items-center gap-3 bg-white/10 backdrop-blur-md border border-white/20 text-white pl-6 pr-6 py-2 rounded-full text-base font-medium hover:bg-white/20 transition-all hover:scale-105 active:scale-95 w-fit">
+                <Link 
+                  href="#contacto"
+                  onClick={(e) => scrollToId(e, "#contacto")}
+                  scroll={false}
+                  className="group flex items-center gap-3 bg-white/10 backdrop-blur-md border border-white/20 text-white pl-6 pr-6 py-2 rounded-full text-base font-medium hover:bg-white/20 transition-all hover:scale-105 active:scale-95 w-fit"
+                >
                   Hablar con un asesor en español
-                </button>
+                </Link>
             </div>
           </div>
         </div>

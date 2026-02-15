@@ -1,7 +1,12 @@
+"use client";
+
 import Link from "next/link";
 import { Mail, Phone, Building2, ArrowRight } from "lucide-react";
+import { useSmoothScroll } from "@/hooks/useSmoothScroll";
 
 export default function Footer() {
+  const { scrollToId } = useSmoothScroll();
+
   return (
     <footer id="contacto" className="h-screen w-full bg-gray-50 flex flex-col justify-between p-4 md:p-6 overflow-hidden">
       {/* Contact Card */}
@@ -115,19 +120,19 @@ export default function Footer() {
         </div>
 
         <nav className="flex gap-8 mb-4 md:mb-0 text-xs font-medium uppercase tracking-wide">
-          <Link href="#nosotros" className="hover:text-gray-900 transition-colors">
+          <Link href="#nosotros" onClick={(e) => scrollToId(e, "#nosotros")} scroll={false} className="hover:text-gray-900 transition-colors">
             Nosotros
           </Link>
-          <Link href="#proyectos" className="hover:text-gray-900 transition-colors">
+          <Link href="#proyectos" onClick={(e) => scrollToId(e, "#proyectos")} scroll={false} className="hover:text-gray-900 transition-colors">
             Proyectos
           </Link>
-          <Link href="#unidades" className="hover:text-gray-900 transition-colors">
+          <Link href="#unidades" onClick={(e) => scrollToId(e, "#unidades")} scroll={false} className="hover:text-gray-900 transition-colors">
             Unidades
           </Link>
-          <Link href="#video" className="hover:text-gray-900 transition-colors">
+          <Link href="#video" onClick={(e) => scrollToId(e, "#video")} scroll={false} className="hover:text-gray-900 transition-colors">
             Video
           </Link>
-          <Link href="#contacto" className="hover:text-gray-900 transition-colors">
+          <Link href="#contacto" onClick={(e) => scrollToId(e, "#contacto")} scroll={false} className="hover:text-gray-900 transition-colors">
             Contacto
           </Link>
         </nav>
