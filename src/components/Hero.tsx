@@ -41,7 +41,7 @@ export default function Hero() {
         </div>
 
         {/* Main Content */}
-        <div className="relative z-40 flex-grow flex flex-col justify-center px-6 md:px-12 lg:px-20 -mt-8">
+        <div className="relative z-40 grow flex flex-col justify-center px-6 md:px-12 lg:px-20 mt-6">
           <div className="max-w-4xl">
             <div className="inline-block mb-4">
               <span className="bg-white/10 backdrop-blur-md border border-white/10 text-white text-[10px] font-bold tracking-widest px-3 py-1.5 rounded-lg uppercase">
