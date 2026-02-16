@@ -2,17 +2,14 @@
 
 import { CheckCircle2, Play } from "lucide-react";
 import { useState, useRef } from "react";
+import { useTranslation } from "@/hooks/useTranslation";
 
 export default function WhyChooseSection() {
+  const { t } = useTranslation();
   const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  const benefits = [
-    "Dubái: visión económica y crecimiento sostenido a 20 años.",
-    "Alianza estratégica basada en datos, no solo intermediación.",
-    "Consultoría inmobiliaria estratégica en tu idioma.",
-    "Acceso a propiedades VIP y oportunidades off-market",
-  ];
+  const benefits = t("why_choose.benefits") as unknown as string[];
 
   const handlePlay = () => {
     if (videoRef.current) {
@@ -65,11 +62,11 @@ export default function WhyChooseSection() {
         {/* Right Column: Text Content */}
         <div className="flex flex-col justify-center h-full max-w-xl">
           <h2 className="text-3xl md:text-4xl lg:text-4xl font-medium text-gray-900 mb-6 leading-tight">
-            Por qué Dubái es el centro de la inversión inmobiliaria del futuro
+            {t("why_choose.title")}
           </h2>
           
           <p className="text-gray-500 text-base lg:text-lg font-light mb-6 leading-relaxed">
-            Dubái se ha posicionado como uno de los mercados inmobiliarios más sólidos, visionarios y rentables del mundo, con una estrategia clara de crecimiento para las próximas dos décadas. 
+            {t("why_choose.description")}
           </p>
 
           <div className="space-y-3 mb-8">
@@ -82,7 +79,7 @@ export default function WhyChooseSection() {
           </div>
 
           <p className="text-gray-900 font-medium italic text-base lg:text-lg border-l-4 border-gray-900 pl-4 py-1">
-            &rdquo;Para nosotros, la reputación importa más que un trato rápido.&rdquo;
+            &rdquo;{t("why_choose.quote")}&rdquo;
           </p>
         </div>
       </div>

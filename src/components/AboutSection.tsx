@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Percent,
   TrendingUp,
@@ -7,16 +9,19 @@ import {
   ShieldCheck,
   Rocket,
 } from "lucide-react";
+import { useTranslation } from "@/hooks/useTranslation";
 
 export default function AboutSection() {
+  const { t } = useTranslation();
+
   const benefits = [
-    { icon: Percent, label: "0% impuestos sobre rentas y ganancias de capital" },
-    { icon: TrendingUp, label: "Alta rentabilidad anual (7%–12% promedio)" },
-    { icon: Key, label: "Propiedad Freehold para extranjeros" },
-    { icon: Coins, label: "Moneda estable (AED vinculado al USD)" },
-    { icon: Globe, label: "Alta demanda internacional de alquiler" },
-    { icon: ShieldCheck, label: "Marco legal claro y transparente" },
-    { icon: Rocket, label: "Economía en crecimiento constante" },
+    { icon: Percent, label: t("about.benefits.tax_free") },
+    { icon: TrendingUp, label: t("about.benefits.high_return") },
+    { icon: Key, label: t("about.benefits.freehold") },
+    { icon: Coins, label: t("about.benefits.stable_currency") },
+    { icon: Globe, label: t("about.benefits.high_demand") },
+    { icon: ShieldCheck, label: t("about.benefits.legal_framework") },
+    { icon: Rocket, label: t("about.benefits.growing_economy") },
   ];
 
   return (
@@ -28,12 +33,12 @@ export default function AboutSection() {
         {/* Left Column: Text & Benefits */}
         <div className="px-4 flex flex-col justify-center h-full max-w-xl">
           <h2 className="text-4xl md:text-5xl lg:text-5xl font-medium text-gray-900 mb-8 leading-tight">
-             ¿POR QUÉ INVERTIR EN DUBÁI? 
+             {t("about.title")}
           </h2>
           
           <div className="space-y-6 text-gray-500 text-lg font-light mb-12 leading-relaxed">
             <p>
-              El mercado inmobiliario de Dubái ofrece alta demanda de alquiler, fuerte apreciación de capital y condiciones fiscales altamente favorables, lo que permite a los inversores obtener rentabilidad en dólares sin impuestos sobre ingresos por alquiler ni plusvalía.
+              {t("about.description")}
             </p>
           </div>
 
@@ -64,10 +69,10 @@ export default function AboutSection() {
           {/* Floating Concept Card */}
           <div className="absolute bottom-8 left-8 bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg max-w-xs">
             <p className="text-xs text-gray-500 font-bold tracking-wider uppercase mb-1">
-              MERCADO INMOBILIARIO
+              {t("about.market_card.title")}
             </p>
             <p className="text-gray-900 font-medium text-lg leading-snug">
-              Estabilidad, crecimiento y seguridad jurídica
+              {t("about.market_card.subtitle")}
             </p>
           </div>
         </div>

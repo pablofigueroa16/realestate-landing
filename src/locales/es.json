@@ -1,0 +1,204 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Nosotros",
+    "projects": "Proyectos",
+    "units": "Unidades",
+    "video": "Video",
+    "contact": "Contacto",
+    "book_consultation": "Agendar consultoria"
+  },
+  "hero": {
+    "title": "Invierte en bienes raíces en Dubái de forma segura, rentable y 100% guiada",
+    "subtitle": "Descubre oportunidades exclusivas de inversión inmobiliaria en Dubái. Proyectos verificados, alta rentabilidad y asesoría personalizada.",
+    "cta": "Explorar Propiedades",
+    "badge": "Hasta +8–12% anual en zonas prime",
+    "cta_consultation": "Hablar con un asesor en español",
+    "card_1_text": "Pago inicial. Plan de cuotas hasta 30 meses",
+    "card_2_text": "Mensual. Pie inicial del 20%"
+  },
+  "about": {
+    "title": "¿POR QUÉ INVERTIR EN DUBÁI?",
+    "description": "El mercado inmobiliario de Dubái ofrece alta demanda de alquiler, fuerte apreciación de capital y condiciones fiscales altamente favorables, lo que permite a los inversores obtener rentabilidad en dólares sin impuestos sobre ingresos por alquiler ni plusvalía.",
+    "benefits": {
+      "tax_free": "0% impuestos sobre rentas y ganancias de capital",
+      "high_return": "Alta rentabilidad anual (7%–12% promedio)",
+      "freehold": "Propiedad Freehold para extranjeros",
+      "stable_currency": "Moneda estable (AED vinculado al USD)",
+      "high_demand": "Alta demanda internacional de alquiler",
+      "legal_framework": "Marco legal claro y transparente",
+      "growing_economy": "Economía en crecimiento constante"
+    },
+    "market_card": {
+      "title": "MERCADO INMOBILIARIO",
+      "subtitle": "Estabilidad, crecimiento y seguridad jurídica"
+    }
+  },
+  "location": {
+    "projects": {
+      "one_river_point": {
+        "area": "BUSINESS BAY",
+        "title": "Dubai Water Canal",
+        "description": "One River Point está ubicado en el corazón de Business Bay, sobre una parcela única frente al Dubai Water Canal. Una de las zonas más dinámicas de Dubái, combinando estilo de vida cosmopolita, conexión directa con Downtown y un alto potencial de valorización a largo plazo.",
+        "features": [
+          "01 min Dubai Water Canal Boardwalk",
+          "07 min Burj Khalifa & Dubai Mall",
+          "10 min DIFC & City Walk"
+        ],
+        "market_insight": "Business Bay continúa consolidándose como uno de los distritos más demandados de Dubái, impulsado por infraestructura de primer nivel, proyectos de alta gama y fuerte interés tanto de residentes como de inversores internacionales."
+      },
+      "costa_mare": {
+        "area": "ISLA AL MARJAN · RAS AL KHAIMAH",
+        "title": "Luxury Island Resort",
+        "description": "Costa Mare está ubicado frente al mar en Isla Al Marjan, uno de los destinos costeros más exclusivos y con mayor proyección de crecimiento en Emiratos Árabes Unidos. Un desarrollo icónico que combina vida estilo resort, sostenibilidad, tecnología inteligente y acceso directo a la playa.",
+        "features": [
+          "Acceso directo a playa privada",
+          "Frente al mar con vistas al Golfo Arábigo",
+          "Zona en expansión con resorts, casinos y lifestyle premium"
+        ],
+        "market_insight": "Isla Al Marjan está experimentando una fuerte valorización impulsada por nuevos resorts de lujo, desarrollo turístico internacional y grandes inversiones estratégicas en Ras Al Khaimah, posicionándola como una alternativa sólida a Dubái para inversores de largo plazo."
+      },
+      "mercer_house": {
+        "area": "UPTOWN DUBAI",
+        "title": "The New Heart of Uptown",
+        "description": "Mercer House está ubicado en Uptown Dubai, uno de los distritos urbanos de nueva generación más ambiciosos de la ciudad. Un proyecto icónico que combina diseño contemporáneo, bienestar, entretenimiento y una vibrante vida urbana, posicionándose como el nuevo punto de encuentro residencial y social de Dubái.",
+        "features": [
+          "01 min Uptown Plaza",
+          "05 min DMCC Metro Station",
+          "17 min Palm Jumeirah",
+          "22 min Burj Khalifa & Dubai Mall"
+        ],
+        "market_insight": "Uptown Dubai se encuentra en plena revitalización y consolidación como un nuevo centro urbano premium. La combinación de conectividad, lifestyle, espacios comerciales y residenciales de diseño posiciona a Mercer House como una oportunidad atractiva tanto para vivir como para invertir en una zona con fuerte potencial de valorización."
+      },
+      "sobha_central": {
+        "area": "SHEIKH ZAYED ROAD · DUBÁI",
+        "title": "Urban Connectivity Redefined",
+        "description": "Sobha Central se ubica directamente sobre Sheikh Zayed Road, la arteria más importante de Dubái. Un desarrollo de uso mixto compuesto por seis torres residenciales interconectadas, diseñado para quienes buscan vivir, trabajar e invertir en el verdadero centro del movimiento urbano de la ciudad.",
+        "features": [
+          "05 min Jebel Ali Metro Station",
+          "Conexión directa a Sheikh Zayed Road",
+          "Vistas panorámicas a Dubai Marina, JLT, Bluewaters y Palm Jumeirah"
+        ],
+        "market_insight": "Los proyectos ubicados sobre Sheikh Zayed Road mantienen una alta demanda tanto residencial como de inversión. La combinación de conectividad, uso mixto, amenities de gran escala y la firma Sobha posicionan a Sobha Central como una oportunidad sólida de valorización y rentabilidad a mediano y largo plazo."
+      },
+      "sobha_hartland_ii": {
+        "area": "MBR CITY · NAD AL SHEBA · DUBÁI",
+        "title": "Nature at the Heart of the City",
+        "description": "Sobha Hartland II es una comunidad residencial waterfront de lujo de más de 8 millones de pies cuadrados, ubicada estratégicamente cerca del centro de Dubái. Un desarrollo icónico que combina lagunas, playas artificiales, amplias áreas verdes y residencias de alto nivel, ofreciendo un equilibrio perfecto entre naturaleza, exclusividad y conexión urbana.",
+        "features": [
+          "10 min Downtown Dubai & Burj Khalifa",
+          "10 min Dubai Design District (D3)",
+          "15 min Dubai Creek Harbour",
+          "Acceso rápido a Ras Al Khor Road y Al Khail Road"
+        ],
+        "market_insight": "Las comunidades master plan waterfront en zonas centrales como MBR City presentan una de las mayores proyecciones de valorización en Dubái. Sobha Hartland II capitaliza el éxito probado de Sobha Hartland, combinando marca premium, escala, naturaleza y ubicación estratégica, convirtiéndolo en una oportunidad sólida tanto para vivir como para invertir a largo plazo."
+      },
+      "azizi_milan": {
+        "area": "SHEIKH MOHAMMED BIN ZAYED ROAD · DUBÁI",
+        "title": "The Italian Soul of Dubai",
+        "description": "Azizi Milan es una ciudad dentro de la ciudad, inspirada en el estilo de vida, la moda y la arquitectura de Milán. Ubicado estratégicamente sobre Sheikh Mohammed Bin Zayed Road, este master development combina residencias, retail, oficinas, cultura, bienestar y entretenimiento en una comunidad autosuficiente, sostenible y de nueva generación.",
+        "features": [
+          "Acceso directo a Sheikh Mohammed Bin Zayed Road",
+          "Conectividad rápida a Dubai International Airport y Al Maktoum Airport",
+          "Cerca de Global Village, IMG Worlds of Adventure y distritos clave de Dubái"
+        ],
+        "market_insight": "Azizi Milan se posiciona como uno de los desarrollos urbanos más ambiciosos de Dubái, destacando por su concepto net-zero carbon city, su enfoque walkable, y su integración de lifestyle, retail y negocios. Los master communities autosuficientes con identidad fuerte y visión sostenible presentan un alto potencial de valorización y demanda a largo plazo, tanto para residentes como para inversores."
+      }
+    }
+  },
+  "unit_types": {
+    "title": "Formatos de inversión inmobiliaria",
+    "subtitle": "Selecciona entre distintos tipos de unidades off-plan en Dubái según rentabilidad, plazo y objetivo de inversión.",
+    "whatsapp_button": "WhatsApp",
+    "whatsapp_message": "Hola, estoy interesado en recibir todos los detalles sobre esta propiedad y oportunidades similares actualmente disponibles. Por favor, inclúyeme precios actualizados, plan de pago, expectativas de retorno (ROI), disponibilidad y opciones para agendar una visita.",
+    "units": {
+      "sobha_hartland_ii": {
+        "title": "Sobha Hartland II",
+        "description": "Exclusiva comunidad residencial waterfront de lujo desarrollada por Sobha Realty, ubicada en el corazón de Dubái.",
+        "size": "Off-plan"
+      },
+      "sobha_central": {
+        "title": "Sobha Central",
+        "description": "Complejo residencial y de uso mixto ubicado sobre Sheikh Zayed Road, compuesto por seis torres interconectadas.",
+        "size": "Off-plan"
+      },
+      "sobha_sanctuary": {
+        "title": "Sobha Sanctuary",
+        "description": "Comunidad residencial premium diseñada como un santuario urbano donde la naturaleza y el bienestar se integran.",
+        "size": "Off-plan"
+      },
+      "azizi_milan": {
+        "title": "Azizi Milan",
+        "description": "Desarrollo urbano de gran escala inspirado en la esencia de Milán, ubicado estratégicamente frente al distrito Majan.",
+        "size": "Off-plan"
+      },
+      "azizi_venice": {
+        "title": "Azizi Venice",
+        "description": "Mega desarrollo residencial y lifestyle inspirado en Venecia, ubicado en Dubai South, que redefine la vida junto al agua.",
+        "size": "Off-plan"
+      },
+      "azizi_monaco_mansions": {
+        "title": "Azizi Monaco Mansions",
+        "description": "Colección exclusiva de mansiones ultra lujo frente a la laguna cristalina en Dubai South, dentro de Azizi Venice.",
+        "size": "Off-plan"
+      },
+      "azizi_wasel": {
+        "title": "Azizi Wasel",
+        "description": "Proyecto residencial frente al mar ubicado en Dubai Islands que combina vistas panorámicas al océano y skyline.",
+        "size": "Off-plan"
+      }
+    }
+  },
+  "presentation": {
+    "badge": "OFERTA EXCLUSIVA",
+    "title": "Recibe la presentación detallada del proyecto",
+    "description": "Hemos preparado una presentación completa con precios actualizados, planes de pago flexibles y cálculos detallados de rentabilidad (ROI) para cada tipo de unidad.",
+    "cta": "Agendar consultoria",
+    "disclaimer": "Te enviaremos la presentación de forma inmediata por WhatsApp o email. \nSin compromiso · Información clara · Atención en español"
+  },
+  "developers": {
+    "title": "Alianzas estratégicas con los principales desarrolladores de Dubái",
+    "partner": "Socio Desarrollador Estratégico",
+    "carousel_label": "Carrusel de Socios Desarrolladores",
+    "prev_slide": "Diapositiva Anterior",
+    "next_slide": "Diapositiva Siguiente",
+    "go_to_slide": "Ir a la diapositiva"
+  },
+  "common": {
+    "image_not_found": "Imagen no encontrada",
+    "prev_image": "Imagen anterior",
+    "next_image": "Imagen siguiente",
+    "loading": "Cargando..."
+  },
+  "why_choose": {
+    "title": "Por qué Dubái es el centro de la inversión inmobiliaria del futuro",
+    "description": "Dubái se ha posicionado como uno de los mercados inmobiliarios más sólidos, visionarios y rentables del mundo, con una estrategia clara de crecimiento para las próximas dos décadas.",
+    "benefits": [
+      "Dubái: visión económica y crecimiento sostenido a 20 años.",
+      "Alianza estratégica basada en datos, no solo intermediación.",
+      "Consultoría inmobiliaria estratégica en tu idioma.",
+      "Acceso a propiedades VIP y oportunidades off-market"
+    ],
+    "quote": "Para nosotros, la reputación importa más que un trato rápido."
+  },
+  "footer": {
+    "contact": {
+      "title": "Contáctanos",
+      "description": "Permítenos ayudarte a encontrar una propiedad que no solo sea un activo rentable, sino también un lugar de energía, inspiración y crecimiento.",
+      "email_label": "Correo electrónico",
+      "phone_label": "Teléfono"
+    },
+    "form": {
+      "name_label": "Nombre",
+      "name_placeholder": "Juan",
+      "lastname_label": "Apellido",
+      "lastname_placeholder": "Pérez",
+      "email_label": "Correo electrónico",
+      "email_placeholder": "juan@ejemplo.com",
+      "phone_label": "Teléfono",
+      "phone_placeholder": "+1 (555) 000-0000",
+      "submit": "Recibir presentación del proyecto"
+    },
+    "copyright": "Estetico Estate."
+  }
+}

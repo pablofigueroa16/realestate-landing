@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
+import { Providers } from "@/components/Providers";
 
 // Configure Serif Font (Headings)
 const playfair = Playfair_Display({
@@ -33,7 +34,9 @@ export default function RootLayout({
       <body
         className={`${playfair.variable} ${inter.variable} antialiased font-sans text-gray-900 bg-white`}
       >
-        {children}
+        <Providers>
+          {children}
+        </Providers>
       </body>
     </html>
   );

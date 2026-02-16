@@ -1,0 +1,10 @@
+- [x] I18nContext and Provider implemented correctly.
+- [x] Translation files (es.json, en.json) created and populated.
+- [x] useTranslation hook working correctly.
+- [x] Language detection logic defaults to English for non-Spanish users.
+- [x] Language detection defaults to Spanish for Spanish users.
+- [x] Language toggle added to Navbar (Desktop & Mobile).
+- [x] Language toggle switches language instantly.
+- [x] Selected language persists in localStorage.
+- [x] All components (Hero, Navbar, About, Location, Units, Presentation, Developers, WhyChoose, Footer) use translation keys.
+- [x] No hardcoded text remains in the UI.

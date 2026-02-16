@@ -2,95 +2,59 @@
 
 import { useState } from "react";
 import { TrendingUp, ChevronLeft, ChevronRight, CheckCircle2 } from "lucide-react";
+import { useTranslation } from "@/hooks/useTranslation";
 
 export default function LocationSection() {
+  const { t } = useTranslation();
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const projects = [
     {
-      area: "BUSINESS BAY",
-      title: "Dubai Water Canal",
-      description:
-        "One River Point está ubicado en el corazón de Business Bay, sobre una parcela única frente al Dubai Water Canal. Una de las zonas más dinámicas de Dubái, combinando estilo de vida cosmopolita, conexión directa con Downtown y un alto potencial de valorización a largo plazo.",
-      features: [
-        "01 min Dubai Water Canal Boardwalk",
-        "07 min Burj Khalifa & Dubai Mall",
-        "10 min DIFC & City Walk",
-      ],
-      marketInsight:
-        "Business Bay continúa consolidándose como uno de los distritos más demandados de Dubái, impulsado por infraestructura de primer nivel, proyectos de alta gama y fuerte interés tanto de residentes como de inversores internacionales.",
+      area: t("location.projects.one_river_point.area"),
+      title: t("location.projects.one_river_point.title"),
+      description: t("location.projects.one_river_point.description"),
+      features: t("location.projects.one_river_point.features") as unknown as string[],
+      marketInsight: t("location.projects.one_river_point.market_insight"),
       image: "/ONE RIVER PONT PROJECT ELLINGTON.png",
     },
     {
-      area: "ISLA AL MARJAN · RAS AL KHAIMAH",
-      title: "Luxury Island Resort",
-      description:
-        "Costa Mare está ubicado frente al mar en Isla Al Marjan, uno de los destinos costeros más exclusivos y con mayor proyección de crecimiento en Emiratos Árabes Unidos. Un desarrollo icónico que combina vida estilo resort, sostenibilidad, tecnología inteligente y acceso directo a la playa.",
-      features: [
-        "Acceso directo a playa privada",
-        "Frente al mar con vistas al Golfo Arábigo",
-        "Zona en expansión con resorts, casinos y lifestyle premium",
-      ],
-      marketInsight:
-        "Isla Al Marjan está experimentando una fuerte valorización impulsada por nuevos resorts de lujo, desarrollo turístico internacional y grandes inversiones estratégicas en Ras Al Khaimah, posicionándola como una alternativa sólida a Dubái para inversores de largo plazo.",
+      area: t("location.projects.costa_mare.area"),
+      title: t("location.projects.costa_mare.title"),
+      description: t("location.projects.costa_mare.description"),
+      features: t("location.projects.costa_mare.features") as unknown as string[],
+      marketInsight: t("location.projects.costa_mare.market_insight"),
       image: "/Costa Mare.jpg",
     },
     {
-      area: "UPTOWN DUBAI",
-      title: "The New Heart of Uptown",
-      description:
-        "Mercer House está ubicado en Uptown Dubai, uno de los distritos urbanos de nueva generación más ambiciosos de la ciudad. Un proyecto icónico que combina diseño contemporáneo, bienestar, entretenimiento y una vibrante vida urbana, posicionándose como el nuevo punto de encuentro residencial y social de Dubái.",
-      features: [
-        "01 min Uptown Plaza",
-        "05 min DMCC Metro Station",
-        "17 min Palm Jumeirah",
-        "22 min Burj Khalifa & Dubai Mall",
-      ],
-      marketInsight:
-        "Uptown Dubai se encuentra en plena revitalización y consolidación como un nuevo centro urbano premium. La combinación de conectividad, lifestyle, espacios comerciales y residenciales de diseño posiciona a Mercer House como una oportunidad atractiva tanto para vivir como para invertir en una zona con fuerte potencial de valorización.",
+      area: t("location.projects.mercer_house.area"),
+      title: t("location.projects.mercer_house.title"),
+      description: t("location.projects.mercer_house.description"),
+      features: t("location.projects.mercer_house.features") as unknown as string[],
+      marketInsight: t("location.projects.mercer_house.market_insight"),
       image: "/Mercer House.jpg",
     },
     {
-      area: "SHEIKH ZAYED ROAD · DUBÁI",
-      title: "Urban Connectivity Redefined",
-      description:
-        "Sobha Central se ubica directamente sobre Sheikh Zayed Road, la arteria más importante de Dubái. Un desarrollo de uso mixto compuesto por seis torres residenciales interconectadas, diseñado para quienes buscan vivir, trabajar e invertir en el verdadero centro del movimiento urbano de la ciudad.",
-      features: [
-        "05 min Jebel Ali Metro Station",
-        "Conexión directa a Sheikh Zayed Road",
-        "Vistas panorámicas a Dubai Marina, JLT, Bluewaters y Palm Jumeirah",
-      ],
-      marketInsight:
-        "Los proyectos ubicados sobre Sheikh Zayed Road mantienen una alta demanda tanto residencial como de inversión. La combinación de conectividad, uso mixto, amenities de gran escala y la firma Sobha posicionan a Sobha Central como una oportunidad sólida de valorización y rentabilidad a mediano y largo plazo.",
+      area: t("location.projects.sobha_central.area"),
+      title: t("location.projects.sobha_central.title"),
+      description: t("location.projects.sobha_central.description"),
+      features: t("location.projects.sobha_central.features") as unknown as string[],
+      marketInsight: t("location.projects.sobha_central.market_insight"),
       image: "/SC-TH-401.jpg",
     },
     {
-      area: "MBR CITY · NAD AL SHEBA · DUBÁI",
-      title: "Nature at the Heart of the City",
-      description:
-        "Sobha Hartland II es una comunidad residencial waterfront de lujo de más de 8 millones de pies cuadrados, ubicada estratégicamente cerca del centro de Dubái. Un desarrollo icónico que combina lagunas, playas artificiales, amplias áreas verdes y residencias de alto nivel, ofreciendo un equilibrio perfecto entre naturaleza, exclusividad y conexión urbana.",
-      features: [
-        "10 min Downtown Dubai & Burj Khalifa",
-        "10 min Dubai Design District (D3)",
-        "15 min Dubai Creek Harbour",
-        "Acceso rápido a Ras Al Khor Road y Al Khail Road",
-      ],
-      marketInsight:
-        "Las comunidades master plan waterfront en zonas centrales como MBR City presentan una de las mayores proyecciones de valorización en Dubái. Sobha Hartland II capitaliza el éxito probado de Sobha Hartland, combinando marca premium, escala, naturaleza y ubicación estratégica, convirtiéndolo en una oportunidad sólida tanto para vivir como para invertir a largo plazo.",
+      area: t("location.projects.sobha_hartland_ii.area"),
+      title: t("location.projects.sobha_hartland_ii.title"),
+      description: t("location.projects.sobha_hartland_ii.description"),
+      features: t("location.projects.sobha_hartland_ii.features") as unknown as string[],
+      marketInsight: t("location.projects.sobha_hartland_ii.market_insight"),
       image: "/proyecto4.png",
     },
     {
-      area: "SHEIKH MOHAMMED BIN ZAYED ROAD · DUBÁI",
-      title: "The Italian Soul of Dubai",
-      description:
-        "Azizi Milan es una ciudad dentro de la ciudad, inspirada en el estilo de vida, la moda y la arquitectura de Milán. Ubicado estratégicamente sobre Sheikh Mohammed Bin Zayed Road, este master development combina residencias, retail, oficinas, cultura, bienestar y entretenimiento en una comunidad autosuficiente, sostenible y de nueva generación.",
-      features: [
-        "Acceso directo a Sheikh Mohammed Bin Zayed Road",
-        "Conectividad rápida a Dubai International Airport y Al Maktoum Airport",
-        "Cerca de Global Village, IMG Worlds of Adventure y distritos clave de Dubái",
-      ],
-      marketInsight:
-        "Azizi Milan se posiciona como uno de los desarrollos urbanos más ambiciosos de Dubái, destacando por su concepto net-zero carbon city, su enfoque walkable, y su integración de lifestyle, retail y negocios. Los master communities autosuficientes con identidad fuerte y visión sostenible presentan un alto potencial de valorización y demanda a largo plazo, tanto para residentes como para inversores.",
+      area: t("location.projects.azizi_milan.area"),
+      title: t("location.projects.azizi_milan.title"),
+      description: t("location.projects.azizi_milan.description"),
+      features: t("location.projects.azizi_milan.features") as unknown as string[],
+      marketInsight: t("location.projects.azizi_milan.market_insight"),
       image: "/Aerial.jpg",
     },
   ];

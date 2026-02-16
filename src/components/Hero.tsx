@@ -7,10 +7,12 @@ import {
   TrendingUp,
 } from "lucide-react";
 import { useSmoothScroll } from "@/hooks/useSmoothScroll";
+import { useTranslation } from "@/hooks/useTranslation";
 import Navbar from "./Navbar";
 
 export default function Hero() {
   const { scrollToId } = useSmoothScroll();
+  const { t } = useTranslation();
 
   return (
     <section id="inicio" className="p-3 md:p-4 h-screen w-full flex flex-col box-border overflow-hidden">
@@ -43,16 +45,16 @@ export default function Hero() {
           <div className="max-w-4xl">
             <div className="inline-block mb-4">
               <span className="bg-white/10 backdrop-blur-md border border-white/10 text-white text-[10px] font-bold tracking-widest px-3 py-1.5 rounded-lg uppercase">
-                Hasta +8–12% anual en zonas prime
+                {t("hero.badge")}
               </span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl text-white font-serif font-medium leading-[1.1] mb-6">
-              Invierte en bienes raíces en Dubái de forma segura, rentable y 100% guiada
+              {t("hero.title")}
             </h1>
 
             <p className="text-white/80 text-base md:text-lg max-w-lg mb-8 font-light leading-relaxed">
-              Proyectos verificados, alta demanda de alquiler y soporte completo para inversores extranjeros.
+              {t("hero.subtitle")}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -62,7 +64,7 @@ export default function Hero() {
                   scroll={false}
                   className="group flex items-center gap-3 bg-white text-black pl-6 pr-1.5 py-2 rounded-full text-base font-medium hover:bg-gray-100 transition-all hover:scale-105 active:scale-95 w-fit"
                 >
-                  Ver oportunidades de inversión
+                  {t("hero.cta")}
                   <div className="w-9 h-9 bg-black rounded-full flex items-center justify-center text-white group-hover:bg-gray-800 transition-colors">
                     <ArrowRight size={18} />
                   </div>
@@ -74,7 +76,7 @@ export default function Hero() {
                   scroll={false}
                   className="group flex items-center gap-3 bg-white/10 backdrop-blur-md border border-white/20 text-white pl-6 pr-6 py-2 rounded-full text-base font-medium hover:bg-white/20 transition-all hover:scale-105 active:scale-95 w-fit"
                 >
-                  Hablar con un asesor en español
+                  {t("hero.cta_consultation")}
                 </Link>
             </div>
           </div>
@@ -89,7 +91,7 @@ export default function Hero() {
               <Clock className="text-white/60" size={18} />
             </div>
             <p className="text-base text-white/80 leading-relaxed">
-              Pago inicial. Plan de cuotas hasta 30 meses
+              {t("hero.card_1_text")}
             </p>
           </div>
 
@@ -100,7 +102,7 @@ export default function Hero() {
               <TrendingUp className="text-white/60" size={18} />
             </div>
             <p className="text-base text-white/80 leading-relaxed">
-              Mensual. Pie inicial del 20%
+              {t("hero.card_2_text")}
             </p>
           </div>
         </div>

@@ -1,0 +1,204 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "projects": "Projects",
+    "units": "Units",
+    "video": "Video",
+    "contact": "Contact",
+    "book_consultation": "Book Consultation"
+  },
+  "hero": {
+    "title": "Invest in Dubai real estate safely, profitably, and with 100% guidance",
+    "subtitle": "Discover exclusive real estate investment opportunities in Dubai. Verified projects, high returns and personalized advice.",
+    "cta": "Explore Properties",
+    "badge": "Up to +8–12% annual in prime areas",
+    "cta_consultation": "Speak with an advisor",
+    "card_1_text": "Down payment. Installment plan up to 30 months",
+    "card_2_text": "Monthly. 20% initial deposit"
+  },
+  "about": {
+    "title": "WHY INVEST IN DUBAI?",
+    "description": "Dubai's real estate market offers high rental demand, strong capital appreciation, and highly favorable tax conditions, allowing investors to earn dollar-based returns with no tax on rental income or capital gains.",
+    "benefits": {
+      "tax_free": "0% tax on rental income and capital gains",
+      "high_return": "High annual return (7%–12% average)",
+      "freehold": "Freehold ownership for foreigners",
+      "stable_currency": "Stable currency (AED pegged to USD)",
+      "high_demand": "High international rental demand",
+      "legal_framework": "Clear and transparent legal framework",
+      "growing_economy": "Economy in constant growth"
+    },
+    "market_card": {
+      "title": "REAL ESTATE MARKET",
+      "subtitle": "Stability, growth, and legal security"
+    }
+  },
+  "location": {
+    "projects": {
+      "one_river_point": {
+        "area": "BUSINESS BAY",
+        "title": "Dubai Water Canal",
+        "description": "One River Point is located in the heart of Business Bay, on a unique plot facing the Dubai Water Canal. One of Dubai's most dynamic areas, combining a cosmopolitan lifestyle, direct connection to Downtown, and high long-term appreciation potential.",
+        "features": [
+          "01 min Dubai Water Canal Boardwalk",
+          "07 min Burj Khalifa & Dubai Mall",
+          "10 min DIFC & City Walk"
+        ],
+        "market_insight": "Business Bay continues to consolidate as one of Dubai's most sought-after districts, driven by world-class infrastructure, high-end projects, and strong interest from both residents and international investors."
+      },
+      "costa_mare": {
+        "area": "AL MARJAN ISLAND · RAS AL KHAIMAH",
+        "title": "Luxury Island Resort",
+        "description": "Costa Mare is located on the waterfront of Al Marjan Island, one of the most exclusive coastal destinations with the highest growth projection in the UAE. An iconic development combining resort-style living, sustainability, smart technology, and direct beach access.",
+        "features": [
+          "Direct private beach access",
+          "Waterfront with Arabian Gulf views",
+          "Expanding area with resorts, casinos, and premium lifestyle"
+        ],
+        "market_insight": "Al Marjan Island is experiencing strong appreciation driven by new luxury resorts, international tourism development, and major strategic investments in Ras Al Khaimah, positioning it as a solid alternative to Dubai for long-term investors."
+      },
+      "mercer_house": {
+        "area": "UPTOWN DUBAI",
+        "title": "The New Heart of Uptown",
+        "description": "Mercer House is located in Uptown Dubai, one of the city's most ambitious new-generation urban districts. An iconic project combining contemporary design, wellness, entertainment, and vibrant urban life, positioning itself as Dubai's new residential and social meeting point.",
+        "features": [
+          "01 min Uptown Plaza",
+          "05 min DMCC Metro Station",
+          "17 min Palm Jumeirah",
+          "22 min Burj Khalifa & Dubai Mall"
+        ],
+        "market_insight": "Uptown Dubai is in full revitalization and consolidation as a new premium urban hub. The combination of connectivity, lifestyle, commercial spaces, and design residences positions Mercer House as an attractive opportunity for both living and investing in an area with strong appreciation potential."
+      },
+      "sobha_central": {
+        "area": "SHEIKH ZAYED ROAD · DUBAI",
+        "title": "Urban Connectivity Redefined",
+        "description": "Sobha Central is located directly on Sheikh Zayed Road, Dubai's most important artery. A mixed-use development composed of six interconnected residential towers, designed for those seeking to live, work, and invest in the true center of the city's urban movement.",
+        "features": [
+          "05 min Jebel Ali Metro Station",
+          "Direct connection to Sheikh Zayed Road",
+          "Panoramic views of Dubai Marina, JLT, Bluewaters, and Palm Jumeirah"
+        ],
+        "market_insight": "Projects located on Sheikh Zayed Road maintain high demand for both residential and investment purposes. The combination of connectivity, mixed-use, large-scale amenities, and the Sobha brand positions Sobha Central as a solid opportunity for appreciation and profitability in the medium to long term."
+      },
+      "sobha_hartland_ii": {
+        "area": "MBR CITY · NAD AL SHEBA · DUBAI",
+        "title": "Nature at the Heart of the City",
+        "description": "Sobha Hartland II is a luxury waterfront residential community of over 8 million square feet, strategically located near Downtown Dubai. An iconic development combining lagoons, artificial beaches, vast green areas, and high-end residences, offering a perfect balance between nature, exclusivity, and urban connection.",
+        "features": [
+          "10 min Downtown Dubai & Burj Khalifa",
+          "10 min Dubai Design District (D3)",
+          "15 min Dubai Creek Harbour",
+          "Quick access to Ras Al Khor Road and Al Khail Road"
+        ],
+        "market_insight": "Waterfront master plan communities in central areas like MBR City present one of the highest appreciation projections in Dubai. Sobha Hartland II capitalizes on the proven success of Sobha Hartland, combining premium brand, scale, nature, and strategic location, making it a solid opportunity for both living and long-term investment."
+      },
+      "azizi_milan": {
+        "area": "SHEIKH MOHAMMED BIN ZAYED ROAD · DUBAI",
+        "title": "The Italian Soul of Dubai",
+        "description": "Azizi Milan is a city within a city, inspired by the lifestyle, fashion, and architecture of Milan. Strategically located on Sheikh Mohammed Bin Zayed Road, this master development combines residences, retail, offices, culture, wellness, and entertainment in a self-sufficient, sustainable, and new-generation community.",
+        "features": [
+          "Direct access to Sheikh Mohammed Bin Zayed Road",
+          "Quick connectivity to Dubai International Airport and Al Maktoum Airport",
+          "Close to Global Village, IMG Worlds of Adventure, and key Dubai districts"
+        ],
+        "market_insight": "Azizi Milan positions itself as one of Dubai's most ambitious urban developments, standing out for its net-zero carbon city concept, walkable focus, and integration of lifestyle, retail, and business. Self-sufficient master communities with strong identity and sustainable vision present high appreciation and demand potential in the long term, for both residents and investors."
+      }
+    }
+  },
+  "unit_types": {
+    "title": "Real Estate Investment Formats",
+    "subtitle": "Select from different types of off-plan units in Dubai according to profitability, term, and investment objective.",
+    "whatsapp_button": "WhatsApp",
+    "whatsapp_message": "Hello, I am interested in receiving all the details about this property and similar opportunities currently available. Please include updated prices, payment plan, return expectations (ROI), availability, and options to schedule a visit.",
+    "units": {
+      "sobha_hartland_ii": {
+        "title": "Sobha Hartland II",
+        "description": "Exclusive luxury waterfront residential community developed by Sobha Realty, located in the heart of Dubai.",
+        "size": "Off-plan"
+      },
+      "sobha_central": {
+        "title": "Sobha Central",
+        "description": "Residential and mixed-use complex located on Sheikh Zayed Road, composed of six interconnected towers.",
+        "size": "Off-plan"
+      },
+      "sobha_sanctuary": {
+        "title": "Sobha Sanctuary",
+        "description": "Premium residential community designed as an urban sanctuary where nature and wellness integrate.",
+        "size": "Off-plan"
+      },
+      "azizi_milan": {
+        "title": "Azizi Milan",
+        "description": "Large-scale urban development inspired by the essence of Milan, strategically located opposite the Majan district.",
+        "size": "Off-plan"
+      },
+      "azizi_venice": {
+        "title": "Azizi Venice",
+        "description": "Mega residential and lifestyle development inspired by Venice, located in Dubai South, redefining waterfront living.",
+        "size": "Off-plan"
+      },
+      "azizi_monaco_mansions": {
+        "title": "Azizi Monaco Mansions",
+        "description": "Exclusive collection of ultra-luxury mansions facing the crystal lagoon in Dubai South, within Azizi Venice.",
+        "size": "Off-plan"
+      },
+      "azizi_wasel": {
+        "title": "Azizi Wasel",
+        "description": "Waterfront residential project located on Dubai Islands combining panoramic ocean and skyline views.",
+        "size": "Off-plan"
+      }
+    }
+  },
+  "presentation": {
+    "badge": "EXCLUSIVE OFFER",
+    "title": "Receive the detailed project presentation",
+    "description": "We have prepared a complete presentation with updated prices, flexible payment plans, and detailed profitability calculations (ROI) for each unit type.",
+    "cta": "Book Consultation",
+    "disclaimer": "We will send you the presentation immediately via WhatsApp or email. \nNo obligation · Clear information · Support in your language"
+  },
+  "developers": {
+    "title": "Strategic Alliances with Dubai's Leading Developers",
+    "partner": "Strategic Developer Partner",
+    "carousel_label": "Developer Partners Carousel",
+    "prev_slide": "Previous Slide",
+    "next_slide": "Next Slide",
+    "go_to_slide": "Go to slide"
+  },
+  "common": {
+    "image_not_found": "Image not found",
+    "prev_image": "Previous image",
+    "next_image": "Next image",
+    "loading": "Loading..."
+  },
+  "why_choose": {
+    "title": "Why Dubai is the center of future real estate investment",
+    "description": "Dubai has positioned itself as one of the world's most solid, visionary, and profitable real estate markets, with a clear growth strategy for the next two decades.",
+    "benefits": [
+      "Dubai: economic vision and sustained growth for 20 years.",
+      "Strategic alliance based on data, not just intermediation.",
+      "Strategic real estate consulting in your language.",
+      "Access to VIP properties and off-market opportunities"
+    ],
+    "quote": "For us, reputation matters more than a quick deal."
+  },
+  "footer": {
+    "contact": {
+      "title": "Contact Us",
+      "description": "Let us help you find a property that is not only a profitable asset but also a place of energy, inspiration, and growth.",
+      "email_label": "Email",
+      "phone_label": "Phone"
+    },
+    "form": {
+      "name_label": "Name",
+      "name_placeholder": "John",
+      "lastname_label": "Last Name",
+      "lastname_placeholder": "Doe",
+      "email_label": "Email",
+      "email_placeholder": "john@example.com",
+      "phone_label": "Phone",
+      "phone_placeholder": "+1 (555) 000-0000",
+      "submit": "Receive Project Presentation"
+    },
+    "copyright": "Estetico Estate."
+  }
+}

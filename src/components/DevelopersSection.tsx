@@ -2,13 +2,16 @@
 
 import { useState, useEffect, useCallback, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useTranslation } from "@/hooks/useTranslation";
 
 export default function DevelopersSection() {
+  const { t } = useTranslation();
+
   // Generate array of 10 developer images
   const developers = Array.from({ length: 10 }, (_, i) => ({
     id: i + 1,
     src: `/developer/developer${i + 1}.png`,
-    alt: `Strategic Developer Partner ${i + 1}`,
+    alt: `${t("developers.partner")} ${i + 1}`,
   }));
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -92,7 +95,7 @@ export default function DevelopersSection() {
 
         <div className="relative z-10 max-w-6xl mx-auto flex flex-col items-center justify-center h-full w-full">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-medium text-gray-900 mb-12 leading-tight">
-            Alianzas estratégicas con los principales desarrolladores de Dubái
+            {t("developers.title")}
           </h2>
           
           {/* Carousel Container */}
@@ -103,7 +106,7 @@ export default function DevelopersSection() {
             onKeyDown={handleKeyDown}
             tabIndex={0}
             role="region"
-            aria-label="Developer Partners Carousel"
+            aria-label={t("developers.carousel_label")}
           >
             {/* Slides Track */}
             <div className="overflow-hidden rounded-2xl">
@@ -172,7 +175,7 @@ export default function DevelopersSection() {
                   className={`h-1.5 rounded-full transition-all duration-300 ${
                     currentIndex === idx ? "w-8 bg-gray-900" : "w-2 bg-gray-300 hover:bg-gray-400"
                   }`}
-                  aria-label={`Go to slide ${idx + 1}`}
+                  aria-label={`${t("developers.go_to_slide")} ${idx + 1}`}
                   aria-current={currentIndex === idx}
                 />
               ))}

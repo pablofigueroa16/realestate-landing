@@ -3,9 +3,11 @@
 import Link from "next/link";
 import { Mail, Phone, Building2, ArrowRight } from "lucide-react";
 import { useSmoothScroll } from "@/hooks/useSmoothScroll";
+import { useTranslation } from "@/hooks/useTranslation";
 
 export default function Footer() {
   const { scrollToId } = useSmoothScroll();
+  const { t } = useTranslation();
 
   return (
     <footer id="contacto" className="h-screen w-full bg-gray-50 flex flex-col justify-between p-4 md:p-6 overflow-hidden">
@@ -15,11 +17,10 @@ export default function Footer() {
           {/* Left Column: Info */}
           <div className="flex flex-col justify-center">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium text-gray-900 mb-8">
-              Contáctanos
+              {t("footer.contact.title")}
             </h2>
             <p className="text-gray-500 text-lg leading-relaxed mb-12 max-w-md font-light">
-              Permítenos ayudarte a encontrar una propiedad que no solo sea un activo rentable, 
-              sino también un lugar de energía, inspiración y crecimiento.
+              {t("footer.contact.description")}
             </p>
 
             <div className="space-y-8">
@@ -29,7 +30,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="text-xs text-gray-400 uppercase tracking-wider mb-1">
-                    Correo electrónico
+                    {t("footer.contact.email_label")}
                   </p>
                   <p className="text-gray-900 font-medium text-lg">
                     office@estetico.estate
@@ -43,7 +44,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="text-xs text-gray-400 uppercase tracking-wider mb-1">
-                    Teléfono
+                    {t("footer.contact.phone_label")}
                   </p>
                   <p className="text-gray-900 font-medium text-lg">
                     +62 812 3983 8440
@@ -59,21 +60,21 @@ export default function Footer() {
               <div className="grid grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-xs font-bold text-gray-400 uppercase tracking-widest">
-                    Nombre
+                    {t("footer.form.name_label")}
                   </label>
                   <input
                     type="text"
-                    placeholder="Juan"
+                    placeholder={t("footer.form.name_placeholder")}
                     className="w-full bg-gray-50 border-none rounded-xl px-4 py-3 text-gray-900 placeholder-gray-300 focus:ring-2 focus:ring-gray-900 transition-all"
                   />
                 </div>
                 <div className="space-y-2">
                   <label className="text-xs font-bold text-gray-400 uppercase tracking-widest">
-                    Apellido
+                    {t("footer.form.lastname_label")}
                   </label>
                   <input
                     type="text"
-                    placeholder="Pérez"
+                    placeholder={t("footer.form.lastname_placeholder")}
                     className="w-full bg-gray-50 border-none rounded-xl px-4 py-3 text-gray-900 placeholder-gray-300 focus:ring-2 focus:ring-gray-900 transition-all"
                   />
                 </div>
@@ -81,28 +82,28 @@ export default function Footer() {
 
               <div className="space-y-2">
                 <label className="text-xs font-bold text-gray-400 uppercase tracking-widest">
-                  Correo electrónico
+                  {t("footer.form.email_label")}
                 </label>
                 <input
                   type="email"
-                  placeholder="juan@ejemplo.com"
+                  placeholder={t("footer.form.email_placeholder")}
                   className="w-full bg-gray-50 border-none rounded-xl px-4 py-3 text-gray-900 placeholder-gray-300 focus:ring-2 focus:ring-gray-900 transition-all"
                 />
               </div>
 
               <div className="space-y-2">
                 <label className="text-xs font-bold text-gray-400 uppercase tracking-widest">
-                  Teléfono
+                  {t("footer.form.phone_label")}
                 </label>
                 <input
                   type="tel"
-                  placeholder="+1 (555) 000-0000"
+                  placeholder={t("footer.form.phone_placeholder")}
                   className="w-full bg-gray-50 border-none rounded-xl px-4 py-3 text-gray-900 placeholder-gray-300 focus:ring-2 focus:ring-gray-900 transition-all"
                 />
               </div>
 
               <button className="w-full bg-black text-white rounded-xl py-4 font-medium flex items-center justify-center gap-2 hover:bg-gray-800 transition-colors mt-4">
-                Recibir presentación del proyecto
+                {t("footer.form.submit")}
                 <ArrowRight size={18} />
               </button>
             </form>
@@ -121,24 +122,24 @@ export default function Footer() {
 
         <nav className="flex gap-8 mb-4 md:mb-0 text-xs font-medium uppercase tracking-wide">
           <Link href="#nosotros" onClick={(e) => scrollToId(e, "#nosotros")} scroll={false} className="hover:text-gray-900 transition-colors">
-            Nosotros
+            {t("nav.about")}
           </Link>
           <Link href="#proyectos" onClick={(e) => scrollToId(e, "#proyectos")} scroll={false} className="hover:text-gray-900 transition-colors">
-            Proyectos
+            {t("nav.projects")}
           </Link>
           <Link href="#unidades" onClick={(e) => scrollToId(e, "#unidades")} scroll={false} className="hover:text-gray-900 transition-colors">
-            Unidades
+            {t("nav.units")}
           </Link>
           <Link href="#video" onClick={(e) => scrollToId(e, "#video")} scroll={false} className="hover:text-gray-900 transition-colors">
-            Video
+            {t("nav.video")}
           </Link>
           <Link href="#contacto" onClick={(e) => scrollToId(e, "#contacto")} scroll={false} className="hover:text-gray-900 transition-colors">
-            Contacto
+            {t("nav.contact")}
           </Link>
         </nav>
 
         <div>
-          <p>&copy; {new Date().getFullYear()} Estetico Estate.</p>
+          <p>&copy; {new Date().getFullYear()} {t("footer.copyright")}</p>
         </div>
       </div>
     </footer>
