@@ -90,7 +90,7 @@ export default function Hero() {
               <span className="text-2xl font-medium">30%</span>
               <Clock className="text-white/60" size={18} />
             </div>
-            <p className="text-base text-white/80 leading-relaxed">
+            <p className="text-sm text-white/80 leading-relaxed">
               {t("hero.card_1_text")}
             </p>
           </div>
@@ -101,7 +101,7 @@ export default function Hero() {
               <span className="text-2xl font-medium">1%</span>
               <TrendingUp className="text-white/60" size={18} />
             </div>
-            <p className="text-base text-white/80 leading-relaxed">
+            <p className="text-sm text-white/80 leading-relaxed">
               {t("hero.card_2_text")}
             </p>
           </div>
