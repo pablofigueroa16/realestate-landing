@@ -1,0 +1,14 @@
+- [x] Property data structure (Property interface) created.
+- [x] Centralized property data file (src/data/properties.ts) created.
+- [x] Translation files updated with new property content keys (implicitly via data structure).
+- [x] UnitTypesSection updated to use centralized data.
+- [x] "Ver Detalles" button added to UnitTypesSection card.
+- [x] Dynamic route /propiedades/[slug] created.
+- [x] Property Details Page Hero section implemented.
+- [x] Property Details Page Content sections implemented (Summary, Concept, etc.).
+- [x] Property Details Page Amenities section implemented.
+- [x] Property Details Page Credentials section implemented.
+- [x] Property Details Page FAQ section implemented.
+- [x] Property Details Page Disclaimers section implemented.
+- [x] Navigation from UnitTypesSection to Property Details Page works.
+- [x] Responsiveness and premium styling verified.
