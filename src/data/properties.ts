@@ -68,6 +68,8 @@ export interface Property {
     availability: string;
   };
   images: string[];
+  description?: string;
+  size?: string;
 }
 
 export const properties: Property[] = [

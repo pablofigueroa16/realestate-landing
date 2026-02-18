@@ -12,7 +12,7 @@
     "title": "Invest in Dubai real estate safely, profitably, and with 100% guidance",
     "subtitle": "Discover exclusive real estate investment opportunities in Dubai. Verified projects, high returns and personalized advice.",
     "cta": "Explore Properties",
-    "badge": "Up to +8–12% annual in prime areas",
+    "badge": "Up to +8–30% annual in prime areas",
     "cta_consultation": "Speak with an advisor",
     "card_1_text": "Down payment. Installment plan up to 30 months",
     "card_2_text": "Monthly. 20% initial deposit"
@@ -22,7 +22,7 @@
     "description": "Dubai's real estate market offers high rental demand, strong capital appreciation, and highly favorable tax conditions, allowing investors to earn dollar-based returns with no tax on rental income or capital gains.",
     "benefits": {
       "tax_free": "0% tax on rental income and capital gains",
-      "high_return": "High annual return (7%–12% average)",
+      "high_return": "High annual return (8%–30% average)",
       "freehold": "Freehold ownership for foreigners",
       "stable_currency": "Stable currency (AED pegged to USD)",
       "high_demand": "High international rental demand",
@@ -201,5 +201,111 @@
       "submit": "Receive Project Presentation"
     },
     "copyright": "Estetico Estate."
+  },
+  "bali": {
+    "hero": {
+      "title": "Invest in Bali. The new global epicenter of tourism, luxury, and sustainable profitability.",
+      "subtitle": "Strategic properties in the most demanded island of Southeast Asia. High appreciation, growing international tourism, and attractive dollar returns.",
+      "badge": "Up to +8-35% annual in prime areas",
+      "cta": "View Projects",
+      "stats": [
+        { "value": "+5.2M", "text": "International tourists/year (2024–2025 record recovery)" },
+        { "value": ">20%", "text": "Average appreciation >20% in recent years" },
+        { "value": "Hub", "text": "Global hub for digital nomads and startups" },
+        { "value": "8-14%", "text": "Estimated ROI between 8% and 14% gross annual in premium areas" }
+      ]
+    },
+    "about": {
+      "title": "Why is Bali the new blue gold of global tourism?",
+      "description": "Bali is not just an island: it is a consolidated international brand.\nRecognized as one of the most demanded destinations in the world, it combines luxury tourism, wellness, nature, and culture in an economic ecosystem highly attractive for real estate investors.\nFrom the G20 Summit in 2022 to its consolidation as a digital nomad hub, Bali positions itself as the economic thermometer of Southeast Asia.",
+      "benefits": {
+        "tourists": "+5 million international tourists/year",
+        "appreciation": "Appreciation >20% in recent years",
+        "hub": "Global hub for digital nomads",
+        "demand": "High demand for premium vacation rentals",
+        "recognition": "International recognition as top destination",
+        "roi": "Estimated ROI between 8% and 14% gross annual",
+        "infrastructure": "Infrastructure expansion and connectivity",
+        "emerging": "Emerging market with high appreciation potential"
+      }
+    },
+    "why_choose": {
+      "title": "Why Bali is the new epicenter of real estate investment in Asia",
+      "description": "Bali has consolidated itself as one of the most attractive emerging markets in Southeast Asia, combining record tourism growth, sustained international demand, and a new generation of digital investors driving the island's real estate market.\nThe island not only sells lifestyle: it sells profitability backed by constant occupancy and progressive appreciation.",
+      "benefits": [
+        "✓ Bali: sustained tourism growth and international expansion.",
+        "✓ Market driven by digital nomads and premium tourism.",
+        "✓ High demand for villas, boutique residences, and wellness projects.",
+        "✓ Competitive returns vs other global destinations."
+      ],
+      "quote": "“Investing in Bali is not just buying property, it is entering the heart of global tourism.”"
+    },
+    "location": {
+      "projects": {
+        "body_sense": {
+          "area": "PANDawa Area",
+          "title": "BODY SENSE",
+          "description": "The project is located in the prestigious Pandawa cliffside area — one of the fastest-growing wellness and lifestyle destinations in Bali, combining ocean views, biohacking infrastructure, and strong rental demand.",
+          "features": [
+            "03 Minutes to Pandawa Beach",
+            "10 Minutes to Melasti Beach",
+            "20 Minutes to Nusa Dua"
+          ],
+          "market_insight": "Wellness-focused properties are attracting high-spending tourists, driving premium nightly rates and stable annual returns."
+        },
+        "rahya_villas": {
+          "area": "PANDawa Area",
+          "title": "RAHYA VILLAS COMPLEX",
+          "description": "The project is located just 500 meters from Pandawa Beach — a rapidly developing premium coastal area known for private villas, white sand beaches, and high occupancy vacation rentals.",
+          "features": [
+            "02 Minutes to Pandawa Beach",
+            "08 Minutes to Melasti Beach",
+            "15 Minutes to Nusa Dua"
+          ],
+          "market_insight": "The Bukit area continues to experience strong capital appreciation due to limited land supply and rising tourism demand."
+        },
+        "eighth_sense": {
+          "area": "PANDawa Cliffside",
+          "title": "EIGHTH SENSE",
+          "description": "Situated on a panoramic cliff overlooking the Indian Ocean, Eighth Sense offers elevated privacy, ocean sunsets, and proximity to Bali’s most iconic beaches.",
+          "features": [
+            "03 Minutes to Pandawa Beach",
+            "08 Minutes to Melasti Beach",
+            "20 Minutes to Ngurah Rai International Airport"
+          ],
+          "market_insight": "Cliffside ocean-view properties consistently outperform standard units in rental pricing and long-term value growth."
+        },
+        "iji_home": {
+          "area": "SOUTH BALI",
+          "title": "IJI HOME",
+          "description": "Operating across the most demanded areas of South Bali, including Pandawa, Bukit, and Nusa Dua — locations with year-round occupancy and strong international tourism inflow.",
+          "features": [
+            "05 Minutes to Pandawa Beach (managed properties)",
+            "10 Minutes to Melasti Beach",
+            "15 Minutes to Nusa Dua"
+          ],
+          "market_insight": "Professional property management significantly increases occupancy rates and annual yield compared to self-managed units."
+        }
+      }
+    },
+    "unit_types": {
+      "units": {
+        "body_sense": {
+          "title": "Body Sense",
+          "description": "Oceanfront wellness complex in Pandawa Beach with suites and villas designed for biohacking, spa, and high profitability in Bali.",
+          "size": "From 32 m²"
+        },
+        "rahya_villas": {
+          "title": "Rahya Villas Complex",
+          "description": "Modern villas with private pool 500m from Pandawa Beach, ideal for living or generating income with high tourist occupancy.",
+          "size": "From 112 m²"
+        },
+        "eighth_sense": {
+          "title": "Eighth Sense",
+          "description": "Cliffside residences and villas with panoramic ocean views, private rooftop, and estimated profitability up to 15% annual.",
+          "size": "From 35 m²"
+        }
+      }
+    }
   }
 }

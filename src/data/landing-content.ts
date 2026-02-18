@@ -1,4 +1,3 @@
-import { Building2, Clock, TrendingUp, Briefcase, Globe, MapPin } from "lucide-react";
 import { Property, properties } from "./properties";
 
 export interface StatCard {
@@ -313,6 +312,100 @@ export const landingContent: Record<string, LandingContent> = {
         privacy: { title: "", text: "" },
         views: { title: "", text: "" },
         design: { title: "", text: "" }
+      },
+      {
+        id: "eighth-sense",
+        slug: "eighth-sense",
+        hero: {
+          title: "Eighth Sense",
+          subtitle: "Open Up New Senses",
+          description: "Un complejo residencial exclusivo en el acantilado de Bali, con villas y apartamentos de diseño moderno, panorámicas vistas al océano y espacios creados para vivir en armonía con la naturaleza.",
+          badges: ["Cliffside Living", "Panoramic Ocean View", "High Yield"],
+          bgImage: "https://real-state-landing.s3.us-east-1.amazonaws.com/bali/proyecto3/1.png"
+        },
+        summary: {
+          title: "RESUMEN RÁPIDO",
+          text: "Eighth Sense ofrece 60 apartamentos y 8 villas con vista al océano en la icónica costa de Bali, combinando privacidad, confort, diseño contemporáneo y alto potencial de inversión."
+        },
+        concept: {
+          title: "El Concepto",
+          text: "Una comunidad construida sobre un principio sensorial: cada espacio refleja y despierta uno de los “ocho sentidos”, diseñados para maximizar el confort diario, la conexión con el entorno natural y el estilo de vida contemporáneo frente al mar. El proyecto combina vistas panorámicas, materiales premium y una infraestructura pensada para vivir y generar ingresos con alto rendimiento."
+        },
+        location: {
+          title: "Pandawa Beach, Bali",
+          intro: "Situado sobre un acantilado frente al Océano Índico en el prestigioso Bukit Peninsula de Bali, a solo 3 minutos de Pandawa Beach.",
+          nearby: [
+            "A pocos minutos de Pandawa Beach",
+            "Conectividad con zonas premium de Bali",
+            "Entorno natural y exclusivo"
+          ]
+        },
+        project: {
+          title: "Villas & Apartamentos",
+          text: "Eighth Sense ocupa una parcela de 5,000 m² en la costa del sur de Bali, con diseño arquitectónico que aprovecha al máximo las vistas al océano y la brisa marina."
+        },
+        subCommunities: [
+          {
+            title: "1-Bedroom Villas with Rooftop",
+            text: "Precio desde $280,000. 8 Villas totales. Área ~143 m². Piscina privada y rooftop con vista oceánica. ROI estimado ~15%."
+          },
+          {
+            title: "1-Bedroom Villas",
+            text: "Precio desde $199,000. 5 Villas totales. Área ~60 m². Piscina privada y diseño premium. ROI estimado ~15%."
+          },
+          {
+            title: "1-Bedroom Apartments",
+            text: "Precio desde $115,000. 42 unidades totales. Desde 35 m². Totalmente amueblados. ROI estimado ~15%."
+          },
+          {
+            title: "2-Bedroom Apartments with Rooftop",
+            text: "Precio desde $170,000. 19 unidades totales. Área ~70 m² con rooftop. Vistas panorámicas. ROI estimado ~15%."
+          }
+        ],
+        amenities: {
+          title: "COMPLEX INFRASTRUCTURE",
+          intro: "Eighth Sense incluye amenidades premium diseñadas para comodidad, estilo de vida y atracción de alquileres vacacionales.",
+          categories: [
+            {
+              name: "AMENITIES",
+              items: [
+                "Recepción y conserjería 24/7",
+                "SPA zone con salas de masaje",
+                "Infinity pool con vista al atardecer",
+                "Restaurante europeo en el complejo",
+                "Shuttles gratuitos a las mejores playas cercanas",
+                "Café de verano y áreas chill",
+                "Ice bath y zonas para yoga",
+                "Internet StarLink de alta velocidad",
+                "Parking con 65 espacios",
+                "Art zones y áreas de paseo frente al mar"
+              ]
+            }
+          ]
+        },
+        developer: {
+          title: "SOBRE IJI GROUP ESTATE",
+          intro: "IJI Group Estate es un desarrollador y gestor inmobiliario con más de 15 años de experiencia en Bali, especializado en proyectos premium, con ocupaciones altas y gestión completa de activos para propietarios e inversores.",
+          bullets: ["15 años de experiencia", "Gestión completa de activos", "Proyectos premium", "Ocupación alta"]
+        },
+        faq: [],
+        disclaimers: {
+          renders: "Las imágenes, renders y amenidades son referenciales y pueden estar sujetas a cambios según las decisiones del desarrollador o requisitos regulatorios.",
+          availability: "Rentabilidad estimada ~15% garantizada con gestión profesional."
+        },
+        images: [
+          "https://real-state-landing.s3.us-east-1.amazonaws.com/bali/proyecto3/1.png",
+          "https://real-state-landing.s3.us-east-1.amazonaws.com/bali/proyecto3/2.jpeg",
+          "https://real-state-landing.s3.us-east-1.amazonaws.com/bali/proyecto3/3.jpeg",
+          "https://real-state-landing.s3.us-east-1.amazonaws.com/bali/proyecto3/4.jpeg",
+          "https://real-state-landing.s3.us-east-1.amazonaws.com/bali/proyecto3/5.webp"
+        ],
+        description: "Residencias y villas en acantilado con vistas panorámicas al océano, rooftop privado y rentabilidad estimada hasta 15% anual.",
+        size: "Desde 35 m²",
+        community: { title: "", text: "" },
+        privacy: { title: "", text: "" },
+        views: { title: "", text: "" },
+        design: { title: "", text: "" }
       }
     ],
     locationProjects: [
@@ -326,7 +419,7 @@ export const landingContent: Record<string, LandingContent> = {
           "20 Minutes to Nusa Dua"
         ],
         marketInsight: "Wellness-focused properties are attracting high-spending tourists, driving premium nightly rates and stable annual returns.",
-        image: "/bali_placeholder.jpg" // Placeholder as requested (empty images)
+        image: "https://real-state-landing.s3.us-east-1.amazonaws.com/bali/proyecto1/1.png" // Placeholder as requested (empty images)
       },
       {
         area: "PANDawa Area",
@@ -338,7 +431,7 @@ export const landingContent: Record<string, LandingContent> = {
           "15 Minutes to Nusa Dua"
         ],
         marketInsight: "The Bukit area continues to experience strong capital appreciation due to limited land supply and rising tourism demand.",
-        image: "/bali_placeholder.jpg" // Placeholder as requested (empty images)
+        image: "https://real-state-landing.s3.us-east-1.amazonaws.com/bali/proyecto2/1.webp" // Placeholder as requested (empty images)
       },
       {
         area: "PANDawa Cliffside",
@@ -362,7 +455,7 @@ export const landingContent: Record<string, LandingContent> = {
           "15 Minutes to Nusa Dua"
         ],
         marketInsight: "Professional property management significantly increases occupancy rates and annual yield compared to self-managed units.",
-        image: "/bali_placeholder.jpg" // Placeholder as requested (empty images)
+        image: "https://real-state-landing.s3.us-east-1.amazonaws.com/bali/proyecto3/1.png" // Placeholder as requested (empty images)
       }
     ],
     presentation: { hidden: true }, // Hide for Bali
