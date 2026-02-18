@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, Check, ChevronDown, ChevronUp, MapPin, ExternalLink } from "lucide-react";
 import { properties, Property } from "@/data/properties";
+import { landingContent } from "@/data/landing-content";
 import { useTranslation } from "@/hooks/useTranslation";
 import { Building2 } from "lucide-react";
 
@@ -16,12 +17,26 @@ export default function PropertyDetailsPage() {
   const [property, setProperty] = useState<Property | null>(null);
   const [activeAccordion, setActiveAccordion] = useState<string | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [backLink, setBackLink] = useState("/#unidades");
 
   useEffect(() => {
     if (params.slug) {
-      const foundProperty = properties.find((p) => p.slug === params.slug);
+      // Search in default properties (Dubai)
+      let foundProperty = properties.find((p) => p.slug === params.slug);
+      let isBali = false;
+      
+      // If not found, search in Bali properties
+      if (!foundProperty) {
+        const baliUnits = landingContent.bali.units;
+        if (baliUnits) {
+             foundProperty = baliUnits.find((p) => p.slug === params.slug);
+             if (foundProperty) isBali = true;
+        }
+      }
+
       if (foundProperty) {
         setProperty(foundProperty);
+        setBackLink(isBali ? "/bali#unidades" : "/#unidades");
       } else {
         // Handle not found - redirect or show error
         router.push("/#unidades");
@@ -105,7 +120,7 @@ export default function PropertyDetailsPage() {
         {/* Content */}
         <div className="relative z-30 h-full container mx-auto px-6 md:px-12 flex flex-col justify-end pb-24 md:pb-32">
           <Link 
-            href="/#unidades"
+            href={backLink}
             className="absolute top-8 left-6 md:left-12 flex items-center gap-2 text-white/80 hover:text-white transition-colors uppercase text-xs font-bold tracking-widest backdrop-blur-md bg-white/10 px-4 py-2 rounded-full border border-white/20 w-fit"
           >
             <ArrowLeft size={14} />

@@ -1,23 +1,5 @@
-import Hero from "@/components/Hero";
-import AboutSection from "@/components/AboutSection";
-import LocationSection from "@/components/LocationSection";
-import UnitTypesSection from "@/components/UnitTypesSection";
-import PresentationSection from "@/components/PresentationSection";
-import DevelopersSection from "@/components/DevelopersSection";
-import WhyChooseSection from "@/components/WhyChooseSection";
-import Footer from "@/components/Footer";
+import LandingPage from "@/components/LandingPage";
 
 export default function Home() {
-  return (
-    <main className="min-h-screen bg-white text-gray-900">
-      <Hero />
-      <AboutSection />
-      <LocationSection />
-      <UnitTypesSection />
-      <PresentationSection />
-      <WhyChooseSection />
-      <DevelopersSection />
-      <Footer />
-    </main>
-  );
+  return <LandingPage destination="dubai" />;
 }

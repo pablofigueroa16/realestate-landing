@@ -5,7 +5,7 @@ import { ArrowUpRight, ChevronLeft, ChevronRight, ImageOff, Eye } from "lucide-r
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "@/hooks/useTranslation";
-import { properties } from "@/data/properties";
+import { properties as defaultProperties, Property } from "@/data/properties";
 
 // Internal Component for the Nested Image Carousel
 function ProjectImageCarousel({ images, alt, badgeText }: { images: string[]; alt: string; badgeText: string }) {
@@ -114,7 +114,11 @@ function ProjectImageCarousel({ images, alt, badgeText }: { images: string[]; al
   );
 }
 
-export default function UnitTypesSection() {
+interface UnitTypesSectionProps {
+  units?: Property[];
+}
+
+export default function UnitTypesSection({ units: propUnits }: UnitTypesSectionProps) {
   const { t } = useTranslation();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [itemsPerView, setItemsPerView] = useState(1);
@@ -122,7 +126,9 @@ export default function UnitTypesSection() {
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
 
   // Map properties from data file to display in carousel
-  const units = properties.map(p => ({
+  const sourceUnits = propUnits || defaultProperties;
+  
+  const units = sourceUnits.map(p => ({
     ...p,
     // Ensure we use translations for listing display if they exist in the properties object, 
     // otherwise fallback to the data structure strings which might be raw.
@@ -131,6 +137,8 @@ export default function UnitTypesSection() {
     description: p.hero.description, // Use hero description for listing
     size: "Off-plan" // Placeholder as it was in original
   }));
+
+  if (units.length === 0) return null;
 
   useEffect(() => {
     const handleResize = () => {

@@ -3,9 +3,16 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useTranslation } from "@/hooks/useTranslation";
+import { DevelopersContent } from "@/data/landing-content";
 
-export default function DevelopersSection() {
+interface DevelopersSectionProps {
+  content?: DevelopersContent | null;
+}
+
+export default function DevelopersSection({ content }: DevelopersSectionProps) {
   const { t } = useTranslation();
+
+  if (content?.hidden) return null;
 
   // Generate array of 10 developer images
   const developers = Array.from({ length: 10 }, (_, i) => ({

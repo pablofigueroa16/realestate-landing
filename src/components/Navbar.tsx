@@ -9,13 +9,19 @@ import {
   ArrowUpRight,
   Menu,
   X,
+  ChevronDown
 } from "lucide-react";
 import { useSmoothScroll } from "@/hooks/useSmoothScroll";
 import { useTranslation } from "@/hooks/useTranslation";
 
-export default function Navbar() {
+interface NavbarProps {
+  currentDestination?: "dubai" | "bali";
+}
+
+export default function Navbar({ currentDestination = "dubai" }: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isDestinationOpen, setIsDestinationOpen] = useState(false);
   const { scrollToId } = useSmoothScroll();
   const { t, locale, setLocale } = useTranslation();
 
@@ -99,6 +105,40 @@ export default function Navbar() {
 
         {/* Desktop Right Actions */}
         <div className="hidden md:flex items-center gap-2">
+          {/* Destination Selector */}
+          <div className="relative">
+            <button 
+              onClick={() => setIsDestinationOpen(!isDestinationOpen)}
+              className={`h-9 px-3 rounded-full flex items-center justify-center transition-colors duration-300 text-xs font-bold tracking-wider gap-1 uppercase ${
+                isScrolled 
+                  ? "bg-gray-100 border border-gray-200 text-gray-900 hover:bg-gray-200" 
+                  : "bg-white/10 backdrop-blur-md border border-white/10 text-white hover:bg-white/20"
+              }`}
+            >
+              {currentDestination}
+              <ChevronDown size={14} />
+            </button>
+            
+            {isDestinationOpen && (
+              <div className="absolute top-full right-0 mt-2 w-32 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden py-1 z-50 animate-in fade-in slide-in-from-top-2">
+                <Link 
+                  href="/"
+                  className={`block px-4 py-2 text-sm hover:bg-gray-50 transition-colors ${currentDestination === 'dubai' ? 'font-bold text-black' : 'text-gray-600'}`}
+                  onClick={() => setIsDestinationOpen(false)}
+                >
+                  DUBAI
+                </Link>
+                <Link 
+                  href="/bali"
+                  className={`block px-4 py-2 text-sm hover:bg-gray-50 transition-colors ${currentDestination === 'bali' ? 'font-bold text-black' : 'text-gray-600'}`}
+                  onClick={() => setIsDestinationOpen(false)}
+                >
+                  BALI
+                </Link>
+              </div>
+            )}
+          </div>
+
           <button 
             onClick={toggleLanguage}
             className={`h-9 px-3 rounded-full flex items-center justify-center transition-colors duration-300 text-xs font-bold tracking-wider ${

@@ -5,37 +5,59 @@ import {
   ArrowRight,
   Clock,
   TrendingUp,
+  Globe,
+  Briefcase,
+  Building2,
+  LucideIcon
 } from "lucide-react";
 import { useSmoothScroll } from "@/hooks/useSmoothScroll";
 import { useTranslation } from "@/hooks/useTranslation";
-import Navbar from "./Navbar";
+import { HeroContent } from "@/data/landing-content";
 
-export default function Hero() {
+// Map of icon names to components
+const ICON_MAP: Record<string, LucideIcon> = {
+  Clock,
+  TrendingUp,
+  Globe,
+  Briefcase,
+  Building2
+};
+
+interface HeroProps {
+  content?: HeroContent | null;
+}
+
+export default function Hero({ content }: HeroProps) {
   const { scrollToId } = useSmoothScroll();
   const { t } = useTranslation();
 
+  const videoSrc = content?.videoSrc || "/VIDEOHERO.mp4";
+  const badgeText = content?.badge || t("hero.badge");
+  const title = content?.title || t("hero.title");
+  const subtitle = content?.subtitle || t("hero.subtitle");
+
   return (
     <section id="inicio" className="p-3 md:p-4 h-screen w-full flex flex-col box-border overflow-hidden">
-      <Navbar />
       <div className="relative flex-grow rounded-[2rem] overflow-hidden flex flex-col">
         {/* Background Video */}
         <div className="absolute inset-0 z-0">
           <video
+            key={videoSrc} // Force re-render on video change
             autoPlay
             loop
             muted
             playsInline
             className="w-full h-full object-cover"
           >
-            <source src="/VIDEOHERO.mp4" type="video/mp4" />
+            <source src={videoSrc} type="video/mp4" />
           </video>
           {/* Subtle gradient overlay for text readability */}
           <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/20 to-black/20 z-10"></div>
           
           {/* Large Background Text */}
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0 opacity-10">
-            <h1 className="text-[20vw] font-bold text-white tracking-widest translate-y-10">
-              DUBAI
+            <h1 className="text-[20vw] font-bold text-white tracking-widest translate-y-10 uppercase">
+              {content ? "BALI" : "DUBAI"}
             </h1>
           </div>
         </div>
@@ -45,16 +67,16 @@ export default function Hero() {
           <div className="max-w-4xl">
             <div className="inline-block mb-4">
               <span className="bg-white/10 backdrop-blur-md border border-white/10 text-white text-[10px] font-bold tracking-widest px-3 py-1.5 rounded-lg uppercase">
-                {t("hero.badge")}
+                {badgeText}
               </span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl text-white font-serif font-medium leading-[1.1] mb-6">
-              {t("hero.title")}
+              {title}
             </h1>
 
             <p className="text-white/80 text-base md:text-lg max-w-lg mb-8 font-light leading-relaxed">
-              {t("hero.subtitle")}
+              {subtitle}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -84,27 +106,46 @@ export default function Hero() {
 
         {/* Floating Cards (Bottom Right) */}
         <div className="absolute bottom-6 right-6 md:right-10 lg:right-16 z-40 flex flex-col gap-3 max-w-[300px] w-full hidden md:flex">
-          {/* Card 1 */}
-          <div className="bg-white/10 backdrop-blur-xl border border-white/10 p-4 rounded-2xl text-white">
-            <div className="flex justify-between items-start mb-1">
-              <span className="text-2xl font-medium">30%</span>
-              <Clock className="text-white/60" size={18} />
-            </div>
-            <p className="text-sm text-white/80 leading-relaxed">
-              {t("hero.card_1_text")}
-            </p>
-          </div>
+          {content?.stats ? (
+             content.stats.map((stat, idx) => {
+              const IconComponent = stat.iconName ? ICON_MAP[stat.iconName] : null;
+              return (
+                <div key={idx} className="bg-white/10 backdrop-blur-xl border border-white/10 p-4 rounded-2xl text-white">
+                  <div className="flex justify-between items-start mb-1">
+                    <span className="text-2xl font-medium">{stat.value}</span>
+                    {IconComponent && <IconComponent className="text-white/60" size={18} />}
+                  </div>
+                  <p className="text-sm text-white/80 leading-relaxed">
+                    {stat.text}
+                  </p>
+                </div>
+              );
+             })
+          ) : (
+            <>
+              {/* Card 1 */}
+              <div className="bg-white/10 backdrop-blur-xl border border-white/10 p-4 rounded-2xl text-white">
+                <div className="flex justify-between items-start mb-1">
+                  <span className="text-2xl font-medium">30%</span>
+                  <Clock className="text-white/60" size={18} />
+                </div>
+                <p className="text-sm text-white/80 leading-relaxed">
+                  {t("hero.card_1_text")}
+                </p>
+              </div>
 
-          {/* Card 2 */}
-          <div className="bg-white/10 backdrop-blur-xl border border-white/10 p-4 rounded-2xl text-white">
-            <div className="flex justify-between items-start mb-1">
-              <span className="text-2xl font-medium">1%</span>
-              <TrendingUp className="text-white/60" size={18} />
-            </div>
-            <p className="text-sm text-white/80 leading-relaxed">
-              {t("hero.card_2_text")}
-            </p>
-          </div>
+              {/* Card 2 */}
+              <div className="bg-white/10 backdrop-blur-xl border border-white/10 p-4 rounded-2xl text-white">
+                <div className="flex justify-between items-start mb-1">
+                  <span className="text-2xl font-medium">1%</span>
+                  <TrendingUp className="text-white/60" size={18} />
+                </div>
+                <p className="text-sm text-white/80 leading-relaxed">
+                  {t("hero.card_2_text")}
+                </p>
+              </div>
+            </>
+          )}
         </div>
       </div>
     </section>

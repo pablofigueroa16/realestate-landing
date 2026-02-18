@@ -3,12 +3,17 @@
 import { useState } from "react";
 import { TrendingUp, ChevronLeft, ChevronRight, CheckCircle2 } from "lucide-react";
 import { useTranslation } from "@/hooks/useTranslation";
+import { LocationProject } from "@/data/landing-content";
 
-export default function LocationSection() {
+interface LocationSectionProps {
+  projects?: LocationProject[];
+}
+
+export default function LocationSection({ projects: propProjects }: LocationSectionProps) {
   const { t } = useTranslation();
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const projects = [
+  const defaultProjects = [
     {
       area: t("location.projects.one_river_point.area"),
       title: t("location.projects.one_river_point.title"),
@@ -58,6 +63,10 @@ export default function LocationSection() {
       image: "/Aerial.jpg",
     },
   ];
+
+  const projects = propProjects || defaultProjects;
+
+  if (projects.length === 0) return null;
 
   const nextProject = () => {
     setCurrentIndex((prev) => (prev + 1) % projects.length);

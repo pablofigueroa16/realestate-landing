@@ -3,13 +3,22 @@
 import { CheckCircle2, Play } from "lucide-react";
 import { useState, useRef } from "react";
 import { useTranslation } from "@/hooks/useTranslation";
+import { WhyChooseContent } from "@/data/landing-content";
 
-export default function WhyChooseSection() {
+interface WhyChooseSectionProps {
+  content?: WhyChooseContent | null;
+}
+
+export default function WhyChooseSection({ content }: WhyChooseSectionProps) {
   const { t } = useTranslation();
   const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  const benefits = t("why_choose.benefits") as unknown as string[];
+  const videoSrc = content?.videoSrc || "/video_why.mp4";
+  const title = content?.title || t("why_choose.title");
+  const description = content?.description || t("why_choose.description");
+  const benefits = content?.benefits || (t("why_choose.benefits") as unknown as string[]);
+  const quote = content?.quote || t("why_choose.quote");
 
   const handlePlay = () => {
     if (videoRef.current) {
@@ -32,13 +41,14 @@ export default function WhyChooseSection() {
         <div className="relative h-[40vh] lg:h-[60vh] w-full group">
           <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden shadow-2xl bg-black">
             <video
+              key={videoSrc} // Force re-render on video change
               ref={videoRef}
               className="w-full h-full object-cover"
               playsInline
               onEnded={handleVideoEnd}
               controls={isPlaying}
             >
-              <source src="/video_why.mp4" type="video/mp4" />
+              <source src={videoSrc} type="video/mp4" />
             </video>
             
             {/* Play Button Overlay */}
@@ -62,11 +72,11 @@ export default function WhyChooseSection() {
         {/* Right Column: Text Content */}
         <div className="flex flex-col justify-center h-full max-w-xl">
           <h2 className="text-3xl md:text-4xl lg:text-4xl font-medium text-gray-900 mb-6 leading-tight">
-            {t("why_choose.title")}
+            {title}
           </h2>
           
-          <p className="text-gray-500 text-base lg:text-lg font-light mb-6 leading-relaxed">
-            {t("why_choose.description")}
+          <p className="text-gray-500 text-base lg:text-lg font-light mb-6 leading-relaxed whitespace-pre-line">
+            {description}
           </p>
 
           <div className="space-y-3 mb-8">
@@ -79,7 +89,7 @@ export default function WhyChooseSection() {
           </div>
 
           <p className="text-gray-900 font-medium italic text-base lg:text-lg border-l-4 border-gray-900 pl-4 py-1">
-            &rdquo;{t("why_choose.quote")}&rdquo;
+            &rdquo;{quote}&rdquo;
           </p>
         </div>
       </div>
