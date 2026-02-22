@@ -111,19 +111,16 @@ export const landingContent: Record<string, LandingContent> = {
         { iconName: "CheckCircle", label: "Estructuración legal internacional" },
         { iconName: "CheckCircle", label: "Acompañamiento integral 360°" },
         { iconName: "CheckCircle", label: "Soporte post-inversión y estrategia de salida" },
-        { iconName: "CheckCircle", label: "Diversificación geográfica inteligente" },
-        { iconName: "CheckCircle", label: "Consultoría personalizada según perfil inversor" }
       ]
     },
     whyChoose: {
       videoSrc: "https://real-state-landing.s3.us-east-1.amazonaws.com/home/home_video.mp4",
-      title: "Por qué los inversores eligen nuestros mercados globales",
-      description: "Seleccionamos únicamente destinos con fundamentos sólidos, crecimiento sostenido y alta demanda internacional. Nuestro enfoque se basa en análisis macroeconómico, estabilidad jurídica y proyección de valorización a largo plazo.\n\nNo seguimos tendencias. Identificamos ciclos.",
+      title: "Por qué invertimos en mercados globales estratégicos",
+      description: "Seleccionamos destinos con crecimiento sólido, estabilidad jurídica y alta demanda internacional, priorizando valorización a largo plazo y generación de ingresos sostenibles.",
       benefits: [
         "Mercados con crecimiento económico comprobado",
         "Ventajas fiscales estratégicas en jurisdicciones clave",
         "Alta liquidez y demanda internacional",
-        "Proyección de valorización y generación de ingresos"
       ],
       quote: "Capital inteligente se mueve hacia ciudades con fundamentos reales.",
       hidden: false
@@ -323,15 +320,14 @@ export const landingContent: Record<string, LandingContent> = {
     },
     whyChoose: {
       videoSrc: "https://real-state-landing.s3.us-east-1.amazonaws.com/bali/Bali_video.mp4",
-      title: "Por qué Bali es el nuevo epicentro de la inversión inmobiliaria en Asia",
-      description: "Bali se ha consolidado como uno de los mercados emergentes más atractivos del Sudeste Asiático, combinando crecimiento turístico récord, demanda internacional sostenida y una nueva generación de inversores digitales que impulsan el mercado inmobiliario de la isla.\nLa isla no solo vende estilo de vida: vende rentabilidad respaldada por ocupación constante y valorización progresiva.",
+      title: "Bali: El nuevo hub inmobiliario de Asia",
+      description: "Bali se consolida como un mercado emergente clave en Asia, impulsado por el turismo, la demanda global y los inversores digitales.",
       benefits: [
         "Bali: crecimiento turístico sostenido y expansión internacional.",
         "Mercado impulsado por nómadas digitales y turismo premium.",
-        "Alta demanda de villas, residencias boutique y proyectos wellness.",
-        "Rentabilidades competitivas frente a otros destinos globales."
+        "Alta demanda de villas, residencias boutique y proyectos wellness."
       ],
-      quote: "“Invertir en Bali no es solo comprar propiedad, es entrar en el corazón del turismo global.”"
+      quote: "Invertir en Bali no es solo comprar propiedad, es entrar en el corazón del turismo global."
     },
     units: [
       {

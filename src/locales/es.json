@@ -21,13 +21,13 @@
     "title": "¿POR QUÉ INVERTIR EN DUBÁI?",
     "description": "El mercado inmobiliario de Dubái ofrece alta demanda de alquiler, fuerte apreciación de capital y condiciones fiscales altamente favorables, lo que permite a los inversores obtener rentabilidad en dólares sin impuestos sobre ingresos por alquiler ni plusvalía.",
     "benefits": {
+      "growing_economy":"Fondos protegidos en cuenta escrow regulada por el gobierno",
       "tax_free": "0% impuestos sobre rentas y ganancias de capital",
       "high_return": "Alta rentabilidad anual (8%–30% promedio)",
       "freehold": "Propiedad Freehold para extranjeros",
       "stable_currency": "Moneda estable (AED vinculado al USD)",
       "high_demand": "Alta demanda internacional de alquiler",
-      "legal_framework": "Marco legal claro y transparente",
-      "growing_economy": "Economía en crecimiento constante"
+      "legal_framework": "Marco legal claro y transparente"
     },
     "market_card": {
       "title": "MERCADO INMOBILIARIO",
@@ -230,15 +230,14 @@
       }
     },
     "why_choose": {
-      "title": "Por qué Bali es el nuevo epicentro de la inversión inmobiliaria en Asia",
-      "description": "Bali se ha consolidado como uno de los mercados emergentes más atractivos del Sudeste Asiático, combinando crecimiento turístico récord, demanda internacional sostenida y una nueva generación de inversores digitales que impulsan el mercado inmobiliario de la isla.\nLa isla no solo vende estilo de vida: vende rentabilidad respaldada por ocupación constante y valorización progresiva.",
+      "title": "Bali: El nuevo hub inmobiliario de Asia",
+      "description": "Bali se consolida como un mercado emergente clave en Asia, impulsado por el turismo, la demanda global y los inversores digitales.",
       "benefits": [
-        "✓ Bali: crecimiento turístico sostenido y expansión internacional.",
-        "✓ Mercado impulsado por nómadas digitales y turismo premium.",
-        "✓ Alta demanda de villas, residencias boutique y proyectos wellness.",
-        "✓ Rentabilidades competitivas frente a otros destinos globales."
+        "Bali: crecimiento turístico sostenido y expansión internacional.",
+        "Mercado impulsado por nómadas digitales y turismo premium.",
+        "Alta demanda de villas, residencias boutique y proyectos wellness."
       ],
-      "quote": "“Invertir en Bali no es solo comprar propiedad, es entrar en el corazón del turismo global.”"
+      "quote": "Invertir en Bali no es solo comprar propiedad, es entrar en el corazón del turismo global."
     },
     "location": {
       "projects": {

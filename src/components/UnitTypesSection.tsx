@@ -271,7 +271,7 @@ export default function UnitTypesSection({ units: propUnits, title, subtitle }: 
 
                             {/* Content */}
                             <div className="px-2 pb-2 grow flex flex-col">
-                                <h3 className="text-2xl font-bold text-gray-900 mb-3 line-clamp-1 group-hover:text-gray-600 transition-colors">
+                                <h3 className="text-3xl font-bold text-black mb-3 group-hover:text-gray-600 transition-colors">
                                     <Link href={unit.externalLink || `/propiedades/${unit.slug}`} className="before:absolute before:inset-0 focus:outline-none">
                                         {unit.hero.title}
                                     </Link>

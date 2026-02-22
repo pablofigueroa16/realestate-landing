@@ -68,7 +68,7 @@ export default function AboutSection({ content }: AboutSectionProps) {
              {title}
           </h2>
           
-          <div className="space-y-6 text-gray-500 text-lg font-light mb-12 leading-relaxed">
+          <div className="space-y-6 text-gray-500 text-lg font-light mb-6 leading-relaxed">
             <p className="whitespace-pre-line">
               {description}
             </p>

@@ -84,8 +84,7 @@ export default function LandingPage({ destination }: LandingPageProps) {
         benefits: [
             t("bali.why_choose.benefits.0"),
             t("bali.why_choose.benefits.1"),
-            t("bali.why_choose.benefits.2"),
-            t("bali.why_choose.benefits.3")
+            t("bali.why_choose.benefits.2")
         ]
       },
       locationProjects: staticContent.locationProjects.map((proj, i) => {
