@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { ArrowUpRight, ChevronLeft, ChevronRight, ImageOff, Eye } from "lucide-react";
+import { ChevronLeft, ChevronRight, ImageOff, Eye } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "@/hooks/useTranslation";
@@ -17,13 +17,17 @@ function ProjectImageCarousel({ images, alt, badgeText }: { images: string[]; al
   const nextImage = (e: React.MouseEvent) => {
     e.preventDefault(); // Prevent link navigation
     e.stopPropagation();
-    setCurrentIndex((prev) => (prev + 1) % images.length);
+    if (images.length > 1) {
+      setCurrentIndex((prev) => (prev + 1) % images.length);
+    }
   };
 
   const prevImage = (e: React.MouseEvent) => {
     e.preventDefault(); // Prevent link navigation
     e.stopPropagation();
-    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
+    if (images.length > 1) {
+      setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
+    }
   };
 
   const handleImageError = (imgSrc: string) => {
@@ -42,7 +46,7 @@ function ProjectImageCarousel({ images, alt, badgeText }: { images: string[]; al
 
   return (
     <div 
-      className="relative h-64 rounded-[1.5rem] overflow-hidden mb-6 group/carousel bg-gray-100"
+      className="relative h-64 rounded-3xl overflow-hidden mb-6 group/carousel bg-gray-100"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -82,6 +86,7 @@ function ProjectImageCarousel({ images, alt, badgeText }: { images: string[]; al
       ))}
 
       {/* Navigation Overlay (Visible on Hover) */}
+      {images.length > 1 && (
       <div className={`absolute inset-0 flex items-center justify-between px-2 transition-opacity duration-300 z-20 ${isHovered ? 'opacity-100' : 'opacity-0'}`}>
         <button
           onClick={prevImage}
@@ -98,8 +103,10 @@ function ProjectImageCarousel({ images, alt, badgeText }: { images: string[]; al
           <ChevronRight size={16} className="text-white" />
         </button>
       </div>
+      )}
 
       {/* Dots Indicators */}
+      {images.length > 1 && (
       <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-20">
         {images.slice(0, 5).map((_, idx) => ( // Limit dots to 5 for cleanliness
           <div
@@ -110,15 +117,18 @@ function ProjectImageCarousel({ images, alt, badgeText }: { images: string[]; al
           />
         ))}
       </div>
+      )}
     </div>
   );
 }
 
 interface UnitTypesSectionProps {
   units?: Property[];
+  title?: string;
+  subtitle?: string;
 }
 
-export default function UnitTypesSection({ units: propUnits }: UnitTypesSectionProps) {
+export default function UnitTypesSection({ units: propUnits, title, subtitle }: UnitTypesSectionProps) {
   const { t } = useTranslation();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [itemsPerView, setItemsPerView] = useState(1);
@@ -134,41 +144,51 @@ export default function UnitTypesSection({ units: propUnits }: UnitTypesSectionP
     // otherwise fallback to the data structure strings which might be raw.
     // For now, we use the properties.ts data directly as it was populated with the specific content.
     // In a full i18n refactor, properties.ts would return data based on locale.
-    description: p.hero.description, // Use hero description for listing
-    size: "Off-plan" // Placeholder as it was in original
+    description: p.description || p.hero.description, // Use explicit description if available, else hero
+    size: p.size || "Off-plan" // Use explicit size if available
   }));
 
-  if (units.length === 0) return null;
+  const maxIndex = Math.max(0, units.length - itemsPerView);
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 1024) setItemsPerView(3);
-      else if (window.innerWidth >= 768) setItemsPerView(2);
-      else setItemsPerView(1);
+      let newItemsPerView = 1;
+      if (window.innerWidth >= 1024) newItemsPerView = 3;
+      else if (window.innerWidth >= 768) newItemsPerView = 2;
+      
+      setItemsPerView(newItemsPerView);
+      // Ensure current index is within bounds when resizing
+      setCurrentIndex(prev => Math.min(prev, Math.max(0, units.length - newItemsPerView)));
     };
 
     handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  }, [units.length]);
+
+  if (units.length === 0) return null;
 
   const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % (units.length - itemsPerView + 1));
+    if (units.length > itemsPerView) {
+      setCurrentIndex((prev) => Math.min(prev + 1, maxIndex));
+    }
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - 1 + (units.length - itemsPerView + 1)) % (units.length - itemsPerView + 1));
+    if (units.length > itemsPerView) {
+      setCurrentIndex((prev) => Math.max(prev - 1, 0));
+    }
   };
   
-  const canGoNext = currentIndex < units.length - itemsPerView;
-  const canGoPrev = currentIndex > 0;
+  const canGoNext = units.length > itemsPerView && currentIndex < maxIndex;
+  const canGoPrev = units.length > itemsPerView && currentIndex > 0;
 
   const handleNext = () => {
-    if (canGoNext) setCurrentIndex(prev => prev + 1);
+    if (canGoNext) nextSlide();
   };
 
   const handlePrev = () => {
-    if (canGoPrev) setCurrentIndex(prev => prev - 1);
+    if (canGoPrev) prevSlide();
   };
 
   const onTouchStart = (e: React.TouchEvent) => {
@@ -198,14 +218,16 @@ export default function UnitTypesSection({ units: propUnits }: UnitTypesSectionP
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
           <div className="max-w-xl">
             <h2 className="text-4xl md:text-5xl font-medium text-gray-900 mb-6">
-              {t("unit_types.title")}
+              {title || t("unit_types.title")}
             </h2>
             <p className="text-gray-500 text-lg leading-relaxed">
-              {t("unit_types.subtitle")}
+              {subtitle || t("unit_types.subtitle")}
             </p>
           </div>
           
           <div className="flex items-center gap-4">
+            {units.length > itemsPerView && (
+            <>
             <button 
                 onClick={handlePrev}
                 disabled={!canGoPrev}
@@ -220,6 +242,8 @@ export default function UnitTypesSection({ units: propUnits }: UnitTypesSectionP
             >
                 <ChevronRight size={20} />
             </button>
+            </>
+            )}
           </div>
         </div>
 
@@ -248,7 +272,7 @@ export default function UnitTypesSection({ units: propUnits }: UnitTypesSectionP
                             {/* Content */}
                             <div className="px-2 pb-2 grow flex flex-col">
                                 <h3 className="text-2xl font-bold text-gray-900 mb-3 line-clamp-1 group-hover:text-gray-600 transition-colors">
-                                    <Link href={`/propiedades/${unit.slug}`} className="before:absolute before:inset-0 focus:outline-none">
+                                    <Link href={unit.externalLink || `/propiedades/${unit.slug}`} className="before:absolute before:inset-0 focus:outline-none">
                                         {unit.hero.title}
                                     </Link>
                                 </h3>
@@ -258,13 +282,14 @@ export default function UnitTypesSection({ units: propUnits }: UnitTypesSectionP
 
                                 <div className="grid grid-cols-2 gap-3 mt-auto">
                                     <Link 
-                                        href={`/propiedades/${unit.slug}`}
-                                        className="relative z-10 w-full py-3 rounded-xl flex items-center justify-center gap-2 text-gray-900 font-medium border border-gray-200 hover:bg-gray-50 transition-all"
+                                        href={unit.externalLink || `/propiedades/${unit.slug}`}
+                                        className={`relative z-10 py-3 rounded-xl flex items-center justify-center gap-2 text-gray-900 font-medium border border-gray-200 hover:bg-gray-50 transition-all ${unit.externalLink ? 'w-full col-span-2' : 'w-full'}`}
                                     >
                                         <Eye size={18} />
-                                        {t("unit_types.details_button") || "Ver Detalles"}
+                                        {unit.externalLink ? "Ver Destino" : (t("unit_types.details_button") || "Ver Detalles")}
                                     </Link>
                                     
+                                    {!unit.externalLink && (
                                     <a 
                                         href={`https://wa.me/971543034346?text=${encodeURIComponent(t("unit_types.whatsapp_message"))}`}
                                         target="_blank"
@@ -284,6 +309,7 @@ export default function UnitTypesSection({ units: propUnits }: UnitTypesSectionP
                                         </svg>
                                         {t("unit_types.whatsapp_button")}
                                     </a>
+                                    )}
                                 </div>
                             </div>
                         </div>
@@ -293,14 +319,16 @@ export default function UnitTypesSection({ units: propUnits }: UnitTypesSectionP
         </div>
         
         {/* Progress Indicator */}
+        {units.length > itemsPerView && (
         <div className="flex justify-center gap-2 mt-8">
-            {Array.from({ length: units.length - itemsPerView + 1 }).map((_, idx) => (
+            {Array.from({ length: Math.max(1, units.length - itemsPerView + 1) }).map((_, idx) => (
                 <div 
                     key={idx}
                     className={`h-1.5 rounded-full transition-all duration-300 ${idx === currentIndex ? 'w-8 bg-gray-900' : 'w-2 bg-gray-300'}`}
                 />
             ))}
         </div>
+        )}
 
       </div>
     </section>

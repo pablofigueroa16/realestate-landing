@@ -11,6 +11,7 @@ import {
   MapPin,
   Briefcase,
   Building2,
+  CheckCircle,
   LucideIcon
 } from "lucide-react";
 import { useTranslation } from "@/hooks/useTranslation";
@@ -27,7 +28,8 @@ const ICON_MAP: Record<string, LucideIcon> = {
   Rocket,
   MapPin,
   Briefcase,
-  Building2
+  Building2,
+  CheckCircle
 };
 
 interface AboutSectionProps {

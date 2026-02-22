@@ -25,16 +25,24 @@ const ICON_MAP: Record<string, LucideIcon> = {
 
 interface HeroProps {
   content?: HeroContent | null;
+  destination?: string;
 }
 
-export default function Hero({ content }: HeroProps) {
+export default function Hero({ content, destination = "dubai" }: HeroProps) {
   const { scrollToId } = useSmoothScroll();
   const { t } = useTranslation();
 
   const videoSrc = content?.videoSrc || "/VIDEOHERO.mp4";
   const badgeText = content?.badge || t("hero.badge");
+  const badges = content?.badges;
   const title = content?.title || t("hero.title");
   const subtitle = content?.subtitle || t("hero.subtitle");
+
+  const getBackgroundText = () => {
+    if (destination === "home") return "GLOBAL";
+    if (destination === "bali") return "BALI";
+    return "DUBAI";
+  };
 
   return (
     <section id="inicio" className="p-3 md:p-4 h-screen w-full flex flex-col box-border overflow-hidden">
@@ -57,7 +65,7 @@ export default function Hero({ content }: HeroProps) {
           {/* Large Background Text */}
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0 opacity-10">
             <h1 className="text-[20vw] font-bold text-white tracking-widest translate-y-10 uppercase">
-              {content ? "BALI" : "DUBAI"}
+              {getBackgroundText()}
             </h1>
           </div>
         </div>
@@ -65,10 +73,22 @@ export default function Hero({ content }: HeroProps) {
         {/* Main Content */}
         <div className="relative z-40 grow flex flex-col justify-center px-6 md:px-12 lg:px-20 mt-6">
           <div className="max-w-4xl">
-            <div className="inline-block mb-4">
-              <span className="bg-white/10 backdrop-blur-md border border-white/10 text-white text-[10px] font-bold tracking-widest px-3 py-1.5 rounded-lg uppercase">
-                {badgeText}
-              </span>
+            <div className="mb-4">
+              {badges ? (
+                <div className="flex flex-wrap gap-2">
+                  {badges.map((b, idx) => (
+                    <span key={idx} className="bg-white/10 backdrop-blur-md border border-white/10 text-white text-[10px] font-bold tracking-widest px-3 py-1.5 rounded-lg uppercase">
+                      {b}
+                    </span>
+                  ))}
+                </div>
+              ) : (
+                <div className="inline-block">
+                  <span className="bg-white/10 backdrop-blur-md border border-white/10 text-white text-[10px] font-bold tracking-widest px-3 py-1.5 rounded-lg uppercase">
+                    {badgeText}
+                  </span>
+                </div>
+              )}
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl text-white font-serif font-medium leading-[1.1] mb-6">

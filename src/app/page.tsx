@@ -1,5 +1,5 @@
 import LandingPage from "@/components/LandingPage";
 
 export default function Home() {
-  return <LandingPage destination="dubai" />;
+  return <LandingPage destination="home" />;
 }

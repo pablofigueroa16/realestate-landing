@@ -14,6 +14,8 @@ export default function WhyChooseSection({ content }: WhyChooseSectionProps) {
   const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
+  if (content?.hidden) return null;
+
   const videoSrc = content?.videoSrc || "/video_why.mp4";
   const title = content?.title || t("why_choose.title");
   const description = content?.description || t("why_choose.description");

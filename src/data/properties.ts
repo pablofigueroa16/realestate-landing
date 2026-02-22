@@ -70,6 +70,7 @@ export interface Property {
   images: string[];
   description?: string;
   size?: string;
+  externalLink?: string;
 }
 
 export const properties: Property[] = [

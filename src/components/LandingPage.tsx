@@ -13,7 +13,7 @@ import { landingContent } from "@/data/landing-content";
 import { useTranslation } from "@/hooks/useTranslation";
 
 interface LandingPageProps {
-  destination: "dubai" | "bali";
+  destination: "dubai" | "bali" | "home";
 }
 
 export default function LandingPage({ destination }: LandingPageProps) {
@@ -24,6 +24,7 @@ export default function LandingPage({ destination }: LandingPageProps) {
   let content = staticContent;
 
   if (destination === "bali" && staticContent.hero && staticContent.about && staticContent.whyChoose) {
+    // ... existing logic for Bali
     content = {
       ...staticContent,
       hero: {
@@ -129,10 +130,14 @@ export default function LandingPage({ destination }: LandingPageProps) {
   return (
     <main className="min-h-screen bg-white text-gray-900">
       <Navbar currentDestination={destination} />
-      <Hero content={content.hero} />
+      <Hero content={content.hero} destination={destination} />
       <AboutSection content={content.about} />
       <LocationSection projects={content.locationProjects} />
-      <UnitTypesSection units={content.units} />
+      <UnitTypesSection 
+        units={content.units} 
+        title={content.unitsConfig?.title} 
+        subtitle={content.unitsConfig?.subtitle} 
+      />
       <PresentationSection content={content.presentation} />
       <WhyChooseSection content={content.whyChoose} />
       <DevelopersSection content={content.developers} />

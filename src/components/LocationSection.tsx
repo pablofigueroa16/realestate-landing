@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { TrendingUp, ChevronLeft, ChevronRight, CheckCircle2 } from "lucide-react";
 import { useTranslation } from "@/hooks/useTranslation";
 import { LocationProject } from "@/data/landing-content";
@@ -83,12 +84,18 @@ export default function LocationSection({ projects: propProjects }: LocationSect
       <div className="relative flex-grow rounded-[2.5rem] overflow-hidden flex items-center transition-all duration-500">
         {/* Background Image with Dark Overlay */}
         <div className="absolute inset-0 z-0">
-          <img
-            key={currentProject.image} // Force re-render on image change for animation
-            src={currentProject.image}
-            alt={currentProject.title}
-            className="w-full h-full object-cover grayscale-[30%] transition-opacity duration-700 ease-in-out"
-          />
+          {currentProject.image ? (
+            <Image
+              key={currentProject.image} // Force re-render on image change for animation
+              src={currentProject.image}
+              alt={currentProject.title}
+              fill
+              sizes="100vw"
+              className="object-cover grayscale-[30%] transition-opacity duration-700 ease-in-out"
+            />
+          ) : (
+            <div className="w-full h-full bg-gray-900 transition-colors duration-700 ease-in-out" />
+          )}
           <div className="absolute inset-0 bg-black/80 z-10"></div>
         </div>
 

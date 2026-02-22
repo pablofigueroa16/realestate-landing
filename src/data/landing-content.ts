@@ -18,7 +18,8 @@ export interface MarketCard {
 
 export interface HeroContent {
   videoSrc: string;
-  badge: string;
+  badge?: string;
+  badges?: string[];
   title: string;
   subtitle: string;
   stats: StatCard[];
@@ -38,6 +39,7 @@ export interface WhyChooseContent {
   description: string;
   benefits: string[];
   quote: string;
+  hidden?: boolean;
 }
 
 export interface LocationProject {
@@ -67,12 +69,201 @@ export interface LandingContent {
   about: AboutContent | null;
   whyChoose: WhyChooseContent | null;
   units: Property[];
+  unitsConfig?: {
+    title: string;
+    subtitle: string;
+  };
   locationProjects: LocationProject[];
   presentation: PresentationContent | null;
   developers: DevelopersContent | null;
 }
 
 export const landingContent: Record<string, LandingContent> = {
+  home: {
+    hero: {
+      videoSrc: "https://real-state-landing.s3.us-east-1.amazonaws.com/home/home_video.mp4",
+      badges: ["DUBAI", "BALI", "MIAMI"],
+      title: "Acceso estratégico a oportunidades inmobiliarias globales.",
+      subtitle: "Seleccionamos mercados con fundamentos sólidos, crecimiento sostenido y ventajas fiscales estratégicas.",
+      stats: [
+        {
+          value: "12%",
+          text: "ROI promedio anual en mercados seleccionados"
+        },
+        {
+          value: "0%",
+          text: "Impuesto sobre renta personal en jurisdicciones estratégicas"
+        }
+      ]
+    },
+    about: {
+      imageSrc: "https://real-state-landing.s3.us-east-1.amazonaws.com/home/seccion2/realstate.png",
+      title: "Estrategia Global, Ejecución Local.",
+      description: "Invertir internacionalmente no es solo elegir una propiedad.\nEs estructurar correctamente la asignación de capital en la jurisdicción adecuada, en el momento adecuado y con el socio correcto.\n\nNuestro enfoque combina análisis macroeconómico, acceso directo a desarrolladores líderes y una visión patrimonial a largo plazo para maximizar retorno y minimizar riesgo.",
+      marketCard: {
+        title: "INVESTMENT APPROACH",
+        subtitle: "Inversión estructurada con visión patrimonial internacional"
+      },
+      benefits: [
+        { iconName: "CheckCircle", label: "Acceso directo a desarrolladores top" },
+        { iconName: "CheckCircle", label: "Oportunidades seleccionadas y filtradas" },
+        { iconName: "CheckCircle", label: "Análisis real de ROI y proyección" },
+        { iconName: "CheckCircle", label: "Estructuración legal internacional" },
+        { iconName: "CheckCircle", label: "Acompañamiento integral 360°" },
+        { iconName: "CheckCircle", label: "Soporte post-inversión y estrategia de salida" },
+        { iconName: "CheckCircle", label: "Diversificación geográfica inteligente" },
+        { iconName: "CheckCircle", label: "Consultoría personalizada según perfil inversor" }
+      ]
+    },
+    whyChoose: {
+      videoSrc: "https://real-state-landing.s3.us-east-1.amazonaws.com/home/home_video.mp4",
+      title: "Por qué los inversores eligen nuestros mercados globales",
+      description: "Seleccionamos únicamente destinos con fundamentos sólidos, crecimiento sostenido y alta demanda internacional. Nuestro enfoque se basa en análisis macroeconómico, estabilidad jurídica y proyección de valorización a largo plazo.\n\nNo seguimos tendencias. Identificamos ciclos.",
+      benefits: [
+        "Mercados con crecimiento económico comprobado",
+        "Ventajas fiscales estratégicas en jurisdicciones clave",
+        "Alta liquidez y demanda internacional",
+        "Proyección de valorización y generación de ingresos"
+      ],
+      quote: "Capital inteligente se mueve hacia ciudades con fundamentos reales.",
+      hidden: false
+    },
+    units: [
+      {
+        id: "home-dubai",
+        slug: "home-dubai",
+        externalLink: "/dubai",
+        hero: {
+          title: "DUBÁI",
+          subtitle: "",
+          description: "Capital global de inversión inmobiliaria, con crecimiento sostenido, infraestructura de clase mundial y un entorno fiscal altamente competitivo.",
+          badges: [],
+          bgVideo: "",
+          bgImage: ""
+        },
+        images: ["https://real-state-landing.s3.us-east-1.amazonaws.com/home/seccion4/dubai.png"],
+        description: "Capital global de inversión inmobiliaria, con crecimiento sostenido, infraestructura de clase mundial y un entorno fiscal altamente competitivo.",
+        size: "Ver más", // Reusing size field for button text override if needed, or just leave it
+        summary: { title: "", text: "" },
+        concept: { title: "", text: "" },
+        community: { title: "", text: "" },
+        privacy: { title: "", text: "" },
+        views: { title: "", text: "" },
+        design: { title: "", text: "" },
+        location: { title: "", intro: "", nearby: [] },
+        project: { title: "", text: "" },
+        subCommunities: [],
+        amenities: { title: "", intro: "", categories: [] },
+        developer: { title: "", intro: "", bullets: [] },
+        faq: [],
+        disclaimers: { renders: "", availability: "" }
+      },
+      {
+        id: "home-miami",
+        slug: "home-miami",
+        externalLink: "/miami", // Placeholder
+        hero: {
+          title: "MIAMI",
+          subtitle: "",
+          description: "Puerta de entrada a Estados Unidos y centro financiero emergente de Latinoamérica, con alta demanda internacional y mercado en USD.",
+          badges: [],
+          bgVideo: "",
+          bgImage: ""
+        },
+        images: ["https://real-state-landing.s3.us-east-1.amazonaws.com/home/seccion4/miami.png"],
+        description: "Puerta de entrada a Estados Unidos y centro financiero emergente de Latinoamérica, con alta demanda internacional y mercado en USD.",
+        size: "Ver más",
+        summary: { title: "", text: "" },
+        concept: { title: "", text: "" },
+        community: { title: "", text: "" },
+        privacy: { title: "", text: "" },
+        views: { title: "", text: "" },
+        design: { title: "", text: "" },
+        location: { title: "", intro: "", nearby: [] },
+        project: { title: "", text: "" },
+        subCommunities: [],
+        amenities: { title: "", intro: "", categories: [] },
+        developer: { title: "", intro: "", bullets: [] },
+        faq: [],
+        disclaimers: { renders: "", availability: "" }
+      },
+      {
+        id: "home-bali",
+        slug: "home-bali",
+        externalLink: "/bali",
+        hero: {
+          title: "BALI",
+          subtitle: "",
+          description: "Destino turístico consolidado con fuerte crecimiento en renta vacacional y oportunidades en zonas de expansión estratégica.",
+          badges: [],
+          bgVideo: "",
+          bgImage: ""
+        },
+        images: ["https://real-state-landing.s3.us-east-1.amazonaws.com/home/seccion4/bali.png"],
+        description: "Destino turístico consolidado con fuerte crecimiento en renta vacacional y oportunidades en zonas de expansión estratégica.",
+        size: "Ver más",
+        summary: { title: "", text: "" },
+        concept: { title: "", text: "" },
+        community: { title: "", text: "" },
+        privacy: { title: "", text: "" },
+        views: { title: "", text: "" },
+        design: { title: "", text: "" },
+        location: { title: "", intro: "", nearby: [] },
+        project: { title: "", text: "" },
+        subCommunities: [],
+        amenities: { title: "", intro: "", categories: [] },
+        developer: { title: "", intro: "", bullets: [] },
+        faq: [],
+        disclaimers: { renders: "", availability: "" }
+      }
+    ],
+    locationProjects: [
+      {
+        area: "DUBAI · UAE",
+        title: "Prime Location — Dubai",
+        description: "Dubai se ha consolidado como uno de los mercados inmobiliarios más dinámicos y seguros del mundo, combinando crecimiento económico sostenido, infraestructura de clase mundial y ventajas fiscales estratégicas.",
+        features: [
+          "05 Minutes to Downtown",
+          "10 Minutes to Dubai Marina",
+          "15 Minutes to International Airport"
+        ],
+        marketInsight: "Mercado con alta demanda internacional, crecimiento constante de capital extranjero y rentabilidades atractivas en alquiler y revalorización.",
+        image: "" // Placeholder as requested (empty images)
+      },
+      {
+        area: "MIAMI · FLORIDA",
+        title: "Prime Location — Miami",
+        description: "Miami es un activo refugio en USD, reconocido por su estabilidad jurídica, fuerte demanda internacional y constante desarrollo urbano en zonas premium.",
+        features: [
+          "08 Minutes to Brickell",
+          "10 Minutes to Miami Beach",
+          "15 Minutes to Miami International Airport"
+        ],
+        marketInsight: "Ciudad con alta liquidez inmobiliaria, apreciación sostenida y fuerte flujo de inversión latinoamericana y europea.",
+        image: "https://real-state-landing.s3.us-east-1.amazonaws.com/home/seccion3/miami.png"
+      },
+      {
+        area: "BALI · INDONESIA",
+        title: "Prime Location — Bali",
+        description: "Bali combina turismo internacional, estilo de vida premium y crecimiento sostenido en el sector hospitality, convirtiéndose en uno de los destinos más atractivos para renta corta.",
+        features: [
+          "05 Minutes to Prime Beaches",
+          "10 Minutes to Lifestyle & Restaurants",
+          "20 Minutes to International Airport"
+        ],
+        marketInsight: "Mercado impulsado por turismo global y ocupación constante en propiedades tipo villa y apart-hotel.",
+        image: "https://real-state-landing.s3.us-east-1.amazonaws.com/home/seccion3/bali.png"
+      }
+    ],
+    presentation: {
+      badge: "GLOBAL PARTNERSHIP",
+      title: "Conecta con nuestro equipo internacional.",
+      description: "Accede a nuestro portafolio global, condiciones preferenciales y oportunidades exclusivas para agentes y brokers estratégicos.",
+      cta: "Solicitar Conexión Estratégica",
+      disclaimer: "Nuestro equipo revisará tu solicitud y coordinará una reunión privada."
+    },
+    developers: null
+  },
   dubai: {
     hero: null, // Use default translations
     about: null, // Use default translations
@@ -135,10 +326,10 @@ export const landingContent: Record<string, LandingContent> = {
       title: "Por qué Bali es el nuevo epicentro de la inversión inmobiliaria en Asia",
       description: "Bali se ha consolidado como uno de los mercados emergentes más atractivos del Sudeste Asiático, combinando crecimiento turístico récord, demanda internacional sostenida y una nueva generación de inversores digitales que impulsan el mercado inmobiliario de la isla.\nLa isla no solo vende estilo de vida: vende rentabilidad respaldada por ocupación constante y valorización progresiva.",
       benefits: [
-        "✓ Bali: crecimiento turístico sostenido y expansión internacional.",
-        "✓ Mercado impulsado por nómadas digitales y turismo premium.",
-        "✓ Alta demanda de villas, residencias boutique y proyectos wellness.",
-        "✓ Rentabilidades competitivas frente a otros destinos globales."
+        "Bali: crecimiento turístico sostenido y expansión internacional.",
+        "Mercado impulsado por nómadas digitales y turismo premium.",
+        "Alta demanda de villas, residencias boutique y proyectos wellness.",
+        "Rentabilidades competitivas frente a otros destinos globales."
       ],
       quote: "“Invertir en Bali no es solo comprar propiedad, es entrar en el corazón del turismo global.”"
     },
@@ -408,6 +599,10 @@ export const landingContent: Record<string, LandingContent> = {
         design: { title: "", text: "" }
       }
     ],
+    unitsConfig: {
+      title: "Destinos Globales de Alta Inversión",
+      subtitle: "Explora las ciudades que lideran crecimiento, liquidez y demanda internacional en bienes raíces."
+    },
     locationProjects: [
       {
         area: "PANDawa Area",
