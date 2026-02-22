@@ -98,7 +98,7 @@ export default function DevelopersSection({ content }: DevelopersSectionProps) {
       <div className="w-full h-full bg-white rounded-[3rem] shadow-sm border border-gray-100 flex flex-col items-center justify-center text-center p-8 md:p-12 relative overflow-hidden">
         
         {/* Subtle decorative background gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-gray-50/50 pointer-events-none"></div>
+        <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-gray-50/50 pointer-events-none"></div>
 
         <div className="relative z-10 max-w-6xl mx-auto flex flex-col items-center justify-center h-full w-full">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-medium text-gray-900 mb-12 leading-tight">
@@ -139,7 +139,7 @@ export default function DevelopersSection({ content }: DevelopersSectionProps) {
                        {slideItems.map((dev) => (
                          <div 
                            key={dev.id} 
-                           className="flex items-center justify-center h-40 w-full max-w-[200px] grayscale hover:grayscale-0 transition-all duration-300 opacity-80 hover:opacity-100 hover:scale-105"
+                           className="flex items-center justify-center h-40 w-full max-w-50 grayscale hover:grayscale-0 transition-all duration-300 opacity-80 hover:opacity-100 hover:scale-105"
                            style={{ flex: `0 0 ${100 / itemsPerView}%` }} // Approximate width distribution
                          >
                            <img
@@ -189,7 +189,7 @@ export default function DevelopersSection({ content }: DevelopersSectionProps) {
             </div>
           </div>
 
-          <div className="flex-grow"></div>
+          <div className="grow"></div>
         </div>
       </div>
     </section>

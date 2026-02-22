@@ -44,9 +44,24 @@ export default function Hero({ content, destination = "dubai" }: HeroProps) {
     return "DUBAI";
   };
 
+  const defaultStats = [
+    {
+      value: "30%",
+      iconName: "Clock",
+      text: t("hero.card_1_text"),
+    },
+    {
+      value: "1%",
+      iconName: "TrendingUp",
+      text: t("hero.card_2_text"),
+    },
+  ];
+
+  const statsToRender = content?.stats || defaultStats;
+
   return (
     <section id="inicio" className="p-3 md:p-4 h-screen w-full flex flex-col box-border overflow-hidden">
-      <div className="relative flex-grow rounded-[2rem] overflow-hidden flex flex-col">
+      <div className="relative grow rounded-4xl overflow-hidden flex flex-col">
         {/* Background Video */}
         <div className="absolute inset-0 z-0">
           <video
@@ -60,7 +75,7 @@ export default function Hero({ content, destination = "dubai" }: HeroProps) {
             <source src={videoSrc} type="video/mp4" />
           </video>
           {/* Subtle gradient overlay for text readability */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/20 to-black/20 z-10"></div>
+          <div className="absolute inset-0 bg-linear-to-r from-black/60 via-black/20 to-black/20 z-10"></div>
           
           {/* Large Background Text */}
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0 opacity-10">
@@ -124,48 +139,22 @@ export default function Hero({ content, destination = "dubai" }: HeroProps) {
           </div>
         </div>
 
-        {/* Floating Cards (Bottom Right) */}
-        <div className="absolute bottom-6 right-6 md:right-10 lg:right-16 z-40 flex flex-col gap-3 max-w-[300px] w-full hidden md:flex">
-          {content?.stats ? (
-             content.stats.map((stat, idx) => {
-              const IconComponent = stat.iconName ? ICON_MAP[stat.iconName] : null;
-              return (
-                <div key={idx} className="bg-white/10 backdrop-blur-xl border border-white/10 p-4 rounded-2xl text-white">
-                  <div className="flex justify-between items-start mb-1">
-                    <span className="text-2xl font-medium">{stat.value}</span>
-                    {IconComponent && <IconComponent className="text-white/60" size={18} />}
-                  </div>
-                  <p className="text-sm text-white/80 leading-relaxed">
-                    {stat.text}
-                  </p>
-                </div>
-              );
-             })
-          ) : (
-            <>
-              {/* Card 1 */}
-              <div className="bg-white/10 backdrop-blur-xl border border-white/10 p-4 rounded-2xl text-white">
+        {/* Floating Cards (Responsive Carousel) */}
+        <div className="absolute bottom-6 right-0 left-0 md:left-auto md:right-10 lg:right-16 z-40 w-full md:w-75 flex md:flex-col gap-3 overflow-x-auto md:overflow-x-visible md:overflow-y-auto md:max-h-75 px-6 md:px-0 snap-x snap-mandatory md:snap-none scrollbar-hide">
+          {statsToRender.map((stat, idx) => {
+            const IconComponent = stat.iconName ? ICON_MAP[stat.iconName] : null;
+            return (
+              <div key={idx} className="min-w-[85%] md:min-w-full snap-center bg-white/10 backdrop-blur-xl border border-white/10 p-4 rounded-2xl text-white shrink-0">
                 <div className="flex justify-between items-start mb-1">
-                  <span className="text-2xl font-medium">30%</span>
-                  <Clock className="text-white/60" size={18} />
+                  <span className="text-2xl font-medium">{stat.value}</span>
+                  {IconComponent ? <IconComponent className="text-white/60" size={18} /> : (idx === 0 ? <Clock className="text-white/60" size={18} /> : <TrendingUp className="text-white/60" size={18} />)}
                 </div>
                 <p className="text-sm text-white/80 leading-relaxed">
-                  {t("hero.card_1_text")}
+                  {stat.text}
                 </p>
               </div>
-
-              {/* Card 2 */}
-              <div className="bg-white/10 backdrop-blur-xl border border-white/10 p-4 rounded-2xl text-white">
-                <div className="flex justify-between items-start mb-1">
-                  <span className="text-2xl font-medium">1%</span>
-                  <TrendingUp className="text-white/60" size={18} />
-                </div>
-                <p className="text-sm text-white/80 leading-relaxed">
-                  {t("hero.card_2_text")}
-                </p>
-              </div>
-            </>
-          )}
+            );
+          })}
         </div>
       </div>
     </section>

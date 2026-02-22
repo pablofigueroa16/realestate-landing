@@ -79,7 +79,7 @@ export default function AboutSection({ content }: AboutSectionProps) {
               const IconComponent = item.iconName ? ICON_MAP[item.iconName] : null;
               return (
                 <div key={index} className="flex items-center gap-3 text-gray-700">
-                  <div className="min-w-[24px]">
+                  <div className="min-w-6">
                       {IconComponent && <IconComponent size={24} strokeWidth={1.5} className="text-gray-900"/>}
                   </div>
                   <span className="text-base font-medium">{item.label}</span>

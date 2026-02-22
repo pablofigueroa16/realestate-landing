@@ -52,7 +52,7 @@ export default function Navbar({ currentDestination = "dubai" }: NavbarProps) {
       className={`fixed z-50  transition-all duration-500 ease-in-out ${
         isScrolled
           ? "top-0 left-0 right-0 w-full rounded-none bg-white/95 backdrop-blur-md py-3 shadow-sm border-b border-gray-100"
-          : "top-3 left-3 right-3 md:top-4 md:left-4 md:right-4 w-auto rounded-t-[2rem] bg-transparent py-5"
+          : "top-3 left-3 right-3 md:top-4 md:left-4 md:right-4 w-auto rounded-t-4xl bg-transparent py-5"
       }`}
     >
       <div className="container  mx-auto px-6 md:px-8 flex justify-between items-center">

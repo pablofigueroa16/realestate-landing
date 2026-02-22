@@ -84,7 +84,7 @@ export default function WhyChooseSection({ content }: WhyChooseSectionProps) {
           <div className="space-y-3 mb-8">
             {benefits.map((item, index) => (
               <div key={index} className="flex items-center gap-3 text-gray-700">
-                <CheckCircle2 size={20} className="text-gray-900 flex-shrink-0" strokeWidth={1.5} />
+                <CheckCircle2 size={20} className="text-gray-900 shrink-0" strokeWidth={1.5} />
                 <span className="text-base lg:text-lg font-light">{item}</span>
               </div>
             ))}

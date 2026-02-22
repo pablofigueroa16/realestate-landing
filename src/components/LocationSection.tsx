@@ -81,7 +81,7 @@ export default function LocationSection({ projects: propProjects }: LocationSect
 
   return (
     <section id="proyectos" className="p-3 md:p-4 min-h-screen w-full flex flex-col box-border">
-      <div className="relative flex-grow rounded-[2.5rem] overflow-hidden flex items-center transition-all duration-500">
+      <div className="relative grow rounded-[2.5rem] overflow-hidden flex items-center transition-all duration-500">
         {/* Background Image with Dark Overlay */}
         <div className="absolute inset-0 z-0">
           {currentProject.image ? (
@@ -91,7 +91,7 @@ export default function LocationSection({ projects: propProjects }: LocationSect
               alt={currentProject.title}
               fill
               sizes="100vw"
-              className="object-cover grayscale-[30%] transition-opacity duration-700 ease-in-out"
+              className="object-cover grayscale-30 transition-opacity duration-700 ease-in-out"
             />
           ) : (
             <div className="w-full h-full bg-gray-900 transition-colors duration-700 ease-in-out" />
@@ -119,7 +119,7 @@ export default function LocationSection({ projects: propProjects }: LocationSect
             <div className="space-y-4 mb-12">
               {currentProject.features.map((feature, index) => (
                 <div key={index} className="flex items-center gap-4 group">
-                  <div className="w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center text-white flex-shrink-0 group-hover:border-white transition-colors">
+                  <div className="w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center text-white shrink-0 group-hover:border-white transition-colors">
                     <CheckCircle2 size={16} />
                   </div>
                   <span className="text-gray-300 text-lg font-light group-hover:text-white transition-colors">

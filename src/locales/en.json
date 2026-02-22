@@ -1,12 +1,12 @@
 {
   "nav": {
-    "home": "Home",
-    "about": "About Us",
-    "projects": "Projects",
-    "units": "Units",
-    "video": "Video",
-    "contact": "Contact",
-    "book_consultation": "Book Consultation"
+    "home": "HOME",
+    "about": "ABOUT US",
+    "projects": "PROJECTS",
+    "units": "UNITS",
+    "video": "VIDEO",
+    "contact": "CONTACT",
+    "book_consultation": "BOOK CONSULTATION"
   },
   "hero": {
     "title": "Invest in Dubai real estate safely, profitably, and with 100% guidance",

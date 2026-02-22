@@ -1,12 +1,12 @@
 {
   "nav": {
-    "home": "Inicio",
-    "about": "Nosotros",
-    "projects": "Proyectos",
-    "units": "Unidades",
-    "video": "Video",
-    "contact": "Contacto",
-    "book_consultation": "Agendar consultoria"
+    "home": "INICIO",
+    "about": "NOSOTROS",
+    "projects": "PROYECTOS",
+    "units": "UNIDADES",
+    "video": "VIDEO",
+    "contact": "CONTACTO",
+    "book_consultation": "AGENDAR CONSULTORIA"
   },
   "hero": {
     "title": "Invierte en bienes raíces en Dubái de forma segura, rentable y 100% guiada",

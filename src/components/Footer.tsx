@@ -12,7 +12,7 @@ export default function Footer() {
   return (
     <footer id="contacto" className="h-screen w-full bg-gray-50 flex flex-col justify-between p-4 md:p-6 overflow-hidden">
       {/* Contact Card */}
-      <div className="flex-grow w-full bg-white rounded-[3rem] shadow-sm p-8 md:p-12 lg:p-20 flex flex-col justify-center mb-6">
+      <div className="grow w-full bg-white rounded-[3rem] shadow-sm p-8 md:p-12 lg:p-20 flex flex-col justify-center mb-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 h-full">
           {/* Left Column: Info */}
           <div className="flex flex-col justify-center">
