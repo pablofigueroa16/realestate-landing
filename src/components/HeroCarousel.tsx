@@ -62,7 +62,7 @@ export default function HeroCarousel({ items }: HeroCarouselProps) {
           "--current-index": currentIndex,
         } as React.CSSProperties}
       >
-        <div className="carousel-track flex flex-row md:flex-col transition-transform duration-700 ease-in-out h-full w-full [transform:translateX(calc(-100%*var(--current-index)))] md:[transform:translateY(calc(-100%/var(--num-items)*var(--current-index)))] md:h-auto">
+        <div className="carousel-track flex flex-row md:flex-col transition-transform duration-700 ease-in-out h-full w-full transform-[translateX(calc(-100%*var(--current-index)))] md:transform-[translateY(calc(-100%/var(--num-items)*var(--current-index)))] md:h-auto">
           {items.map((stat, idx) => {
             const IconComponent = stat.iconName ? ICON_MAP[stat.iconName] : null;
             const DefaultIcon = idx === 0 ? Clock : TrendingUp;
@@ -71,7 +71,7 @@ export default function HeroCarousel({ items }: HeroCarouselProps) {
             return (
               <div 
                 key={idx} 
-                className="carousel-item flex-shrink-0 w-full md:h-40 p-2 box-border"
+                className="carousel-item shrink-0 w-full md:h-40 p-2 box-border"
               >
                 <div className="bg-white/10 backdrop-blur-xl border border-white/10 p-4 rounded-2xl text-white h-full flex flex-col justify-center">
                   <div className="flex justify-between items-start mb-1">

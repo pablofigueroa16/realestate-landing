@@ -214,6 +214,10 @@ export const landingContent: Record<string, LandingContent> = {
         disclaimers: { renders: "", availability: "" }
       }
     ],
+    unitsConfig: {
+      title: "Destinos Globales de Alta Inversión",
+      subtitle: "Explora las ciudades que lideran crecimiento, liquidez y demanda internacional en bienes raíces."
+    },
     locationProjects: [
       {
         area: "DUBAI · UAE",
@@ -302,7 +306,6 @@ export const landingContent: Record<string, LandingContent> = {
         { iconName: "TrendingUp", label: "Valorización superior al 20% en los últimos años" },
         { iconName: "Briefcase", label: "Hub global de nómadas digitales" },
         { iconName: "Building2", label: "Alta demanda de alquiler vacacional premium" },
-        { iconName: "MapPin", label: "Reconocimiento internacional como destino top" },
         { iconName: "TrendingUp", label: "ROI estimado entre 8% y 14% bruto anual" },
         { iconName: "Building2", label: "Expansión de infraestructura y conectividad" },
         { iconName: "TrendingUp", label: "Mercado emergente con alto potencial de apreciación" }
@@ -586,8 +589,8 @@ export const landingContent: Record<string, LandingContent> = {
       }
     ],
     unitsConfig: {
-      title: "Destinos Globales de Alta Inversión",
-      subtitle: "Explora las ciudades que lideran crecimiento, liquidez y demanda internacional en bienes raíces."
+      title: "Formatos de inversión inmobiliaria",
+      subtitle: "Selecciona entre distintos tipos de unidades off-plan en Bali según rentabilidad, plazo y objetivo de inversión."
     },
     locationProjects: [
       {

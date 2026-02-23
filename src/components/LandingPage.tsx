@@ -53,9 +53,7 @@ export default function LandingPage({ destination }: LandingPageProps) {
              const labels = [
                t("bali.about.benefits.tourists"),
                t("bali.about.benefits.appreciation"),
-               t("bali.about.benefits.hub"),
                t("bali.about.benefits.demand"),
-               t("bali.about.benefits.recognition"),
                t("bali.about.benefits.roi"),
                t("bali.about.benefits.infrastructure"),
                t("bali.about.benefits.emerging")
