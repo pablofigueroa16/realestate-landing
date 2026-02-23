@@ -114,11 +114,14 @@ export default function Navbar({ currentDestination = "home" }: NavbarProps) {
               }`}
             >
               DESTINOS
-              <ChevronDown size={14} />
+              <ChevronDown size={14} className={`transition-transform duration-300 ${isDestinationOpen ? "rotate-180" : ""}`} />
             </button>
             
-            {isDestinationOpen && (
-              <div className="absolute top-full left-0 mt-2 w-32 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden py-1 z-50 animate-in fade-in slide-in-from-top-2">
+            <div className={`absolute top-full left-0 mt-2 w-32 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden py-1 z-50 transition-all duration-300 ease-out origin-top ${
+              isDestinationOpen 
+                ? "opacity-100 scale-y-100 translate-y-0 pointer-events-auto" 
+                : "opacity-0 scale-y-95 -translate-y-2 pointer-events-none"
+            }`}>
                 <Link 
                   href="/"
                   className={`block px-4 py-2 text-sm hover:bg-gray-50 transition-colors ${currentDestination === 'home' ? 'font-bold text-black' : 'text-gray-600'}`}
@@ -147,8 +150,7 @@ export default function Navbar({ currentDestination = "home" }: NavbarProps) {
                 >
                   MIAMI
                 </Link>
-              </div>
-            )}
+            </div>
           </div>
 
           {/* Remaining Links based on Destination */}
