@@ -54,7 +54,7 @@ export default function HeroCarousel({ items }: HeroCarouselProps) {
   }, [items.length]);
 
   return (
-    <div className="absolute bottom-6 right-0 left-0 md:left-auto md:right-10 lg:right-16 z-40 w-full md:w-80 overflow-hidden px-6 md:px-0">
+    <div className="hidden md:block absolute bottom-6 right-0 left-0 md:left-auto md:right-10 lg:right-16 z-40 w-full md:w-80 overflow-hidden px-6 md:px-0">
       <div 
         className="carousel-container md:h-80 relative w-full"
         style={{

@@ -45,7 +45,7 @@ export default function Hero({ content, destination = "dubai" }: HeroProps) {
 
   return (
     <section id="inicio" className="p-3 md:p-4 h-screen w-full flex flex-col box-border overflow-hidden">
-      <div className="relative grow rounded-4xl overflow-hidden flex flex-col">
+      <div className="relative grow rounded-4xl overflow-hidden flex flex-col isolate [mask-image:linear-gradient(white,white)]">
         {/* Background Video */}
         <div className="absolute inset-0 z-0">
           <video

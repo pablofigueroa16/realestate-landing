@@ -47,6 +47,27 @@ export default function Navbar({ currentDestination = "home" }: NavbarProps) {
     setIsMobileMenuOpen(false);
   };
 
+  const navLinks = currentDestination === 'home' ? [
+    { name: "NOSOTROS", id: "#nosotros" },
+    { name: "UBICACIÓN", id: "#proyectos" },
+    { name: "CIUDADES", id: "#unidades" },
+    { name: "MERCADO", id: "#video" },
+    { name: "CONTACTO", id: "#contacto" },
+  ] : [
+    { name: t('nav.about'), id: "#nosotros" },
+    { name: t('nav.projects'), id: "#proyectos" },
+    { name: t('nav.units'), id: "#unidades" },
+    { name: t('nav.video'), id: "#video" },
+    { name: t('nav.contact'), id: "#contacto" },
+  ];
+
+  const destinationsList = [
+    { name: "HOME", path: "/" },
+    { name: "DUBAI", path: "/dubai" },
+    { name: "BALI", path: "/bali" },
+    { name: "MIAMI", path: "/miami" },
+  ];
+
   return (
     <header
       className={`fixed z-50  transition-all duration-500 ease-in-out ${
@@ -122,52 +143,25 @@ export default function Navbar({ currentDestination = "home" }: NavbarProps) {
                 ? "opacity-100 scale-y-100 translate-y-0 pointer-events-auto" 
                 : "opacity-0 scale-y-95 -translate-y-2 pointer-events-none"
             }`}>
-                <Link 
-                  href="/"
-                  className={`block px-4 py-2 text-sm hover:bg-gray-50 transition-colors ${currentDestination === 'home' ? 'font-bold text-black' : 'text-gray-600'}`}
-                  onClick={() => setIsDestinationOpen(false)}
-                >
-                  HOME
-                </Link>
-                <Link 
-                  href="/dubai"
-                  className={`block px-4 py-2 text-sm hover:bg-gray-50 transition-colors ${currentDestination === 'dubai' ? 'font-bold text-black' : 'text-gray-600'}`}
-                  onClick={() => setIsDestinationOpen(false)}
-                >
-                  DUBAI
-                </Link>
-                <Link 
-                  href="/bali"
-                  className={`block px-4 py-2 text-sm hover:bg-gray-50 transition-colors ${currentDestination === 'bali' ? 'font-bold text-black' : 'text-gray-600'}`}
-                  onClick={() => setIsDestinationOpen(false)}
-                >
-                  BALI
-                </Link>
-                <Link 
-                  href="/miami"
-                  className={`block px-4 py-2 text-sm hover:bg-gray-50 transition-colors ${currentDestination === 'miami' ? 'font-bold text-black' : 'text-gray-600'}`}
-                  onClick={() => setIsDestinationOpen(false)}
-                >
-                  MIAMI
-                </Link>
+                {destinationsList.map((dest) => (
+                  <Link 
+                    key={dest.path}
+                    href={dest.path}
+                    className={`block px-4 py-2 text-sm hover:bg-gray-50 transition-colors ${
+                      (dest.path === '/' && currentDestination === 'home') || dest.path.includes(currentDestination) && currentDestination !== 'home' 
+                        ? 'font-bold text-black' 
+                        : 'text-gray-600'
+                    }`}
+                    onClick={() => setIsDestinationOpen(false)}
+                  >
+                    {dest.name}
+                  </Link>
+                ))}
             </div>
           </div>
 
           {/* Remaining Links based on Destination */}
-          {(currentDestination === 'home' ? [
-            { name: "NOSOTROS", id: "#nosotros" },
-            { name: "UBICACIÓN", id: "#proyectos" }, // Changed to #proyectos as requested
-            { name: "CIUDADES", id: "#unidades" }, // Changed to #unidades as requested (CUIDADES typo fixed)
-            { name: "MERCADO", id: "#video" }, // Changed to #video as requested
-            { name: "CONTACTO", id: "#contacto" },
-          ] : [
-            // Default links for other pages (using translations or existing logic)
-            { name: t('nav.about'), id: "#nosotros" },
-            { name: t('nav.projects'), id: "#proyectos" },
-            { name: t('nav.units'), id: "#unidades" },
-            { name: t('nav.video'), id: "#video" },
-            { name: t('nav.contact'), id: "#contacto" },
-          ]).map((item) => (
+          {navLinks.map((item) => (
             <Link
               key={item.id}
               href={item.id}
@@ -249,15 +243,38 @@ export default function Navbar({ currentDestination = "home" }: NavbarProps) {
               : "opacity-0 pointer-events-none"
           }`}
         >
-          <nav className="flex flex-col items-center gap-8 text-xl font-medium text-white">
-            {[
-              { name: t('nav.home'), id: "#inicio" },
-              { name: t('nav.about'), id: "#nosotros" },
-              { name: t('nav.projects'), id: "#proyectos" },
-              { name: t('nav.units'), id: "#unidades" },
-              { name: t('nav.video'), id: "#video" },
-              { name: t('nav.contact'), id: "#contacto" },
-            ].map((item) => (
+          <nav className="flex flex-col items-center gap-6 text-xl font-medium text-white w-full px-6">
+            {/* Mobile Destinations Selector */}
+            <div className="flex flex-col items-center w-full border-b border-white/10 py-4">
+              <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
+                {destinationsList.map((dest) => (
+                  <Link
+                    key={dest.path}
+                    href={dest.path}
+                    className={`text-base transition-colors ${
+                       (dest.path === '/' && currentDestination === 'home') || dest.path.includes(currentDestination) && currentDestination !== 'home' 
+                        ? 'text-white font-bold' 
+                        : 'text-white/60 hover:text-white'
+                    }`}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {dest.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Current Page Title (Like Desktop) */}
+            <Link
+              href={currentDestination === 'home' ? "/" : `/${currentDestination}`}
+              onClick={(e) => handleMobileNavClick(e, "#inicio")}
+              className="text-2xl font-serif font-bold text-white hover:text-gray-300 transition-colors"
+            >
+              {currentDestination === 'home' ? "HOME" : currentDestination.toUpperCase()}
+            </Link>
+
+            {/* Mobile Navigation Links */}
+            {navLinks.map((item) => (
               <Link
                 key={item.id}
                 href={item.id}
@@ -270,7 +287,7 @@ export default function Navbar({ currentDestination = "home" }: NavbarProps) {
             ))}
           </nav>
 
-          <div className="flex items-center gap-4 mt-12">
+          <div className="flex items-center gap-4 mt-6">
             <button 
               onClick={toggleLanguage}
               className="h-12 px-4 rounded-full bg-white/10 border border-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors text-sm font-bold tracking-wider"
