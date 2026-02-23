@@ -42,17 +42,7 @@ export default function LandingPage({ destination }: LandingPageProps) {
             value: t("bali.hero.stats.1.value"), 
             text: t("bali.hero.stats.1.text"), 
             iconName: staticContent.hero.stats[1]?.iconName 
-          },
-          { 
-            value: t("bali.hero.stats.2.value"), 
-            text: t("bali.hero.stats.2.text"), 
-            iconName: staticContent.hero.stats[2]?.iconName 
-          },
-          { 
-            value: t("bali.hero.stats.3.value"), 
-            text: t("bali.hero.stats.3.text"), 
-            iconName: staticContent.hero.stats[3]?.iconName 
-          },
+          }
         ]
       },
       about: {
