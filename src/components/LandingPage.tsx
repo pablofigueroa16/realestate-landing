@@ -55,7 +55,6 @@ export default function LandingPage({ destination }: LandingPageProps) {
                t("bali.about.benefits.appreciation"),
                t("bali.about.benefits.demand"),
                t("bali.about.benefits.roi"),
-               t("bali.about.benefits.infrastructure"),
                t("bali.about.benefits.emerging")
              ];
              return {

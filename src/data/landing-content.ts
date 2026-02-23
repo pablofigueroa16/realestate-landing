@@ -307,7 +307,6 @@ export const landingContent: Record<string, LandingContent> = {
         { iconName: "Briefcase", label: "Hub global de nómadas digitales" },
         { iconName: "Building2", label: "Alta demanda de alquiler vacacional premium" },
         { iconName: "TrendingUp", label: "ROI estimado entre 8% y 14% bruto anual" },
-        { iconName: "Building2", label: "Expansión de infraestructura y conectividad" },
         { iconName: "TrendingUp", label: "Mercado emergente con alto potencial de apreciación" }
       ]
     },
