@@ -4,11 +4,12 @@ import { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, Check, ChevronDown, ChevronUp, MapPin, ExternalLink } from "lucide-react";
+import { ArrowLeft, ArrowRight, Check, ChevronDown, ChevronUp, MapPin, ExternalLink } from "lucide-react";
 import { properties, Property } from "@/data/properties";
 import { landingContent } from "@/data/landing-content";
 import { useTranslation } from "@/hooks/useTranslation";
 import { Building2 } from "lucide-react";
+import PropertyMap from "@/components/PropertyMap";
 
 export default function PropertyDetailsPage() {
   const params = useParams();
@@ -92,88 +93,93 @@ export default function PropertyDetailsPage() {
   return (
     <main className="min-h-screen bg-white text-gray-900 font-sans selection:bg-black selection:text-white">
       {/* 1) HERO SECTION */}
-      <section className="relative h-screen w-full overflow-hidden">
-        {/* Background Media */}
-        <div className="absolute inset-0 z-0">
-          {property.images && property.images.length > 0 ? (
-            // Carousel Mode
-            property.images.map((img, idx) => (
-              <div
-                key={idx}
-                className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-                  idx === currentImageIndex ? "opacity-100 z-10" : "opacity-0 z-0"
-                }`}
-              >
-                <Image
-                  src={img}
-                  alt={`${property.hero.title} - ${idx + 1}`}
-                  fill
-                  className="object-cover"
-                  priority={idx === 0}
-                />
-              </div>
-            ))
-          ) : property.hero.bgVideo ? (
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="w-full h-full object-cover"
-            >
-              <source src={property.hero.bgVideo} type="video/mp4" />
-            </video>
-          ) : (
-            <Image
-              src={property.hero.bgImage || ""}
-              alt={property.hero.title}
-              fill
-              className="object-cover"
-              priority
-            />
-          )}
-          <div className="absolute inset-0 bg-black/40 z-20"></div>
-          <div className="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-black/20 z-20"></div>
-        </div>
-
-        {/* Content */}
-        <div className="relative z-30 h-full container mx-auto px-6 md:px-12 flex flex-col justify-end pb-24 md:pb-32">
-          <Link 
-            href={backLink}
-            className="absolute top-8 left-6 md:left-12 flex items-center gap-2 text-white/80 hover:text-white transition-colors uppercase text-xs font-bold tracking-widest backdrop-blur-md bg-white/10 px-4 py-2 rounded-full border border-white/20 w-fit"
-          >
-            <ArrowLeft size={14} />
-            Volver
-          </Link>
-
-          <div className="max-w-4xl">
-            <div className="flex flex-wrap gap-3 mb-6">
-              {property.hero.badges.map((badge, idx) => (
-                <span 
+      <section className="p-3 md:p-4 h-screen w-full flex flex-col box-border overflow-hidden">
+        <div className="relative grow rounded-4xl overflow-hidden flex flex-col justify-end pb-12 md:pb-20 isolate [mask-image:linear-gradient(white,white)]">
+          {/* Background Media */}
+          <div className="absolute inset-0 z-0">
+            {property.images && property.images.length > 0 ? (
+              // Carousel Mode
+              property.images.map((img, idx) => (
+                <div
                   key={idx}
-                  className="px-4 py-1.5 bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs font-medium uppercase tracking-wider rounded-full"
+                  className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+                    idx === currentImageIndex ? "opacity-100 z-10" : "opacity-0 z-0"
+                  }`}
                 >
-                  {badge}
-                </span>
-              ))}
-            </div>
+                  <Image
+                    src={img}
+                    alt={`${property.hero.title} - ${idx + 1}`}
+                    fill
+                    className="object-cover"
+                    priority={idx === 0}
+                  />
+                </div>
+              ))
+            ) : property.hero.bgVideo ? (
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover"
+              >
+                <source src={property.hero.bgVideo} type="video/mp4" />
+              </video>
+            ) : (
+              <Image
+                src={property.hero.bgImage || ""}
+                alt={property.hero.title}
+                fill
+                className="object-cover"
+                priority
+              />
+            )}
+            <div className="absolute inset-0 bg-black/40 z-20"></div>
+            <div className="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-black/20 z-20"></div>
+          </div>
 
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-white mb-6 leading-none">
-              {property.hero.title}
-            </h1>
-            
-            <p className="text-xl md:text-2xl text-white/90 font-light max-w-2xl mb-10 leading-relaxed">
-              {property.hero.subtitle}
-            </p>
+          {/* Content */}
+          <div className="relative z-30 container mx-auto px-6 md:px-12 flex flex-col justify-end h-full pb-10">
+            <Link 
+              href={backLink}
+              className="absolute top-8 left-6 md:left-12 flex items-center gap-2 text-white/80 hover:text-white transition-colors text-xs font-bold tracking-widest backdrop-blur-md bg-white/10 px-4 py-2 rounded-full border border-white/20 w-fit uppercase"
+            >
+              <ArrowLeft size={14} />
+              Volver
+            </Link>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button className="px-8 py-4 bg-white text-black font-medium text-sm tracking-wide uppercase hover:bg-gray-100 transition-colors rounded-none">
-                Solicitar disponibilidad
-              </button>
-              <button className="px-8 py-4 bg-transparent border border-white text-white font-medium text-sm tracking-wide uppercase hover:bg-white/10 transition-colors rounded-none flex items-center justify-center gap-2">
-                Brochure por WhatsApp
-                <ExternalLink size={16} />
-              </button>
+            <div className="max-w-4xl">
+              <div className="flex flex-wrap gap-2 mb-6">
+                {property.hero.badges.map((badge, idx) => (
+                  <span 
+                    key={idx}
+                    className="bg-white/10 backdrop-blur-md border border-white/10 text-white text-[10px] font-bold tracking-widest px-3 py-1.5 rounded-lg uppercase"
+                  >
+                    {badge}
+                  </span>
+                ))}
+              </div>
+
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-medium text-white mb-6 leading-[1.1]">
+                {property.hero.title}
+              </h1>
+              
+              <p className="text-white/80 text-base md:text-lg font-light max-w-lg mb-8 leading-relaxed">
+                {property.hero.subtitle}
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <button className="group flex items-center gap-3 bg-white text-black pl-6 pr-1.5 py-2 rounded-full text-base font-medium hover:bg-gray-100 transition-all hover:scale-105 active:scale-95 w-fit">
+                  Solicitar disponibilidad
+                  <div className="w-9 h-9 bg-black rounded-full flex items-center justify-center text-white group-hover:bg-gray-800 transition-colors">
+                    <ArrowRight size={18} />
+                  </div>
+                </button>
+                <button className="group flex items-center gap-3 bg-white/10 backdrop-blur-md border border-white/20 text-white pl-6 pr-6 py-2 rounded-full text-base font-medium hover:bg-white/20 transition-all hover:scale-105 active:scale-95 w-fit">
+                  Brochure por WhatsApp
+                  <ExternalLink size={18} />
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -257,11 +263,20 @@ export default function PropertyDetailsPage() {
                   ))}
                 </ul>
               </div>
-              <div className="relative h-[500px] bg-white/5 rounded-none border border-white/10 p-4">
-                {/* Placeholder for Map */}
-                <div className="w-full h-full bg-gray-900 flex items-center justify-center">
-                   <span className="text-white/30 uppercase tracking-widest text-sm">Mapa Interactivo</span>
-                </div>
+              <div className="relative h-[500px] bg-white/5 rounded-3xl border border-white/10 overflow-hidden">
+                {typeof property.location.latitude === "number" &&
+                typeof property.location.longitude === "number" ? (
+                  <PropertyMap 
+                    latitude={property.location.latitude} 
+                    longitude={property.location.longitude} 
+                    title={property.hero.title} 
+                  />
+                ) : (
+                  /* Placeholder for Map when no coordinates */
+                  <div className="w-full h-full bg-gray-900 flex items-center justify-center">
+                     <span className="text-white/30 uppercase tracking-widest text-sm">Mapa Interactivo No Disponible</span>
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -283,13 +298,13 @@ export default function PropertyDetailsPage() {
            )}
 
            <div className="grid gap-12">
-             {property.subCommunities.map((sub, idx) => (
-               <div key={idx} className="bg-gray-50 p-8 md:p-12 border border-gray-100 hover:shadow-lg transition-shadow duration-300">
-                 <h3 className="text-2xl font-serif font-medium text-gray-900 mb-4">{sub.title}</h3>
-                 <p className="text-gray-600 font-light leading-relaxed">{sub.text}</p>
-               </div>
-             ))}
-           </div>
+            {property.subCommunities.map((sub, idx) => (
+              <div key={idx} className="bg-gray-50 p-8 md:p-12 border border-gray-100 hover:shadow-lg transition-shadow duration-300 rounded-3xl">
+                <h3 className="text-2xl font-serif font-medium text-gray-900 mb-4">{sub.title}</h3>
+                <p className="text-gray-600 font-light leading-relaxed">{sub.text}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -363,7 +378,7 @@ export default function PropertyDetailsPage() {
             <h2 className="text-3xl font-serif font-medium text-gray-900 mb-12 text-center">Preguntas Frecuentes</h2>
             <div className="space-y-4">
               {property.faq.map((item, idx) => (
-                <div key={idx} className="bg-white border border-gray-100">
+                <div key={idx} className="bg-white border border-gray-100 rounded-2xl overflow-hidden">
                   <button 
                     onClick={() => toggleAccordion(`faq-${idx}`)}
                     className="w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-colors"

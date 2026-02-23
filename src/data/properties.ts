@@ -37,6 +37,8 @@ export interface Property {
     title: string;
     intro: string;
     nearby: string[];
+    latitude?: number;
+    longitude?: number;
   };
   project: {
     title: string;
@@ -116,6 +118,8 @@ export const properties: Property[] = [
     location: {
       title: "Ubicación estratégica, cerca de todo",
       intro: "Sobha Hartland II se ubica con conexión directa a zonas clave, con acceso cómodo a los principales puntos de la ciudad.",
+      latitude: 25.1856,
+      longitude: 55.3113,
       nearby: [
         "Downtown Dubai",
         "Dubai Design District",
@@ -266,6 +270,8 @@ export const properties: Property[] = [
     location: {
       title: "Ubicación estratégica",
       intro: "Con acceso directo a las principales arterias de Dubái, permitiendo movilidad fluida hacia distritos comerciales, centros financieros y destinos icónicos.",
+      latitude: 25.1760,
+      longitude: 55.2890,
       nearby: [
         "Sheikh Zayed Road",
         "Downtown Dubai",
@@ -359,6 +365,8 @@ export const properties: Property[] = [
     location: {
       title: "Ubicación estratégica",
       intro: "Un entorno diseñado para que la conexión ocurra de forma natural, con acceso directo a las principales vías de la ciudad.",
+      latitude: 25.1850,
+      longitude: 55.3100,
       nearby: [
         "Meydan Racecourse",
         "Dubai Creek Harbour",
@@ -476,6 +484,8 @@ export const properties: Property[] = [
     location: {
       title: "Ubicación estratégica",
       intro: "Un nuevo mundo, al alcance. Ubicado estratégicamente en uno de los distritos más dinámicos de Dubái, garantizando conectividad total y valorización a largo plazo.",
+      latitude: 25.0740,
+      longitude: 55.3180,
       nearby: [
         "Sheikh Mohammed Bin Zayed Road",
         "IMG Worlds of Adventure",
@@ -588,6 +598,8 @@ export const properties: Property[] = [
     location: {
       title: "En el corazón de Dubai South",
       intro: "Ubicado en Dubai South, el mayor desarrollo urbano integral de la ciudad, Azizi Venice forma parte de una metrópolis inteligente y futurista. Una ubicación estratégica pensada para el crecimiento y la valorización futura.",
+      latitude: 24.8870,
+      longitude: 55.1520,
       nearby: [
         "Al Maktoum International Airport (DWC)",
         "Emirates Road",
@@ -708,6 +720,8 @@ export const properties: Property[] = [
     location: {
       title: "A Venetian Oasis in Dubai South",
       intro: "Ubicado dentro del icónico desarrollo Azizi Venice, en Dubai South, Monaco Mansions forma parte de un destino estratégico pensado para el crecimiento futuro y la valorización de largo plazo.",
+      latitude: 24.8870,
+      longitude: 55.1520,
       nearby: [
         "Al Maktoum International Airport",
         "Emirates Road",
@@ -819,6 +833,8 @@ export const properties: Property[] = [
     location: {
       title: "Dubai Islands – El nuevo destino costero de lujo",
       intro: "Parte de un desarrollo visionario que redefine la costa de Dubái, Azizi Wasel se posiciona estratégicamente con excelente conectividad y acceso rápido a puntos clave de la ciudad. Además, conexión directa con Sheikh Zayed Road y principales hubs de transporte.",
+      latitude: 25.3000,
+      longitude: 55.3400,
       nearby: [
         "5 min – Waterfront Market",
         "10 min – Port Rashid",

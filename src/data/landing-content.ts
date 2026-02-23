@@ -343,6 +343,8 @@ export const landingContent: Record<string, LandingContent> = {
         location: {
           title: "Pandawa Beach, Bali",
           intro: "Situado justo frente al océano en Pandawa Beach, uno de los destinos más prestigiosos y buscados de Bali, conocido por sus aguas cristalinas, arenas blancas y atmósfera tranquila y sofisticada.",
+          latitude: -8.8450,
+          longitude: 115.1860,
           nearby: [
             "3 minutos caminando a Pandawa Beach",
             "A pasos de restaurantes, tiendas boutique y zonas recreativas",
@@ -433,6 +435,8 @@ export const landingContent: Record<string, LandingContent> = {
         location: {
           title: "Pandawa Beach, Bukit, Bali",
           intro: "Situado en las colinas del sur de Bali, a solo 500 m de la famosa Pandawa Beach, uno de los enclaves más prestigiosos de la isla conocido por su arena blanca, aguas cristalinas y ambiente exclusivo para vivir y vacacionar.",
+          latitude: -8.8430,
+          longitude: 115.1850,
           nearby: [
             "A 500 m de Pandawa Beach, con acceso fácil y peatonal.",
             "Rodeado de naturaleza tropical, zonas de recreación y restaurantes boutique.",
@@ -513,6 +517,8 @@ export const landingContent: Record<string, LandingContent> = {
         location: {
           title: "Pandawa Beach, Bali",
           intro: "Situado sobre un acantilado frente al Océano Índico en el prestigioso Bukit Peninsula de Bali, a solo 3 minutos de Pandawa Beach.",
+          latitude: -8.8470,
+          longitude: 115.1870,
           nearby: [
             "A pocos minutos de Pandawa Beach",
             "Conectividad con zonas premium de Bali",
@@ -680,7 +686,18 @@ export const landingContent: Record<string, LandingContent> = {
         { iconName: "Briefcase", label: "Hub financiero y tecnológico en expansión" }
       ]
     },
-    whyChoose: null,
+    whyChoose: {
+      videoSrc: "https://real-state-landing.s3.us-east-1.amazonaws.com/miami/miami_video.mp4",
+      title: "Por qué los inversionistas eligen invertir en Miami",
+      description: "Miami se ha consolidado como uno de los mercados inmobiliarios más dinámicos y resilientes de Estados Unidos, impulsado por migración constante, crecimiento financiero y demanda internacional sostenida.",
+      benefits: [
+        "Selección estratégica en zonas prime (Brickell, Downtown, Waterfront)",
+        "Análisis de rentabilidad, valorización y liquidez en USD",
+        "Due diligence completa: desarrollador, HOA y estructura legal",
+        "Acompañamiento integral desde compra hasta eventual reventa"
+      ],
+      quote: "Invertir bien no es cuestión de suerte. Es cuestión de estrategia."
+    },
     units: [
       {
         id: "buena-vista-modern-residence",
@@ -719,6 +736,8 @@ export const landingContent: Record<string, LandingContent> = {
         location: {
           title: "Ubicación Estratégica",
           intro: "Zona residencial en crecimiento con alta demanda premium.",
+          latitude: 25.8130,
+          longitude: -80.1920,
           nearby: [
             "A minutos del Design District",
             "Cercano a Wynwood y Midtown",
@@ -801,6 +820,8 @@ export const landingContent: Record<string, LandingContent> = {
         location: {
           title: "Ubicación Estratégica",
           intro: "Downtown & Brickell continúan consolidándose como el epicentro financiero y residencial de lujo de Florida, con fuerte demanda internacional y apreciación sostenida en propiedades waterfront de marca.",
+          latitude: 25.7705,
+          longitude: -80.1880,
           nearby: [
             "02 min Brickell Financial District",
             "05 min Miami Central Station",
@@ -881,6 +902,8 @@ export const landingContent: Record<string, LandingContent> = {
         location: {
           title: "Ubicación Privilegiada",
           intro: "Situado en una de las direcciones más codiciadas de Estados Unidos. South Beach combina influencia europea, arte, gastronomía y lifestyle internacional en un solo enclave.",
+          latitude: 25.7907,
+          longitude: -80.1284,
           nearby: [
             "Frente directo al Océano Atlántico",
             "A pasos de Lincoln Road",

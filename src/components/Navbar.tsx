@@ -82,11 +82,11 @@ export default function Navbar({ currentDestination = "home" }: NavbarProps) {
           href="/" 
           onClick={(e) => handleMobileNavClick(e, "#inicio")}
           className={`flex items-center gap-2 z-50 relative transition-colors duration-300 ${
-            isScrolled ? "text-gray-900" : "text-white"
+            isScrolled && !isMobileMenuOpen ? "text-gray-900" : "text-white"
           }`}
         >
           <div className={`w-8 h-8 border rounded-lg flex items-center justify-center transition-colors duration-300 ${
-            isScrolled ? "border-gray-900" : "border-white"
+            isScrolled && !isMobileMenuOpen ? "border-gray-900" : "border-white"
           }`}>
             <Building2 size={16} />
           </div>
@@ -236,13 +236,13 @@ export default function Navbar({ currentDestination = "home" }: NavbarProps) {
         </button>
 
         {/* Mobile Menu Overlay */}
-        <div
-          className={`fixed inset-0 bg-black/95 backdrop-blur-xl z-40 flex flex-col items-center justify-center transition-all duration-300 md:hidden ${
-            isMobileMenuOpen
-              ? "opacity-100 pointer-events-auto"
-              : "opacity-0 pointer-events-none"
-          }`}
-        >
+      <div
+        className={`fixed inset-0 bg-black/95 backdrop-blur-xl z-40 flex flex-col items-center justify-center transition-all duration-300 md:hidden h-screen w-screen ${
+          isMobileMenuOpen
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
+        }`}
+      >
           <nav className="flex flex-col items-center gap-6 text-xl font-medium text-white w-full px-6">
             {/* Mobile Destinations Selector */}
             <div className="flex flex-col items-center w-full border-b border-white/10 py-4">
