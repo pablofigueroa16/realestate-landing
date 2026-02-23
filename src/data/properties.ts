@@ -1815,6 +1815,318 @@ const propertyContentEn: Record<string, DeepPartial<Property>> = {
     description:
       "Cliffside residences and villas with panoramic ocean views, private rooftop, and estimated profitability up to 15% annually.",
   },
+  "buena-vista-modern-residence": {
+    hero: {
+      title: "Buena Vista Modern Residence",
+      subtitle: "Modern Luxury Living | Design District Area",
+      description:
+        "Luxury residence with private pool and independent guest house, located minutes from the Design District. Ideal for USD wealth investment and appreciation in a prime Miami area.",
+      badges: ["New Construction 2026", "Design District Area", "Modern Luxury"],
+    },
+    summary: {
+      title: "BUENA VISTA SHOWSTOPPER",
+      text: "A contemporary design residence in one of Miami’s highest-appreciation submarkets. High ceilings, open spaces, and large-format glazing create a sophisticated architectural experience with abundant natural light.",
+    },
+    concept: {
+      title: "Exterior & Lifestyle",
+      text: "A property designed for Miami’s indoor-outdoor lifestyle: heated saltwater private pool, outdoor BBQ area, independent guest house with full bath and kitchenette, tropical landscaping, convertible carport/garage, and EV charging station.",
+    },
+    community: {
+      title: "Ideal Investor Profile",
+      text: "Perfect for: wealth-focused investors, high-end primary residence buyers, long-term luxury rentals, and the international market (U.S. + LATAM).",
+    },
+    privacy: {
+      title: "Financial Data",
+      text: "Price per sqft: $888 USD. Estimated annual tax: $8,505. No HOA. New construction with a favorable long-term appreciation profile.",
+    },
+    views: {
+      title: "Design & Light",
+      text: "High ceilings and open-plan design. Hurricane-impact windows and doors. Premium appliance kitchen with oversized pantry and flush cabinetry.",
+    },
+    design: {
+      title: "Key Features",
+      text: "5 Bedrooms | 6 Bathrooms (5 full + 1 half) | 3,321 interior sqft | 5,800 lot sqft | 2 levels | New construction (2026). Integrated Sonos system and custom-designed closets.",
+    },
+    location: {
+      title: "Strategic Location",
+      intro: "Growing residential zone with strong premium demand.",
+      nearby: [
+        {
+          name: "Miami Design District",
+          latitude: 25.8132,
+          longitude: -80.1936,
+          category: "Urban District",
+        },
+        {
+          name: "Wynwood",
+          latitude: 25.8004,
+          longitude: -80.1992,
+          category: "Art & Lifestyle",
+        },
+        {
+          name: "Midtown Miami",
+          latitude: 25.8077,
+          longitude: -80.1938,
+          category: "Residential",
+        },
+        {
+          name: "Miami Beach",
+          latitude: 25.7907,
+          longitude: -80.13,
+          category: "Beach",
+        },
+      ],
+    },
+    project: {
+      title: "Investment Potential",
+      text: "Buena Vista benefits from continuous Design District expansion and luxury urban corridor repositioning. Strong executive rental demand, USD-denominated market, and sustained appreciation near cultural and commercial hubs.",
+    },
+    amenities: {
+      title: "Highlights",
+      intro: "Details that define a true luxury asset.",
+      categories: [
+        {
+          name: "EXTERIOR",
+          items: [
+            "Heated saltwater pool",
+            "Independent guest house",
+            "Tropical landscaping",
+            "EV charging station",
+          ],
+        },
+        {
+          name: "INTERIOR",
+          items: [
+            "High ceilings",
+            "Premium kitchen",
+            "Integrated Sonos system",
+            "Impact windows and doors",
+          ],
+        },
+      ],
+    },
+    developer: {
+      title: "Ideal Investor Type",
+      intro: "Property designed for investors seeking medium- to long-term appreciation, buyers diversifying capital in USD, and international families searching for a second home in Miami.",
+      bullets: ["Medium/long-term appreciation", "USD diversification", "Second residence"],
+    },
+    disclaimers: {
+      renders: "Images are illustrative.",
+      availability: "Prices and availability are subject to change.",
+    },
+    description:
+      "Luxury residence with private pool and independent guest house, located minutes from the Design District. Ideal for USD wealth investment in a prime Miami area.",
+  },
+  "aston-martin-residences": {
+    hero: {
+      title: "ASTON MARTIN RESIDENCES",
+      subtitle: "The Pinnacle of Waterfront Luxury - Downtown Miami",
+      description:
+        "Iconic waterfront residences in Downtown Miami, designed by the legendary British brand. A landmark tower with panoramic Biscayne Bay views and private marina access.",
+      badges: ["Waterfront Luxury", "Downtown Miami", "Private Marina"],
+    },
+    summary: {
+      title: "The Pinnacle of Waterfront Luxury",
+      text: "Located at 300 Biscayne Boulevard Way, one of the last waterfront plots in Downtown Miami, Aston Martin Residences merges British engineering, contemporary architecture, and cosmopolitan lifestyle.",
+    },
+    concept: {
+      title: "Interiors & Design",
+      text: "Bulthaup kitchens, Gaggenau appliances, premium marble floors, floor-to-ceiling glazing, panoramic-view bathrooms, and European craftsmanship. Each residence is conceived to maximize light, space, and views with Aston Martin precision.",
+    },
+    community: {
+      title: "Investment Profile",
+      text: "Global iconic brand product. Irreplaceable waterfront location. Strong international demand. Prime USD asset with long-term appreciation potential.",
+    },
+    privacy: {
+      title: "Signature Collection",
+      text: "A limited collection designed as individual masterpieces. Contemporary architecture, noble finishes, and uninterrupted views elevate the residential experience to an artistic level.",
+    },
+    views: {
+      title: "Unmatched Views",
+      text: "Uninterrupted views of Biscayne Bay, Miami River, and Miami skyline from an iconic 66-story tower.",
+    },
+    design: {
+      title: "Project",
+      text: "391 exclusive residences. 66 residential levels. 1-5 bedrooms + duplexes + penthouses. Unique Triple Penthouse (levels 63-65). On-site private marina.",
+    },
+    location: {
+      title: "Strategic Location",
+      intro: "Downtown and Brickell continue to consolidate as Florida’s financial and luxury residential epicenter, with strong international demand and sustained appreciation in branded waterfront assets.",
+      nearby: [
+        {
+          name: "Brickell Financial District",
+          latitude: 25.7617,
+          longitude: -80.1918,
+          category: "Financial",
+        },
+        {
+          name: "MiamiCentral Station",
+          latitude: 25.7782,
+          longitude: -80.1959,
+          category: "Transport",
+        },
+        {
+          name: "PortMiami",
+          latitude: 25.7781,
+          longitude: -80.1794,
+          category: "Port",
+        },
+        {
+          name: "Miami Design District",
+          latitude: 25.8132,
+          longitude: -80.1936,
+          category: "Urban District",
+        },
+        {
+          name: "Miami Beach",
+          latitude: 25.7907,
+          longitude: -80.13,
+          category: "Beach",
+        },
+      ],
+    },
+    project: {
+      title: "Residence Types",
+      text: "Studios from 698 SF. 1BR: 754-1,001 SF. 2BR: 1,001-1,317 SF. 3BR: 2,236-3,075 SF. 4BR: 3,235-4,434 SF. 5BR: 3,764-3,994 SF. Penthouses: 8,977-10,463 SF. Triple Penthouse: levels 63-65.",
+    },
+    amenities: {
+      title: "Ultra-Luxury Amenities",
+      intro: "A world of exclusive privileges.",
+      categories: [
+        {
+          name: "AMENITIES",
+          items: [
+            "Panoramic pool",
+            "Spa & wellness center",
+            "State-of-the-art fitness center",
+            "Private lounges and salons",
+            "Private marina",
+            "Exclusive social areas",
+          ],
+        },
+      ],
+    },
+    developer: {
+      title: "Aston Martin",
+      intro: "The legendary British brand brings its engineering and precision design legacy into Miami’s luxury real estate market.",
+      bullets: ["Global iconic brand", "Precision design", "Exclusivity"],
+    },
+    disclaimers: {
+      renders: "Images are illustrative.",
+      availability: "Prices and availability are subject to change.",
+    },
+    description:
+      "Iconic waterfront residences in Downtown Miami by the legendary British brand, with panoramic Biscayne Bay views and private marina.",
+  },
+  "ritz-carlton-residences": {
+    hero: {
+      title: "THE RITZ-CARLTON RESIDENCES",
+      subtitle: "South Beach, Miami",
+      description:
+        "Exclusive oceanfront boutique collection in South Beach with VIP access to the Ritz-Carlton hotel and panoramic Atlantic views.",
+      badges: ["South Beach", "Oceanfront", "Branded Residences"],
+    },
+    summary: {
+      title: "South Beach, Miami",
+      text: "An ultra-exclusive boutique collection of only 30 oceanfront residences, where Ritz-Carlton heritage merges with contemporary design and iconic South Beach lifestyle.",
+    },
+    concept: {
+      title: "Culinary Experience - Jose Andres",
+      text: "A gastronomic program curated by Michelin-starred chef Jose Andres, including Zaytinya, DiLido Beach Club, Lapidus Bar, and a new cafe in the historic Sagamore lobby.",
+    },
+    community: {
+      title: "Investment Value",
+      text: "Boutique product with limited inventory. Irreplaceable oceanfront location. Prestigious global brand. Strong international demand in South Beach.",
+    },
+    privacy: {
+      title: "Boutique Residences",
+      text: "Only 30 boutique condos with panoramic Atlantic and Miami Beach views, open layouts, natural light, and expansive private terraces.",
+    },
+    views: {
+      title: "Panoramic Views",
+      text: "Panoramic Atlantic and Miami Beach views. The connection between sand, sea, and sky is central to the design concept.",
+    },
+    design: {
+      title: "Architecture & Design",
+      text: "Designed by renowned architect Kobi Karp, inspired by Morris Lapidus’s iconic architecture and Miami Beach Art Deco heritage. Features full-height glass panels, private balconies, custom Italian kitchens by Alessandro Munge, and premium finishes.",
+    },
+    location: {
+      title: "Prime Location",
+      intro: "Set on one of the most coveted addresses in the U.S. South Beach blends European influence, art, gastronomy, and international lifestyle in one enclave.",
+      nearby: [
+        {
+          name: "Lincoln Road",
+          latitude: 25.7901,
+          longitude: -80.1403,
+          category: "Lifestyle",
+        },
+        {
+          name: "South Pointe Park",
+          latitude: 25.7655,
+          longitude: -80.1311,
+          category: "Park",
+        },
+        {
+          name: "Sunset Harbour",
+          latitude: 25.7923,
+          longitude: -80.1485,
+          category: "Marina",
+        },
+        {
+          name: "Ocean Drive",
+          latitude: 25.7814,
+          longitude: -80.1301,
+          category: "Culture & Lifestyle",
+        },
+        {
+          name: "Atlantic Oceanfront",
+          latitude: 25.7907,
+          longitude: -80.127,
+          category: "Beach",
+        },
+      ],
+    },
+    project: {
+      title: "Strategic Summary",
+      text: "30 boutique residences. Direct Atlantic frontage. Ritz-Carlton brand. Premium cultural and culinary lifestyle.",
+    },
+    amenities: {
+      title: "Amenities & Services",
+      intro: "Residents enjoy a dedicated world of comfort and privileges.",
+      categories: [
+        {
+          name: "PRIVATE RESIDENTIAL",
+          items: [
+            "Rooftop oasis with pool",
+            "Private screening room",
+            "Entertainment lounge with kitchen",
+            "24/7 fitness center",
+            "Personalized concierge service",
+          ],
+        },
+        {
+          name: "VIP HOTEL ACCESS",
+          items: [
+            "World-class spa",
+            "Beach Club",
+            "Ritz Kids program",
+            "Premium concierge services",
+          ],
+        },
+      ],
+    },
+    developer: {
+      title: "Ritz-Carlton",
+      intro: "The Ritz-Carlton brand stands for legendary service and timeless luxury worldwide.",
+      bullets: ["Legendary service", "Timeless luxury", "Global recognition"],
+    },
+    disclaimers: {
+      renders: "Images are illustrative.",
+      availability: "Prices and availability are subject to change.",
+    },
+    description:
+      "Exclusive oceanfront boutique collection in South Beach with VIP hotel access and panoramic Atlantic views.",
+  },
 };
 
 function isObject(value: unknown): value is Record<string, unknown> {

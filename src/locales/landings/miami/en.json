@@ -1,1 +1,103 @@
-{}
+{
+  "hero": {
+    "title": "Investment Apartments and Residences in Miami",
+    "subtitle": "Invest in one of the most solid real estate markets in the United States. Miami combines rapid population growth, state tax advantages, and strong international demand in rentals and premium property purchases.",
+    "badge": "Up to +8–30% annual in prime areas",
+    "stats": [
+      {
+        "value": "6% – 10%",
+        "text": "Estimated gross returns in prime zones such as Brickell, Downtown, and Edgewater."
+      },
+      {
+        "value": "+140k",
+        "text": "New residents (2020–2024). Florida leads domestic migration in the U.S., driving sustained demand."
+      }
+    ]
+  },
+  "about": {
+    "title": "Why Invest in Miami",
+    "description": "Miami is one of the most solid and attractive real estate markets in the U.S., combining sustained growth, legal certainty, and strong international demand.\n\nIts economic dynamism and tax advantages position it as a strategic destination to protect and grow capital in USD.",
+    "market_card": {
+      "title": "REAL ESTATE MARKET",
+      "subtitle": "High demand and legal certainty in USD"
+    },
+    "benefits": {
+      "population_growth": "Consistent population growth",
+      "tax_advantage": "No state income tax",
+      "international_demand": "Strong international demand",
+      "prime_appreciation": "Strong appreciation in prime areas",
+      "year_round_rentals": "Tourism and active rental market year-round",
+      "financial_hub": "Expanding financial and tech hub"
+    }
+  },
+  "why_choose": {
+    "title": "Why Investors Choose Miami",
+    "description": "Miami has established itself as one of the most dynamic and resilient real estate markets in the United States, driven by constant migration, financial growth, and sustained international demand.",
+    "benefits": [
+      "Strategic selection in prime areas (Brickell, Downtown, Waterfront)",
+      "Profitability, appreciation, and liquidity analysis in USD",
+      "Full due diligence: developer, HOA, and legal structure",
+      "End-to-end support from acquisition to potential resale"
+    ],
+    "quote": "Investing well is not luck. It is strategy."
+  },
+  "location": {
+    "projects": {
+      "buena_vista": {
+        "area": "BUENA VISTA — MIAMI DESIGN DISTRICT",
+        "title": "Prime Location — Buena Vista, Miami",
+        "description": "Located in one of Miami’s fastest-growing residential areas, this new construction combines modern architectural design, proximity to cultural hubs, and strong USD appreciation potential.",
+        "features": [
+          "03 min to Miami Design District",
+          "08 min to Wynwood Arts District",
+          "15 min to Miami Beach"
+        ],
+        "market_insight": "Buena Vista benefits from the Design District expansion and the continued growth of Miami’s luxury urban corridor, driving sustained appreciation and strong executive rental demand."
+      },
+      "aston_martin": {
+        "area": "DOWNTOWN MIAMI",
+        "title": "Prime Location — Biscayne Boulevard Way",
+        "description": "Set on one of the last waterfront parcels in Downtown Miami, Aston Martin Residences combines panoramic Biscayne Bay views, proximity to Brickell’s financial district, and direct access to the city’s top cultural and culinary hubs.",
+        "features": [
+          "03 min to Brickell Financial District",
+          "05 min to Brickell City Centre",
+          "07 min to Miami Design District"
+        ],
+        "market_insight": "Downtown Miami and Brickell continue to lead luxury market appreciation in South Florida, driven by high-net-worth migration, financial expansion, and international demand for premium waterfront assets."
+      },
+      "ritz_carlton": {
+        "area": "THE RITZ-CARLTON RESIDENCES",
+        "title": "South Beach, Miami",
+        "description": "An ultra-exclusive boutique collection of just 30 oceanfront residences, where Ritz-Carlton heritage meets contemporary design and the iconic South Beach lifestyle.",
+        "features": [
+          "Direct Atlantic Ocean frontage",
+          "Steps from Lincoln Road",
+          "Surrounded by Michelin restaurants, galleries, and culture",
+          "Immediate access to South Pointe, Sunset Harbour, and Ocean Drive"
+        ],
+        "market_insight": "Oceanfront branded residences in Miami Beach maintain a strong position in the luxury segment, with a high long-term wealth preservation component."
+      }
+    }
+  },
+  "unit_types": {
+    "title": "Real Estate Investment Formats",
+    "subtitle": "Choose between different off-plan unit types in Miami based on profitability, timeline, and investment objective.",
+    "units": {
+      "buena_vista": {
+        "title": "Buena Vista Modern Residence",
+        "description": "Luxury residence with private pool and independent guest house, located minutes from the Design District.",
+        "size": "Off-plan"
+      },
+      "aston_martin": {
+        "title": "Aston Martin Residences",
+        "description": "Iconic waterfront residences in Downtown Miami, designed by the legendary British brand.",
+        "size": "Off-plan"
+      },
+      "ritz_carlton": {
+        "title": "The Ritz-Carlton Residences",
+        "description": "Oceanfront boutique collection in South Beach with VIP access to the Ritz-Carlton hotel.",
+        "size": "Off-plan"
+      }
+    }
+  }
+}

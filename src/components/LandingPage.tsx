@@ -266,6 +266,115 @@ export default function LandingPage({ destination }: LandingPageProps) {
     };
   }
 
+  if (destination === "miami" && staticContent.hero && staticContent.about && staticContent.whyChoose) {
+    content = {
+      ...staticContent,
+      hero: {
+        ...staticContent.hero,
+        title: t("miami.hero.title"),
+        subtitle: t("miami.hero.subtitle"),
+        badge: t("miami.hero.badge"),
+        stats: [
+          {
+            value: t("miami.hero.stats.0.value"),
+            text: t("miami.hero.stats.0.text"),
+            iconName: staticContent.hero.stats[0]?.iconName,
+          },
+          {
+            value: t("miami.hero.stats.1.value"),
+            text: t("miami.hero.stats.1.text"),
+            iconName: staticContent.hero.stats[1]?.iconName,
+          },
+        ],
+      },
+      about: {
+        ...staticContent.about,
+        title: t("miami.about.title"),
+        description: t("miami.about.description"),
+        marketCard: {
+          ...staticContent.about.marketCard,
+          title: t("miami.about.market_card.title"),
+          subtitle: t("miami.about.market_card.subtitle"),
+        },
+        benefits: staticContent.about.benefits.map((b, i) => {
+          const labels = [
+            t("miami.about.benefits.population_growth"),
+            t("miami.about.benefits.tax_advantage"),
+            t("miami.about.benefits.international_demand"),
+            t("miami.about.benefits.prime_appreciation"),
+            t("miami.about.benefits.year_round_rentals"),
+            t("miami.about.benefits.financial_hub"),
+          ];
+          return {
+            ...b,
+            label: labels[i] || b.label,
+          };
+        }),
+      },
+      whyChoose: {
+        ...staticContent.whyChoose,
+        title: t("miami.why_choose.title"),
+        description: t("miami.why_choose.description"),
+        quote: t("miami.why_choose.quote"),
+        benefits: [
+          t("miami.why_choose.benefits.0"),
+          t("miami.why_choose.benefits.1"),
+          t("miami.why_choose.benefits.2"),
+          t("miami.why_choose.benefits.3"),
+        ],
+      },
+      locationProjects: staticContent.locationProjects.map((proj, i) => {
+        const keys = ["buena_vista", "aston_martin", "ritz_carlton"];
+        const key = keys[i];
+        if (!key) return proj;
+        return {
+          ...proj,
+          area: t(`miami.location.projects.${key}.area`),
+          title: t(`miami.location.projects.${key}.title`),
+          description: t(`miami.location.projects.${key}.description`),
+          marketInsight: t(`miami.location.projects.${key}.market_insight`),
+          features: key === "ritz_carlton"
+            ? [
+                t(`miami.location.projects.${key}.features.0`),
+                t(`miami.location.projects.${key}.features.1`),
+                t(`miami.location.projects.${key}.features.2`),
+                t(`miami.location.projects.${key}.features.3`),
+              ]
+            : [
+                t(`miami.location.projects.${key}.features.0`),
+                t(`miami.location.projects.${key}.features.1`),
+                t(`miami.location.projects.${key}.features.2`),
+              ],
+        };
+      }),
+      units: staticContent.units.map((unit) => {
+        const keyById: Record<string, string> = {
+          "buena-vista-modern-residence": "buena_vista",
+          "aston-martin-residences": "aston_martin",
+          "ritz-carlton-residences": "ritz_carlton",
+        };
+
+        const key = keyById[unit.id];
+        if (!key) return unit;
+
+        return {
+          ...unit,
+          hero: {
+            ...unit.hero,
+            title: t(`miami.unit_types.units.${key}.title`),
+            description: t(`miami.unit_types.units.${key}.description`),
+          },
+          description: t(`miami.unit_types.units.${key}.description`),
+          size: t(`miami.unit_types.units.${key}.size`),
+        };
+      }),
+      unitsConfig: {
+        title: t("miami.unit_types.title"),
+        subtitle: t("miami.unit_types.subtitle"),
+      },
+    };
+  }
+
   const locationProjectsForSection =
     content.locationProjects && content.locationProjects.length > 0
       ? content.locationProjects
