@@ -36,7 +36,7 @@ export interface Property {
   location: {
     title: string;
     intro: string;
-    nearby: string[];
+    nearby: (string | NearbyPlace)[];
     latitude?: number;
     longitude?: number;
   };
@@ -73,6 +73,13 @@ export interface Property {
   description?: string;
   size?: string;
   externalLink?: string;
+}
+
+export interface NearbyPlace {
+  name: string;
+  latitude: number;
+  longitude: number;
+  category?: string;
 }
 
 export const properties: Property[] = [
@@ -121,11 +128,36 @@ export const properties: Property[] = [
       latitude: 25.1856,
       longitude: 55.3113,
       nearby: [
-        "Downtown Dubai",
-        "Dubai Design District",
-        "Dubai Creek Harbour",
-        "Ras Al Khor Wetlands",
-        "Meydan / Nad Al Sheba"
+        {
+          name: "Downtown Dubai",
+          latitude: 25.1972,
+          longitude: 55.2744,
+          category: "Distrito Urbano",
+        },
+        {
+          name: "Dubai Design District",
+          latitude: 25.1864,
+          longitude: 55.2999,
+          category: "Negocios y Diseño",
+        },
+        {
+          name: "Dubai Creek Harbour",
+          latitude: 25.2065,
+          longitude: 55.3386,
+          category: "Waterfront",
+        },
+        {
+          name: "Ras Al Khor Wetlands",
+          latitude: 25.1825,
+          longitude: 55.3576,
+          category: "Naturaleza",
+        },
+        {
+          name: "Meydan / Nad Al Sheba",
+          latitude: 25.1597,
+          longitude: 55.3033,
+          category: "Zona Residencial",
+        },
       ]
     },
     project: {

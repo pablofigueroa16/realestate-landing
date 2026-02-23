@@ -6,6 +6,12 @@ interface PropertyMapProps {
   latitude: number;
   longitude: number;
   title: string;
+  nearbyPlaces?: Array<{
+    name: string;
+    latitude: number;
+    longitude: number;
+    category?: string;
+  }>;
 }
 
 const PropertyMapClient = dynamic(() => import("./PropertyMapClient"), {
@@ -19,6 +25,18 @@ const PropertyMapClient = dynamic(() => import("./PropertyMapClient"), {
   ),
 });
 
-export default function PropertyMap({ latitude, longitude, title }: PropertyMapProps) {
-  return <PropertyMapClient latitude={latitude} longitude={longitude} title={title} />;
+export default function PropertyMap({
+  latitude,
+  longitude,
+  title,
+  nearbyPlaces = [],
+}: PropertyMapProps) {
+  return (
+    <PropertyMapClient
+      latitude={latitude}
+      longitude={longitude}
+      title={title}
+      nearbyPlaces={nearbyPlaces}
+    />
+  );
 }

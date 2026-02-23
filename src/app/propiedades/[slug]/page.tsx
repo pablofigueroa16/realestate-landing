@@ -5,7 +5,7 @@ import { useParams, useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, Check, ChevronDown, ChevronUp, MapPin, ExternalLink } from "lucide-react";
-import { properties, Property } from "@/data/properties";
+import { properties, Property, NearbyPlace } from "@/data/properties";
 import { landingContent } from "@/data/landing-content";
 import { useTranslation } from "@/hooks/useTranslation";
 import { Building2 } from "lucide-react";
@@ -89,6 +89,13 @@ export default function PropertyDetailsPage() {
   const toggleAccordion = (category: string) => {
     setActiveAccordion(activeAccordion === category ? null : category);
   };
+
+  const nearbyPlacesForMap: NearbyPlace[] = property.location.nearby.filter(
+    (place): place is NearbyPlace =>
+      typeof place === "object" &&
+      typeof place.latitude === "number" &&
+      typeof place.longitude === "number"
+  );
 
   return (
     <main className="min-h-screen bg-white text-gray-900 font-sans selection:bg-black selection:text-white">
@@ -258,7 +265,9 @@ export default function PropertyDetailsPage() {
                   {property.location.nearby.map((place, idx) => (
                     <li key={idx} className="flex items-center gap-4 text-white/90 py-3 border-b border-white/10">
                       <MapPin size={18} className="text-white/60" />
-                      <span className="font-light tracking-wide">{place}</span>
+                      <span className="font-light tracking-wide">
+                        {typeof place === "string" ? place : place.name}
+                      </span>
                     </li>
                   ))}
                 </ul>
@@ -269,7 +278,8 @@ export default function PropertyDetailsPage() {
                   <PropertyMap 
                     latitude={property.location.latitude} 
                     longitude={property.location.longitude} 
-                    title={property.hero.title} 
+                    title={property.hero.title}
+                    nearbyPlaces={nearbyPlacesForMap}
                   />
                 ) : (
                   /* Placeholder for Map when no coordinates */
