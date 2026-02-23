@@ -12,6 +12,10 @@
   "about": {
     "title": "Why is Bali the new blue gold of global tourism?",
     "description": "Bali is not just an island: it is a consolidated international brand.\nRecognized as one of the most demanded destinations in the world, it combines luxury tourism, wellness, nature, and culture in an economic ecosystem highly attractive for real estate investors.",
+    "market_card": {
+      "title": "REAL ESTATE MARKET",
+      "subtitle": "High tourist demand and growth potential"
+    },
     "benefits": {
       "tourists": "+5 million international tourists/year",
       "appreciation": "Appreciation >20% in recent years",
@@ -81,6 +85,8 @@
     }
   },
   "unit_types": {
+    "title": "Real Estate Investment Formats",
+    "subtitle": "Choose between different off-plan unit types in Bali based on profitability, timeframe, and investment goals.",
     "units": {
       "body_sense": {
         "title": "Body Sense",

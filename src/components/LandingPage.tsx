@@ -191,10 +191,16 @@ export default function LandingPage({ destination }: LandingPageProps) {
         ...staticContent.about,
         title: t("bali.about.title"),
         description: t("bali.about.description"),
+        marketCard: {
+          ...staticContent.about.marketCard,
+          title: t("bali.about.market_card.title"),
+          subtitle: t("bali.about.market_card.subtitle"),
+        },
         benefits: staticContent.about.benefits.map((b, i) => {
              const labels = [
                t("bali.about.benefits.tourists"),
                t("bali.about.benefits.appreciation"),
+               t("bali.about.benefits.recognition"),
                t("bali.about.benefits.demand"),
                t("bali.about.benefits.roi"),
                t("bali.about.benefits.emerging")
@@ -213,7 +219,8 @@ export default function LandingPage({ destination }: LandingPageProps) {
         benefits: [
             t("bali.why_choose.benefits.0"),
             t("bali.why_choose.benefits.1"),
-            t("bali.why_choose.benefits.2")
+            t("bali.why_choose.benefits.2"),
+            t("bali.why_choose.benefits.3")
         ]
       },
       locationProjects: staticContent.locationProjects.map((proj, i) => {
@@ -251,7 +258,11 @@ export default function LandingPage({ destination }: LandingPageProps) {
            description: t(`bali.unit_types.units.${key}.description`),
            size: t(`bali.unit_types.units.${key}.size`)
         };
-      })
+      }),
+      unitsConfig: {
+        title: t("bali.unit_types.title"),
+        subtitle: t("bali.unit_types.subtitle"),
+      },
     };
   }
 

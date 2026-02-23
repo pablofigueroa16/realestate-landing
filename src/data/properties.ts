@@ -1537,6 +1537,284 @@ const propertyContentEn: Record<string, DeepPartial<Property>> = {
       availability: "Specifications and amenities are subject to change according to developer decisions and regulatory approvals.",
     },
   },
+  "body-sense": {
+    hero: {
+      subtitle: "Living Wellness by the Ocean",
+      description:
+        "A next-generation oceanfront wellness complex designed to restore body and mind through high-impact experiences: spa, biohacking, and recovery protocols in an unmatched natural Bali setting.",
+      badges: ["Wellness Living", "Oceanfront", "High ROI"],
+    },
+    summary: {
+      title: "Quick Summary",
+      text: "An exclusive villa and suite project with ocean views in Pandawa Beach, combining living, investment, and holistic wellness surrounded by tropical nature and Indian Ocean panoramas.",
+    },
+    concept: {
+      title: "Next-generation wellness retreat",
+      text: "Body Sense redefines oceanfront living through a holistic wellness approach that integrates biohacking technologies, recovery spaces, and advanced treatments within a premium residential community. It is not just a place to live or invest, but an environment dedicated to full rejuvenation where each space is designed to balance rhythm, energy, and integral health.",
+    },
+    location: {
+      title: "Pandawa Beach, Bali",
+      intro: "Set right by the ocean at Pandawa Beach, one of Bali’s most prestigious and sought-after destinations, known for crystal-clear waters, white sand, and a calm yet sophisticated atmosphere.",
+      nearby: [
+        {
+          name: "Pandawa Beach",
+          latitude: -8.8446,
+          longitude: 115.1882,
+          category: "Beach",
+        },
+        {
+          name: "Timbis Beach Club",
+          latitude: -8.8466,
+          longitude: 115.1803,
+          category: "Lifestyle",
+        },
+        {
+          name: "Bukit Pandawa Golf & Country Club",
+          latitude: -8.8394,
+          longitude: 115.1792,
+          category: "Sports",
+        },
+      ],
+    },
+    project: {
+      title: "Villas & Suites",
+      text: "Body Sense consists of villas and apartments built on a panoramic cliff, featuring ocean views and a design that combines privacy, comfort, and direct connection to nature.",
+    },
+    subCommunities: [
+      {
+        title: "Deluxe SPA Suite",
+        text: "From $155,000. 15 units available. 50 m² with balcony and ocean view. Private infrared sauna and copper bathtub for deep detox. Equipped with premium wellness amenities. Estimated ROI ~14.35%. Highlight: an intimate space perfect for daily rest and regeneration rituals.",
+      },
+      {
+        title: "Premium SPA Suite",
+        text: "From $115,000. 36 units available. 32 m² with ocean, pool, or nature views. Infrared lamp and spaces designed for daily wellness. Estimated ROI ~14.40%. Highlight: ideal for residential investment with strong profitability potential.",
+      },
+    ],
+    amenities: {
+      title: "Complex Infrastructure",
+      intro: "Body Sense offers premium infrastructure designed to enhance the physical and mental health of residents and guests.",
+      categories: [
+        {
+          name: "INFRASTRUCTURE",
+          items: [
+            "Pool with lounge area and panoramic views",
+            "Restaurant with a healthy, balanced menu",
+            "Functional gym",
+            "Relax zones & ocean-view terraces",
+            "Full spa with snow room, salt room, and cold plunge",
+          ],
+        },
+        {
+          name: "FULL-SERVICE SPA",
+          items: [
+            "Advanced infrared sauna",
+            "Biohacking and restoration treatments",
+            "Snow & salt rooms + cold plunge",
+          ],
+        },
+      ],
+    },
+    developer: {
+      title: "About IJI Group Estate",
+      intro: "IJI Group Estate has operated in Bali for over 15 years, developing and managing premium villas and apartments focused on hospitality service, high occupancy, and full transparency.",
+      bullets: [
+        "15 years of experience",
+        "Hospitality-focused model",
+        "High occupancy performance",
+        "Full transparency",
+      ],
+    },
+    disclaimers: {
+      renders: "Images, renders, and amenities are illustrative and may vary in final execution based on developer decisions and regulatory approvals.",
+      availability: "",
+    },
+    description:
+      "Oceanfront wellness complex in Pandawa Beach with suites and villas designed for biohacking, spa, and high profitability in Bali.",
+  },
+  "rahya-villas-complex": {
+    hero: {
+      subtitle: "Your Oceanview Villa Retreat in Bali",
+      description:
+        "An exclusive collection of premium ocean-view villas in the picturesque Bukit area, just 500 m from Pandawa Beach. Ideal for both living and investing with stable returns in a top tourism destination.",
+      badges: ["Oceanview Villas", "Smart Investment", "High Occupancy"],
+    },
+    summary: {
+      title: "Quick Summary",
+      text: "Modern villas and apartments with panoramic Indian Ocean views, surrounded by tropical nature and tranquility, combining a relaxed lifestyle with strong rental-income potential.",
+    },
+    concept: {
+      title: "The Concept",
+      text: "Rahya Villas Complex is a boutique luxury development for those seeking quality of life, oceanfront relaxation, and smart investment opportunities in Bali. Each unit offers modern comfort, privacy, and spectacular sea views that maximize both residential and rental experience.",
+    },
+    location: {
+      title: "Pandawa Beach, Bukit, Bali",
+      intro: "Located in the southern Bali hills, just 500 m from the famous Pandawa Beach, one of the island’s most prestigious enclaves known for white sand, crystal-clear waters, and an exclusive atmosphere.",
+      nearby: [
+        {
+          name: "Pandawa Beach",
+          latitude: -8.8446,
+          longitude: 115.1882,
+          category: "Beach",
+        },
+        {
+          name: "Green Bowl Beach",
+          latitude: -8.8458,
+          longitude: 115.1727,
+          category: "Beach",
+        },
+        {
+          name: "Uluwatu Area (Bukit Lifestyle)",
+          latitude: -8.8297,
+          longitude: 115.087,
+          category: "Lifestyle",
+        },
+      ],
+    },
+    project: {
+      title: "Luxury Villas",
+      text: "Rahya Villas Complex features a collection of two villa typologies, each carefully designed to deliver maximum comfort, contemporary style, and direct connection to Bali’s oceanfront lifestyle.",
+    },
+    subCommunities: [
+      {
+        title: "Rahya Villa",
+        text: "Detached villas. 2 bedrooms + 3 bathrooms. 2 floors with parking and private pool. Approx. 112 m². Estimated annual rental model: ~$64,800/year. Ideal as a vacation residence, second home, or high-yield investment unit.",
+      },
+      {
+        title: "Rahya Villa with Rooftop (Ocean View)",
+        text: "Premium villas with rooftop and panoramic sea views. 2 bedrooms + 3 bathrooms. Parking and private pool. Approx. 184 m². Approx. daily rental/year: ~$38,880 (based on market performance). A more exclusive option with wide ocean views and private rooftop.",
+      },
+    ],
+    amenities: {
+      title: "Infrastructure & Amenities",
+      intro: "The complex provides facilities designed for lifestyle, tourism, and profitability.",
+      categories: [
+        {
+          name: "LIFESTYLE",
+          items: [
+            "Private pool per villa",
+            "Dedicated parking",
+            "Natural surroundings near Pandawa Beach",
+            "Close to restaurants, cafes, and local entertainment",
+          ],
+        },
+      ],
+    },
+    developer: {
+      title: "About IJI Group Estate",
+      intro: "IJI Group Estate operates in Bali with over 15 years of experience, specializing in premium development and management with high effective return performance, full property management services, and owner support at every stage.",
+      bullets: [
+        "15 years of experience",
+        "High performance",
+        "Property management",
+        "Owner support",
+      ],
+    },
+    disclaimers: {
+      renders: "Images, renders, and amenities are illustrative and subject to change based on developer decisions or regulatory permissions.",
+      availability: "Estimated profitability is based on property management averages and local tourism occupancy performance.",
+    },
+    description:
+      "Modern villas with private pool 500 m from Pandawa Beach, ideal for living or generating income with high tourist occupancy.",
+  },
+  "eighth-sense": {
+    hero: {
+      subtitle: "Open Up New Senses",
+      description:
+        "An exclusive cliffside residential complex in Bali, with modern-design villas and apartments, panoramic ocean views, and spaces created to live in harmony with nature.",
+      badges: ["Cliffside Living", "Panoramic Ocean View", "High Yield"],
+    },
+    summary: {
+      title: "Quick Summary",
+      text: "Eighth Sense offers 60 apartments and 8 ocean-view villas on Bali’s iconic coast, combining privacy, comfort, contemporary design, and high investment potential.",
+    },
+    concept: {
+      title: "The Concept",
+      text: "A community built on a sensory principle: each space reflects and awakens one of the 'eight senses', designed to maximize daily comfort, connection with nature, and contemporary oceanfront lifestyle. The project combines panoramic views, premium materials, and infrastructure built for both living and high-yield income generation.",
+    },
+    location: {
+      title: "Pandawa Beach, Bali",
+      intro: "Located on a cliff facing the Indian Ocean in Bali’s prestigious Bukit Peninsula, just 3 minutes from Pandawa Beach.",
+      nearby: [
+        {
+          name: "Pandawa Beach",
+          latitude: -8.8446,
+          longitude: 115.1882,
+          category: "Beach",
+        },
+        {
+          name: "Melasti Beach",
+          latitude: -8.8442,
+          longitude: 115.1613,
+          category: "Beach",
+        },
+        {
+          name: "Nusa Dua",
+          latitude: -8.8078,
+          longitude: 115.23,
+          category: "Premium Area",
+        },
+      ],
+    },
+    project: {
+      title: "Villas & Apartments",
+      text: "Eighth Sense spans a 5,000 m² plot on Bali’s southern coast, with architecture designed to fully capture ocean views and sea breeze.",
+    },
+    subCommunities: [
+      {
+        title: "1-Bedroom Villas with Rooftop",
+        text: "Starting from $280,000. 8 villas total. Approx. 143 m². Private pool and rooftop with ocean view. Estimated ROI ~15%.",
+      },
+      {
+        title: "1-Bedroom Villas",
+        text: "Starting from $199,000. 5 villas total. Approx. 60 m². Private pool and premium design. Estimated ROI ~15%.",
+      },
+      {
+        title: "1-Bedroom Apartments",
+        text: "Starting from $115,000. 42 units total. From 35 m². Fully furnished. Estimated ROI ~15%.",
+      },
+      {
+        title: "2-Bedroom Apartments with Rooftop",
+        text: "Starting from $170,000. 19 units total. Approx. 70 m² with rooftop. Panoramic views. Estimated ROI ~15%.",
+      },
+    ],
+    amenities: {
+      title: "Complex Infrastructure",
+      intro: "Eighth Sense includes premium amenities designed for comfort, lifestyle, and vacation-rental appeal.",
+      categories: [
+        {
+          name: "AMENITIES",
+          items: [
+            "24/7 reception and concierge",
+            "SPA zone with massage rooms",
+            "Infinity pool with sunset view",
+            "European restaurant within the complex",
+            "Free shuttles to top nearby beaches",
+            "Summer cafe and chill areas",
+            "Ice bath and yoga zones",
+            "High-speed StarLink internet",
+            "Parking with 65 spaces",
+            "Art zones and oceanfront walk areas",
+          ],
+        },
+      ],
+    },
+    developer: {
+      title: "About IJI Group Estate",
+      intro: "IJI Group Estate is a developer and real estate operator with over 15 years of experience in Bali, specialized in premium projects with high occupancy and full asset management for owners and investors.",
+      bullets: [
+        "15 years of experience",
+        "Full asset management",
+        "Premium projects",
+        "High occupancy",
+      ],
+    },
+    disclaimers: {
+      renders: "Images, renders, and amenities are illustrative and may be subject to change according to developer decisions or regulatory requirements.",
+      availability: "Estimated ~15% profitability is projected under professional management.",
+    },
+    description:
+      "Cliffside residences and villas with panoramic ocean views, private rooftop, and estimated profitability up to 15% annually.",
+  },
 };
 
 function isObject(value: unknown): value is Record<string, unknown> {

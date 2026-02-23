@@ -12,9 +12,14 @@
   "about": {
     "title": "¿Por qué Bali es el nuevo oro azul del turismo global?",
     "description": "Bali no es solo una isla: es una marca internacional consolidada.\nReconocida como uno de los destinos más demandados del mundo, combina turismo de lujo, bienestar, naturaleza y cultura en un ecosistema económico altamente atractivo para inversores inmobiliarios.",
+    "market_card": {
+      "title": "MERCADO INMOBILIARIO",
+      "subtitle": "Alta demanda turística y potencial de crecimiento"
+    },
     "benefits": {
       "tourists": "+5 millones de turistas internacionales al año",
       "appreciation": "Valorización superior al 20% en los últimos años",
+      "recognition": "Reconocimiento internacional como destino top",
       "demand": "Alta demanda de alquiler vacacional premium",
       "roi": "ROI estimado entre 8% y 14% bruto anual",
       "emerging": "Mercado emergente con alto potencial de apreciación"
@@ -26,7 +31,8 @@
     "benefits": [
       "Bali: crecimiento turístico sostenido y expansión internacional.",
       "Mercado impulsado por nómadas digitales y turismo premium.",
-      "Alta demanda de villas, residencias boutique y proyectos wellness."
+      "Alta demanda de villas, residencias boutique y proyectos wellness.",
+      "Retornos competitivos frente a otros destinos globales."
     ],
     "quote": "Invertir en Bali no es solo comprar propiedad, es entrar en el corazón del turismo global."
   },
@@ -79,6 +85,8 @@
     }
   },
   "unit_types": {
+    "title": "Formatos de inversión inmobiliaria",
+    "subtitle": "Selecciona entre distintos tipos de unidades off-plan en Bali según rentabilidad, plazo y objetivo de inversión.",
     "units": {
       "body_sense": {
         "title": "Body Sense",
