@@ -18,7 +18,7 @@ interface NavbarProps {
   currentDestination?: "dubai" | "bali" | "home" | "miami";
 }
 
-export default function Navbar({ currentDestination = "dubai" }: NavbarProps) {
+export default function Navbar({ currentDestination = "home" }: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDestinationOpen, setIsDestinationOpen] = useState(false);
@@ -82,45 +82,43 @@ export default function Navbar({ currentDestination = "dubai" }: NavbarProps) {
               : "bg-white/10 backdrop-blur-md border border-white/10 text-white/90"
           }`}
         >
-          {[
-            { name: t('nav.about'), id: "#nosotros" },
-            { name: t('nav.projects'), id: "#proyectos" },
-            { name: t('nav.units'), id: "#unidades" },
-            { name: t('nav.video'), id: "#video" },
-            { name: t('nav.contact'), id: "#contacto" },
-          ].map((item) => (
+          {/* 1. HOME Link */}
+          {currentDestination === 'home' ? (
+             <Link
+               href="/"
+               onClick={(e) => scrollToId(e, "#inicio")}
+               scroll={false}
+               className={`transition-colors cursor-pointer ${
+                 isScrolled ? "hover:text-gray-900" : "hover:text-white"
+               }`}
+             >
+               HOME
+             </Link>
+          ) : (
             <Link
-              key={item.id}
-              href={item.id}
-              onClick={(e) => scrollToId(e, item.id)}
-              scroll={false}
-              className={`transition-colors ${
+               href={currentDestination === 'dubai' ? '/dubai' : currentDestination === 'bali' ? '/bali' : currentDestination === 'miami' ? '/miami' : '/'}
+               className={`transition-colors ${
+                 isScrolled ? "hover:text-gray-900" : "hover:text-white"
+               }`}
+             >
+               {currentDestination.toUpperCase()}
+             </Link>
+          )}
+
+          {/* 2. DESTINATION SELECTOR (Moved here) */}
+          <div className="relative group">
+            <button 
+              onClick={() => setIsDestinationOpen(!isDestinationOpen)}
+              className={`flex items-center gap-1 transition-colors cursor-pointer uppercase ${
                 isScrolled ? "hover:text-gray-900" : "hover:text-white"
               }`}
             >
-              {item.name}
-            </Link>
-          ))}
-        </nav>
-
-        {/* Desktop Right Actions */}
-        <div className="hidden md:flex items-center gap-2">
-          {/* Destination Selector */}
-          <div className="relative">
-            <button 
-              onClick={() => setIsDestinationOpen(!isDestinationOpen)}
-              className={`h-9 px-3 rounded-full flex items-center justify-center transition-colors duration-300 text-xs font-bold tracking-wider gap-1 uppercase ${
-                isScrolled 
-                  ? "bg-gray-100 border border-gray-200 text-gray-900 hover:bg-gray-200" 
-                  : "bg-white/10 backdrop-blur-md border border-white/10 text-white hover:bg-white/20"
-              }`}
-            >
-              {currentDestination}
+              DESTINOS
               <ChevronDown size={14} />
             </button>
             
             {isDestinationOpen && (
-              <div className="absolute top-full right-0 mt-2 w-32 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden py-1 z-50 animate-in fade-in slide-in-from-top-2">
+              <div className="absolute top-full left-0 mt-2 w-32 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden py-1 z-50 animate-in fade-in slide-in-from-top-2">
                 <Link 
                   href="/"
                   className={`block px-4 py-2 text-sm hover:bg-gray-50 transition-colors ${currentDestination === 'home' ? 'font-bold text-black' : 'text-gray-600'}`}
@@ -152,6 +150,39 @@ export default function Navbar({ currentDestination = "dubai" }: NavbarProps) {
               </div>
             )}
           </div>
+
+          {/* Remaining Links based on Destination */}
+          {(currentDestination === 'home' ? [
+            { name: "NOSOTROS", id: "#nosotros" },
+            { name: "UBICACIÓN", id: "#proyectos" }, // Changed to #proyectos as requested
+            { name: "CIUDADES", id: "#unidades" }, // Changed to #unidades as requested (CUIDADES typo fixed)
+            { name: "MERCADO", id: "#video" }, // Changed to #video as requested
+            { name: "CONTACTO", id: "#contacto" },
+          ] : [
+            // Default links for other pages (using translations or existing logic)
+            { name: t('nav.about'), id: "#nosotros" },
+            { name: t('nav.projects'), id: "#proyectos" },
+            { name: t('nav.units'), id: "#unidades" },
+            { name: t('nav.video'), id: "#video" },
+            { name: t('nav.contact'), id: "#contacto" },
+          ]).map((item) => (
+            <Link
+              key={item.id}
+              href={item.id}
+              onClick={(e) => scrollToId(e, item.id)}
+              scroll={false}
+              className={`transition-colors ${
+                isScrolled ? "hover:text-gray-900" : "hover:text-white"
+              }`}
+            >
+              {item.name}
+            </Link>
+          ))}
+        </nav>
+
+        {/* Desktop Right Actions */}
+        <div className="hidden md:flex items-center gap-2">
+          {/* Destination Selector Removed from here */}
 
           <button 
             onClick={toggleLanguage}
