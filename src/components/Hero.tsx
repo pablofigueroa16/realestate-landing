@@ -1,27 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import {
-  ArrowRight,
-  Clock,
-  TrendingUp,
-  Globe,
-  Briefcase,
-  Building2,
-  LucideIcon
-} from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useSmoothScroll } from "@/hooks/useSmoothScroll";
 import { useTranslation } from "@/hooks/useTranslation";
 import { HeroContent } from "@/data/landing-content";
-
-// Map of icon names to components
-const ICON_MAP: Record<string, LucideIcon> = {
-  Clock,
-  TrendingUp,
-  Globe,
-  Briefcase,
-  Building2
-};
+import HeroCarousel from "./HeroCarousel";
 
 interface HeroProps {
   content?: HeroContent | null;
@@ -140,22 +124,7 @@ export default function Hero({ content, destination = "dubai" }: HeroProps) {
         </div>
 
         {/* Floating Cards (Responsive Carousel) */}
-        <div className="absolute bottom-6 right-0 left-0 md:left-auto md:right-10 lg:right-16 z-40 w-full md:w-75 flex md:flex-col gap-3 overflow-x-auto md:overflow-x-visible md:overflow-y-auto md:max-h-75 px-6 md:px-0 snap-x snap-mandatory md:snap-none scrollbar-hide">
-          {statsToRender.map((stat, idx) => {
-            const IconComponent = stat.iconName ? ICON_MAP[stat.iconName] : null;
-            return (
-              <div key={idx} className="min-w-[85%] md:min-w-full snap-center bg-white/10 backdrop-blur-xl border border-white/10 p-4 rounded-2xl text-white shrink-0">
-                <div className="flex justify-between items-start mb-1">
-                  <span className="text-2xl font-medium">{stat.value}</span>
-                  {IconComponent ? <IconComponent className="text-white/60" size={18} /> : (idx === 0 ? <Clock className="text-white/60" size={18} /> : <TrendingUp className="text-white/60" size={18} />)}
-                </div>
-                <p className="text-sm text-white/80 leading-relaxed">
-                  {stat.text}
-                </p>
-              </div>
-            );
-          })}
-        </div>
+        <HeroCarousel items={statsToRender} />
       </div>
     </section>
   );

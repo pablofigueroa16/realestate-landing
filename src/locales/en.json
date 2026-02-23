@@ -210,9 +210,7 @@
       "cta": "View Projects",
       "stats": [
         { "value": "+5.2M", "text": "International tourists/year (2024–2025 record recovery)" },
-        { "value": ">20%", "text": "Average appreciation >20% in recent years" },
-        { "value": "Hub", "text": "Global hub for digital nomads and startups" },
-        { "value": "8-14%", "text": "Estimated ROI between 8% and 14% gross annual in premium areas" }
+        { "value": ">20%", "text": "Average appreciation >20% in recent years" }
       ]
     },
     "about": {

@@ -287,16 +287,16 @@ export const landingContent: Record<string, LandingContent> = {
           iconName: "TrendingUp",
           text: "Valorización promedio superior al 20% en los últimos años"
         },
-        {
-          value: "Hub",
-          iconName: "Briefcase",
-          text: "Hub global de nómadas digitales y startups"
-        },
-        {
-          value: "8-14%",
-          iconName: "Building2",
-          text: "ROI estimado entre 8% y 14% bruto anual en zonas premium"
-        }
+        // {
+        //   value: "Hub",
+        //   iconName: "Briefcase",
+        //   text: "Hub global de nómadas digitales y startups"
+        // },
+        // {
+        //   value: "8-14%",
+        //   iconName: "Building2",
+        //   text: "ROI estimado entre 8% y 14% bruto anual en zonas premium"
+        // }
       ]
     },
     about: {
