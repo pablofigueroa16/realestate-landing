@@ -15,7 +15,7 @@ import { useSmoothScroll } from "@/hooks/useSmoothScroll";
 import { useTranslation } from "@/hooks/useTranslation";
 
 interface NavbarProps {
-  currentDestination?: "dubai" | "bali" | "home";
+  currentDestination?: "dubai" | "bali" | "home" | "miami";
 }
 
 export default function Navbar({ currentDestination = "dubai" }: NavbarProps) {
@@ -141,6 +141,13 @@ export default function Navbar({ currentDestination = "dubai" }: NavbarProps) {
                   onClick={() => setIsDestinationOpen(false)}
                 >
                   BALI
+                </Link>
+                <Link 
+                  href="/miami"
+                  className={`block px-4 py-2 text-sm hover:bg-gray-50 transition-colors ${currentDestination === 'miami' ? 'font-bold text-black' : 'text-gray-600'}`}
+                  onClick={() => setIsDestinationOpen(false)}
+                >
+                  MIAMI
                 </Link>
               </div>
             )}

@@ -225,7 +225,7 @@ export const landingContent: Record<string, LandingContent> = {
           "15 Minutes to International Airport"
         ],
         marketInsight: "Mercado con alta demanda internacional, crecimiento constante de capital extranjero y rentabilidades atractivas en alquiler y revalorización.",
-        image: "" // Placeholder as requested (empty images)
+        image: "https://real-state-landing.s3.us-east-1.amazonaws.com/home/seccion3/seccion3/dubai.png"
       },
       {
         area: "MIAMI · FLORIDA",
@@ -414,7 +414,7 @@ export const landingContent: Record<string, LandingContent> = {
         ],
         // Adding required fields for UnitTypesSection display
         description: "Complejo wellness frente al océano en Pandawa Beach con suites y villas diseñadas para biohacking, spa y alta rentabilidad en Bali.",
-        size: "Desde 32 m²",
+        size: "Off-plan",
         community: { title: "", text: "" }, // Placeholder
         privacy: { title: "", text: "" }, // Placeholder
         views: { title: "", text: "" }, // Placeholder
@@ -494,7 +494,7 @@ export const landingContent: Record<string, LandingContent> = {
           "https://real-state-landing.s3.us-east-1.amazonaws.com/bali/proyecto2/5.png"
         ],
         description: "Villas modernas con piscina privada a 500 m de Pandawa Beach, ideales para vivir o generar ingresos con alta ocupación turística.",
-        size: "Desde 112 m²",
+        size: "Off-plan",
         community: { title: "", text: "" },
         privacy: { title: "", text: "" },
         views: { title: "", text: "" },
@@ -588,7 +588,7 @@ export const landingContent: Record<string, LandingContent> = {
           "https://real-state-landing.s3.us-east-1.amazonaws.com/bali/proyecto3/5.webp"
         ],
         description: "Residencias y villas en acantilado con vistas panorámicas al océano, rooftop privado y rentabilidad estimada hasta 15% anual.",
-        size: "Desde 35 m²",
+        size: "Off-plan",
         community: { title: "", text: "" },
         privacy: { title: "", text: "" },
         views: { title: "", text: "" },
@@ -651,5 +651,335 @@ export const landingContent: Record<string, LandingContent> = {
     ],
     presentation: { hidden: true }, // Hide for Bali
     developers: { hidden: true } // Hide for Bali
+  },
+  miami: {
+    hero: {
+      videoSrc: "https://real-state-landing.s3.us-east-1.amazonaws.com/miami/miami_hero.mp4",
+      badge: "Hasta +8–30% anual en zonas prime",
+      title: "Apartamentos y residencias de inversión en Miami",
+      subtitle: "Invierte en uno de los mercados inmobiliarios más sólidos de Estados Unidos. Miami combina crecimiento poblacional acelerado, beneficios fiscales estatales (sin impuesto estatal sobre la renta en Florida) y alta demanda internacional en alquileres y compra de propiedades premium.",
+      stats: [
+        {
+          value: "6% – 10%",
+          iconName: "TrendingUp",
+          text: "Rentabilidad bruta estimada en zonas prime como Brickell, Downtown y Edgewater."
+        },
+        {
+          value: "+140k",
+          iconName: "Globe",
+          text: "Nuevos residentes (2020–2024). Florida lidera la migración interna en EE.UU., impulsando la demanda."
+        }
+      ]
+    },
+    about: {
+      imageSrc: "https://real-state-landing.s3.us-east-1.amazonaws.com/miami/miami.png",
+      title: "Por qué invertir en Miami",
+      description: "Miami es uno de los mercados inmobiliarios más sólidos y atractivos de EE.UU., combinando crecimiento sostenido, seguridad jurídica y alta demanda internacional.\n\nSu dinamismo económico y ventaja fiscal la posicionan como un destino estratégico para proteger y rentabilizar capital en dólares.",
+      marketCard: {
+        title: "MERCADO INMOBILIARIO",
+        subtitle: "Alta demanda y seguridad jurídica en USD"
+      },
+      benefits: [
+        { iconName: "Building2", label: "Crecimiento poblacional constante" },
+        { iconName: "Coins", label: "Sin impuesto estatal sobre la renta" },
+        { iconName: "Globe", label: "Alta demanda internacional" },
+        { iconName: "TrendingUp", label: "Fuerte apreciación en zonas prime" },
+        { iconName: "CheckCircle", label: "Turismo y renta activa todo el año" },
+        { iconName: "Briefcase", label: "Hub financiero y tecnológico en expansión" }
+      ]
+    },
+    whyChoose: null,
+    units: [
+      {
+        id: "buena-vista-modern-residence",
+        slug: "buena-vista-modern-residence",
+        hero: {
+          title: "Buena Vista Modern Residence",
+          subtitle: "Modern Luxury Living | Design District Area",
+          description: "Residencia de lujo con piscina privada y guest house independiente, ubicada a minutos del Design District. Ideal para inversión patrimonial en USD y valorización en zona premium de Miami.",
+          badges: ["Nueva Construcción 2026", "Design District Area", "Modern Luxury"],
+          bgImage: "https://real-state-landing.s3.us-east-1.amazonaws.com/miami/proyecto1/1.webp"
+        },
+        summary: {
+          title: "BUENA VISTA SHOWSTOPPER",
+          text: "Residencia de diseño contemporáneo en una de las zonas con mayor proyección de valorización en Miami. Techos altos, espacios abiertos y ventanales de gran formato crean una experiencia arquitectónica sofisticada con abundante luz natural. Ubicada a minutos del Miami Design District, esta propiedad redefine el estándar del lujo moderno en Miami."
+        },
+        concept: {
+          title: "Exterior & Lifestyle",
+          text: "Una propiedad diseñada para el estilo de vida indoor-outdoor que define Miami. Piscina privada climatizada de agua salada, Área BBQ exterior, Guest House independiente con baño completo y kitchenette, Patio con paisajismo tropical, Carport convertible a garage y estación de carga para vehículos eléctricos."
+        },
+        community: {
+          title: "Perfil Ideal",
+          text: "Perfecto para: Inversor patrimonial, Residencia primaria de alto nivel, Rental de lujo a largo plazo, Mercado internacional (EE.UU. + LATAM)."
+        },
+        privacy: {
+          title: "Datos Financieros",
+          text: "Precio por sqft: $888 USD. Impuesto anual aproximado: $8,505. Sin HOA. Nueva construcción (ventaja fiscal en revalorización)."
+        },
+        views: {
+          title: "Diseño y Luz",
+          text: "Techos elevados y concepto abierto. Ventanas y puertas de impacto (huracanes). Cocina con electrodomésticos premium, despensa oversized y cabinetry flush."
+        },
+        design: {
+          title: "Características Clave",
+          text: "5 Habitaciones | 6 Baños (5 completos + 1 medio baño) | 3,321 sqft interiores | 5,800 sqft lote | 2 niveles | Nueva construcción (2026). Sistema Sonos integrado y closets diseñados a medida."
+        },
+        location: {
+          title: "Ubicación Estratégica",
+          intro: "Zona residencial en crecimiento con alta demanda premium.",
+          nearby: [
+            "A minutos del Design District",
+            "Cercano a Wynwood y Midtown",
+            "15 min de Miami Beach"
+          ]
+        },
+        project: {
+          title: "Potencial de Inversión",
+          text: "Buena Vista se beneficia del crecimiento continuo del Design District y el reposicionamiento del corredor urbano de lujo. Alta demanda de renta ejecutiva, mercado dolarizado y valorización sostenida en zonas cercanas a hubs culturales y comerciales."
+        },
+        subCommunities: [],
+        amenities: {
+          title: "Highlights",
+          intro: "Detalles que marcan la diferencia en una propiedad de lujo.",
+          categories: [
+            {
+              name: "EXTERIOR",
+              items: ["Piscina climatizada agua salada", "Guest House independiente", "Paisajismo tropical", "Estación carga EV"]
+            },
+            {
+              name: "INTERIOR",
+              items: ["Techos elevados", "Cocina premium", "Sistema Sonos", "Ventanas de impacto"]
+            }
+          ]
+        },
+        developer: {
+          title: "Tipo de Inversor Ideal",
+          intro: "Propiedad pensada para inversores que buscan apreciación a mediano-largo plazo, compradores que desean diversificar capital en USD y familias internacionales que buscan segunda residencia en Miami.",
+          bullets: ["Apreciación a mediano-largo plazo", "Diversificación en USD", "Segunda residencia"]
+        },
+        faq: [],
+        disclaimers: {
+          renders: "Las imágenes son referenciales.",
+          availability: "Precios y disponibilidad sujetos a cambios."
+        },
+        images: [
+          "https://real-state-landing.s3.us-east-1.amazonaws.com/miami/proyecto1/1.webp",
+          "https://real-state-landing.s3.us-east-1.amazonaws.com/miami/proyecto1/2.webp",
+          "https://real-state-landing.s3.us-east-1.amazonaws.com/miami/proyecto1/3.webp",
+          "https://real-state-landing.s3.us-east-1.amazonaws.com/miami/proyecto1/4.webp",
+          "https://real-state-landing.s3.us-east-1.amazonaws.com/miami/proyecto1/5.webp"
+        ],
+        description: "Residencia de lujo con piscina privada y guest house independiente, ubicada a minutos del Design District. Ideal para inversión patrimonial en USD y valorización en zona premium de Miami.",
+        size: "Off-plan"
+      },
+      {
+        id: "aston-martin-residences",
+        slug: "aston-martin-residences",
+        hero: {
+          title: "ASTON MARTIN RESIDENCES",
+          subtitle: "The Pinnacle of Waterfront Luxury – Downtown Miami",
+          description: "Residencias icónicas frente al agua en Downtown Miami, diseñadas por la legendaria marca británica. Un ícono arquitectónico con vistas panorámicas a Biscayne Bay y marina privada.",
+          badges: ["Waterfront Luxury", "Downtown Miami", "Marina Privada"],
+          bgImage: "https://real-state-landing.s3.us-east-1.amazonaws.com/miami/proyecto2/1.webp"
+        },
+        summary: {
+          title: "The Pinnacle of Waterfront Luxury",
+          text: "Ubicado en 300 Biscayne Boulevard Way, una de las últimas parcelas frente al agua en Downtown Miami, Aston Martin Residences representa la fusión perfecta entre ingeniería británica, arquitectura contemporánea y estilo de vida cosmopolita. Un edificio icónico de 66 pisos diseñado para capturar vistas ininterrumpidas de Biscayne Bay, Miami River y el skyline de Miami."
+        },
+        concept: {
+          title: "Interiores & Diseño",
+          text: "Cocinas Bulthaup, Electrodomésticos Gaggenau, Pisos en mármol premium, Ventanales piso a techo, Baños con vistas panorámicas, Diseño artesanal europeo. Cada residencia está concebida bajo los principios de maximización de luz, espacio y vistas, manteniendo el ADN de precisión y exclusividad de Aston Martin."
+        },
+        community: {
+          title: "Perfil de Inversión",
+          text: "Producto de marca global icónica. Ubicación waterfront irrepetible. Alta demanda internacional. Activo prime en USD. Potencial de valorización a largo plazo."
+        },
+        privacy: {
+          title: "Signature Collection",
+          text: "Una colección limitada diseñada como piezas maestras individuales. Arquitectura contemporánea, acabados nobles y vistas ininterrumpidas que elevan la experiencia residencial a nivel artístico."
+        },
+        views: {
+          title: "Vistas Inigualables",
+          text: "Vistas ininterrumpidas de Biscayne Bay, Miami River y el skyline de Miami desde un edificio icónico de 66 pisos."
+        },
+        design: {
+          title: "Proyecto",
+          text: "391 residencias exclusivas. 66 niveles residenciales. 1–5 habitaciones + dúplex + penthouses. Triple Penthouse único (63–65). Marina privada onsite."
+        },
+        location: {
+          title: "Ubicación Estratégica",
+          intro: "Downtown & Brickell continúan consolidándose como el epicentro financiero y residencial de lujo de Florida, con fuerte demanda internacional y apreciación sostenida en propiedades waterfront de marca.",
+          nearby: [
+            "02 min Brickell Financial District",
+            "05 min Miami Central Station",
+            "07 min Port of Miami",
+            "10 min Design District",
+            "15 min Miami Beach"
+          ]
+        },
+        project: {
+          title: "Tipos de Residencias",
+          text: "Studios desde 698 SF. 1 Habitación: 754 – 1,001 SF. 2 Habitaciones: 1,001 – 1,317 SF. 3 Habitaciones: 2,236 – 3,075 SF. 4 Habitaciones: 3,235 – 4,434 SF. 5 Habitaciones: 3,764 – 3,994 SF. Penthouses: 8,977 – 10,463 SF. Triple Penthouse: Nivel 63–65."
+        },
+        subCommunities: [],
+        amenities: {
+          title: "Amenidades de Ultra Lujo",
+          intro: "Un mundo de privilegios exclusivos.",
+          categories: [
+            {
+              name: "AMENITIES",
+              items: ["Piscina panorámica", "Spa & Wellness Center", "Fitness Center de última generación", "Salones privados & lounges", "Marina privada", "Áreas sociales exclusivas"]
+            }
+          ]
+        },
+        developer: {
+          title: "Aston Martin",
+          intro: "La legendaria marca británica trae su ingeniería y diseño de precisión al mercado inmobiliario de lujo en Miami.",
+          bullets: ["Marca global icónica", "Diseño de precisión", "Exclusividad"]
+        },
+        faq: [],
+        disclaimers: {
+          renders: "Las imágenes son referenciales.",
+          availability: "Precios y disponibilidad sujetos a cambios."
+        },
+        images: [
+          "https://real-state-landing.s3.us-east-1.amazonaws.com/miami/proyecto2/1.webp",
+          "https://real-state-landing.s3.us-east-1.amazonaws.com/miami/proyecto2/2.webp",
+          "https://real-state-landing.s3.us-east-1.amazonaws.com/miami/proyecto2/3.webp",
+          "https://real-state-landing.s3.us-east-1.amazonaws.com/miami/proyecto2/4.webp",
+          "https://real-state-landing.s3.us-east-1.amazonaws.com/miami/proyecto2/5.webp"
+        ],
+        description: "Residencias icónicas frente al agua en Downtown Miami, diseñadas por la legendaria marca británica. Un ícono arquitectónico con vistas panorámicas a Biscayne Bay y marina privada.",
+        size: "Off-plan"
+      },
+      {
+        id: "ritz-carlton-residences",
+        slug: "ritz-carlton-residences",
+        hero: {
+          title: "THE RITZ-CARLTON RESIDENCES",
+          subtitle: "South Beach, Miami",
+          description: "Exclusiva colección boutique frente al mar en South Beach, con acceso VIP al hotel Ritz-Carlton y vistas panorámicas al Atlántico.",
+          badges: ["South Beach", "Oceanfront", "Branded Residences"],
+          bgImage: "https://real-state-landing.s3.us-east-1.amazonaws.com/miami/proyecto3/1.avif"
+        },
+        summary: {
+          title: "South Beach, Miami",
+          text: "Una colección boutique ultra exclusiva de solo 30 residencias frente al mar, donde la historia del Ritz-Carlton se fusiona con el diseño contemporáneo y el estilo de vida icónico de South Beach. Ubicado en la intersección de la playa del Atlántico y Lincoln Road, este proyecto redefine el concepto de branded residences en Miami Beach."
+        },
+        concept: {
+          title: "Experiencia Culinaria – José Andrés",
+          text: "Programa gastronómico curado por el chef con estrella Michelin José Andrés, incluyendo: Zaytinya, DiLido Beach Club, Lapidus Bar, Nuevo café en el histórico lobby Sagamore. Una propuesta culinaria de nivel internacional integrada al estilo de vida residencial."
+        },
+        community: {
+          title: "Valor de Inversión",
+          text: "Producto boutique con inventario limitado. Ubicación oceanfront irrepetible. Marca global de prestigio. Alta demanda internacional en South Beach. Las branded residences frente al mar en Miami Beach mantienen un posicionamiento sólido dentro del mercado luxury, con fuerte componente patrimonial."
+        },
+        privacy: {
+          title: "Residencias Boutique",
+          text: "Solo 30 condominios boutique. Vistas panorámicas al Atlántico y Miami Beach. Diseño abierto con abundante luz natural. Layouts amplios con terrazas privadas. Un inventario extremadamente limitado que refuerza la exclusividad del activo."
+        },
+        views: {
+          title: "Vistas Panorámicas",
+          text: "Vistas panorámicas al Atlántico y Miami Beach. La conexión entre arena, mar y cielo es central en el diseño."
+        },
+        design: {
+          title: "Arquitectura & Diseño",
+          text: "Diseñado por el reconocido arquitecto Kobi Karp, inspirado en la arquitectura icónica de Morris Lapidus y la herencia Art Deco de Miami Beach. Las residencias cuentan con paneles de vidrio de altura completa, amplios balcones privados, cocinas italianas personalizadas por Alessandro Munge, materiales nobles y acabados de alta gama."
+        },
+        location: {
+          title: "Ubicación Privilegiada",
+          intro: "Situado en una de las direcciones más codiciadas de Estados Unidos. South Beach combina influencia europea, arte, gastronomía y lifestyle internacional en un solo enclave.",
+          nearby: [
+            "Frente directo al Océano Atlántico",
+            "A pasos de Lincoln Road",
+            "Rodeado de restaurantes Michelin, galerías y cultura",
+            "Acceso inmediato a South Pointe, Sunset Harbour y Ocean Drive"
+          ]
+        },
+        project: {
+          title: "Resumen Estratégico",
+          text: "30 residencias boutique. Frente directo al Atlántico. Marca Ritz-Carlton. Lifestyle cultural y gastronómico premium."
+        },
+        subCommunities: [],
+        amenities: {
+          title: "Amenidades & Servicios",
+          intro: "Los residentes disfrutan de un mundo propio de comodidades.",
+          categories: [
+            {
+              name: "RESIDENCIALES PRIVADAS",
+              items: ["Rooftop oasis con piscina", "Sala de proyección privada", "Salón de entretenimiento con cocina", "Gimnasio 24/7", "Servicio de concierge personalizado"]
+            },
+            {
+              name: "ACCESO VIP HOTEL",
+              items: ["Spa de clase mundial", "Beach Club", "Programa Ritz Kids", "Servicios de conserjería premium"]
+            }
+          ]
+        },
+        developer: {
+          title: "Ritz-Carlton",
+          intro: "La marca Ritz-Carlton es sinónimo de servicio legendario y lujo atemporal en todo el mundo.",
+          bullets: ["Servicio Legendario", "Lujo Atemporal", "Reconocimiento Global"]
+        },
+        faq: [],
+        disclaimers: {
+          renders: "Las imágenes son referenciales.",
+          availability: "Precios y disponibilidad sujetos a cambios."
+        },
+        images: [
+          "https://real-state-landing.s3.us-east-1.amazonaws.com/miami/proyecto3/1.avif",
+          "https://real-state-landing.s3.us-east-1.amazonaws.com/miami/proyecto3/2.avif",
+          "https://real-state-landing.s3.us-east-1.amazonaws.com/miami/proyecto3/3.avif",
+          "https://real-state-landing.s3.us-east-1.amazonaws.com/miami/proyecto3/4.avif",
+          "https://real-state-landing.s3.us-east-1.amazonaws.com/miami/proyecto3/5.avif"
+        ],
+        description: "Exclusiva colección boutique frente al mar en South Beach, con acceso VIP al hotel Ritz-Carlton y vistas panorámicas al Atlántico.",
+        size: "Off-plan"
+      }
+    ],
+    unitsConfig: {
+      title: "Formatos de inversión inmobiliaria",
+      subtitle: "Selecciona entre distintos tipos de unidades off-plan en Miami según rentabilidad, plazo y objetivo de inversión."
+    },
+    locationProjects: [
+      {
+        area: "BUENA VISTA — MIAMI DESIGN DISTRICT",
+        title: "Prime Location — Buena Vista, Miami",
+        description: "Ubicada en una de las zonas residenciales con mayor crecimiento de Miami, esta nueva construcción combina diseño arquitectónico moderno, cercanía a hubs culturales y alto potencial de valorización en USD.",
+        features: [
+          "03 min Miami Design District",
+          "08 min Wynwood Arts District",
+          "15 min Miami Beach"
+        ],
+        marketInsight: "Buena Vista se beneficia de la expansión del Design District y el desarrollo continuo del corredor urbano de lujo, impulsando apreciación sostenida y alta demanda de renta ejecutiva.",
+        image: "https://real-state-landing.s3.us-east-1.amazonaws.com/miami/proyecto1/1.webp"
+      },
+      {
+        area: "DOWNTOWN MIAMI",
+        title: "Prime Location — Biscayne Boulevard Way",
+        description: "Ubicado en una de las últimas parcelas frente al agua en Downtown Miami, Aston Martin Residences combina vistas panorámicas a Biscayne Bay, proximidad al distrito financiero de Brickell y acceso directo a los principales centros culturales y gastronómicos de la ciudad.",
+        features: [
+          "03 min Brickell Financial District",
+          "05 min Brickell City Centre",
+          "07 min Miami Design District"
+        ],
+        marketInsight: "Downtown Miami y Brickell continúan liderando la valorización del mercado de lujo en el sur de Florida, impulsados por migración de alto patrimonio, expansión financiera y demanda internacional en activos waterfront premium.",
+        image: "https://real-state-landing.s3.us-east-1.amazonaws.com/miami/proyecto2/1.webp"
+      },
+      {
+        area: "THE RITZ-CARLTON RESIDENCES",
+        title: "South Beach, Miami",
+        description: "Una colección boutique ultra exclusiva de solo 30 residencias frente al mar, donde la historia del Ritz-Carlton se fusiona con el diseño contemporáneo y el estilo de vida icónico de South Beach. Ubicado en la intersección de la playa del Atlántico y Lincoln Road, este proyecto redefine el concepto de branded residences en Miami Beach.",
+        features: [
+          "Frente directo al Océano Atlántico",
+          "A pasos de Lincoln Road",
+          "Rodeado de restaurantes Michelin, galerías y cultura",
+          "Acceso inmediato a South Pointe, Sunset Harbour y Ocean Drive"
+        ],
+        marketInsight: "Las branded residences frente al mar en Miami Beach mantienen un posicionamiento sólido dentro del mercado luxury, con fuerte componente patrimonial.",
+        image: "https://real-state-landing.s3.us-east-1.amazonaws.com/miami/proyecto3/1.avif"
+      }
+    ],
+    presentation: null,
+    developers: null
   }
 };

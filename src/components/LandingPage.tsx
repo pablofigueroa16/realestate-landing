@@ -13,7 +13,7 @@ import { landingContent } from "@/data/landing-content";
 import { useTranslation } from "@/hooks/useTranslation";
 
 interface LandingPageProps {
-  destination: "dubai" | "bali" | "home";
+  destination: "dubai" | "bali" | "home" | "miami";
 }
 
 export default function LandingPage({ destination }: LandingPageProps) {
@@ -132,8 +132,8 @@ export default function LandingPage({ destination }: LandingPageProps) {
       <Hero content={content.hero} destination={destination} />
       <AboutSection content={content.about} />
       <LocationSection projects={content.locationProjects} />
-      <UnitTypesSection 
-        units={content.units} 
+      <UnitTypesSection
+        units={content.units}
         title={content.unitsConfig?.title} 
         subtitle={content.unitsConfig?.subtitle} 
       />

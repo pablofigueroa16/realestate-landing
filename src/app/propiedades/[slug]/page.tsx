@@ -21,24 +21,43 @@ export default function PropertyDetailsPage() {
 
   useEffect(() => {
     if (params.slug) {
-      // Search in default properties (Dubai)
-      let foundProperty = properties.find((p) => p.slug === params.slug);
-      let isBali = false;
-      
-      // If not found, search in Bali properties
+      let foundProperty: Property | undefined;
+      let backPath = "/#unidades";
+
+      // Iterate over all destinations to find the property
+      for (const [key, content] of Object.entries(landingContent)) {
+        if (!content.units) continue;
+        
+        const found = content.units.find((p) => p.slug === params.slug);
+        if (found) {
+          foundProperty = found;
+          
+          // Determine back path based on the destination key
+          if (key === "home") {
+            backPath = "/#unidades";
+          } else if (key === "dubai") {
+            // User requested to go back to Dubai landing, not Home
+            backPath = "/dubai#unidades"; 
+          } else {
+            backPath = `/${key}#unidades`;
+          }
+          break;
+        }
+      }
+
+      // Fallback: Check strictly in properties file (Dubai) if not found above 
+      // (though landingContent.dubai.units should cover this)
       if (!foundProperty) {
-        const baliUnits = landingContent.bali.units;
-        if (baliUnits) {
-             foundProperty = baliUnits.find((p) => p.slug === params.slug);
-             if (foundProperty) isBali = true;
+        foundProperty = properties.find((p) => p.slug === params.slug);
+        if (foundProperty) {
+           backPath = "/dubai#unidades";
         }
       }
 
       if (foundProperty) {
         setProperty(foundProperty);
-        setBackLink(isBali ? "/bali#unidades" : "/#unidades");
+        setBackLink(backPath);
       } else {
-        // Handle not found - redirect or show error
         router.push("/#unidades");
       }
     }
