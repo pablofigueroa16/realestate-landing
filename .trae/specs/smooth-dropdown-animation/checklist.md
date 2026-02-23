@@ -1,8 +1,0 @@
-- [x] The dropdown animation starts immediately upon clicking "DESTINOS".
-- [x] The dropdown expands vertically downwards from the selector button.
-- [x] The animation duration is between 200ms and 400ms.
-- [x] The easing function is "ease-out" or similar for a natural feel.
-- [x] The dropdown closes smoothly when an option is selected or clicked again.
-- [x] The dropdown is fully visible and clickable when open.
-- [x] The dropdown is fully hidden and not clickable when closed.
-- [x] The dropdown position is correct (aligned under the button).

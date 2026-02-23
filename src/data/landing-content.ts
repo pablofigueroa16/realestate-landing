@@ -274,7 +274,7 @@ export const landingContent: Record<string, LandingContent> = {
     hero: {
       videoSrc: "https://real-state-landing.s3.us-east-1.amazonaws.com/bali/bali_hero.mp4",
       badge: "Hasta +8-35% anual en zonas prime",
-      title: "Invierte en Bali. El nuevo epicentro global del turismo, lujo y rentabilidad sostenible.",
+      title: "Invierte en Bali. El nuevo epicentro global del turismo y lujo",
       subtitle: "Propiedades estratégicas en la isla más demandada del Sudeste Asiático. Alta valorización, turismo internacional en crecimiento y rentabilidades atractivas en dólares.",
       stats: [
         {
