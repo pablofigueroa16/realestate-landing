@@ -346,9 +346,24 @@ export const landingContent: Record<string, LandingContent> = {
           latitude: -8.8450,
           longitude: 115.1860,
           nearby: [
-            "3 minutos caminando a Pandawa Beach",
-            "A pasos de restaurantes, tiendas boutique y zonas recreativas",
-            "Entorno natural único del suroeste de la isla"
+            {
+              name: "Pandawa Beach",
+              latitude: -8.8446,
+              longitude: 115.1882,
+              category: "Playa",
+            },
+            {
+              name: "Timbis Beach Club",
+              latitude: -8.8466,
+              longitude: 115.1803,
+              category: "Lifestyle",
+            },
+            {
+              name: "Bukit Pandawa Golf & Country Club",
+              latitude: -8.8394,
+              longitude: 115.1792,
+              category: "Deporte",
+            },
           ]
         },
         project: {
@@ -438,9 +453,24 @@ export const landingContent: Record<string, LandingContent> = {
           latitude: -8.8430,
           longitude: 115.1850,
           nearby: [
-            "A 500 m de Pandawa Beach, con acceso fácil y peatonal.",
-            "Rodeado de naturaleza tropical, zonas de recreación y restaurantes boutique.",
-            "Tranquilidad y privacidad en un entorno premium."
+            {
+              name: "Pandawa Beach",
+              latitude: -8.8446,
+              longitude: 115.1882,
+              category: "Playa",
+            },
+            {
+              name: "Green Bowl Beach",
+              latitude: -8.8458,
+              longitude: 115.1727,
+              category: "Playa",
+            },
+            {
+              name: "Uluwatu Area (Bukit Lifestyle)",
+              latitude: -8.8297,
+              longitude: 115.0870,
+              category: "Lifestyle",
+            },
           ]
         },
         project: {
@@ -520,9 +550,24 @@ export const landingContent: Record<string, LandingContent> = {
           latitude: -8.8470,
           longitude: 115.1870,
           nearby: [
-            "A pocos minutos de Pandawa Beach",
-            "Conectividad con zonas premium de Bali",
-            "Entorno natural y exclusivo"
+            {
+              name: "Pandawa Beach",
+              latitude: -8.8446,
+              longitude: 115.1882,
+              category: "Playa",
+            },
+            {
+              name: "Melasti Beach",
+              latitude: -8.8442,
+              longitude: 115.1613,
+              category: "Playa",
+            },
+            {
+              name: "Nusa Dua",
+              latitude: -8.8078,
+              longitude: 115.2300,
+              category: "Zona Premium",
+            },
           ]
         },
         project: {
@@ -739,9 +784,30 @@ export const landingContent: Record<string, LandingContent> = {
           latitude: 25.8130,
           longitude: -80.1920,
           nearby: [
-            "A minutos del Design District",
-            "Cercano a Wynwood y Midtown",
-            "15 min de Miami Beach"
+            {
+              name: "Miami Design District",
+              latitude: 25.8132,
+              longitude: -80.1936,
+              category: "Distrito Urbano",
+            },
+            {
+              name: "Wynwood",
+              latitude: 25.8004,
+              longitude: -80.1992,
+              category: "Arte y Lifestyle",
+            },
+            {
+              name: "Midtown Miami",
+              latitude: 25.8077,
+              longitude: -80.1938,
+              category: "Residencial",
+            },
+            {
+              name: "Miami Beach",
+              latitude: 25.7907,
+              longitude: -80.1300,
+              category: "Playa",
+            },
           ]
         },
         project: {
@@ -823,11 +889,36 @@ export const landingContent: Record<string, LandingContent> = {
           latitude: 25.7705,
           longitude: -80.1880,
           nearby: [
-            "02 min Brickell Financial District",
-            "05 min Miami Central Station",
-            "07 min Port of Miami",
-            "10 min Design District",
-            "15 min Miami Beach"
+            {
+              name: "Brickell Financial District",
+              latitude: 25.7617,
+              longitude: -80.1918,
+              category: "Financiero",
+            },
+            {
+              name: "MiamiCentral Station",
+              latitude: 25.7782,
+              longitude: -80.1959,
+              category: "Transporte",
+            },
+            {
+              name: "PortMiami",
+              latitude: 25.7781,
+              longitude: -80.1794,
+              category: "Puerto",
+            },
+            {
+              name: "Miami Design District",
+              latitude: 25.8132,
+              longitude: -80.1936,
+              category: "Distrito Urbano",
+            },
+            {
+              name: "Miami Beach",
+              latitude: 25.7907,
+              longitude: -80.1300,
+              category: "Playa",
+            },
           ]
         },
         project: {
@@ -905,10 +996,36 @@ export const landingContent: Record<string, LandingContent> = {
           latitude: 25.7907,
           longitude: -80.1284,
           nearby: [
-            "Frente directo al Océano Atlántico",
-            "A pasos de Lincoln Road",
-            "Rodeado de restaurantes Michelin, galerías y cultura",
-            "Acceso inmediato a South Pointe, Sunset Harbour y Ocean Drive"
+            {
+              name: "Lincoln Road",
+              latitude: 25.7901,
+              longitude: -80.1403,
+              category: "Lifestyle",
+            },
+            {
+              name: "South Pointe Park",
+              latitude: 25.7655,
+              longitude: -80.1311,
+              category: "Parque",
+            },
+            {
+              name: "Sunset Harbour",
+              latitude: 25.7923,
+              longitude: -80.1485,
+              category: "Marina",
+            },
+            {
+              name: "Ocean Drive",
+              latitude: 25.7814,
+              longitude: -80.1301,
+              category: "Cultura y Lifestyle",
+            },
+            {
+              name: "Atlantic Oceanfront",
+              latitude: 25.7907,
+              longitude: -80.1270,
+              category: "Playa",
+            },
           ]
         },
         project: {

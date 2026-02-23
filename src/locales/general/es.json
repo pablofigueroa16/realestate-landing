@@ -1,0 +1,58 @@
+{
+  "nav": {
+    "home": "INICIO",
+    "destinations": "DESTINOS",
+    "about": "NOSOTROS",
+    "projects": "PROYECTOS",
+    "units": "UNIDADES",
+    "video": "MERCADO",
+    "contact": "CONTACTO",
+    "book_consultation": "AGENDAR CONSULTORIA"
+  },
+  "common": {
+    "image_not_found": "Imagen no encontrada",
+    "prev_image": "Imagen anterior",
+    "next_image": "Imagen siguiente",
+    "loading": "Cargando..."
+  },
+  "footer": {
+    "contact": {
+      "title": "Contáctanos",
+      "description": "Permítenos ayudarte a encontrar una propiedad que no solo sea un activo rentable, sino también un lugar de energía, inspiración y crecimiento.",
+      "email_label": "Correo electrónico",
+      "phone_label": "Teléfono"
+    },
+    "form": {
+      "name_label": "Nombre",
+      "name_placeholder": "Juan",
+      "lastname_label": "Apellido",
+      "lastname_placeholder": "Pérez",
+      "email_label": "Correo electrónico",
+      "email_placeholder": "juan@ejemplo.com",
+      "phone_label": "Teléfono",
+      "phone_placeholder": "+1 (555) 000-0000",
+      "submit": "Recibir presentación del proyecto"
+    },
+    "copyright": "Estetico Estate."
+  },
+  "location": {
+    "market_insight_label": "Insight de Mercado"
+  },
+  "unit_types": {
+    "whatsapp_button": "WhatsApp",
+    "destination_button": "Ver Destino",
+    "details_button": "Ver Detalles",
+    "whatsapp_message": "Hola, estoy interesado en recibir todos los detalles sobre esta propiedad y oportunidades similares actualmente disponibles. Por favor, inclúyeme precios actualizados, plan de pago, expectativas de retorno (ROI), disponibilidad y opciones para agendar una visita."
+  },
+  "property_details": {
+    "back": "Volver",
+    "request_availability": "Solicitar disponibilidad",
+    "whatsapp_brochure": "Brochure por WhatsApp",
+    "summary": "Resumen",
+    "concept": "El Concepto",
+    "location": "Ubicación",
+    "map_loading": "Cargando Mapa...",
+    "map_unavailable": "Mapa Interactivo No Disponible",
+    "faq_title": "Preguntas Frecuentes"
+  }
+}

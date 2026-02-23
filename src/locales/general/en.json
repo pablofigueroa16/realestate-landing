@@ -1,0 +1,58 @@
+{
+  "nav": {
+    "home": "HOME",
+    "destinations": "DESTINATIONS",
+    "about": "ABOUT US",
+    "projects": "PROJECTS",
+    "units": "UNITS",
+    "video": "MARKET",
+    "contact": "CONTACT",
+    "book_consultation": "BOOK CONSULTATION"
+  },
+  "common": {
+    "image_not_found": "Image not found",
+    "prev_image": "Previous image",
+    "next_image": "Next image",
+    "loading": "Loading..."
+  },
+  "footer": {
+    "contact": {
+      "title": "Contact Us",
+      "description": "Let us help you find a property that is not only a profitable asset but also a place of energy, inspiration, and growth.",
+      "email_label": "Email",
+      "phone_label": "Phone"
+    },
+    "form": {
+      "name_label": "Name",
+      "name_placeholder": "John",
+      "lastname_label": "Last Name",
+      "lastname_placeholder": "Doe",
+      "email_label": "Email",
+      "email_placeholder": "john@example.com",
+      "phone_label": "Phone",
+      "phone_placeholder": "+1 (555) 000-0000",
+      "submit": "Receive Project Presentation"
+    },
+    "copyright": "Estetico Estate."
+  },
+  "location": {
+    "market_insight_label": "Market Insight"
+  },
+  "unit_types": {
+    "whatsapp_button": "WhatsApp",
+    "destination_button": "View Destination",
+    "details_button": "View Details",
+    "whatsapp_message": "Hello, I am interested in receiving all the details about this property and similar opportunities currently available. Please include updated prices, payment plan, return expectations (ROI), availability, and options to schedule a visit."
+  },
+  "property_details": {
+    "back": "Back",
+    "request_availability": "Request availability",
+    "whatsapp_brochure": "Brochure via WhatsApp",
+    "summary": "Summary",
+    "concept": "The Concept",
+    "location": "Location",
+    "map_loading": "Loading Map...",
+    "map_unavailable": "Interactive Map Unavailable",
+    "faq_title": "Frequently Asked Questions"
+  }
+}

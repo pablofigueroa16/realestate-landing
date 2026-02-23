@@ -82,6 +82,14 @@ export interface NearbyPlace {
   category?: string;
 }
 
+type DeepPartial<T> = {
+  [K in keyof T]?: T[K] extends Array<infer U>
+    ? Array<DeepPartial<U>>
+    : T[K] extends object
+      ? DeepPartial<T[K]>
+      : T[K];
+};
+
 export const properties: Property[] = [
   {
     id: "sobha-hartland-ii",
@@ -305,10 +313,30 @@ export const properties: Property[] = [
       latitude: 25.1760,
       longitude: 55.2890,
       nearby: [
-        "Sheikh Zayed Road",
-        "Downtown Dubai",
-        "Business Bay",
-        "Dubai Marina"
+        {
+          name: "Sheikh Zayed Road",
+          latitude: 25.1831,
+          longitude: 55.2616,
+          category: "Conectividad",
+        },
+        {
+          name: "Downtown Dubai",
+          latitude: 25.1972,
+          longitude: 55.2744,
+          category: "Distrito Urbano",
+        },
+        {
+          name: "Business Bay",
+          latitude: 25.1867,
+          longitude: 55.2654,
+          category: "Financiero",
+        },
+        {
+          name: "Dubai Marina",
+          latitude: 25.0800,
+          longitude: 55.1404,
+          category: "Lifestyle",
+        },
       ]
     },
     project: {
@@ -400,10 +428,30 @@ export const properties: Property[] = [
       latitude: 25.1850,
       longitude: 55.3100,
       nearby: [
-        "Meydan Racecourse",
-        "Dubai Creek Harbour",
-        "Downtown Dubai",
-        "Dubai International Airport"
+        {
+          name: "Meydan Racecourse",
+          latitude: 25.1579,
+          longitude: 55.2985,
+          category: "Deporte",
+        },
+        {
+          name: "Dubai Creek Harbour",
+          latitude: 25.2065,
+          longitude: 55.3386,
+          category: "Waterfront",
+        },
+        {
+          name: "Downtown Dubai",
+          latitude: 25.1972,
+          longitude: 55.2744,
+          category: "Distrito Urbano",
+        },
+        {
+          name: "Dubai International Airport",
+          latitude: 25.2532,
+          longitude: 55.3657,
+          category: "Transporte",
+        },
       ]
     },
     project: {
@@ -519,11 +567,36 @@ export const properties: Property[] = [
       latitude: 25.0740,
       longitude: 55.3180,
       nearby: [
-        "Sheikh Mohammed Bin Zayed Road",
-        "IMG Worlds of Adventure",
-        "Global Village",
-        "Dubai International Airport",
-        "Al Maktoum International Airport"
+        {
+          name: "Sheikh Mohammed Bin Zayed Road",
+          latitude: 25.0792,
+          longitude: 55.3227,
+          category: "Conectividad",
+        },
+        {
+          name: "IMG Worlds of Adventure",
+          latitude: 25.0834,
+          longitude: 55.2992,
+          category: "Entretenimiento",
+        },
+        {
+          name: "Global Village",
+          latitude: 25.0715,
+          longitude: 55.3084,
+          category: "Lifestyle",
+        },
+        {
+          name: "Dubai International Airport",
+          latitude: 25.2532,
+          longitude: 55.3657,
+          category: "Transporte",
+        },
+        {
+          name: "Al Maktoum International Airport",
+          latitude: 24.8964,
+          longitude: 55.1614,
+          category: "Transporte",
+        },
       ]
     },
     project: {
@@ -633,10 +706,30 @@ export const properties: Property[] = [
       latitude: 24.8870,
       longitude: 55.1520,
       nearby: [
-        "Al Maktoum International Airport (DWC)",
-        "Emirates Road",
-        "Expo City Dubai",
-        "Sheikh Mohammed Bin Zayed Road"
+        {
+          name: "Al Maktoum International Airport (DWC)",
+          latitude: 24.8964,
+          longitude: 55.1614,
+          category: "Transporte",
+        },
+        {
+          name: "Emirates Road",
+          latitude: 24.9303,
+          longitude: 55.2391,
+          category: "Conectividad",
+        },
+        {
+          name: "Expo City Dubai",
+          latitude: 24.9576,
+          longitude: 55.1510,
+          category: "Negocios",
+        },
+        {
+          name: "Sheikh Mohammed Bin Zayed Road",
+          latitude: 24.9875,
+          longitude: 55.2033,
+          category: "Conectividad",
+        },
       ]
     },
     project: {
@@ -755,10 +848,30 @@ export const properties: Property[] = [
       latitude: 24.8870,
       longitude: 55.1520,
       nearby: [
-        "Al Maktoum International Airport",
-        "Emirates Road",
-        "Expo City Dubai",
-        "Sheikh Mohammed Bin Zayed Road"
+        {
+          name: "Al Maktoum International Airport",
+          latitude: 24.8964,
+          longitude: 55.1614,
+          category: "Transporte",
+        },
+        {
+          name: "Emirates Road",
+          latitude: 24.9303,
+          longitude: 55.2391,
+          category: "Conectividad",
+        },
+        {
+          name: "Expo City Dubai",
+          latitude: 24.9576,
+          longitude: 55.1510,
+          category: "Negocios",
+        },
+        {
+          name: "Sheikh Mohammed Bin Zayed Road",
+          latitude: 24.9875,
+          longitude: 55.2033,
+          category: "Conectividad",
+        },
       ]
     },
     project: {
@@ -868,12 +981,42 @@ export const properties: Property[] = [
       latitude: 25.3000,
       longitude: 55.3400,
       nearby: [
-        "5 min – Waterfront Market",
-        "10 min – Port Rashid",
-        "12 min – Dubai Hospital",
-        "15 min – Dubai International Airport",
-        "15 min – Dubai Frame",
-        "20 min – City Centre Deira"
+        {
+          name: "Waterfront Market",
+          latitude: 25.3033,
+          longitude: 55.3350,
+          category: "Comercio",
+        },
+        {
+          name: "Port Rashid",
+          latitude: 25.2793,
+          longitude: 55.2710,
+          category: "Puerto",
+        },
+        {
+          name: "Dubai Hospital",
+          latitude: 25.2369,
+          longitude: 55.3222,
+          category: "Salud",
+        },
+        {
+          name: "Dubai International Airport",
+          latitude: 25.2532,
+          longitude: 55.3657,
+          category: "Transporte",
+        },
+        {
+          name: "Dubai Frame",
+          latitude: 25.2355,
+          longitude: 55.3003,
+          category: "Landmark",
+        },
+        {
+          name: "City Centre Deira",
+          latitude: 25.2515,
+          longitude: 55.3333,
+          category: "Comercio",
+        },
       ]
     },
     project: {
@@ -929,3 +1072,505 @@ export const properties: Property[] = [
     ]
   }
 ];
+
+const propertyContentEn: Record<string, DeepPartial<Property>> = {
+  "sobha-hartland-ii": {
+    hero: {
+      subtitle: "The epitome of luxury waterfront living.",
+      description:
+        "Sobha Hartland II is a new 8 million sq. ft. waterfront residential district, created as the continuation of Sobha Hartland’s success. A premium lifestyle close to Dubai’s main hubs.",
+      badges: [
+        "Luxury waterfront community",
+        "8 million sq. ft.",
+        "Close to the city core",
+      ],
+    },
+    summary: {
+      title: "The best of the city... with calm by the water",
+      text: "Live the perfect combination: malls, business districts, and hotspots just minutes away, while returning home to an urban waterfront paradise.",
+    },
+    concept: {
+      title: "Serene nature. Total waterfront calm.",
+      text: "Sobha Hartland II presents a unique blend of opulent and sustainable waterfront living, with blue lagoons and beach edges in the middle of a vibrant city.",
+    },
+    community: {
+      title: "A community built to connect",
+      text: "Discover your tribe in a vibrant community full of possibilities. Build new connections and enjoy an elevated lifestyle in harmony with nature.",
+    },
+    privacy: {
+      title: "An exclusive retreat designed for you",
+      text: "Enjoy the privacy of a gated community surrounded by luminous beachfront and greenery. Elevated spaces blend with natural beauty for an extraordinary daily experience.",
+    },
+    views: {
+      title: "A window to endless possibilities",
+      text: "Step into your private sanctuary and embrace panoramic views: blue waters, greenery, and unmatched serenity.",
+    },
+    design: {
+      title: "Embrace the extraordinary",
+      text: "A world of contemporary design and sustainable infrastructure, where premium materials and refined details shape a sophisticated sanctuary.",
+    },
+    location: {
+      title: "Strategic location close to everything",
+      intro: "Sobha Hartland II is directly connected to key zones, with smooth access to the city’s main destinations.",
+    },
+    project: {
+      title: "A home for every desire",
+      text: "Sobha Hartland II is an 8 million sq. ft. waterfront residential community with generous green spaces, community gardens, and premium lifestyle amenities.",
+    },
+    subCommunities: [
+      {
+        title: "Sobha Estates",
+        text: "A private gated villa enclave within Sobha Hartland II, featuring bespoke 5- and 6-bedroom mansions with rooftop terraces and grand arrival courts.",
+      },
+      {
+        title: "Riverside Crescent",
+        text: "A distinctive crescent-shaped apartment cluster that redefines waterfront living with panoramic water, greenery, and skyline views.",
+      },
+    ],
+    amenities: {
+      title: "At Sobha Hartland II, amenities become essentials",
+      intro: "Everything is designed to meet your needs and support a complete lifestyle.",
+    },
+    developer: {
+      title: "The Sobha way of building",
+      intro:
+        "Sobha Realty redefines residential luxury in Dubai with an uncompromising focus on quality and innovation.",
+      bullets: [
+        "Design: efficient conceptualization",
+        "Engineering and construction: precision in every detail",
+        "Material sourcing: world-class technology and manufacturing",
+        "Craftsmanship: excellence from concept to delivery",
+        "Quality control: global benchmark standards",
+      ],
+    },
+    disclaimers: {
+      renders: "All images and renders are illustrative and may vary from the final delivered product.",
+      availability: "Prices, unit availability, and terms are subject to change without prior notice.",
+    },
+    faq: [
+      {
+        question: "What is Sobha Hartland II?",
+        answer:
+          "A new 8 million sq. ft. luxury waterfront community built as the next chapter of Sobha Hartland.",
+      },
+      {
+        question: "What kind of lifestyle does it offer?",
+        answer:
+          "A balance of nature and urban access, with blue lagoons, boardwalks, privacy, and world-class amenities.",
+      },
+      {
+        question: "What amenities are included?",
+        answer:
+          "From coworking, sensory gardens and yoga to cinemas, theaters, sports, VR rooms, and pet-friendly services.",
+      },
+    ],
+  },
+  "sobha-central": {
+    hero: {
+      subtitle: "The new epicenter of urban living in Dubai",
+      description:
+        "Sobha Central redefines city living by combining strategic location, contemporary design, and seamless connectivity.",
+      badges: [
+        "Strategic central location",
+        "Immediate connectivity",
+        "Contemporary design",
+        "Integrated development",
+      ],
+    },
+    summary: {
+      title: "The city’s vibrant core",
+      text: "Sobha Central is more than a residential development: it is an urban destination built for people who seek dynamism, connectivity, and city-paced living.",
+    },
+    concept: {
+      title: "Connected to everything that matters",
+      text: "Sobha Central offers direct access to Dubai’s main arteries, ensuring seamless mobility to business districts, financial hubs, and iconic destinations.",
+    },
+    community: {
+      title: "An integrated urban development",
+      text: "Residential, retail, and social spaces coexist in balance. The masterplan prioritizes open spaces, pedestrian connectivity, and integrated modern infrastructure.",
+    },
+    privacy: {
+      title: "Spaces designed for contemporary living",
+      text: "Residences stand out for elegant architecture, clean lines, and efficient layouts that maximize natural light, function, and comfort.",
+    },
+    views: {
+      title: "Where urban energy becomes inspiration",
+      text: "Living in Sobha Central means being part of an active and connected environment designed for social, dynamic, and modern lifestyles.",
+    },
+    design: {
+      title: "Innovation with purpose",
+      text: "The development combines modern infrastructure with strategic planning to deliver efficiency, sustainability, and lasting construction quality.",
+    },
+    location: {
+      title: "Strategic location",
+      intro:
+        "Direct access to Dubai’s main arteries, enabling smooth mobility to business hubs, financial centers, and iconic destinations.",
+    },
+    project: {
+      title: "A home for every desire",
+      text: "Sobha Central offers a broad mix of residences, from compact apartments to spacious family-oriented layouts.",
+    },
+    developer: {
+      title: "About Sobha Realty",
+      intro: "Founded in 1976, Sobha Realty is known for its Backward Integration model, unifying design, engineering, and construction under one quality system.",
+      bullets: [
+        "Built from within",
+        "Designed to endure",
+        "Superior quality assurance",
+        "Consistency in every development",
+      ],
+    },
+    disclaimers: {
+      renders: "Images and renders are illustrative and may not represent the final delivered product.",
+      availability: "Specifications, amenities, and configurations are subject to change according to approvals and developer decisions.",
+    },
+  },
+  "sobha-sanctuary": {
+    hero: {
+      subtitle: "A Life Within",
+      description:
+        "A sanctuary where life slows down, clarity returns, and balance becomes part of everyday living.",
+      badges: [
+        "50,000+ trees",
+        "800,000 sq.ft. central park",
+        "9+ km Wellness Loop",
+        "20 km cycling network",
+      ],
+    },
+    summary: {
+      title: "A place where life feels whole again",
+      text: "In a world that never slows down, Sobha Sanctuary offers space to breathe, reconnect, and rediscover what it means to feel fully alive.",
+    },
+    concept: {
+      title: "Sanctuary (noun)",
+      text: "A space of serenity where life slows down and clarity returns. Not far from life, but deeper within it.",
+    },
+    community: {
+      title: "A community designed for life at scale",
+      text: "Planned for approximately 20,000 families while preserving its essence of tranquility, nature, and daily balance.",
+    },
+    privacy: {
+      title: "A complete environment shaped by wellness",
+      text: "The project is built on four pillars: Nature, Water, Wellness, and Community, integrated into everyday experience.",
+    },
+    views: {
+      title: "Nature as a daily experience",
+      text: "Around 50% of the development is dedicated to open green spaces linked by natural corridors, forest trails, and botanical gardens.",
+    },
+    design: {
+      title: "Wellness built into everyday life",
+      text: "Outdoor training zones, sports courts, football, tennis, and wellness spaces for all generations are part of daily life.",
+    },
+    location: {
+      title: "Strategic location",
+      intro:
+        "An environment designed for natural connection, with direct access to the city’s main routes.",
+    },
+    project: {
+      title: "Water as the language of the landscape",
+      text: "Hydrotherapy facilities, saunas, steam rooms, resort-style beach lagoon, and water plazas shape an environment of calm and vitality.",
+    },
+    amenities: {
+      title: "Social, family, and sustainable living",
+      intro: "From vibrant social clubs to pet-friendly zones and integrated sustainable infrastructure.",
+    },
+    developer: {
+      title: "About Sobha Realty",
+      intro: "Founded in 1976, Sobha Realty has spent nearly five decades building under a fully integrated quality philosophy.",
+      bullets: [
+        "Built from within",
+        "Designed to endure",
+        "Quality-controlled execution",
+        "Engineering excellence",
+      ],
+    },
+    disclaimers: {
+      renders: "Displayed images are illustrative and may not represent the final product. Renders are subject to change.",
+      availability: "Mentioned amenities are indicative and may vary according to approvals and developer decisions.",
+    },
+  },
+  "azizi-milan": {
+    hero: {
+      subtitle: "A Statement of Style",
+      description:
+        "Not just a residence, but an Italian rhythm of life. Inspired by Milan, designed for Dubai, crafted for those who value style and substance.",
+      badges: [
+        "A city within a city",
+        "Net-Zero Carbon City",
+        "Canal lifestyle & Galleria District",
+        "Integrated business and culture hub",
+      ],
+    },
+    summary: {
+      title: "Inspired by Milan. Designed for Dubai.",
+      text: "Azizi Milan brings Italian effortless elegance to Dubai’s skyline, where fashion, architecture, and lifestyle converge.",
+    },
+    concept: {
+      title: "A city within a city",
+      text: "Beyond a gated community, Azizi Milan is a self-sufficient ecosystem integrating residences, retail, business, culture, green space, and waterfront living.",
+    },
+    community: {
+      title: "Galleria District: The vibrant heart of style",
+      text: "An immersive destination where luxury, fashion, and culture meet through boutiques, events, and curated lifestyle experiences.",
+    },
+    privacy: {
+      title: "Canal District: The pulse of the district",
+      text: "A walkable boulevard inspired by Milanese avenues, with cafes, restaurants, and markets that blend European sophistication with urban energy.",
+    },
+    views: {
+      title: "Arts & Culture Quarter",
+      text: "A district dedicated to creativity, featuring galleries, exhibitions, workshops, and live performances.",
+    },
+    design: {
+      title: "Net-Zero Carbon City",
+      text: "Designed as a carbon-neutral city with efficient infrastructure, solar integration, local materials, and green roofs.",
+    },
+    location: { title: "Strategic location" },
+    project: {
+      title: "Residences: Available typologies",
+      text: "Available in high-rise and low-rise buildings with park or canal views, including studios, 1BR, 2BR, and 3BR residences.",
+    },
+    subCommunities: [
+      {
+        title: "Business Innovation Hub",
+        text: "A district within office towers offering conference centers, coworking spaces, and high-speed connectivity for startups and established companies.",
+      },
+      {
+        title: "Wellness District",
+        text: "A walkable, wellness-led environment with green rooftops, community parks, natural trails, and outdoor yoga areas.",
+      },
+    ],
+    amenities: {
+      title: "Premium Amenities",
+      intro:
+        "A complete world in one destination, including 5-star hospitality, international education, healthcare, and metro connectivity.",
+    },
+    developer: { title: "About Azizi Developments" },
+    disclaimers: {
+      renders: "Images and renders are illustrative and may not represent the final delivered product.",
+      availability: "Specifications and amenities are subject to change according to developer decisions and regulatory approvals.",
+    },
+  },
+  "azizi-venice": {
+    hero: {
+      subtitle: "Dubai’s Next Legacy",
+      description:
+        "A luxury community inspired by water, where crystal lagoons, private beaches, and a vibrant boulevard create a one-of-a-kind Dubai lifestyle.",
+      badges: [
+        "136 hectares of development",
+        "Navigable Crystal Lagoon",
+        "1 km retail boulevard",
+        "Floating Opera House (2,000 seats)",
+      ],
+    },
+    summary: {
+      title: "Water-Inspired Living Like No Other",
+      text: "Azizi Venice redefines waterfront luxury with crystal lagoons, private beaches, and a destination-level entertainment ecosystem.",
+    },
+    concept: {
+      title: "A city within the water",
+      text: "With over 136 hectares, Azizi Venice integrates villas, luxury apartments, a navigable crystal lagoon, and a vibrant retail boulevard.",
+    },
+    community: {
+      title: "Where life effortlessly flows",
+      text: "Wake up to lagoon views and enjoy beachside walks, kayaking, and sailing in a setting designed for daily connection with nature.",
+    },
+    privacy: {
+      title: "A boulevard brimming with possibilities",
+      text: "A 1 km walkable waterfront boulevard with world-class dining, boutiques, and year-round lifestyle experiences.",
+    },
+    views: {
+      title: "The Opera House – A floating masterpiece",
+      text: "A 2,000-seat floating Opera House at the heart of the community, hosting performances, events, and private experiences.",
+    },
+    design: {
+      title: "Luxury Apartments",
+      text: "Contemporary architecture, premium finishes, floor-to-ceiling glazing, and curated interiors designed around lagoon views.",
+    },
+    location: {
+      title: "In the heart of Dubai South",
+      intro:
+        "Located in Dubai South, the city’s largest integrated urban development, built for future growth and long-term value appreciation.",
+    },
+    project: {
+      title: "Magnificent Mansions",
+      text: "Private lagoonfront mansions with infinity pools, landscaped gardens, private spa zones, entertainment rooms, and advanced design.",
+    },
+    subCommunities: [
+      {
+        title: "A World of Wellness",
+        text: "The project includes jogging and cycling tracks, a vertical garden with over a million flowers, family waterpark, and a 5-star lagoonfront hotel.",
+      },
+      {
+        title: "Complete Infrastructure",
+        text: "Integrated essentials include a 5-star hotel, international school, community hospital, and mosque within the development.",
+      },
+    ],
+    amenities: {
+      title: "World-class amenities",
+      intro: "Everything needed for an elevated lifestyle in one place.",
+    },
+    developer: {
+      title: "About Azizi Developments",
+      intro:
+        "Founded in 2007, Azizi Developments is one of Dubai’s leading developers, focused on premium residential and mixed-use communities.",
+      bullets: ["Founded in 2007", "Residential communities", "Mixed-use projects", "Prime locations"],
+    },
+    disclaimers: {
+      renders: "Images and renders are illustrative and may not represent the final delivered product.",
+      availability: "Specifications, amenities, and configurations are subject to change according to developer decisions and regulatory approvals.",
+    },
+  },
+  "azizi-monaco-mansions": {
+    hero: {
+      subtitle: "A New Era of Mansion Living by the Waters",
+      description:
+        "A new era of ultra-exclusive lagoonfront mansions begins in Dubai South, blending classical elegance with future-forward luxury.",
+      badges: [
+        "Private waterfront mansions",
+        "Ultra-exclusive gated community",
+        "Reimagined classical architecture",
+        "Marble and crystal interiors",
+      ],
+    },
+    summary: {
+      title: "Relish Majesty on Water’s Edge",
+      text: "Azizi Monaco Mansions delivers a majestic residential experience where timeless elegance meets lagoonfront serenity.",
+    },
+    concept: {
+      title: "Twofold Escape, Infinite Relaxation",
+      text: "A private waterfront enclave offering absolute privacy with direct access to the vibrant boulevard and cultural core of Azizi Venice.",
+    },
+    community: {
+      title: "Entertainment & Culture",
+      text: "Residents enjoy immediate access to a dynamic cultural district with the floating Opera House, premium dining, and curated retail.",
+    },
+    privacy: {
+      title: "A World of Wellness Within",
+      text: "Each mansion includes private wellness facilities such as gym, spa, Turkish hammam, sauna, jacuzzi, and a signature snow room.",
+    },
+    views: {
+      title: "The Eternal Bliss of Water",
+      text: "Infinity pool, private beach access, landscaped gardens, and generous waterfront terraces define a fully immersive water experience.",
+    },
+    design: {
+      title: "A Palace of Classic Enchantment",
+      text: "European palace-inspired facades, monumental proportions, and curated interiors in marble, crystal, and noble materials create a timeless statement.",
+    },
+    location: { title: "A Venetian Oasis in Dubai South" },
+    project: {
+      title: "The Pinnacle of Living",
+      text: "Grand social areas, floor-to-ceiling windows, formal lounges, piano room, and private entertainment zones built for elevated living.",
+    },
+    amenities: {
+      title: "Absolute exclusivity and comfort",
+      intro: "A level of private amenities rarely seen in the region.",
+    },
+    developer: {
+      title: "About Azizi Developments",
+      intro:
+        "Azizi Developments, founded in 2007, is one of Dubai’s most recognized developers in premium residential and mixed-use projects.",
+      bullets: ["Founded in 2007", "Luxury residential projects", "Mixed-use developments", "Prime locations"],
+    },
+    disclaimers: {
+      renders: "Images and renders are illustrative and may not represent the final delivered product.",
+      availability: "Specifications and amenities are subject to change according to developer decisions and regulatory approvals.",
+    },
+  },
+  "azizi-wasel": {
+    hero: {
+      subtitle: "An Oceanic Retreat Along the Shores of Dubai Islands",
+      description:
+        "A coastal retreat at Dubai Islands, where infinite sea views meet Dubai’s iconic skyline in a refined residential setting.",
+      badges: [
+        "Waterfront living at Dubai Islands",
+        "Panoramic sea and skyline views",
+        "Planned marina & yacht club",
+        "Emerging premium investment hub",
+      ],
+    },
+    summary: {
+      title: "An ocean retreat in Dubai’s new luxury waterfront",
+      text: "Azizi Wasel is a refined coastal address combining sea views, skyline perspectives, and direct connectivity to Dubai’s key hubs.",
+    },
+    concept: {
+      title: "Seaside elegance",
+      text: "A curated selection of studios, 1–3 bedroom residences, and panoramic penthouses designed to maximize waterfront and skyline views.",
+    },
+    community: {
+      title: "Where sea and city converge",
+      text: "Enjoy beaches, parks, and lifestyle amenities in a calm seaside setting that still connects directly to Dubai’s urban energy.",
+    },
+    privacy: {
+      title: "A new coastal investment hub",
+      text: "Dubai Islands is emerging as one of the city’s most promising lifestyle and investment destinations, with marina and yachting infrastructure.",
+    },
+    views: {
+      title: "Panoramic Views",
+      text: "Architecture and layouts are crafted to frame both the open sea and Dubai skyline with expansive visual continuity.",
+    },
+    design: {
+      title: "Modern and Sophisticated Design",
+      text: "Bright interiors and contemporary planning create elegant spaces built for comfort, lifestyle, and long-term value.",
+    },
+    location: {
+      title: "Dubai Islands – The new luxury coastal destination",
+      intro:
+        "Part of a visionary development reshaping Dubai’s coastline, with excellent connectivity and fast access to key city destinations.",
+    },
+    project: {
+      title: "Exclusive Residences",
+      text: "Azizi Wasel offers studios, 1-, 2-, and 3-bedroom residences, plus panoramic penthouses crafted for modern coastal living.",
+    },
+    amenities: {
+      title: "Community Amenities",
+      intro: "Designed for modern family and professional lifestyles in a secure, functional environment.",
+    },
+    developer: {
+      title: "About Azizi Developments",
+      intro:
+        "Azizi Developments is recognized for creating high-quality residential communities and mixed-use projects in strategic prime locations.",
+      bullets: ["Leading developer in Dubai", "Residential communities", "Mixed-use projects", "Prime locations"],
+    },
+    disclaimers: {
+      renders: "Images and renders are illustrative and may not represent the final delivered product.",
+      availability: "Specifications and amenities are subject to change according to developer decisions and regulatory approvals.",
+    },
+  },
+};
+
+function isObject(value: unknown): value is Record<string, unknown> {
+  return typeof value === "object" && value !== null && !Array.isArray(value);
+}
+
+function deepMerge<T extends Record<string, unknown>, U extends Record<string, unknown>>(
+  target: T,
+  source: U
+): T & U {
+  const output = { ...target } as Record<string, unknown>;
+
+  Object.keys(source).forEach((key) => {
+    const sourceValue = source[key];
+    const targetValue = output[key];
+
+    if (isObject(targetValue) && isObject(sourceValue)) {
+      output[key] = deepMerge(targetValue, sourceValue);
+    } else {
+      output[key] = sourceValue;
+    }
+  });
+
+  return output as T & U;
+}
+
+export function getLocalizedProperty(property: Property, locale: "es" | "en"): Property {
+  if (locale === "es") return property;
+
+  const translation = propertyContentEn[property.slug];
+  if (!translation) return property;
+
+  return deepMerge(
+    property as unknown as Record<string, unknown>,
+    translation as Record<string, unknown>
+  ) as unknown as Property;
+}

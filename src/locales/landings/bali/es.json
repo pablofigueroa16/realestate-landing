@@ -1,0 +1,100 @@
+{
+  "hero": {
+    "title": "Invierte en Bali. El nuevo epicentro global del turismo y lujo",
+    "subtitle": "Propiedades estratégicas en la isla más demandada del Sudeste Asiático. Alta valorización, turismo internacional en crecimiento y rentabilidades atractivas en dólares.",
+    "badge": "Hasta +8-35% anual en zonas prime",
+    "cta": "Ver Proyectos",
+    "stats": [
+      { "value": "+5,2M", "text": "Turistas internacionales anuales (2024–2025 recuperación récord)" },
+      { "value": ">20%", "text": "Valorización promedio superior al 20% en los últimos años" }
+    ]
+  },
+  "about": {
+    "title": "¿Por qué Bali es el nuevo oro azul del turismo global?",
+    "description": "Bali no es solo una isla: es una marca internacional consolidada.\nReconocida como uno de los destinos más demandados del mundo, combina turismo de lujo, bienestar, naturaleza y cultura en un ecosistema económico altamente atractivo para inversores inmobiliarios.",
+    "benefits": {
+      "tourists": "+5 millones de turistas internacionales al año",
+      "appreciation": "Valorización superior al 20% en los últimos años",
+      "demand": "Alta demanda de alquiler vacacional premium",
+      "roi": "ROI estimado entre 8% y 14% bruto anual",
+      "emerging": "Mercado emergente con alto potencial de apreciación"
+    }
+  },
+  "why_choose": {
+    "title": "Bali: El nuevo hub inmobiliario de Asia",
+    "description": "Bali se consolida como un mercado emergente clave en Asia, impulsado por el turismo, la demanda global y los inversores digitales.",
+    "benefits": [
+      "Bali: crecimiento turístico sostenido y expansión internacional.",
+      "Mercado impulsado por nómadas digitales y turismo premium.",
+      "Alta demanda de villas, residencias boutique y proyectos wellness."
+    ],
+    "quote": "Invertir en Bali no es solo comprar propiedad, es entrar en el corazón del turismo global."
+  },
+  "location": {
+    "projects": {
+      "body_sense": {
+        "area": "ZONA PANDAWA",
+        "title": "BODY SENSE",
+        "description": "El proyecto está ubicado en la prestigiosa zona de acantilados de Pandawa — uno de los destinos de bienestar y estilo de vida de más rápido crecimiento en Bali, combinando vistas al océano, infraestructura de biohacking y fuerte demanda de alquiler.",
+        "features": [
+          "03 Minutos a Pandawa Beach",
+          "10 Minutos a Melasti Beach",
+          "20 Minutos a Nusa Dua"
+        ],
+        "market_insight": "Las propiedades enfocadas en el bienestar atraen a turistas de alto gasto, impulsando tarifas por noche premium y retornos anuales estables."
+      },
+      "rahya_villas": {
+        "area": "ZONA PANDAWA",
+        "title": "RAHYA VILLAS COMPLEX",
+        "description": "El proyecto está ubicado a solo 500 metros de Pandawa Beach — una zona costera premium en rápido desarrollo conocida por villas privadas, playas de arena blanca y alquileres vacacionales de alta ocupación.",
+        "features": [
+          "02 Minutos a Pandawa Beach",
+          "08 Minutos a Melasti Beach",
+          "15 Minutos a Nusa Dua"
+        ],
+        "market_insight": "El área de Bukit continúa experimentando una fuerte apreciación de capital debido a la oferta limitada de tierra y la creciente demanda turística."
+      },
+      "eighth_sense": {
+        "area": "ACANTILADO PANDAWA",
+        "title": "EIGHTH SENSE",
+        "description": "Situado en un acantilado panorámico con vistas al Océano Índico, Eighth Sense ofrece privacidad elevada, atardeceres en el océano y proximidad a las playas más icónicas de Bali.",
+        "features": [
+          "03 Minutos a Pandawa Beach",
+          "08 Minutos a Melasti Beach",
+          "20 Minutos al Aeropuerto Internacional Ngurah Rai"
+        ],
+        "market_insight": "Las propiedades con vista al océano en acantilados superan consistentemente a las unidades estándar en precios de alquiler y crecimiento de valor a largo plazo."
+      },
+      "iji_home": {
+        "area": "SUR DE BALI",
+        "title": "IJI HOME",
+        "description": "Operando en las áreas más demandadas del sur de Bali, incluyendo Pandawa, Bukit y Nusa Dua — ubicaciones con ocupación durante todo el año y fuerte flujo de turismo internacional.",
+        "features": [
+          "05 Minutos a Pandawa Beach (propiedades gestionadas)",
+          "10 Minutos a Melasti Beach",
+          "15 Minutos a Nusa Dua"
+        ],
+        "market_insight": "La gestión profesional de propiedades aumenta significativamente las tasas de ocupación y el rendimiento anual en comparación con las unidades autogestionadas."
+      }
+    }
+  },
+  "unit_types": {
+    "units": {
+      "body_sense": {
+        "title": "Body Sense",
+        "description": "Complejo wellness frente al océano en Pandawa Beach con suites y villas diseñadas para biohacking, spa y alta rentabilidad en Bali.",
+        "size": "Off-plan"
+      },
+      "rahya_villas": {
+        "title": "Rahya Villas Complex",
+        "description": "Villas modernas con piscina privada a 500 m de Pandawa Beach, ideales para vivir o generar ingresos con alta ocupación turística.",
+        "size": "Off-plan"
+      },
+      "eighth_sense": {
+        "title": "Eighth Sense",
+        "description": "Residencias y villas en acantilado con vistas panorámicas al océano, rooftop privado y rentabilidad estimada hasta 15% anual.",
+        "size": "Off-plan"
+      }
+    }
+  }
+}

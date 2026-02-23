@@ -135,7 +135,7 @@ export default function LocationSection({ projects: propProjects }: LocationSect
                 <TrendingUp size={24} />
               </div>
               <p className="text-gray-300 text-sm leading-relaxed">
-                <span className="text-white font-medium block mb-1">Market Insight</span>
+                <span className="text-white font-medium block mb-1">{t("location.market_insight_label")}</span>
                 {currentProject.marketInsight}
               </p>
             </div>

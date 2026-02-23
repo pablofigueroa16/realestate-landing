@@ -1,11 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, Check, ChevronDown, ChevronUp, MapPin, ExternalLink } from "lucide-react";
-import { properties, Property, NearbyPlace } from "@/data/properties";
+import { properties, Property, NearbyPlace, getLocalizedProperty } from "@/data/properties";
 import { landingContent } from "@/data/landing-content";
 import { useTranslation } from "@/hooks/useTranslation";
 import { Building2 } from "lucide-react";
@@ -14,55 +14,51 @@ import PropertyMap from "@/components/PropertyMap";
 export default function PropertyDetailsPage() {
   const params = useParams();
   const router = useRouter();
-  const { t } = useTranslation();
-  const [property, setProperty] = useState<Property | null>(null);
+  const { t, locale } = useTranslation();
   const [activeAccordion, setActiveAccordion] = useState<string | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [backLink, setBackLink] = useState("/#unidades");
+  const slugParam = Array.isArray(params.slug) ? params.slug[0] : params.slug;
 
-  useEffect(() => {
-    if (params.slug) {
-      let foundProperty: Property | undefined;
-      let backPath = "/#unidades";
+  const resolvedProperty = useMemo(() => {
+    if (!slugParam) {
+      return { property: null as Property | null, backLink: "/#unidades" };
+    }
 
-      // Iterate over all destinations to find the property
-      for (const [key, content] of Object.entries(landingContent)) {
-        if (!content.units) continue;
-        
-        const found = content.units.find((p) => p.slug === params.slug);
-        if (found) {
-          foundProperty = found;
-          
-          // Determine back path based on the destination key
-          if (key === "home") {
-            backPath = "/#unidades";
-          } else if (key === "dubai") {
-            // User requested to go back to Dubai landing, not Home
-            backPath = "/dubai#unidades"; 
-          } else {
-            backPath = `/${key}#unidades`;
-          }
-          break;
-        }
-      }
+    let foundProperty: Property | undefined;
+    let backPath = "/#unidades";
 
-      // Fallback: Check strictly in properties file (Dubai) if not found above 
-      // (though landingContent.dubai.units should cover this)
-      if (!foundProperty) {
-        foundProperty = properties.find((p) => p.slug === params.slug);
-        if (foundProperty) {
-           backPath = "/dubai#unidades";
-        }
-      }
+    for (const [key, content] of Object.entries(landingContent)) {
+      if (!content.units) continue;
 
-      if (foundProperty) {
-        setProperty(foundProperty);
-        setBackLink(backPath);
-      } else {
-        router.push("/#unidades");
+      const found = content.units.find((p) => p.slug === slugParam);
+      if (found) {
+        foundProperty = found;
+        if (key === "home") backPath = "/#unidades";
+        else if (key === "dubai") backPath = "/dubai#unidades";
+        else backPath = `/${key}#unidades`;
+        break;
       }
     }
-  }, [params.slug, router]);
+
+    if (!foundProperty) {
+      foundProperty = properties.find((p) => p.slug === slugParam);
+      if (foundProperty) backPath = "/dubai#unidades";
+    }
+
+    return {
+      property: foundProperty ? getLocalizedProperty(foundProperty, locale) : null,
+      backLink: backPath,
+    };
+  }, [slugParam, locale]);
+
+  useEffect(() => {
+    if (slugParam && !resolvedProperty.property) {
+      router.push("/#unidades");
+    }
+  }, [slugParam, resolvedProperty.property, router]);
+
+  const property = resolvedProperty.property;
+  const backLink = resolvedProperty.backLink;
 
   // Carousel auto-rotation effect
   useEffect(() => {
@@ -90,18 +86,29 @@ export default function PropertyDetailsPage() {
     setActiveAccordion(activeAccordion === category ? null : category);
   };
 
-  const nearbyPlacesForMap: NearbyPlace[] = property.location.nearby.filter(
-    (place): place is NearbyPlace =>
-      typeof place === "object" &&
-      typeof place.latitude === "number" &&
-      typeof place.longitude === "number"
-  );
+  const nearbyPlacesForMap: NearbyPlace[] = property.location.nearby
+    .map((place) => {
+      if (
+        typeof place === "object" &&
+        typeof place.latitude === "number" &&
+        typeof place.longitude === "number"
+      ) {
+        return place;
+      }
+
+      return null;
+    })
+    .filter((place): place is NearbyPlace => place !== null);
+  const displayedImageIndex =
+    property.images && property.images.length > 0
+      ? currentImageIndex % property.images.length
+      : 0;
 
   return (
     <main className="min-h-screen bg-white text-gray-900 font-sans selection:bg-black selection:text-white">
       {/* 1) HERO SECTION */}
       <section className="p-3 md:p-4 h-screen w-full flex flex-col box-border overflow-hidden">
-        <div className="relative grow rounded-4xl overflow-hidden flex flex-col justify-end pb-12 md:pb-20 isolate [mask-image:linear-gradient(white,white)]">
+        <div className="relative grow rounded-4xl overflow-hidden flex flex-col justify-end pb-12 md:pb-20 isolate mask-[linear-gradient(white,white)]">
           {/* Background Media */}
           <div className="absolute inset-0 z-0">
             {property.images && property.images.length > 0 ? (
@@ -110,7 +117,7 @@ export default function PropertyDetailsPage() {
                 <div
                   key={idx}
                   className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-                    idx === currentImageIndex ? "opacity-100 z-10" : "opacity-0 z-0"
+                    idx === displayedImageIndex ? "opacity-100 z-10" : "opacity-0 z-0"
                   }`}
                 >
                   <Image
@@ -152,7 +159,7 @@ export default function PropertyDetailsPage() {
               className="absolute top-8 left-6 md:left-12 flex items-center gap-2 text-white/80 hover:text-white transition-colors text-xs font-bold tracking-widest backdrop-blur-md bg-white/10 px-4 py-2 rounded-full border border-white/20 w-fit uppercase"
             >
               <ArrowLeft size={14} />
-              Volver
+              {t("property_details.back")}
             </Link>
 
             <div className="max-w-4xl">
@@ -177,13 +184,13 @@ export default function PropertyDetailsPage() {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <button className="group flex items-center gap-3 bg-white text-black pl-6 pr-1.5 py-2 rounded-full text-base font-medium hover:bg-gray-100 transition-all hover:scale-105 active:scale-95 w-fit">
-                  Solicitar disponibilidad
+                  {t("property_details.request_availability")}
                   <div className="w-9 h-9 bg-black rounded-full flex items-center justify-center text-white group-hover:bg-gray-800 transition-colors">
                     <ArrowRight size={18} />
                   </div>
                 </button>
                 <button className="group flex items-center gap-3 bg-white/10 backdrop-blur-md border border-white/20 text-white pl-6 pr-6 py-2 rounded-full text-base font-medium hover:bg-white/20 transition-all hover:scale-105 active:scale-95 w-fit">
-                  Brochure por WhatsApp
+                  {t("property_details.whatsapp_brochure")}
                   <ExternalLink size={18} />
                 </button>
               </div>
@@ -197,7 +204,7 @@ export default function PropertyDetailsPage() {
         <section className="py-24 md:py-32 container mx-auto px-6 md:px-12 border-b border-gray-100">
           <div className="grid md:grid-cols-12 gap-12 items-start">
             <div className="md:col-span-4">
-              <span className="text-xs font-bold tracking-[0.2em] text-gray-400 uppercase block mb-4">Resumen</span>
+              <span className="text-xs font-bold tracking-[0.2em] text-gray-400 uppercase block mb-4">{t("property_details.summary")}</span>
               <h2 className="text-3xl md:text-4xl font-serif font-medium text-gray-900 leading-tight">
                 {property.summary.title}
               </h2>
@@ -216,7 +223,7 @@ export default function PropertyDetailsPage() {
         <section className="py-24 md:py-32 bg-gray-50">
           <div className="container mx-auto px-6 md:px-12">
             <div className="max-w-3xl mx-auto text-center">
-              <span className="text-xs font-bold tracking-[0.2em] text-gray-400 uppercase block mb-6">El Concepto</span>
+              <span className="text-xs font-bold tracking-[0.2em] text-gray-400 uppercase block mb-6">{t("property_details.concept")}</span>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-medium text-gray-900 mb-10 leading-tight">
                 {property.concept.title}
               </h2>
@@ -253,7 +260,7 @@ export default function PropertyDetailsPage() {
           <div className="container mx-auto px-6 md:px-12 relative z-10">
             <div className="grid md:grid-cols-2 gap-16 items-center">
               <div>
-                <span className="text-xs font-bold tracking-[0.2em] text-white/50 uppercase block mb-6">Ubicación</span>
+                <span className="text-xs font-bold tracking-[0.2em] text-white/50 uppercase block mb-6">{t("property_details.location")}</span>
                 <h2 className="text-4xl md:text-5xl font-serif font-medium mb-8 leading-tight">
                   {property.location.title}
                 </h2>
@@ -284,7 +291,7 @@ export default function PropertyDetailsPage() {
                 ) : (
                   /* Placeholder for Map when no coordinates */
                   <div className="w-full h-full bg-gray-900 flex items-center justify-center">
-                     <span className="text-white/30 uppercase tracking-widest text-sm">Mapa Interactivo No Disponible</span>
+                     <span className="text-white/30 uppercase tracking-widest text-sm">{t("property_details.map_unavailable")}</span>
                   </div>
                 )}
               </div>
@@ -385,7 +392,7 @@ export default function PropertyDetailsPage() {
       {property.faq.length > 0 && (
         <section className="py-24 bg-gray-50">
           <div className="container mx-auto px-6 md:px-12 max-w-4xl">
-            <h2 className="text-3xl font-serif font-medium text-gray-900 mb-12 text-center">Preguntas Frecuentes</h2>
+            <h2 className="text-3xl font-serif font-medium text-gray-900 mb-12 text-center">{t("property_details.faq_title")}</h2>
             <div className="space-y-4">
               {property.faq.map((item, idx) => (
                 <div key={idx} className="bg-white border border-gray-100 rounded-2xl overflow-hidden">

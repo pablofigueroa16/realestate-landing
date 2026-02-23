@@ -23,6 +23,148 @@ export default function LandingPage({ destination }: LandingPageProps) {
   // Dynamic content override for Bali to support i18n
   let content = staticContent;
 
+  if (destination === "home" && staticContent.hero && staticContent.about && staticContent.whyChoose && staticContent.presentation) {
+    content = {
+      ...staticContent,
+      hero: {
+        ...staticContent.hero,
+        title: t("home.hero.title"),
+        subtitle: t("home.hero.subtitle"),
+        badges: [
+          t("home.hero.badges.0"),
+          t("home.hero.badges.1"),
+          t("home.hero.badges.2"),
+        ],
+        stats: [
+          {
+            value: t("home.hero.stats.0.value"),
+            text: t("home.hero.stats.0.text"),
+            iconName: staticContent.hero.stats[0]?.iconName,
+          },
+          {
+            value: t("home.hero.stats.1.value"),
+            text: t("home.hero.stats.1.text"),
+            iconName: staticContent.hero.stats[1]?.iconName,
+          },
+        ],
+      },
+      about: {
+        ...staticContent.about,
+        title: t("home.about.title"),
+        description: t("home.about.description"),
+        marketCard: {
+          ...staticContent.about.marketCard,
+          title: t("home.about.market_card.title"),
+          subtitle: t("home.about.market_card.subtitle"),
+        },
+        benefits: staticContent.about.benefits.map((b, i) => {
+          const labels = [
+            t("home.about.benefits.0"),
+            t("home.about.benefits.1"),
+            t("home.about.benefits.2"),
+            t("home.about.benefits.3"),
+            t("home.about.benefits.4"),
+            t("home.about.benefits.5"),
+          ];
+          return {
+            ...b,
+            label: labels[i] || b.label,
+          };
+        }),
+      },
+      whyChoose: {
+        ...staticContent.whyChoose,
+        title: t("home.why_choose.title"),
+        description: t("home.why_choose.description"),
+        quote: t("home.why_choose.quote"),
+        benefits: [
+          t("home.why_choose.benefits.0"),
+          t("home.why_choose.benefits.1"),
+          t("home.why_choose.benefits.2"),
+        ],
+      },
+      locationProjects: staticContent.locationProjects.map((proj, i) => {
+        const keys = ["dubai", "miami", "bali"];
+        const key = keys[i];
+        if (!key) return proj;
+        return {
+          ...proj,
+          area: t(`home.location.projects.${key}.area`),
+          title: t(`home.location.projects.${key}.title`),
+          description: t(`home.location.projects.${key}.description`),
+          marketInsight: t(`home.location.projects.${key}.market_insight`),
+          features: [
+            t(`home.location.projects.${key}.features.0`),
+            t(`home.location.projects.${key}.features.1`),
+            t(`home.location.projects.${key}.features.2`),
+          ],
+        };
+      }),
+      unitsConfig: {
+        title: t("home.units_config.title"),
+        subtitle: t("home.units_config.subtitle"),
+      },
+      units: staticContent.units.map((unit) => {
+        let key = "";
+        if (unit.id === "home-dubai") key = "dubai";
+        else if (unit.id === "home-miami") key = "miami";
+        else if (unit.id === "home-bali") key = "bali";
+
+        if (!key) return unit;
+
+        return {
+          ...unit,
+          hero: {
+            ...unit.hero,
+            title: t(`home.unit_types.units.${key}.title`),
+            description: t(`home.unit_types.units.${key}.description`),
+          },
+          description: t(`home.unit_types.units.${key}.description`),
+          size: t(`home.unit_types.units.${key}.size`),
+        };
+      }),
+      presentation: {
+        ...staticContent.presentation,
+        badge: t("home.presentation.badge"),
+        title: t("home.presentation.title"),
+        description: t("home.presentation.description"),
+        cta: t("home.presentation.cta"),
+        disclaimer: t("home.presentation.disclaimer"),
+      },
+    };
+  }
+
+  if (destination === "dubai") {
+    content = {
+      ...staticContent,
+      units: staticContent.units.map((unit) => {
+        const keyById: Record<string, string> = {
+          "sobha-hartland-ii": "sobha_hartland_ii",
+          "sobha-central": "sobha_central",
+          "sobha-sanctuary": "sobha_sanctuary",
+          "azizi-milan": "azizi_milan",
+          "azizi-venice": "azizi_venice",
+          "azizi-monaco-mansions": "azizi_monaco_mansions",
+          "azizi-wasel": "azizi_wasel",
+        };
+
+        const key = keyById[unit.id];
+        if (!key) return unit;
+
+        return {
+          ...unit,
+          hero: {
+            ...unit.hero,
+            title: t(`unit_types.units.${key}.title`),
+            description: t(`unit_types.units.${key}.description`),
+          },
+          description: t(`unit_types.units.${key}.description`),
+          size: t(`unit_types.units.${key}.size`),
+        };
+      }),
+    };
+  }
+
   if (destination === "bali" && staticContent.hero && staticContent.about && staticContent.whyChoose) {
     // ... existing logic for Bali
     content = {
@@ -113,12 +255,17 @@ export default function LandingPage({ destination }: LandingPageProps) {
     };
   }
 
+  const locationProjectsForSection =
+    content.locationProjects && content.locationProjects.length > 0
+      ? content.locationProjects
+      : undefined;
+
   return (
     <main className="min-h-screen bg-white text-gray-900">
       <Navbar currentDestination={destination} />
       <Hero content={content.hero} destination={destination} />
       <AboutSection content={content.about} />
-      <LocationSection projects={content.locationProjects} />
+      <LocationSection projects={locationProjectsForSection} />
       <UnitTypesSection
         units={content.units}
         title={content.unitsConfig?.title} 

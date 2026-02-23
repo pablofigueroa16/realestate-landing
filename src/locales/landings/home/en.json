@@ -1,0 +1,113 @@
+{
+  "nav": {
+    "home": "HOME",
+    "destinations": "DESTINATIONS",
+    "about": "ABOUT US",
+    "projects": "LOCATION",
+    "units": "CITIES",
+    "video": "MARKET",
+    "contact": "CONTACT"
+  },
+  "hero": {
+    "title": "Strategic access to global real estate opportunities.",
+    "subtitle": "We select markets with strong fundamentals, sustained growth, and strategic tax advantages.",
+    "badges": ["DUBAI", "BALI", "MIAMI"],
+    "stats": [
+      { "value": "12%", "text": "Average annual ROI in selected markets" },
+      { "value": "0%", "text": "Personal income tax in strategic jurisdictions" }
+    ]
+  },
+  "about": {
+    "title": "Global Strategy, Local Execution.",
+    "description": "Investing internationally is not just about choosing a property.\nIt is about structuring capital allocation correctly in the right jurisdiction, at the right time, with the right partner.\n\nOur approach combines macroeconomic analysis, direct access to leading developers, and a long-term wealth vision to maximize returns and minimize risk.",
+    "market_card": {
+      "title": "INVESTMENT APPROACH",
+      "subtitle": "Structured investment with an international wealth vision"
+    },
+    "benefits": [
+      "Direct access to top developers",
+      "Curated and filtered opportunities",
+      "Real ROI and projection analysis",
+      "International legal structuring",
+      "Comprehensive 360° advisory",
+      "Post-investment support and exit strategy"
+    ]
+  },
+  "why_choose": {
+    "title": "Why we invest in strategic global markets",
+    "description": "We select destinations with solid growth, legal stability, and strong international demand, prioritizing long-term appreciation and sustainable income generation.",
+    "benefits": [
+      "Markets with proven economic growth",
+      "Strategic tax advantages in key jurisdictions",
+      "High liquidity and international demand"
+    ],
+    "quote": "Smart capital moves toward cities with real fundamentals."
+  },
+  "location": {
+    "projects": {
+      "dubai": {
+        "area": "DUBAI · UAE",
+        "title": "Prime Location — Dubai",
+        "description": "Dubai has consolidated itself as one of the world’s most dynamic and secure real estate markets, combining sustained economic growth, world-class infrastructure, and strategic tax advantages.",
+        "features": [
+          "05 Minutes to Downtown",
+          "10 Minutes to Dubai Marina",
+          "15 Minutes to International Airport"
+        ],
+        "market_insight": "A market with strong international demand, constant foreign capital growth, and attractive rental and appreciation returns."
+      },
+      "miami": {
+        "area": "MIAMI · FLORIDA",
+        "title": "Prime Location — Miami",
+        "description": "Miami is a USD safe-haven asset, recognized for legal stability, strong international demand, and continuous urban development in premium areas.",
+        "features": [
+          "08 Minutes to Brickell",
+          "10 Minutes to Miami Beach",
+          "15 Minutes to Miami International Airport"
+        ],
+        "market_insight": "A city with high real estate liquidity, sustained appreciation, and strong inflows of Latin American and European investment."
+      },
+      "bali": {
+        "area": "BALI · INDONESIA",
+        "title": "Prime Location — Bali",
+        "description": "Bali combines international tourism, premium lifestyle, and sustained growth in the hospitality sector, making it one of the most attractive short-term rental destinations.",
+        "features": [
+          "05 Minutes to Prime Beaches",
+          "10 Minutes to Lifestyle & Restaurants",
+          "20 Minutes to International Airport"
+        ],
+        "market_insight": "A market driven by global tourism and consistent occupancy in villa and apart-hotel properties."
+      }
+    }
+  },
+  "units_config": {
+    "title": "High-Investment Global Destinations",
+    "subtitle": "Explore the cities leading growth, liquidity, and international demand in real estate."
+  },
+  "unit_types": {
+    "units": {
+      "dubai": {
+        "title": "DUBAI",
+        "description": "Global capital of real estate investment, with sustained growth, world-class infrastructure, and a highly competitive tax environment.",
+        "size": "View more"
+      },
+      "miami": {
+        "title": "MIAMI",
+        "description": "Gateway to the United States and an emerging financial center for Latin America, with high international demand and a USD-based market.",
+        "size": "View more"
+      },
+      "bali": {
+        "title": "BALI",
+        "description": "Established tourism destination with strong growth in vacation rentals and opportunities in strategic expansion areas.",
+        "size": "View more"
+      }
+    }
+  },
+  "presentation": {
+    "badge": "GLOBAL PARTNERSHIP",
+    "title": "Connect with our international team.",
+    "description": "Access our global portfolio, preferred terms, and exclusive opportunities for strategic agents and brokers.",
+    "cta": "Request Strategic Connection",
+    "disclaimer": "Our team will review your request and coordinate a private meeting."
+  }
+}

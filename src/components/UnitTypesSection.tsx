@@ -286,7 +286,7 @@ export default function UnitTypesSection({ units: propUnits, title, subtitle }: 
                                         className={`relative z-10 py-3 rounded-xl flex items-center justify-center gap-2 text-gray-900 font-medium border border-gray-200 hover:bg-gray-50 transition-all ${unit.externalLink ? 'w-full col-span-2' : 'w-full'}`}
                                     >
                                         <Eye size={18} />
-                                        {unit.externalLink ? "Ver Destino" : (t("unit_types.details_button") || "Ver Detalles")}
+                                        {unit.externalLink ? (t("unit_types.destination_button") || "Ver Destino") : (t("unit_types.details_button") || "Ver Detalles")}
                                     </Link>
                                     
                                     {!unit.externalLink && (

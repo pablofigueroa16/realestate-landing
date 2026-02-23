@@ -1,0 +1,113 @@
+{
+  "nav": {
+    "home": "HOME",
+    "destinations": "DESTINOS",
+    "about": "NOSOTROS",
+    "projects": "UBICACIÓN",
+    "units": "CIUDADES",
+    "video": "MERCADO",
+    "contact": "CONTACTO"
+  },
+  "hero": {
+    "title": "Acceso estratégico a oportunidades inmobiliarias globales.",
+    "subtitle": "Seleccionamos mercados con fundamentos sólidos, crecimiento sostenido y ventajas fiscales estratégicas.",
+    "badges": ["DUBAI", "BALI", "MIAMI"],
+    "stats": [
+      { "value": "12%", "text": "ROI promedio anual en mercados seleccionados" },
+      { "value": "0%", "text": "Impuesto sobre renta personal en jurisdicciones estratégicas" }
+    ]
+  },
+  "about": {
+    "title": "Estrategia Global, Ejecución Local.",
+    "description": "Invertir internacionalmente no es solo elegir una propiedad.\nEs estructurar correctamente la asignación de capital en la jurisdicción adecuada, en el momento adecuado y con el socio correcto.\n\nNuestro enfoque combina análisis macroeconómico, acceso directo a desarrolladores líderes y una visión patrimonial a largo plazo para maximizar retorno y minimizar riesgo.",
+    "market_card": {
+      "title": "INVESTMENT APPROACH",
+      "subtitle": "Inversión estructurada con visión patrimonial internacional"
+    },
+    "benefits": [
+      "Acceso directo a desarrolladores top",
+      "Oportunidades seleccionadas y filtradas",
+      "Análisis real de ROI y proyección",
+      "Estructuración legal internacional",
+      "Acompañamiento integral 360°",
+      "Soporte post-inversión y estrategia de salida"
+    ]
+  },
+  "why_choose": {
+    "title": "Por qué invertimos en mercados globales estratégicos",
+    "description": "Seleccionamos destinos con crecimiento sólido, estabilidad jurídica y alta demanda internacional, priorizando valorización a largo plazo y generación de ingresos sostenibles.",
+    "benefits": [
+      "Mercados con crecimiento económico comprobado",
+      "Ventajas fiscales estratégicas en jurisdicciones clave",
+      "Alta liquidez y demanda internacional"
+    ],
+    "quote": "Capital inteligente se mueve hacia ciudades con fundamentos reales."
+  },
+  "location": {
+    "projects": {
+      "dubai": {
+        "area": "DUBAI · UAE",
+        "title": "Prime Location — Dubai",
+        "description": "Dubai se ha consolidado como uno de los mercados inmobiliarios más dinámicos y seguros del mundo, combinando crecimiento económico sostenido, infraestructura de clase mundial y ventajas fiscales estratégicas.",
+        "features": [
+          "05 Minutes to Downtown",
+          "10 Minutes to Dubai Marina",
+          "15 Minutes to International Airport"
+        ],
+        "market_insight": "Mercado con alta demanda internacional, crecimiento constante de capital extranjero y rentabilidades atractivas en alquiler y revalorización."
+      },
+      "miami": {
+        "area": "MIAMI · FLORIDA",
+        "title": "Prime Location — Miami",
+        "description": "Miami es un activo refugio en USD, reconocido por su estabilidad jurídica, fuerte demanda internacional y constante desarrollo urbano en zonas premium.",
+        "features": [
+          "08 Minutes to Brickell",
+          "10 Minutes to Miami Beach",
+          "15 Minutes to Miami International Airport"
+        ],
+        "market_insight": "Ciudad con alta liquidez inmobiliaria, apreciación sostenida y fuerte flujo de inversión latinoamericana y europea."
+      },
+      "bali": {
+        "area": "BALI · INDONESIA",
+        "title": "Prime Location — Bali",
+        "description": "Bali combina turismo internacional, estilo de vida premium y crecimiento sostenido en el sector hospitality, convirtiéndose en uno de los destinos más atractivos para renta corta.",
+        "features": [
+          "05 Minutes to Prime Beaches",
+          "10 Minutes to Lifestyle & Restaurants",
+          "20 Minutes to International Airport"
+        ],
+        "market_insight": "Mercado impulsado por turismo global y ocupación constante en propiedades tipo villa y apart-hotel."
+      }
+    }
+  },
+  "units_config": {
+    "title": "Destinos Globales de Alta Inversión",
+    "subtitle": "Explora las ciudades que lideran crecimiento, liquidez y demanda internacional en bienes raíces."
+  },
+  "unit_types": {
+    "units": {
+      "dubai": {
+        "title": "DUBÁI",
+        "description": "Capital global de inversión inmobiliaria, con crecimiento sostenido, infraestructura de clase mundial y un entorno fiscal altamente competitivo.",
+        "size": "Ver más"
+      },
+      "miami": {
+        "title": "MIAMI",
+        "description": "Puerta de entrada a Estados Unidos y centro financiero emergente de Latinoamérica, con alta demanda internacional y mercado en USD.",
+        "size": "Ver más"
+      },
+      "bali": {
+        "title": "BALI",
+        "description": "Destino turístico consolidado con fuerte crecimiento en renta vacacional y oportunidades en zonas de expansión estratégica.",
+        "size": "Ver más"
+      }
+    }
+  },
+  "presentation": {
+    "badge": "GLOBAL PARTNERSHIP",
+    "title": "Conecta con nuestro equipo internacional.",
+    "description": "Accede a nuestro portafolio global, condiciones preferenciales y oportunidades exclusivas para agentes y brokers estratégicos.",
+    "cta": "Solicitar Conexión Estratégica",
+    "disclaimer": "Nuestro equipo revisará tu solicitud y coordinará una reunión privada."
+  }
+}

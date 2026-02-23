@@ -4,6 +4,7 @@ import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { useMemo } from "react";
+import { useTranslation } from "@/hooks/useTranslation";
 
 interface PropertyMapClientProps {
   latitude: number;
@@ -35,12 +36,62 @@ const nearbyIcon = L.divIcon({
   iconAnchor: [6, 6],
 });
 
+const CATEGORY_LABELS = {
+  connectivity: { es: "Conectividad", en: "Connectivity" },
+  urban_district: { es: "Distrito Urbano", en: "Urban District" },
+  finance: { es: "Financiero", en: "Financial" },
+  lifestyle: { es: "Lifestyle", en: "Lifestyle" },
+  sport: { es: "Deporte", en: "Sports" },
+  waterfront: { es: "Waterfront", en: "Waterfront" },
+  transport: { es: "Transporte", en: "Transport" },
+  entertainment: { es: "Entretenimiento", en: "Entertainment" },
+  business: { es: "Negocios", en: "Business" },
+  commerce: { es: "Comercio", en: "Commerce" },
+  port: { es: "Puerto", en: "Port" },
+  health: { es: "Salud", en: "Health" },
+  landmark: { es: "Landmark", en: "Landmark" },
+} as const;
+
+const CATEGORY_ALIASES: Record<string, keyof typeof CATEGORY_LABELS> = {
+  "conectividad": "connectivity",
+  "connectivity": "connectivity",
+  "distrito urbano": "urban_district",
+  "urban district": "urban_district",
+  "financiero": "finance",
+  "financial": "finance",
+  "lifestyle": "lifestyle",
+  "deporte": "sport",
+  "sports": "sport",
+  "waterfront": "waterfront",
+  "transporte": "transport",
+  "transport": "transport",
+  "entretenimiento": "entertainment",
+  "entertainment": "entertainment",
+  "negocios": "business",
+  "business": "business",
+  "comercio": "commerce",
+  "commerce": "commerce",
+  "puerto": "port",
+  "port": "port",
+  "salud": "health",
+  "health": "health",
+  "landmark": "landmark",
+};
+
+function getLocalizedCategory(category: string | undefined, locale: "es" | "en") {
+  if (!category) return undefined;
+  const key = CATEGORY_ALIASES[category.trim().toLowerCase()];
+  if (!key) return category;
+  return CATEGORY_LABELS[key][locale];
+}
+
 export default function PropertyMapClient({
   latitude,
   longitude,
   title,
   nearbyPlaces,
 }: PropertyMapClientProps) {
+  const { locale } = useTranslation();
   const position: [number, number] = [latitude, longitude];
   const mapKey = useMemo(
     () => `${latitude}-${longitude}-${title}-${nearbyPlaces.length}`,
@@ -75,7 +126,9 @@ export default function PropertyMapClient({
             <div className="font-sans">
               <p className="text-sm font-semibold">{place.name}</p>
               {place.category ? (
-                <p className="text-xs text-gray-500 mt-0.5">{place.category}</p>
+                <p className="text-xs text-gray-500 mt-0.5">
+                  {getLocalizedCategory(place.category, locale)}
+                </p>
               ) : null}
             </div>
           </Popup>

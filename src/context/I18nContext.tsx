@@ -1,11 +1,19 @@
 "use client";
 
 import React, { createContext, useState, useEffect, ReactNode, useContext } from 'react';
-import es from '../locales/es.json';
-import en from '../locales/en.json';
+import generalEs from '../locales/general/es.json';
+import generalEn from '../locales/general/en.json';
+import dubaiEs from '../locales/landings/dubai/es.json';
+import dubaiEn from '../locales/landings/dubai/en.json';
+import homeEs from '../locales/landings/home/es.json';
+import homeEn from '../locales/landings/home/en.json';
+import baliEs from '../locales/landings/bali/es.json';
+import baliEn from '../locales/landings/bali/en.json';
+import miamiEs from '../locales/landings/miami/es.json';
+import miamiEn from '../locales/landings/miami/en.json';
 
 type Locale = 'es' | 'en';
-type Translations = typeof es;
+type Translations = Record<string, unknown>;
 
 // Helper to get nested properties
 function getNestedTranslation(obj: any, path: string): string {
@@ -20,9 +28,42 @@ interface I18nContextProps {
   t: (key: string) => string;
 }
 
+function isObject(value: unknown): value is Record<string, unknown> {
+  return typeof value === 'object' && value !== null && !Array.isArray(value);
+}
+
+function deepMerge(target: Record<string, unknown>, source: Record<string, unknown>): Record<string, unknown> {
+  const output = { ...target };
+
+  Object.keys(source).forEach((key) => {
+    const sourceValue = source[key];
+    const targetValue = output[key];
+
+    if (isObject(targetValue) && isObject(sourceValue)) {
+      output[key] = deepMerge(targetValue, sourceValue);
+    } else {
+      output[key] = sourceValue;
+    }
+  });
+
+  return output;
+}
+
 const translations: Record<Locale, Translations> = {
-  es,
-  en,
+  es: deepMerge(
+    deepMerge(
+      deepMerge(generalEs as Record<string, unknown>, dubaiEs as Record<string, unknown>),
+      { home: homeEs, bali: baliEs, miami: miamiEs }
+    ),
+    {}
+  ),
+  en: deepMerge(
+    deepMerge(
+      deepMerge(generalEn as Record<string, unknown>, dubaiEn as Record<string, unknown>),
+      { home: homeEn, bali: baliEn, miami: miamiEn }
+    ),
+    {}
+  ),
 };
 
 const I18nContext = createContext<I18nContextProps | undefined>(undefined);
