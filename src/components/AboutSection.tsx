@@ -64,11 +64,11 @@ export default function AboutSection({ content }: AboutSectionProps) {
       <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center h-full">
         {/* Left Column: Text & Benefits */}
         <div className="px-4 flex flex-col justify-center h-full max-w-xl">
-          <h2 className="text-4xl md:text-5xl lg:text-5xl font-medium text-gray-900 mb-8 leading-tight">
-             {title}
+          <h2 className="text-4xl md:text-5xl lg:text-5xl font-medium text-gray-900 mb-6 leading-tight">
+            {title}
           </h2>
-          
-          <div className="space-y-6 text-gray-500 text-lg font-light mb-6 leading-relaxed">
+
+          <div className="space-y-6 text-gray-500 text-lg font-light leading-relaxed">
             <p className="whitespace-pre-line">
               {description}
             </p>
@@ -80,7 +80,7 @@ export default function AboutSection({ content }: AboutSectionProps) {
               return (
                 <div key={index} className="flex items-center gap-3 text-gray-700">
                   <div className="min-w-6">
-                      {IconComponent && <IconComponent size={24} strokeWidth={1.5} className="text-gray-900"/>}
+                    {IconComponent && <IconComponent size={24} strokeWidth={1.5} className="text-gray-900" />}
                   </div>
                   <span className="text-base font-medium">{item.label}</span>
                 </div>

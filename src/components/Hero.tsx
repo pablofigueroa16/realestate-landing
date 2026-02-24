@@ -28,12 +28,6 @@ export default function Hero({ content, destination = "dubai" }: HeroProps) {
       ? t("home.hero.cta_consultation")
       : t("hero.cta_consultation");
 
-  const getBackgroundText = () => {
-    if (destination === "home") return "GLOBAL";
-    if (destination === "bali") return "BALI";
-    return "DUBAI";
-  };
-
   const defaultStats = [
     {
       value: "30%",

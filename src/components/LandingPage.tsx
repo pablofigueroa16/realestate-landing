@@ -9,6 +9,11 @@ import DevelopersSection from "@/components/DevelopersSection";
 import WhyChooseSection from "@/components/WhyChooseSection";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import HomeHowToInvestSection from "@/components/HomeHowToInvestSection";
+import HomeInvestmentModelsSection from "@/components/HomeInvestmentModelsSection";
+import HomeResidencyInvestmentSection from "@/components/HomeResidencyInvestmentSection";
+import HomeFundCapitalSection from "@/components/HomeFundCapitalSection";
+import HomeGlobalAgentSection from "@/components/HomeGlobalAgentSection";
 import { landingContent } from "@/data/landing-content";
 import { useTranslation } from "@/hooks/useTranslation";
 
@@ -384,6 +389,11 @@ export default function LandingPage({ destination }: LandingPageProps) {
     <main className="min-h-screen bg-white text-gray-900 font-serif">
       <Navbar currentDestination={destination} />
       <Hero content={content.hero} destination={destination} />
+      {destination === "home" ? <HomeHowToInvestSection /> : null}
+      {destination === "home" ? <HomeInvestmentModelsSection /> : null}
+      {destination === "home" ? <HomeResidencyInvestmentSection /> : null}
+      {destination === "home" ? <HomeFundCapitalSection /> : null}
+      {destination === "home" ? <HomeGlobalAgentSection /> : null}
       <AboutSection content={content.about} />
       <LocationSection projects={locationProjectsForSection} />
       <UnitTypesSection

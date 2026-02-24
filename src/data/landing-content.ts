@@ -109,7 +109,6 @@ export const landingContent: Record<string, LandingContent> = {
         { iconName: "CheckCircle", label: "Oportunidades seleccionadas y filtradas" },
         { iconName: "CheckCircle", label: "Análisis real de ROI y proyección" },
         { iconName: "CheckCircle", label: "Estructuración legal internacional" },
-        { iconName: "CheckCircle", label: "Acompañamiento integral 360°" },
         { iconName: "CheckCircle", label: "Soporte post-inversión y estrategia de salida" },
       ]
     },

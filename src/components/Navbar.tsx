@@ -125,7 +125,7 @@ export default function Navbar({ currentDestination = "home" }: NavbarProps) {
                   href={dest.path}
                   className={`block px-4 py-2 text-sm hover:bg-gray-50 transition-colors ${dest.path.includes(currentDestination) && currentDestination !== 'home'
                     ? 'font-bold text-black'
-                    : 'text-gray-600'
+                    : 'text-gray-700'
                     }`}
                   onClick={() => setIsDestinationOpen(false)}
                 >

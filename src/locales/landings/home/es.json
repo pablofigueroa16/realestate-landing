@@ -19,6 +19,158 @@
     "cta": "Explorar Oportunidades",
     "cta_consultation": "Hablar con un Asesor"
   },
+  "how_to_invest": {
+    "eyebrow": "CÓMO INVERTIR",
+    "title": "CÓMO INVERTIR",
+    "step_label": "Paso",
+    "steps": [
+      {
+        "title": "Elige tu destino",
+        "description": "Dubái, Miami, Bali y mercados estratégicos."
+      },
+      {
+        "title": "Elige tu modelo",
+        "description": "Compra individual, copropiedad o fondo."
+      },
+      {
+        "title": "Estructuración y Due Diligence",
+        "description": "ROI proyectado, análisis legal y fiscal."
+      },
+      {
+        "title": "Gestión y Rendimiento",
+        "description": "Nos encargamos del activo y reportes."
+      }
+    ]
+  },
+  "investment_models": {
+    "eyebrow": "MODELOS DE INVERSIÓN",
+    "title": "MODELOS DE INVERSIÓN",
+    "models": [
+      {
+        "title": "Modelo 1 - Propiedad Individual",
+        "description": "Control total. Activo 100% a tu nombre.\nIdeal para residencia y plusvalía."
+      },
+      {
+        "title": "Modelo 2 - Copropiedad",
+        "description": "Desde USD 50,000.\nParticipa en activos premium con diversificación automática."
+      },
+      {
+        "title": "Modelo 3 - Fondo Inmobiliario",
+        "description": "Desde USD 10,000.\nRendimientos mensuales proyectados + valorización."
+      }
+    ],
+    "key_message": "No necesitas millones para invertir globalmente."
+  },
+  "residency_investment": {
+    "eyebrow": "RESIDENCIA POR INVERSIÓN",
+    "title": "RESIDENCIA POR INVERSIÓN",
+    "subtitle": "Movilidad Global a través de Activos Estratégicos",
+    "options": [
+      {
+        "country": "Dubái",
+        "program": "Golden Visa (UAE)",
+        "investment": "Inversión mínima aproximada: AED 2,000,000 (~USD 545,000)",
+        "benefits": [
+          "Visa por 10 años renovable",
+          "Incluye cónyuge e hijos",
+          "Sin impuesto sobre renta personal",
+          "Centro financiero global"
+        ],
+        "ideal_for": "Ideal para empresarios y patrimonios altos que buscan estructura fiscal eficiente."
+      },
+      {
+        "country": "Miami",
+        "program": "Estados Unidos (EB-5 u otras vías estructuradas)",
+        "investment": "Inversión desde: USD 800,000 (según programa EB-5)",
+        "benefits": [
+          "Residencia permanente (Green Card)",
+          "Acceso al sistema financiero y educativo de EE.UU.",
+          "Protección jurídica sólida"
+        ],
+        "ideal_for": "Ideal para familias LATAM que buscan estabilidad en dólares."
+      },
+      {
+        "country": "Chile",
+        "program": "Residencia por Inversión",
+        "investment": "No existe Golden Visa formal, pero sí residencia temporal o definitiva vía inversión.",
+        "benefits": [
+          "País estable dentro de LATAM",
+          "Tratados comerciales internacionales",
+          "Mercado inmobiliario dolarizado en zonas premium",
+          "Marco institucional predecible"
+        ],
+        "ideal_for": "Ideal para empresarios que quieren operar en Sudamérica con estabilidad jurídica."
+      },
+      {
+        "country": "México",
+        "program": "Residencia Temporal por Inversión",
+        "investment": "Inversión inmobiliaria aproximada requerida: variable según salario mínimo vigente.",
+        "benefits": [
+          "Residencia temporal renovable",
+          "Mercado inmobiliario turístico fuerte",
+          "Cercanía con EE.UU."
+        ],
+        "ideal_for": "Ideal para diversificación regional."
+      },
+      {
+        "country": "Bali",
+        "program": "Indonesia",
+        "investment": "Bali no otorga residencia directa por compra inmobiliaria.",
+        "benefits": [
+          "Visas de inversionista (KITAS)",
+          "Estructuración mediante empresa local",
+          "Mercado turístico de alta demanda"
+        ],
+        "ideal_for": "Ideal para inversores que buscan lifestyle + rentabilidad turística."
+      },
+      {
+        "country": "Madrid",
+        "program": "España",
+        "investment": "El programa Golden Visa inmobiliaria está en proceso de cambios/revisión.",
+        "benefits": [
+          "Residencia por inversión estructurada",
+          "Acceso a la Unión Europea",
+          "Mercado inmobiliario sólido en Madrid"
+        ],
+        "ideal_for": "Ideal para movilidad europea."
+      },
+      {
+        "country": "Punta Cana",
+        "program": "República Dominicana",
+        "investment": "República Dominicana permite residencia por inversión con proceso relativamente ágil.",
+        "benefits": [
+          "Proceso relativamente ágil",
+          "Mercado turístico en expansión",
+          "Alto flujo internacional en Caribe"
+        ],
+        "ideal_for": "Ideal para diversificación en Caribe con alto flujo turístico."
+      }
+    ]
+  },
+  "fund_capital": {
+    "eyebrow": "FONDO & CAPITAL",
+    "title": "Respaldados por Capital Institucional",
+    "description": "Nuestra plataforma opera con el respaldo de un fondo de inversión privado que nos permite:",
+    "bullets": [
+      "Acceso a inventario exclusivo",
+      "Negociación directa con desarrolladores",
+      "Estructuración de modelos fraccionados",
+      "Oportunidades con rendimientos mensuales proyectados"
+    ],
+    "strong_message": "No somos solo intermediarios. Estructuramos oportunidades."
+  },
+  "global_agent": {
+    "eyebrow": "SÉ AGENTE GLOBAL",
+    "title": "Conviértete en Agente Global",
+    "benefits": [
+      "4% a 5% de comisión",
+      "Acceso a portafolio internacional",
+      "Landing personalizada",
+      "Soporte de marketing",
+      "Viaje a Dubái al superar 20 cierres"
+    ],
+    "cta": "Más información"
+  },
   "about": {
     "title": "Estrategia Global, Ejecución Local.",
     "description": "Invertir internacionalmente no es solo elegir una propiedad.\nEs estructurar correctamente la asignación de capital en la jurisdicción adecuada, en el momento adecuado y con el socio correcto.\n\nNuestro enfoque combina análisis macroeconómico, acceso directo a desarrolladores líderes y una visión patrimonial a largo plazo para maximizar retorno y minimizar riesgo.",
@@ -31,7 +183,6 @@
       "Oportunidades seleccionadas y filtradas",
       "Análisis real de ROI y proyección",
       "Estructuración legal internacional",
-      "Acompañamiento integral 360°",
       "Soporte post-inversión y estrategia de salida"
     ]
   },
