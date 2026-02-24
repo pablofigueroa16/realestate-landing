@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="es" className="scroll-smooth">
       <body
-        className={`${playfair.variable} ${inter.variable} antialiased font-sans text-gray-900 bg-white`}
+        className={`${playfair.variable} ${inter.variable} antialiased font-serif text-gray-900 bg-white`}
       >
         <Providers>
           {children}

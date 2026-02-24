@@ -133,7 +133,7 @@ export default function PropertyMapClient({
       />
       <Marker position={position} icon={icon}>
         <Popup>
-          <span className="font-sans text-sm font-medium">{title}</span>
+          <span className="font-serif text-sm font-medium">{title}</span>
         </Popup>
       </Marker>
       {nearbyPlaces.map((place) => (
@@ -143,7 +143,7 @@ export default function PropertyMapClient({
           icon={nearbyIcon}
         >
           <Popup>
-            <div className="font-sans">
+            <div className="font-serif">
               <p className="text-sm font-semibold">{place.name}</p>
               {place.category ? (
                 <p className="text-xs text-gray-500 mt-0.5">

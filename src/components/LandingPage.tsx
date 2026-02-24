@@ -381,7 +381,7 @@ export default function LandingPage({ destination }: LandingPageProps) {
       : undefined;
 
   return (
-    <main className="min-h-screen bg-white text-gray-900">
+    <main className="min-h-screen bg-white text-gray-900 font-serif">
       <Navbar currentDestination={destination} />
       <Hero content={content.hero} destination={destination} />
       <AboutSection content={content.about} />

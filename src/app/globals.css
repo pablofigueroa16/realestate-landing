@@ -23,7 +23,7 @@ html {
 body {
   background: linear-gradient(135deg, #fdfbf7 0%, #f4f4f5 100%);
   color: var(--foreground);
-  font-family: var(--font-sans);
+  font-family: var(--font-serif);
   font-weight: 300; /* Light/Book for elegance */
   font-size: 1.125rem; /* 18px */
   line-height: 1.6;
@@ -50,7 +50,7 @@ h2 {
 }
 
 h3 {
-  font-family: var(--font-sans); /* Subtitles often look better in Sans */
+  font-family: var(--font-serif);
   font-weight: 400;
   font-size: clamp(1.5rem, 3vw + 0.5rem, 2.25rem);
 }

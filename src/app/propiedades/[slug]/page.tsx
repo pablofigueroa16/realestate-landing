@@ -105,7 +105,7 @@ export default function PropertyDetailsPage() {
       : 0;
 
   return (
-    <main className="min-h-screen bg-white text-gray-900 font-sans selection:bg-black selection:text-white">
+    <main className="min-h-screen bg-white text-gray-900 font-serif selection:bg-black selection:text-white">
       {/* 1) HERO SECTION */}
       <section className="p-3 md:p-4 h-screen w-full flex flex-col box-border overflow-hidden">
         <div className="relative grow rounded-4xl overflow-hidden flex flex-col justify-end pb-12 md:pb-20 isolate mask-[linear-gradient(white,white)]">

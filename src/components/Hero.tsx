@@ -66,21 +66,21 @@ export default function Hero({ content, destination = "dubai" }: HeroProps) {
           </video>
           {/* Subtle gradient overlay for text readability */}
           <div className="absolute inset-0 bg-linear-to-r from-black/60 via-black/20 to-black/20 z-10"></div>
-          
+
           {/* Large Background Text */}
-          <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0 opacity-10">
+          {/* <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0 opacity-10">
             <h1 className="text-[20vw] font-bold text-white tracking-widest translate-y-10 uppercase">
               {getBackgroundText()}
             </h1>
-          </div>
+          </div> */}
         </div>
 
         {/* Main Content */}
-        <div className="relative z-40 grow flex flex-col justify-center px-6 md:px-12 lg:px-20 mt-6">
+        <div className="relative z-40 grow flex flex-col justify-center px-6 md:px-12 lg:px-20 mt-4">
           <div className="max-w-4xl">
             <div className="mb-4">
               {badges ? (
-                <div className="flex flex-wrap gap-2">
+                <div className="hidden md:flex flex-wrap gap-2">
                   {badges.map((b, idx) => (
                     <span key={idx} className="bg-white/10 backdrop-blur-md border border-white/10 text-white text-[10px] font-bold tracking-widest px-3 py-1.5 rounded-lg uppercase">
                       {b}
@@ -95,36 +95,36 @@ export default function Hero({ content, destination = "dubai" }: HeroProps) {
                 </div>
               )}
             </div>
-            
-            <h1 className="text-4xl md:text-6xl lg:text-7xl text-white font-serif font-medium leading-[1.1] mb-6">
+
+            <h1 className="text-2xl md:text-5xl lg:text-6xl text-white font-serif font-medium leading-[1.1] mb-4">
               {title}
             </h1>
 
-            <p className="text-white/80 text-base md:text-lg max-w-lg mb-8 font-light leading-relaxed">
+            <p className="text-white/80 text-base md:text-lg max-w-lg mb-4 font-light leading-relaxed">
               {subtitle}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-                <Link 
-                  href="#proyectos"
-                  onClick={(e) => scrollToId(e, "#proyectos")}
-                  scroll={false}
-                  className="group flex items-center gap-3 bg-white text-black pl-6 pr-1.5 py-2 rounded-full text-base font-medium hover:bg-gray-100 transition-all hover:scale-105 active:scale-95 w-fit"
-                >
-                  {primaryCta}
-                  <div className="w-9 h-9 bg-black rounded-full flex items-center justify-center text-white group-hover:bg-gray-800 transition-colors">
-                    <ArrowRight size={18} />
-                  </div>
-                </Link>
-                
-                <Link 
-                  href="#contacto"
-                  onClick={(e) => scrollToId(e, "#contacto")}
-                  scroll={false}
-                  className="group flex items-center gap-3 bg-white/10 backdrop-blur-md border border-white/20 text-white pl-6 pr-6 py-2 rounded-full text-base font-medium hover:bg-white/20 transition-all hover:scale-105 active:scale-95 w-fit"
-                >
-                  {secondaryCta}
-                </Link>
+              <Link
+                href="#proyectos"
+                onClick={(e) => scrollToId(e, "#proyectos")}
+                scroll={false}
+                className="group flex items-center gap-3 bg-white text-black pl-6 pr-1.5 py-2 rounded-full text-base font-medium hover:bg-gray-100 transition-all hover:scale-105 active:scale-95 w-fit"
+              >
+                {primaryCta}
+                <div className="w-9 h-9 bg-black rounded-full flex items-center justify-center text-white group-hover:bg-gray-800 transition-colors">
+                  <ArrowRight size={18} />
+                </div>
+              </Link>
+
+              <Link
+                href="#contacto"
+                onClick={(e) => scrollToId(e, "#contacto")}
+                scroll={false}
+                className="group flex items-center gap-3 bg-white/10 backdrop-blur-md border border-white/20 text-white pl-6 pr-6 py-2 rounded-full text-base font-medium hover:bg-white/20 transition-all hover:scale-105 active:scale-95 w-fit"
+              >
+                {secondaryCta}
+              </Link>
             </div>
           </div>
         </div>

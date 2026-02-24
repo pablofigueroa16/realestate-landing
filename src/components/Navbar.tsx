@@ -91,7 +91,7 @@ export default function Navbar({ currentDestination = "home" }: NavbarProps) {
         {/* Desktop Navigation */}
         <nav
           className={`hidden border border-gray-200 md:flex items-center gap-6 rounded-full px-6 py-2.5 text-sm font-medium transition-all duration-300 ${isScrolled
-            ? "bg-gray-100/50 text-gray-600"
+            ? "bg-gray-100/50 text-gray-800"
             : "bg-white/10 backdrop-blur-md border border-white/10 text-white/90"
             }`}
         >
