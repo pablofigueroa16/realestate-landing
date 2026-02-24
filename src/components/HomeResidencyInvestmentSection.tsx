@@ -12,12 +12,7 @@ export default function HomeResidencyInvestmentSection() {
   const [mouseEnd, setMouseEnd] = useState<number | null>(null);
   const [isHovered, setIsHovered] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
-  const [itemsPerView, setItemsPerView] = useState(() => {
-    if (typeof window === "undefined") return 1;
-    if (window.innerWidth >= 1280) return 3;
-    if (window.innerWidth >= 768) return 2;
-    return 1;
-  });
+  const [itemsPerView, setItemsPerView] = useState(1);
 
   const options = [
     {
@@ -126,6 +121,7 @@ export default function HomeResidencyInvestmentSection() {
       else setItemsPerView(1);
     };
 
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
