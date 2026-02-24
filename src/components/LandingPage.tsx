@@ -46,7 +46,7 @@ export default function LandingPage({ destination }: LandingPageProps) {
             text: t("home.hero.stats.1.text"),
             iconName: staticContent.hero.stats[1]?.iconName,
           },
-        ],
+        ]
       },
       about: {
         ...staticContent.about,
@@ -175,15 +175,15 @@ export default function LandingPage({ destination }: LandingPageProps) {
         subtitle: t("bali.hero.subtitle"),
         badge: t("bali.hero.badge"),
         stats: [
-          { 
-            value: t("bali.hero.stats.0.value"), 
-            text: t("bali.hero.stats.0.text"), 
-            iconName: staticContent.hero.stats[0]?.iconName 
+          {
+            value: t("bali.hero.stats.0.value"),
+            text: t("bali.hero.stats.0.text"),
+            iconName: staticContent.hero.stats[0]?.iconName
           },
-          { 
-            value: t("bali.hero.stats.1.value"), 
-            text: t("bali.hero.stats.1.text"), 
-            iconName: staticContent.hero.stats[1]?.iconName 
+          {
+            value: t("bali.hero.stats.1.value"),
+            text: t("bali.hero.stats.1.text"),
+            iconName: staticContent.hero.stats[1]?.iconName
           }
         ]
       },
@@ -197,18 +197,18 @@ export default function LandingPage({ destination }: LandingPageProps) {
           subtitle: t("bali.about.market_card.subtitle"),
         },
         benefits: staticContent.about.benefits.map((b, i) => {
-             const labels = [
-               t("bali.about.benefits.tourists"),
-               t("bali.about.benefits.appreciation"),
-               t("bali.about.benefits.digital_nomads"),
-               t("bali.about.benefits.demand"),
-               t("bali.about.benefits.roi"),
-               t("bali.about.benefits.emerging")
-             ];
-             return {
-               ...b,
-               label: labels[i] || b.label
-             };
+          const labels = [
+            t("bali.about.benefits.tourists"),
+            t("bali.about.benefits.appreciation"),
+            t("bali.about.benefits.digital_nomads"),
+            t("bali.about.benefits.demand"),
+            t("bali.about.benefits.roi"),
+            t("bali.about.benefits.emerging")
+          ];
+          return {
+            ...b,
+            label: labels[i] || b.label
+          };
         })
       },
       whyChoose: {
@@ -217,10 +217,10 @@ export default function LandingPage({ destination }: LandingPageProps) {
         description: t("bali.why_choose.description"),
         quote: t("bali.why_choose.quote"),
         benefits: [
-            t("bali.why_choose.benefits.0"),
-            t("bali.why_choose.benefits.1"),
-            t("bali.why_choose.benefits.2"),
-            t("bali.why_choose.benefits.3")
+          t("bali.why_choose.benefits.0"),
+          t("bali.why_choose.benefits.1"),
+          t("bali.why_choose.benefits.2"),
+          t("bali.why_choose.benefits.3")
         ]
       },
       locationProjects: staticContent.locationProjects.map((proj, i) => {
@@ -234,9 +234,9 @@ export default function LandingPage({ destination }: LandingPageProps) {
           description: t(`bali.location.projects.${key}.description`),
           marketInsight: t(`bali.location.projects.${key}.market_insight`),
           features: [
-             t(`bali.location.projects.${key}.features.0`),
-             t(`bali.location.projects.${key}.features.1`),
-             t(`bali.location.projects.${key}.features.2`)
+            t(`bali.location.projects.${key}.features.0`),
+            t(`bali.location.projects.${key}.features.1`),
+            t(`bali.location.projects.${key}.features.2`)
           ]
         };
       }),
@@ -245,18 +245,18 @@ export default function LandingPage({ destination }: LandingPageProps) {
         if (unit.id === "body-sense") key = "body_sense";
         else if (unit.id === "rahya-villas-complex") key = "rahya_villas";
         else if (unit.id === "eighth-sense") key = "eighth_sense";
-        
+
         if (!key) return unit;
 
         return {
-           ...unit,
-           hero: { 
-             ...unit.hero, 
-             title: t(`bali.unit_types.units.${key}.title`),
-             description: t(`bali.unit_types.units.${key}.description`) // Ensure hero uses translated description
-           },
-           description: t(`bali.unit_types.units.${key}.description`),
-           size: t(`bali.unit_types.units.${key}.size`)
+          ...unit,
+          hero: {
+            ...unit.hero,
+            title: t(`bali.unit_types.units.${key}.title`),
+            description: t(`bali.unit_types.units.${key}.description`) // Ensure hero uses translated description
+          },
+          description: t(`bali.unit_types.units.${key}.description`),
+          size: t(`bali.unit_types.units.${key}.size`)
         };
       }),
       unitsConfig: {
@@ -335,16 +335,16 @@ export default function LandingPage({ destination }: LandingPageProps) {
           marketInsight: t(`miami.location.projects.${key}.market_insight`),
           features: key === "ritz_carlton"
             ? [
-                t(`miami.location.projects.${key}.features.0`),
-                t(`miami.location.projects.${key}.features.1`),
-                t(`miami.location.projects.${key}.features.2`),
-                t(`miami.location.projects.${key}.features.3`),
-              ]
+              t(`miami.location.projects.${key}.features.0`),
+              t(`miami.location.projects.${key}.features.1`),
+              t(`miami.location.projects.${key}.features.2`),
+              t(`miami.location.projects.${key}.features.3`),
+            ]
             : [
-                t(`miami.location.projects.${key}.features.0`),
-                t(`miami.location.projects.${key}.features.1`),
-                t(`miami.location.projects.${key}.features.2`),
-              ],
+              t(`miami.location.projects.${key}.features.0`),
+              t(`miami.location.projects.${key}.features.1`),
+              t(`miami.location.projects.${key}.features.2`),
+            ],
         };
       }),
       units: staticContent.units.map((unit) => {
@@ -388,8 +388,8 @@ export default function LandingPage({ destination }: LandingPageProps) {
       <LocationSection projects={locationProjectsForSection} />
       <UnitTypesSection
         units={content.units}
-        title={content.unitsConfig?.title} 
-        subtitle={content.unitsConfig?.subtitle} 
+        title={content.unitsConfig?.title}
+        subtitle={content.unitsConfig?.subtitle}
       />
       <PresentationSection content={content.presentation} />
       <WhyChooseSection content={content.whyChoose} />

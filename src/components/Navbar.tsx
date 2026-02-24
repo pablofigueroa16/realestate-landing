@@ -48,6 +48,7 @@ export default function Navbar({ currentDestination = "home" }: NavbarProps) {
   };
 
   const isHome = currentDestination === "home";
+  const homeLabel = locale === "es" ? "INICIO" : "HOME";
 
   const navLinks = [
     { name: isHome ? t("home.nav.about") : t("nav.about"), id: "#nosotros" },
@@ -58,7 +59,6 @@ export default function Navbar({ currentDestination = "home" }: NavbarProps) {
   ];
 
   const destinationsList = [
-    { name: isHome ? t("home.nav.home") : t("nav.home"), path: "/" },
     { name: "DUBAI", path: "/dubai" },
     { name: "BALI", path: "/bali" },
     { name: "MIAMI", path: "/miami" },
@@ -96,25 +96,13 @@ export default function Navbar({ currentDestination = "home" }: NavbarProps) {
             }`}
         >
           {/* 1. HOME Link */}
-          {isHome ? (
-            <Link
-              href="/"
-              onClick={(e) => scrollToId(e, "#inicio")}
-              scroll={false}
-              className={`transition-colors cursor-pointer ${isScrolled ? "hover:text-gray-900" : "hover:text-white"
-                }`}
-            >
-              {t("home.nav.home")}
-            </Link>
-          ) : (
-            <Link
-              href={currentDestination === 'dubai' ? '/dubai' : currentDestination === 'bali' ? '/bali' : currentDestination === 'miami' ? '/miami' : '/'}
-              className={`transition-colors ${isScrolled ? "hover:text-gray-900" : "hover:text-white"
-                }`}
-            >
-              {currentDestination.toUpperCase()}
-            </Link>
-          )}
+          <Link
+            href="/"
+            className={`transition-colors cursor-pointer ${isScrolled ? "hover:text-gray-900" : "hover:text-white"
+              }`}
+          >
+            {homeLabel}
+          </Link>
 
           {/* 2. DESTINATION SELECTOR (Moved here) */}
           <div className="relative group">
@@ -135,7 +123,7 @@ export default function Navbar({ currentDestination = "home" }: NavbarProps) {
                 <Link
                   key={dest.path}
                   href={dest.path}
-                  className={`block px-4 py-2 text-sm hover:bg-gray-50 transition-colors ${(dest.path === '/' && currentDestination === 'home') || dest.path.includes(currentDestination) && currentDestination !== 'home'
+                  className={`block px-4 py-2 text-sm hover:bg-gray-50 transition-colors ${dest.path.includes(currentDestination) && currentDestination !== 'home'
                     ? 'font-bold text-black'
                     : 'text-gray-600'
                     }`}
@@ -244,11 +232,11 @@ export default function Navbar({ currentDestination = "home" }: NavbarProps) {
 
             {/* Current Page Title (Like Desktop) */}
             <Link
-              href={currentDestination === 'home' ? "/" : `/${currentDestination}`}
-              onClick={(e) => handleMobileNavClick(e, "#inicio")}
+              href="/"
+              onClick={() => setIsMobileMenuOpen(false)}
               className="text-2xl font-serif font-bold text-white hover:text-gray-300 transition-colors"
             >
-              {isHome ? t("home.nav.home") : currentDestination.toUpperCase()}
+              {homeLabel}
             </Link>
 
             {/* Mobile Navigation Links */}

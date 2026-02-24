@@ -9,13 +9,15 @@
     "contact": "CONTACTO"
   },
   "hero": {
-    "title": "Acceso estratégico a oportunidades inmobiliarias globales.",
-    "subtitle": "Seleccionamos mercados con fundamentos sólidos, crecimiento sostenido y ventajas fiscales estratégicas.",
+    "title": "Inversión Inmobiliaria Global con Arquitectura de Capital Inteligente",
+    "subtitle": "Diversifica tu patrimonio en las ciudades más sólidas del mundo, con acceso institucional, modelos flexibles y oportunidades estructuradas.",
     "badges": ["DUBAI", "BALI", "MIAMI"],
     "stats": [
       { "value": "12%", "text": "ROI promedio anual en mercados seleccionados" },
       { "value": "0%", "text": "Impuesto sobre renta personal en jurisdicciones estratégicas" }
-    ]
+    ],
+    "cta": "Explorar Oportunidades",
+    "cta_consultation": "Hablar con un Asesor"
   },
   "about": {
     "title": "Estrategia Global, Ejecución Local.",

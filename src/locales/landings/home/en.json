@@ -9,13 +9,15 @@
     "contact": "CONTACT"
   },
   "hero": {
-    "title": "Strategic access to global real estate opportunities.",
-    "subtitle": "We select markets with strong fundamentals, sustained growth, and strategic tax advantages.",
+    "title": "Global Real Estate Investment with Smart Capital Architecture",
+    "subtitle": "Diversify your wealth in the world’s strongest cities, with institutional access, flexible models, and structured opportunities.",
     "badges": ["DUBAI", "BALI", "MIAMI"],
     "stats": [
       { "value": "12%", "text": "Average annual ROI in selected markets" },
       { "value": "0%", "text": "Personal income tax in strategic jurisdictions" }
-    ]
+    ],
+    "cta": "Explore Opportunities",
+    "cta_consultation": "Talk to an Advisor"
   },
   "about": {
     "title": "Global Strategy, Local Execution.",

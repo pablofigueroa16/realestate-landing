@@ -21,6 +21,12 @@ export default function Hero({ content, destination = "dubai" }: HeroProps) {
   const badges = content?.badges;
   const title = content?.title || t("hero.title");
   const subtitle = content?.subtitle || t("hero.subtitle");
+  const primaryCta =
+    destination === "home" ? t("home.hero.cta") : t("hero.cta");
+  const secondaryCta =
+    destination === "home"
+      ? t("home.hero.cta_consultation")
+      : t("hero.cta_consultation");
 
   const getBackgroundText = () => {
     if (destination === "home") return "GLOBAL";
@@ -45,7 +51,7 @@ export default function Hero({ content, destination = "dubai" }: HeroProps) {
 
   return (
     <section id="inicio" className="p-3 md:p-4 h-screen w-full flex flex-col box-border overflow-hidden">
-      <div className="relative grow rounded-4xl overflow-hidden flex flex-col isolate [mask-image:linear-gradient(white,white)]">
+      <div className="relative grow rounded-4xl overflow-hidden flex flex-col isolate mask-[linear-gradient(white,white)]">
         {/* Background Video */}
         <div className="absolute inset-0 z-0">
           <video
@@ -105,7 +111,7 @@ export default function Hero({ content, destination = "dubai" }: HeroProps) {
                   scroll={false}
                   className="group flex items-center gap-3 bg-white text-black pl-6 pr-1.5 py-2 rounded-full text-base font-medium hover:bg-gray-100 transition-all hover:scale-105 active:scale-95 w-fit"
                 >
-                  {t("hero.cta")}
+                  {primaryCta}
                   <div className="w-9 h-9 bg-black rounded-full flex items-center justify-center text-white group-hover:bg-gray-800 transition-colors">
                     <ArrowRight size={18} />
                   </div>
@@ -117,7 +123,7 @@ export default function Hero({ content, destination = "dubai" }: HeroProps) {
                   scroll={false}
                   className="group flex items-center gap-3 bg-white/10 backdrop-blur-md border border-white/20 text-white pl-6 pr-6 py-2 rounded-full text-base font-medium hover:bg-white/20 transition-all hover:scale-105 active:scale-95 w-fit"
                 >
-                  {t("hero.cta_consultation")}
+                  {secondaryCta}
                 </Link>
             </div>
           </div>

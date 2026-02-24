@@ -427,7 +427,7 @@ export const landingContent: Record<string, LandingContent> = {
         community: { title: "", text: "" }, // Placeholder
         privacy: { title: "", text: "" }, // Placeholder
         views: { title: "", text: "" }, // Placeholder
-        design: { title: "", text: "" } 
+        design: { title: "", text: "" }
       },// Placeholder
       {
         id: "rahya-villas-complex",
