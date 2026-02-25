@@ -1,0 +1,153 @@
+{
+  "hero": {
+    "badge": "BE A GLOBAL AGENT",
+    "title": "Don't work for a real estate agency.",
+    "title_highlight": "Operate within a Global Investment Platform.",
+    "description": "If you already sell real estate, advise on investments, or have a network of contacts, this is your opportunity to scale internationally without opening an office or taking on operational costs.",
+    "closing_1": "We give you the infrastructure.",
+    "closing_2": "You activate your market.",
+    "cta": "Apply as Global Agent",
+    "cta_secondary": "Schedule a strategy call"
+  },
+  "what_is": {
+    "eyebrow": "WHAT IT MEANS",
+    "title": "What does it mean to be a Global Agent?",
+    "subtitle": "It means you can offer your clients:",
+    "offerings": [
+      "Investment in Dubai",
+      "Projects in Miami",
+      "Villas in Bali",
+      "Assets in Madrid",
+      "Opportunities in Punta Cana",
+      "Fractional models and real estate fund"
+    ],
+    "no_1": "Without negotiating directly with developers.",
+    "no_2": "Without your own legal structure in each country.",
+    "no_3": "Without limited inventory."
+  },
+  "starter_kit": {
+    "eyebrow": "AGENT STARTER KIT",
+    "title": "When you join, you will receive:"
+  },
+  "kit_landing": {
+    "tag": "01",
+    "title": "Custom Landing Page",
+    "features": [
+      "With your name and contact info",
+      "Direct WhatsApp",
+      "Integrated global portfolio",
+      "ROI Calculator",
+      "Automatic lead capture"
+    ],
+    "closing": "Professional, institutional, and ready to convert."
+  },
+  "kit_portfolio": {
+    "tag": "02",
+    "title": "Access to Global Portfolio",
+    "subtitle": "Top strategic destinations:",
+    "destinations": [
+      "Dubai",
+      "Miami",
+      "Bali",
+      "Madrid",
+      "Punta Cana",
+      "Chile",
+      "Mexico"
+    ],
+    "closing": "With official developer materials, updated pricing, and payment plans."
+  },
+  "kit_developers": {
+    "tag": "03",
+    "title": "Direct Access to Developers",
+    "features": [
+      "Private presentations",
+      "Exclusive webinars",
+      "Premium sales materials",
+      "Priority launches"
+    ],
+    "closing_1": "You don't compete with generic inventory.",
+    "closing_2": "You work with structured opportunities."
+  },
+  "kit_training": {
+    "tag": "04",
+    "title": "Training & Strategic Support",
+    "subtitle": "We train you on:",
+    "topics": [
+      "How to sell ROI",
+      "How to sell residency by investment",
+      "How to present the fund model",
+      "How to attract LATAM investors",
+      "How to create professional real estate content"
+    ],
+    "extras_title": "Plus:",
+    "extras": [
+      "Closing scripts",
+      "Scripts for reels",
+      "Positioning strategies"
+    ]
+  },
+  "kit_commission": {
+    "tag": "05",
+    "title": "Competitive Commission",
+    "features": [
+      "1% to 5% per transaction",
+      "Volume bonuses",
+      "Leadership ladder"
+    ],
+    "no_1": "No hidden costs.",
+    "no_2": "No pyramid structures.",
+    "no_3": "Professional and direct model."
+  },
+  "elite": {
+    "eyebrow": "ELITE PROGRAM",
+    "title": "Trip to Dubai",
+    "subtitle": "Close 20 clients and get:",
+    "benefits": [
+      "5 nights in Dubai",
+      "Desert safari",
+      "Private yacht experience",
+      "Mastermind with developers",
+      "International networking"
+    ],
+    "closing_1": "It's not just a trip.",
+    "closing_2": "It's a high-level experience to elevate your brand."
+  },
+  "who": {
+    "eyebrow": "WHO IS IT FOR?",
+    "title": "Who is this program for?",
+    "profiles": [
+      "Real estate agents",
+      "Independent brokers",
+      "Financial advisors",
+      "Entrepreneurs with a network",
+      "Investment content creators"
+    ],
+    "closing": "If you have clients or an audience, you can operate globally."
+  },
+  "difference": {
+    "eyebrow": "OUR DIFFERENCE",
+    "title": "We don't just give you projects.",
+    "title_highlight": "We give you infrastructure.",
+    "benefits": [
+      "Structured platform",
+      "Institutional capital backing",
+      "International portfolio",
+      "Strong brand",
+      "Strategic support"
+    ],
+    "closing_1": "While other agents compete locally,",
+    "closing_2": "you can sell globally."
+  },
+  "apply": {
+    "eyebrow": "HOW TO APPLY",
+    "title": "How to apply",
+    "steps": [
+      "Complete the form",
+      "We evaluate your profile",
+      "We activate your onboarding",
+      "You receive your landing page and portfolio access"
+    ],
+    "cta_primary": "Apply as Global Agent",
+    "cta_secondary": "Schedule a strategy call"
+  }
+}

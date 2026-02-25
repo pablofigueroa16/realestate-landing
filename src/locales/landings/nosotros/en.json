@@ -1,0 +1,95 @@
+{
+  "hero": {
+    "badge": "ABOUT US",
+    "title": "We are not a traditional real estate agency.",
+    "title_highlight": "We are a Global Smart Real Estate Investment Platform.",
+    "description": "We connect Latin American and global capital with strategic opportunities in the world's strongest cities.",
+    "approach_title": "Our approach combines:",
+    "approach": [
+      "Direct access to developers",
+      "Structured financial architecture",
+      "Flexible investment models",
+      "Global mobility through assets",
+      "Institutional backing"
+    ]
+  },
+  "vision": {
+    "eyebrow": "OUR VISION",
+    "title": "Building a bridge between private capital and the most dynamic real estate markets on the planet.",
+    "line_1": "We believe international investment should not be exclusive to large fortunes.",
+    "line_2": "It should be structured, transparent, and accessible."
+  },
+  "difference": {
+    "eyebrow": "OUR DIFFERENCE",
+    "title": "While others only market properties, we:",
+    "items": [
+      "Analyze risk and appreciation projections",
+      "Evaluate legal and tax structures",
+      "Design fractional models",
+      "Manage post-purchase assets",
+      "Offer access to off-market opportunities"
+    ],
+    "closing_1": "We don't sell square meters.",
+    "closing_2": "We structure global wealth."
+  },
+  "capital": {
+    "eyebrow": "BACKING & CAPITAL",
+    "title": "We operate with the backing of a private investment fund that allows us to:",
+    "items": [
+      "Expand our portfolio beyond traditional real estate",
+      "Create investment models with projected monthly returns",
+      "Negotiate directly with international developers",
+      "Access exclusive inventory"
+    ],
+    "closing": "This allows us to act with an institutional mindset, not a commercial one."
+  },
+  "presence": {
+    "eyebrow": "GLOBAL PRESENCE",
+    "title": "Our Global Presence",
+    "subtitle": "We work in strategic markets such as:",
+    "markets": [
+      "Dubai",
+      "Miami",
+      "Madrid",
+      "Bali",
+      "Punta Cana",
+      "Chile",
+      "Mexico"
+    ],
+    "closing": "We select destinations based on stability, growth, and international projection."
+  },
+  "philosophy": {
+    "eyebrow": "OUR PHILOSOPHY",
+    "pillars": [
+      "Diversification.",
+      "Wealth protection.",
+      "Strategic mobility.",
+      "Smart capital."
+    ],
+    "closing_1": "Investing is not just about buying a property.",
+    "closing_2": "It's about designing your family's financial future."
+  },
+  "audience": {
+    "eyebrow": "WHO WE WORK FOR",
+    "title": "Who We Work For",
+    "profiles": [
+      "Entrepreneurs seeking tax efficiency",
+      "Investors who want income in USD",
+      "Families seeking international residency",
+      "Agents who want to operate in global markets",
+      "Private capital seeking professional structuring"
+    ]
+  },
+  "commitment": {
+    "eyebrow": "OUR COMMITMENT",
+    "title": "Our Commitment",
+    "pillars": [
+      "Transparency.",
+      "Realistic analysis.",
+      "Solid structuring.",
+      "Comprehensive support."
+    ],
+    "closing": "From the first contact to asset management.",
+    "cta": "Connect with our team"
+  }
+}

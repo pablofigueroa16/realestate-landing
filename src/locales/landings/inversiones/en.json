@@ -1,0 +1,141 @@
+{
+  "hero": {
+    "badge": "SMART INVESTMENT",
+    "title": "Is your money growing… or standing still?",
+    "subtitle": "While inflation erodes capital in LATAM, major portfolios diversify into international assets.",
+    "highlight": "It's not just about buying a property. It's about structuring your capital in solid markets.",
+    "cta": "Assess My Profile",
+    "cta_secondary": "Simulate My Investment"
+  },
+  "reality": {
+    "eyebrow": "THE REALITY",
+    "title": "Most investors make one of these mistakes:",
+    "errors": [
+      "Investing everything in a single country",
+      "Depending on a single currency",
+      "Not generating monthly cash flow",
+      "Not diversifying risk"
+    ],
+    "conclusion_1": "Smart capital moves.",
+    "conclusion_2": "It structures.",
+    "conclusion_3": "It projects."
+  },
+  "solution": {
+    "eyebrow": "THE SOLUTION",
+    "title": "Three ways to invest globally.",
+    "subtitle": "One strategic decision.",
+    "description": "Not all investors have the same profile. That is why we designed three models."
+  },
+  "model_individual": {
+    "tag": "MODEL 1",
+    "title": "Individual Ownership",
+    "tagline": "Full control. International wealth.",
+    "price": "From USD $150k",
+    "intro": "For those seeking:",
+    "benefits": [
+      "Asset 100% under your name",
+      "USD capital appreciation",
+      "Possible international residency",
+      "Wealth protection"
+    ],
+    "roi_title": "Actual market ranges:",
+    "roi_items": [
+      "Dubai → 10% – 18% combined ROI",
+      "Miami → 7% – 12% combined ROI",
+      "Bali → 12% – 20% combined ROI"
+    ],
+    "closing": "This model is for those who want to build a legacy."
+  },
+  "model_coproperty": {
+    "tag": "MODEL 2",
+    "title": "Strategic Co-Ownership",
+    "price": "From USD $50,000",
+    "description": "Participate alongside other investors in strategically selected assets.",
+    "benefits": [
+      "Automatic diversification",
+      "Shared risk",
+      "Professional management",
+      "Greater project scale"
+    ],
+    "closing": "The balance between premium access and smart structuring."
+  },
+  "model_fund": {
+    "tag": "MODEL 3",
+    "title": "Real Estate Fund with Monthly Yield",
+    "price": "From USD $10,000",
+    "tagline": "Structured capital. Projected cash flow.",
+    "description": "This model integrates your investment into a diversified portfolio combining:",
+    "allocation": [
+      "50% stabilized rental assets",
+      "30% development with appreciation",
+      "20% strategic opportunities"
+    ],
+    "target_roi": "Projected annual return target: 8% – 12%",
+    "benefits_title": "Designed for those seeking:",
+    "benefits": [
+      "Monthly cash flow",
+      "Scalability",
+      "Professional management",
+      "International diversification"
+    ],
+    "closing_1": "This is not a speculative fund.",
+    "closing_2": "It is a capital architecture backed by real assets."
+  },
+  "emotional": {
+    "title": "You don't need millions to invest globally.",
+    "subtitle": "You can start from USD 10,000 or structure a complete portfolio.",
+    "closing": "The difference isn't how much you have. It's how you structure it."
+  },
+  "calculator": {
+    "eyebrow": "ROI CALCULATOR",
+    "title": "Simulate your growth",
+    "intro_1": "Imagine investing USD 50,000 with a projected 10% annual return.",
+    "intro_2": "In 5 years you could reach:",
+    "intro_amount": "USD 80,525",
+    "intro_3": "Now imagine scaling it.",
+    "field_amount_label": "How much do you want to invest?",
+    "field_amount_placeholder": "E.g.: 20,000 USD",
+    "field_amount_hint": "You can start from USD 10,000.",
+    "field_model_label": "Select a model",
+    "model_options": [
+      "Individual Ownership",
+      "Co-Ownership",
+      "Fund with Monthly Yield"
+    ],
+    "field_years_label": "For how many years?",
+    "field_years_hint": "Recommended: 3 to 5 years to maximize results.",
+    "simulate_btn": "Simulate",
+    "result_title": "Your investment could grow to:",
+    "result_initial": "Initial capital",
+    "result_gain": "Estimated gain",
+    "result_rate": "Estimated annual return",
+    "disclaimer": "This is a projection based on the average estimated return of selected international markets. It does not constitute a guarantee of return.",
+    "cta_advisor": "Talk to an Advisor",
+    "cta_opportunities": "View Available Opportunities"
+  },
+  "institutional": {
+    "eyebrow": "INSTITUTIONAL DIFFERENTIATION",
+    "title": "We are not traditional intermediaries.",
+    "subtitle": "We operate with institutional capital architecture.",
+    "intro": "That means:",
+    "benefits": [
+      "Direct access to developers",
+      "Strategic inventory",
+      "Legal and tax structuring",
+      "Professional management",
+      "International diversification"
+    ],
+    "closing_1": "While others sell properties,",
+    "closing_2": "we structure wealth."
+  },
+  "closing": {
+    "line_1": "Capital that doesn't move loses power.",
+    "line_2": "Capital that structures itself grows.",
+    "intro": "Today you can choose:",
+    "option_1": "Keep waiting.",
+    "option_2": "Or start diversifying globally.",
+    "cta_primary": "Assess My Investor Profile",
+    "cta_secondary": "Simulate My Investment",
+    "cta_advisor": "Talk to a Strategic Advisor"
+  }
+}

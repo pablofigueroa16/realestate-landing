@@ -11,6 +11,12 @@ import baliEs from '../locales/landings/bali/es.json';
 import baliEn from '../locales/landings/bali/en.json';
 import miamiEs from '../locales/landings/miami/es.json';
 import miamiEn from '../locales/landings/miami/en.json';
+import inversionesEs from '../locales/landings/inversiones/es.json';
+import inversionesEn from '../locales/landings/inversiones/en.json';
+import agentesEs from '../locales/landings/agentes/es.json';
+import agentesEn from '../locales/landings/agentes/en.json';
+import nosotrosEs from '../locales/landings/nosotros/es.json';
+import nosotrosEn from '../locales/landings/nosotros/en.json';
 
 type Locale = 'es' | 'en';
 type Translations = Record<string, unknown>;
@@ -53,14 +59,14 @@ const translations: Record<Locale, Translations> = {
   es: deepMerge(
     deepMerge(
       deepMerge(generalEs as Record<string, unknown>, dubaiEs as Record<string, unknown>),
-      { home: homeEs, bali: baliEs, miami: miamiEs }
+      { home: homeEs, bali: baliEs, miami: miamiEs, inversiones: inversionesEs, agentes: agentesEs, nosotros: nosotrosEs }
     ),
     {}
   ),
   en: deepMerge(
     deepMerge(
       deepMerge(generalEn as Record<string, unknown>, dubaiEn as Record<string, unknown>),
-      { home: homeEn, bali: baliEn, miami: miamiEn }
+      { home: homeEn, bali: baliEn, miami: miamiEn, inversiones: inversionesEn, agentes: agentesEn, nosotros: nosotrosEn }
     ),
     {}
   ),

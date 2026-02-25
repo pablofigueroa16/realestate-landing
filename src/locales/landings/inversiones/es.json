@@ -1,0 +1,141 @@
+{
+  "hero": {
+    "badge": "INVERSIÓN INTELIGENTE",
+    "title": "¿Tu dinero está creciendo… o está detenido?",
+    "subtitle": "Mientras la inflación erosiona el capital en LATAM, los grandes patrimonios diversifican en activos internacionales.",
+    "highlight": "No se trata solo de comprar una propiedad. Se trata de estructurar tu capital en mercados sólidos.",
+    "cta": "Evaluar mi Perfil",
+    "cta_secondary": "Simular mi Inversión"
+  },
+  "reality": {
+    "eyebrow": "LA REALIDAD",
+    "title": "La mayoría de los inversionistas comete uno de estos errores:",
+    "errors": [
+      "Invertir todo en un solo país",
+      "Depender de una sola moneda",
+      "No generar flujo mensual",
+      "No diversificar riesgo"
+    ],
+    "conclusion_1": "El capital inteligente se mueve.",
+    "conclusion_2": "Se estructura.",
+    "conclusion_3": "Se proyecta."
+  },
+  "solution": {
+    "eyebrow": "LA SOLUCIÓN",
+    "title": "Tres formas de invertir globalmente.",
+    "subtitle": "Una decisión estratégica.",
+    "description": "No todos los inversionistas tienen el mismo perfil. Por eso diseñamos tres modelos."
+  },
+  "model_individual": {
+    "tag": "MODELO 1",
+    "title": "Propiedad Individual",
+    "tagline": "Control total. Patrimonio internacional.",
+    "price": "Desde USD $150k",
+    "intro": "Para quienes buscan:",
+    "benefits": [
+      "Activo 100% a su nombre",
+      "Plusvalía en dólares",
+      "Posible residencia internacional",
+      "Protección patrimonial"
+    ],
+    "roi_title": "Rangos reales de mercado:",
+    "roi_items": [
+      "Dubai → 10% – 18% ROI combinado",
+      "Miami → 7% – 12% ROI combinado",
+      "Bali → 12% – 20% ROI combinado"
+    ],
+    "closing": "Este modelo es para quien quiere construir legado."
+  },
+  "model_coproperty": {
+    "tag": "MODELO 2",
+    "title": "Copropiedad Estratégica",
+    "price": "Desde USD $50,000",
+    "description": "Participa junto a otros inversionistas en activos seleccionados estratégicamente.",
+    "benefits": [
+      "Diversificación automática",
+      "Riesgo compartido",
+      "Gestión profesional",
+      "Mayor escala de proyecto"
+    ],
+    "closing": "Es el equilibrio entre acceso premium y estructura inteligente."
+  },
+  "model_fund": {
+    "tag": "MODELO 3",
+    "title": "Fondo Inmobiliario con Rendimiento Mensual",
+    "price": "Desde USD $10,000",
+    "tagline": "Capital estructurado. Flujo proyectado.",
+    "description": "Este modelo integra tu inversión en un portafolio diversificado que combina:",
+    "allocation": [
+      "50% activos estabilizados en renta",
+      "30% desarrollo con plusvalía",
+      "20% oportunidades estratégicas"
+    ],
+    "target_roi": "Objetivo de rendimiento proyectado anual: 8% – 12%",
+    "benefits_title": "Diseñado para quienes buscan:",
+    "benefits": [
+      "Flujo mensual",
+      "Escalabilidad",
+      "Gestión profesional",
+      "Diversificación internacional"
+    ],
+    "closing_1": "Este no es un fondo especulativo.",
+    "closing_2": "Es una arquitectura de capital respaldada por activos reales."
+  },
+  "emotional": {
+    "title": "No necesitas millones para invertir globalmente.",
+    "subtitle": "Puedes comenzar desde USD 10,000 o estructurar un portafolio completo.",
+    "closing": "La diferencia no está en cuánto tienes. Está en cómo lo estructuras."
+  },
+  "calculator": {
+    "eyebrow": "CALCULADORA DE ROI",
+    "title": "Simula tu crecimiento",
+    "intro_1": "Imagina invertir 50,000 USD con un rendimiento proyectado del 10% anual.",
+    "intro_2": "En 5 años podrías alcanzar:",
+    "intro_amount": "USD 80,525",
+    "intro_3": "Ahora imagina escalarlo.",
+    "field_amount_label": "¿Cuánto deseas invertir?",
+    "field_amount_placeholder": "Ej: 20,000 USD",
+    "field_amount_hint": "Desde USD 10,000 puedes comenzar.",
+    "field_model_label": "Selecciona un modelo",
+    "model_options": [
+      "Propiedad Individual",
+      "Copropiedad",
+      "Fondo con Flujo Mensual"
+    ],
+    "field_years_label": "¿Por cuántos años?",
+    "field_years_hint": "Recomendado: 3 a 5 años para maximizar resultados.",
+    "simulate_btn": "Simular",
+    "result_title": "Tu inversión podría crecer a:",
+    "result_initial": "Capital inicial",
+    "result_gain": "Ganancia estimada",
+    "result_rate": "Rendimiento anual estimado",
+    "disclaimer": "Esta es una proyección basada en rendimiento promedio estimado de mercados internacionales seleccionados. No constituye garantía de retorno.",
+    "cta_advisor": "Hablar con un Asesor",
+    "cta_opportunities": "Ver Oportunidades Disponibles"
+  },
+  "institutional": {
+    "eyebrow": "DIFERENCIACIÓN INSTITUCIONAL",
+    "title": "No somos intermediarios tradicionales.",
+    "subtitle": "Operamos con arquitectura de capital institucional.",
+    "intro": "Eso significa:",
+    "benefits": [
+      "Acceso directo a desarrolladores",
+      "Inventario estratégico",
+      "Estructuración legal y fiscal",
+      "Gestión profesional",
+      "Diversificación internacional"
+    ],
+    "closing_1": "Mientras otros venden propiedades,",
+    "closing_2": "nosotros estructuramos patrimonio."
+  },
+  "closing": {
+    "line_1": "El capital que no se mueve, pierde poder.",
+    "line_2": "El capital que se estructura, crece.",
+    "intro": "Hoy puedes elegir:",
+    "option_1": "Seguir esperando.",
+    "option_2": "O empezar a diversificar globalmente.",
+    "cta_primary": "Evaluar mi Perfil de Inversor",
+    "cta_secondary": "Simular mi Inversión",
+    "cta_advisor": "Hablar con un Asesor Estratégico"
+  }
+}

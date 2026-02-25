@@ -1,0 +1,95 @@
+{
+  "hero": {
+    "badge": "NOSOTROS",
+    "title": "No somos una agencia inmobiliaria tradicional.",
+    "title_highlight": "Somos una Plataforma Global de Inversión Inmobiliaria Inteligente.",
+    "description": "Conectamos capital latinoamericano y global con oportunidades estratégicas en las ciudades más sólidas del mundo.",
+    "approach_title": "Nuestro enfoque combina:",
+    "approach": [
+      "Acceso directo a desarrolladores",
+      "Arquitectura financiera estructurada",
+      "Modelos flexibles de inversión",
+      "Movilidad global a través de activos",
+      "Respaldo institucional"
+    ]
+  },
+  "vision": {
+    "eyebrow": "NUESTRA VISIÓN",
+    "title": "Construir un puente entre el capital privado y los mercados inmobiliarios más dinámicos del planeta.",
+    "line_1": "Creemos que la inversión internacional no debe ser exclusiva para grandes patrimonios.",
+    "line_2": "Debe ser estructurada, transparente y accesible."
+  },
+  "difference": {
+    "eyebrow": "NUESTRA DIFERENCIA",
+    "title": "Mientras otros solo comercializan propiedades, nosotros:",
+    "items": [
+      "Analizamos riesgo y proyección de plusvalía",
+      "Evaluamos estructura legal y fiscal",
+      "Diseñamos modelos fraccionados",
+      "Gestionamos activos post-compra",
+      "Ofrecemos acceso a oportunidades off-market"
+    ],
+    "closing_1": "No vendemos metros cuadrados.",
+    "closing_2": "Estructuramos patrimonio global."
+  },
+  "capital": {
+    "eyebrow": "RESPALDO & CAPITAL",
+    "title": "Operamos con el respaldo de un fondo de inversión privado que nos permite:",
+    "items": [
+      "Expandir el portafolio más allá del real estate tradicional",
+      "Crear modelos de inversión con rendimientos mensuales proyectados",
+      "Negociar directamente con desarrolladores internacionales",
+      "Acceder a inventario exclusivo"
+    ],
+    "closing": "Esto nos permite actuar con una mentalidad institucional, no comercial."
+  },
+  "presence": {
+    "eyebrow": "PRESENCIA GLOBAL",
+    "title": "Nuestra Presencia Global",
+    "subtitle": "Trabajamos en mercados estratégicos como:",
+    "markets": [
+      "Dubái",
+      "Miami",
+      "Madrid",
+      "Bali",
+      "Punta Cana",
+      "Chile",
+      "México"
+    ],
+    "closing": "Seleccionamos destinos por estabilidad, crecimiento y proyección internacional."
+  },
+  "philosophy": {
+    "eyebrow": "NUESTRA FILOSOFÍA",
+    "pillars": [
+      "Diversificación.",
+      "Protección patrimonial.",
+      "Movilidad estratégica.",
+      "Capital inteligente."
+    ],
+    "closing_1": "Invertir no es solo comprar una propiedad.",
+    "closing_2": "Es diseñar el futuro financiero de tu familia."
+  },
+  "audience": {
+    "eyebrow": "PARA QUIÉN TRABAJAMOS",
+    "title": "Para Quién Trabajamos",
+    "profiles": [
+      "Empresarios que buscan eficiencia fiscal",
+      "Inversores que desean ingresos en dólares",
+      "Familias que quieren residencia internacional",
+      "Agentes que desean operar en mercados globales",
+      "Capital privado que busca estructuración profesional"
+    ]
+  },
+  "commitment": {
+    "eyebrow": "NUESTRO COMPROMISO",
+    "title": "Nuestro Compromiso",
+    "pillars": [
+      "Transparencia.",
+      "Análisis realista.",
+      "Estructuración sólida.",
+      "Acompañamiento integral."
+    ],
+    "closing": "Desde el primer contacto hasta la gestión del activo.",
+    "cta": "Conectar con nuestro equipo"
+  }
+}
