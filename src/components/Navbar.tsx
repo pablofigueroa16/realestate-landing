@@ -18,6 +18,12 @@ interface NavbarProps {
   currentDestination?: "dubai" | "bali" | "home" | "miami";
 }
 
+interface NavLinkItem {
+  name: string;
+  href: string;
+  isAnchor?: boolean;
+}
+
 export default function Navbar({ currentDestination = "home" }: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -42,20 +48,19 @@ export default function Navbar({ currentDestination = "home" }: NavbarProps) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleMobileNavClick = (e: React.MouseEvent<HTMLElement>, id: string) => {
+  const handleAnchorClick = (e: React.MouseEvent<HTMLElement>, id: string) => {
     scrollToId(e, id);
     setIsMobileMenuOpen(false);
   };
 
-  const isHome = currentDestination === "home";
   const homeLabel = locale === "es" ? "INICIO" : "HOME";
 
-  const navLinks = [
-    { name: isHome ? t("home.nav.about") : t("nav.about"), id: "#nosotros" },
-    { name: isHome ? t("home.nav.projects") : t("nav.projects"), id: "#proyectos" },
-    { name: isHome ? t("home.nav.units") : t("nav.units"), id: "#unidades" },
-    { name: isHome ? t("home.nav.video") : t("nav.video"), id: "#video" },
-    { name: isHome ? t("home.nav.contact") : t("nav.contact"), id: "#contacto" },
+  const navLinks: NavLinkItem[] = [
+    { name: t("nav.investments"), href: "/inversiones" },
+    { name: t("nav.projects"), href: "#unidades", isAnchor: true },
+    { name: t("nav.agent"), href: "/agentes" },
+    { name: t("nav.about"), href: "/nosotros" },
+    { name: t("nav.contact"), href: "#contacto", isAnchor: true },
   ];
 
   const destinationsList = [
@@ -75,7 +80,7 @@ export default function Navbar({ currentDestination = "home" }: NavbarProps) {
         {/* Logo */}
         <Link
           href="/"
-          onClick={(e) => handleMobileNavClick(e, "#inicio")}
+          onClick={(e) => handleAnchorClick(e, "#inicio")}
           className={`flex items-center gap-2 z-50 relative transition-colors duration-300 ${isScrolled && !isMobileMenuOpen ? "text-gray-900" : "text-white"
             }`}
         >
@@ -111,7 +116,7 @@ export default function Navbar({ currentDestination = "home" }: NavbarProps) {
               className={`flex items-center gap-1 transition-colors cursor-pointer uppercase ${isScrolled ? "hover:text-gray-900" : "hover:text-white"
                 }`}
             >
-              {isHome ? t("home.nav.destinations") : t("nav.destinations")}
+              {t("nav.destinations")}
               <ChevronDown size={14} className={`transition-transform duration-300 ${isDestinationOpen ? "rotate-180" : ""}`} />
             </button>
 
@@ -137,16 +142,27 @@ export default function Navbar({ currentDestination = "home" }: NavbarProps) {
 
           {/* Remaining Links based on Destination */}
           {navLinks.map((item) => (
-            <Link
-              key={item.id}
-              href={item.id}
-              onClick={(e) => scrollToId(e, item.id)}
-              scroll={false}
-              className={`transition-colors ${isScrolled ? "hover:text-gray-900" : "hover:text-white"
-                }`}
-            >
-              {item.name}
-            </Link>
+            item.isAnchor ? (
+              <Link
+                key={item.href}
+                href={item.href}
+                onClick={(e) => scrollToId(e, item.href)}
+                scroll={false}
+                className={`transition-colors ${isScrolled ? "hover:text-gray-900" : "hover:text-white"
+                  }`}
+              >
+                {item.name}
+              </Link>
+            ) : (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`transition-colors ${isScrolled ? "hover:text-gray-900" : "hover:text-white"
+                  }`}
+              >
+                {item.name}
+              </Link>
+            )
           ))}
         </nav>
 
@@ -241,15 +257,26 @@ export default function Navbar({ currentDestination = "home" }: NavbarProps) {
 
             {/* Mobile Navigation Links */}
             {navLinks.map((item) => (
-              <Link
-                key={item.id}
-                href={item.id}
-                onClick={(e) => handleMobileNavClick(e, item.id)}
-                scroll={false}
-                className="hover:text-gray-300 transition-colors"
-              >
-                {item.name}
-              </Link>
+              item.isAnchor ? (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={(e) => handleAnchorClick(e, item.href)}
+                  scroll={false}
+                  className="hover:text-gray-300 transition-colors"
+                >
+                  {item.name}
+                </Link>
+              ) : (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="hover:text-gray-300 transition-colors"
+                >
+                  {item.name}
+                </Link>
+              )
             ))}
           </nav>
 
@@ -270,7 +297,7 @@ export default function Navbar({ currentDestination = "home" }: NavbarProps) {
 
           <Link
             href="#contacto"
-            onClick={(e) => handleMobileNavClick(e, "#contacto")}
+            onClick={(e) => handleAnchorClick(e, "#contacto")}
             className="mt-8 flex items-center gap-2 bg-white text-black pl-6 pr-2 py-2 rounded-full font-medium hover:bg-gray-100 transition-colors group"
           >
             {t('nav.book_consultation')}
