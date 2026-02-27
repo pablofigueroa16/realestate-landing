@@ -24,7 +24,7 @@ export default function PresentationSection({ content }: PresentationSectionProp
             {content?.badge || t("presentation.badge")}
           </p>
           
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-medium text-gray-900 mb-8 leading-tight">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-sans font-medium text-gray-900 mb-8 leading-tight">
             {content?.title || t("presentation.title")}
           </h2>
           

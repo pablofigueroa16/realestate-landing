@@ -1,22 +1,13 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Inter } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { Providers } from "@/components/Providers";
 
-// Configure Serif Font (Headings)
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin"],
   display: "swap",
-  weight: ["700", "800", "900"],
-});
-
-// Configure Sans-Serif Font (Body/Subtitles)
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  display: "swap",
-  weight: ["300", "400", "500", "600"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
@@ -32,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="es" className="scroll-smooth">
       <body
-        className={`${playfair.variable} ${inter.variable} antialiased font-serif text-gray-900 bg-white`}
+        className={`${montserrat.variable} antialiased font-sans text-gray-900 bg-white`}
       >
         <Providers>
           {children}

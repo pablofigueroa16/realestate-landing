@@ -11,7 +11,7 @@ export default function ContactSection() {
             <span className="text-emerald-300 font-medium tracking-wider text-sm uppercase">
               Get in Touch
             </span>
-            <h2 className="text-3xl md:text-5xl font-serif font-bold mt-4 mb-6">
+            <h2 className="text-3xl md:text-5xl font-sans font-bold mt-4 mb-6">
               Ready to Find Your Dream Villa?
             </h2>
             <p className="text-emerald-100 text-lg mb-8 max-w-md leading-relaxed">

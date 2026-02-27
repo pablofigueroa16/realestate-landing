@@ -66,7 +66,7 @@ export default function FeaturedProperties() {
           <span className="text-emerald-600 font-medium tracking-wider text-sm uppercase bg-emerald-100 px-3 py-1 rounded-full">
             Exclusive Listings
           </span>
-          <h2 className="text-3xl md:text-5xl font-serif font-bold text-gray-900 mt-4 mb-4">
+          <h2 className="text-3xl md:text-5xl font-sans font-bold text-gray-900 mt-4 mb-4">
             Featured Properties
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">

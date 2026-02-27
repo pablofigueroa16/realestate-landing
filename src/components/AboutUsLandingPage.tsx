@@ -390,7 +390,7 @@ function CommitmentSection() {
 /* ───────────────── MAIN PAGE ───────────────── */
 export default function AboutUsLandingPage() {
   return (
-    <main className="min-h-screen bg-white text-gray-900 font-serif">
+    <main className="min-h-screen bg-white text-gray-900 font-sans">
       <Navbar currentDestination="home" />
       <HeroSection />
       <VisionSection />

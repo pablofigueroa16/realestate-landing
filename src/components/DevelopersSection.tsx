@@ -101,7 +101,7 @@ export default function DevelopersSection({ content }: DevelopersSectionProps) {
         <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-gray-50/50 pointer-events-none"></div>
 
         <div className="relative z-10 max-w-6xl mx-auto flex flex-col items-center justify-center h-full w-full">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-medium text-gray-900 mb-12 leading-tight">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-sans font-medium text-gray-900 mb-12 leading-tight">
             {t("developers.title")}
           </h2>
           

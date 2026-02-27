@@ -43,7 +43,7 @@ export default function PropertyCard({
           <MapPin size={16} />
           {location}
         </div>
-        <h3 className="text-2xl font-serif font-bold mb-4">{title}</h3>
+        <h3 className="text-2xl font-sans font-bold mb-4">{title}</h3>
         
         <div className="flex items-center justify-between text-gray-200 text-sm border-t border-white/20 pt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
           <div className="flex items-center gap-2">

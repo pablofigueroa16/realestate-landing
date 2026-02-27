@@ -386,7 +386,7 @@ export default function LandingPage({ destination }: LandingPageProps) {
       : undefined;
 
   return (
-    <main className="min-h-screen bg-white text-gray-900 font-serif">
+    <main className="min-h-screen bg-white text-gray-900 font-sans">
       <Navbar currentDestination={destination} />
       <Hero content={content.hero} destination={destination} />
       {destination === "home" ? <HomeHowToInvestSection /> : null}

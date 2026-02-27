@@ -83,7 +83,7 @@ export default function Navbar({ currentDestination = "home" }: NavbarProps) {
             }`}>
             <Building2 size={16} />
           </div>
-          <span className="text-xl font-serif font-bold tracking-wide">
+          <span className="text-xl font-sans font-bold tracking-wide">
             Estetico.
           </span>
         </Link>
@@ -234,7 +234,7 @@ export default function Navbar({ currentDestination = "home" }: NavbarProps) {
             <Link
               href="/"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-2xl font-serif font-bold text-white hover:text-gray-300 transition-colors"
+              className="text-2xl font-sans font-bold text-white hover:text-gray-300 transition-colors"
             >
               {homeLabel}
             </Link>

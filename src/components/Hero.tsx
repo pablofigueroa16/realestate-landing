@@ -90,7 +90,7 @@ export default function Hero({ content, destination = "dubai" }: HeroProps) {
               )}
             </div>
 
-            <h1 className="text-2xl md:text-5xl lg:text-6xl text-white font-serif font-medium leading-[1.1] mb-4">
+            <h1 className="text-2xl md:text-5xl lg:text-6xl text-white font-sans font-medium leading-[1.1] mb-4">
               {title}
             </h1>
 

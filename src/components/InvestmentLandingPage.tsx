@@ -452,7 +452,7 @@ function ClosingSection() {
 
 export default function InvestmentLandingPage() {
   return (
-    <main className="min-h-screen bg-white text-gray-900 font-serif">
+    <main className="min-h-screen bg-white text-gray-900 font-sans">
       <Navbar currentDestination="home" />
       <HeroSection />
       <RealitySection />

@@ -514,7 +514,7 @@ function ApplySection() {
 /* ───────────────── MAIN PAGE ───────────────── */
 export default function AgentLandingPage() {
   return (
-    <main className="min-h-screen bg-white text-gray-900 font-serif">
+    <main className="min-h-screen bg-white text-gray-900 font-sans">
       <Navbar currentDestination="home" />
       <HeroSection />
       <WhatIsSection />

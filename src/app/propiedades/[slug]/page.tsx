@@ -105,7 +105,7 @@ export default function PropertyDetailsPage() {
       : 0;
 
   return (
-    <main className="min-h-screen bg-white text-gray-900 font-serif selection:bg-black selection:text-white">
+    <main className="min-h-screen bg-white text-gray-900 font-sans selection:bg-black selection:text-white">
       {/* 1) HERO SECTION */}
       <section className="p-3 md:p-4 h-screen w-full flex flex-col box-border overflow-hidden">
         <div className="relative grow rounded-4xl overflow-hidden flex flex-col justify-end pb-12 md:pb-20 isolate mask-[linear-gradient(white,white)]">
@@ -174,7 +174,7 @@ export default function PropertyDetailsPage() {
                 ))}
               </div>
 
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-medium text-white mb-6 leading-[1.1]">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-sans font-medium text-white mb-6 leading-[1.1]">
                 {property.hero.title}
               </h1>
               
@@ -205,7 +205,7 @@ export default function PropertyDetailsPage() {
           <div className="grid md:grid-cols-12 gap-12 items-start">
             <div className="md:col-span-4">
               <span className="text-xs font-bold tracking-[0.2em] text-gray-400 uppercase block mb-4">{t("property_details.summary")}</span>
-              <h2 className="text-3xl md:text-4xl font-serif font-medium text-gray-900 leading-tight">
+              <h2 className="text-3xl md:text-4xl font-sans font-medium text-gray-900 leading-tight">
                 {property.summary.title}
               </h2>
             </div>
@@ -224,7 +224,7 @@ export default function PropertyDetailsPage() {
           <div className="container mx-auto px-6 md:px-12">
             <div className="max-w-3xl mx-auto text-center">
               <span className="text-xs font-bold tracking-[0.2em] text-gray-400 uppercase block mb-6">{t("property_details.concept")}</span>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-medium text-gray-900 mb-10 leading-tight">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-sans font-medium text-gray-900 mb-10 leading-tight">
                 {property.concept.title}
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed font-light">
@@ -242,7 +242,7 @@ export default function PropertyDetailsPage() {
             section.title ? (
               <div key={idx} className="group">
                  <div className="h-px w-full bg-gray-200 mb-8 group-hover:bg-gray-900 transition-colors duration-500"></div>
-                 <h3 className="text-2xl md:text-3xl font-serif font-medium text-gray-900 mb-6">
+                 <h3 className="text-2xl md:text-3xl font-sans font-medium text-gray-900 mb-6">
                    {section.title}
                  </h3>
                  <p className="text-gray-600 leading-relaxed font-light">
@@ -261,7 +261,7 @@ export default function PropertyDetailsPage() {
             <div className="grid md:grid-cols-2 gap-16 items-center">
               <div>
                 <span className="text-xs font-bold tracking-[0.2em] text-white/50 uppercase block mb-6">{t("property_details.location")}</span>
-                <h2 className="text-4xl md:text-5xl font-serif font-medium mb-8 leading-tight">
+                <h2 className="text-4xl md:text-5xl font-sans font-medium mb-8 leading-tight">
                   {property.location.title}
                 </h2>
                 <p className="text-white/70 text-lg font-light mb-12 leading-relaxed">
@@ -305,7 +305,7 @@ export default function PropertyDetailsPage() {
         <div className="max-w-4xl mx-auto">
            {property.project.title && (
              <div className="mb-20 text-center">
-                <h2 className="text-3xl md:text-4xl font-serif font-medium text-gray-900 mb-6">
+                <h2 className="text-3xl md:text-4xl font-sans font-medium text-gray-900 mb-6">
                   {property.project.title}
                 </h2>
                 <p className="text-gray-600 text-lg font-light leading-relaxed">
@@ -317,7 +317,7 @@ export default function PropertyDetailsPage() {
            <div className="grid gap-12">
             {property.subCommunities.map((sub, idx) => (
               <div key={idx} className="bg-gray-50 p-8 md:p-12 border border-gray-100 hover:shadow-lg transition-shadow duration-300 rounded-3xl">
-                <h3 className="text-2xl font-serif font-medium text-gray-900 mb-4">{sub.title}</h3>
+                <h3 className="text-2xl font-sans font-medium text-gray-900 mb-4">{sub.title}</h3>
                 <p className="text-gray-600 font-light leading-relaxed">{sub.text}</p>
               </div>
             ))}
@@ -330,7 +330,7 @@ export default function PropertyDetailsPage() {
         <section className="py-24 bg-gray-900 text-white">
           <div className="container mx-auto px-6 md:px-12">
             <div className="max-w-3xl mb-16">
-              <h2 className="text-3xl md:text-4xl font-serif font-medium mb-6">
+              <h2 className="text-3xl md:text-4xl font-sans font-medium mb-6">
                 {property.amenities.title}
               </h2>
               <p className="text-white/70 font-light text-lg">
@@ -369,7 +369,7 @@ export default function PropertyDetailsPage() {
                </div>
             </div>
             <div className="w-full md:w-2/3">
-              <h2 className="text-3xl md:text-4xl font-serif font-medium text-gray-900 mb-6">
+              <h2 className="text-3xl md:text-4xl font-sans font-medium text-gray-900 mb-6">
                 {property.developer.title}
               </h2>
               <p className="text-gray-600 font-light mb-8 leading-relaxed">
@@ -392,7 +392,7 @@ export default function PropertyDetailsPage() {
       {property.faq.length > 0 && (
         <section className="py-24 bg-gray-50">
           <div className="container mx-auto px-6 md:px-12 max-w-4xl">
-            <h2 className="text-3xl font-serif font-medium text-gray-900 mb-12 text-center">{t("property_details.faq_title")}</h2>
+            <h2 className="text-3xl font-sans font-medium text-gray-900 mb-12 text-center">{t("property_details.faq_title")}</h2>
             <div className="space-y-4">
               {property.faq.map((item, idx) => (
                 <div key={idx} className="bg-white border border-gray-100 rounded-2xl overflow-hidden">
