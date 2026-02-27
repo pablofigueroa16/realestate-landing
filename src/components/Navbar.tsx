@@ -53,15 +53,25 @@ export default function Navbar({ currentDestination = "home" }: NavbarProps) {
     setIsMobileMenuOpen(false);
   };
 
+  const isHome = currentDestination === "home";
   const homeLabel = locale === "es" ? "INICIO" : "HOME";
 
-  const navLinks: NavLinkItem[] = [
-    { name: t("nav.investments"), href: "/inversiones" },
-    { name: t("nav.projects"), href: "#unidades", isAnchor: true },
-    { name: t("nav.agent"), href: "/agentes" },
-    { name: t("nav.about"), href: "/nosotros" },
-    { name: t("nav.contact"), href: "#contacto", isAnchor: true },
-  ];
+  const navLinks: NavLinkItem[] = isHome
+    ? [
+      { name: t("nav.investments"), href: "/inversiones" },
+      { name: t("home.nav.projects"), href: "#proyectos", isAnchor: true },
+      { name: t("home.nav.units"), href: "#unidades", isAnchor: true },
+      { name: t("nav.agent"), href: "/agentes" },
+      { name: t("home.nav.about"), href: "/nosotros" },
+      { name: t("home.nav.contact"), href: "#contacto", isAnchor: true },
+    ]
+    : [
+      { name: t("nav.investments"), href: "/inversiones" },
+      { name: t("nav.projects"), href: "#unidades", isAnchor: true },
+      { name: t("nav.agent"), href: "/agentes" },
+      { name: t("nav.about"), href: "/nosotros" },
+      { name: t("nav.contact"), href: "#contacto", isAnchor: true },
+    ];
 
   const destinationsList = [
     { name: "DUBAI", path: "/dubai" },
@@ -116,7 +126,7 @@ export default function Navbar({ currentDestination = "home" }: NavbarProps) {
               className={`flex items-center gap-1 transition-colors cursor-pointer uppercase ${isScrolled ? "hover:text-gray-900" : "hover:text-white"
                 }`}
             >
-              {t("nav.destinations")}
+              {isHome ? t("home.nav.destinations") : t("nav.destinations")}
               <ChevronDown size={14} className={`transition-transform duration-300 ${isDestinationOpen ? "rotate-180" : ""}`} />
             </button>
 
