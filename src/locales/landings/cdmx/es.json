@@ -8,5 +8,46 @@
       { "value": "20% – 30%", "text": "Enganche inicial. Planes de pago flexibles durante construcción." },
       { "value": "8% – 12%", "text": "Rendimiento anual estimado en renta tradicional o ejecutiva." }
     ]
+  },
+  "about": {
+    "title": "¿Por qué invertir en Ciudad de México?",
+    "description": "Ciudad de México es el principal centro financiero y corporativo de Latinoamérica. Su tamaño, actividad económica y alta demanda habitacional la convierten en un mercado inmobiliario sólido y constante.\n\nInvertir en zonas estratégicas significa acceder a liquidez, renta estable y potencial de plusvalía.",
+    "market_card": {
+      "title": "ENTORNO DE INVERSIÓN",
+      "subtitle": "Demanda constante + economía activa + ubicación estratégica."
+    },
+    "benefits": {
+      "rental_demand": "Alta demanda de renta",
+      "liquid_market": "Mercado amplio y líquido",
+      "urban_growth": "Crecimiento urbano continuo",
+      "prime_zones": "Zonas prime consolidadas",
+      "appreciation": "Potencial de plusvalía"
+    }
+  },
+  "presentation": {
+    "badge": "OFERTA EXCLUSIVA",
+    "title": "Recibe la presentación detallada del proyecto",
+    "description": "Accede al dossier con precios actualizados, planes de pago disponibles y estimaciones reales de renta en las principales zonas de Ciudad de México.\nIncluye análisis de plusvalía, demanda de alquiler y perfil ideal de inversión en áreas como Polanco, Roma, Condesa y Santa Fe.",
+    "cta": "Agendar consultoría",
+    "disclaimer": "Te enviaremos la presentación de forma inmediata por WhatsApp o email.\nSin compromiso · Información clara · Atención en español"
+  },
+  "why_choose": {
+    "title": "¿Por Qué Invertir con Nosotros en Ciudad de México?",
+    "description": "Trabajamos exclusivamente con desarrolladores sólidos y proyectos ubicados en zonas estratégicas de CDMX. Nuestro objetivo es ayudarte a tomar decisiones de inversión claras, seguras y rentables.\nSeleccionamos oportunidades en Polanco, Roma, Condesa, Santa Fe y otras áreas con alta demanda y liquidez comprobada.",
+    "benefits": [
+      "Análisis riguroso de cada desarrollador",
+      "Enfoque en renta estable y plusvalía",
+      "Transparencia legal y acompañamiento notarial",
+      "Asesoría integral hasta renta o reventa"
+    ],
+    "quote": "No buscamos cerrar operaciones rápidas, buscamos construir patrimonio sólido."
+  },
+  "developers": {
+    "title": "Alianzas estratégicas con los principales desarrolladores de Ciudad de México",
+    "partner": "Socio Desarrollador Estratégico",
+    "carousel_label": "Carrusel de Socios Desarrolladores",
+    "prev_slide": "Diapositiva Anterior",
+    "next_slide": "Diapositiva Siguiente",
+    "go_to_slide": "Ir a la diapositiva"
   }
 }

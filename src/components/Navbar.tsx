@@ -59,8 +59,7 @@ export default function Navbar({ currentDestination = "home" }: NavbarProps) {
   const navLinks: NavLinkItem[] = isHome
     ? [
       { name: t("nav.investments"), href: "/inversiones" },
-      { name: t("home.nav.projects"), href: "#proyectos", isAnchor: true },
-      { name: t("home.nav.units"), href: "#unidades", isAnchor: true },
+      { name: t("nav.projects"), href: "#unidades", isAnchor: true },
       { name: t("nav.agent"), href: "/agentes" },
       { name: t("home.nav.about"), href: "/nosotros" },
       { name: t("home.nav.contact"), href: "#contacto", isAnchor: true },

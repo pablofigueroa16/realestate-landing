@@ -11,6 +11,19 @@
     "contact": "CONTACTO",
     "book_consultation": "AGENDAR CONSULTORIA"
   },
+  "properties_page": {
+    "title": "Todas las Propiedades",
+    "subtitle": "Explora nuestra seleccion completa de propiedades de inversion en los mercados mas estrategicos del mundo.",
+    "all_cities": "Todas las ciudades",
+    "search_placeholder": "Buscar propiedad...",
+    "sort_newest": "Mas recientes",
+    "sort_name": "Nombre A-Z",
+    "sort_price_asc": "Precio: menor a mayor",
+    "sort_price_desc": "Precio: mayor a menor",
+    "properties_found": "propiedades encontradas",
+    "no_results": "No se encontraron propiedades con los filtros seleccionados.",
+    "clear_filters": "Limpiar filtros"
+  },
   "common": {
     "image_not_found": "Imagen no encontrada",
     "prev_image": "Imagen anterior",
@@ -44,7 +57,8 @@
     "whatsapp_button": "WhatsApp",
     "destination_button": "Ver Destino",
     "details_button": "Ver Detalles",
-    "whatsapp_message": "Hola, estoy interesado en recibir todos los detalles sobre esta propiedad y oportunidades similares actualmente disponibles. Por favor, inclúyeme precios actualizados, plan de pago, expectativas de retorno (ROI), disponibilidad y opciones para agendar una visita."
+    "whatsapp_message": "Hola, estoy interesado en recibir todos los detalles sobre esta propiedad y oportunidades similares actualmente disponibles. Por favor, inclúyeme precios actualizados, plan de pago, expectativas de retorno (ROI), disponibilidad y opciones para agendar una visita.",
+    "view_all_button": "Ver todas las propiedades"
   },
   "property_details": {
     "back": "Volver",

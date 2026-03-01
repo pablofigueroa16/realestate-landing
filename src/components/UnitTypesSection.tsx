@@ -126,9 +126,10 @@ interface UnitTypesSectionProps {
   units?: Property[];
   title?: string;
   subtitle?: string;
+  showViewAllButton?: boolean;
 }
 
-export default function UnitTypesSection({ units: propUnits, title, subtitle }: UnitTypesSectionProps) {
+export default function UnitTypesSection({ units: propUnits, title, subtitle, showViewAllButton = false }: UnitTypesSectionProps) {
   const { t } = useTranslation();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [itemsPerView, setItemsPerView] = useState(1);
@@ -224,40 +225,45 @@ export default function UnitTypesSection({ units: propUnits, title, subtitle }: 
               {subtitle || t("unit_types.subtitle")}
             </p>
           </div>
-          
-          <div className="flex items-center gap-4">
-            {units.length > itemsPerView && (
-            <>
-            <button 
-                onClick={handlePrev}
-                disabled={!canGoPrev}
-                className={`w-12 h-12 rounded-full border border-gray-300 flex items-center justify-center transition-all ${!canGoPrev ? 'opacity-30 cursor-not-allowed' : 'hover:bg-gray-900 hover:text-white hover:border-gray-900'}`}
-            >
-                <ChevronLeft size={20} />
-            </button>
-            <button 
-                onClick={handleNext}
-                disabled={!canGoNext}
-                className={`w-12 h-12 rounded-full border border-gray-300 flex items-center justify-center transition-all ${!canGoNext ? 'opacity-30 cursor-not-allowed' : 'hover:bg-gray-900 hover:text-white hover:border-gray-900'}`}
-            >
-                <ChevronRight size={20} />
-            </button>
-            </>
-            )}
-          </div>
         </div>
 
-        {/* Carousel Track */}
-        <div 
-            className="overflow-hidden -mx-4 px-4 py-8"
-            onTouchStart={onTouchStart}
-            onTouchMove={onTouchMove}
-            onTouchEnd={onTouchEnd}
-        >
-            <div 
-                className="flex gap-8 transition-transform duration-500 ease-out"
-                style={{ transform: `translateX(calc(-${currentIndex} * (100% + 32px) / ${itemsPerView}))` }} 
+        {/* Carousel Container with Side Navigation */}
+        <div className="relative">
+          {/* Left Navigation Button */}
+          {units.length > itemsPerView && (
+            <button
+              onClick={handlePrev}
+              disabled={!canGoPrev}
+              className={`absolute left-0 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full border border-gray-300 bg-white/90 backdrop-blur-md flex items-center justify-center transition-all shadow-lg -translate-x-4 lg:-translate-x-14 ${!canGoPrev ? 'opacity-30 cursor-not-allowed' : 'hover:bg-gray-900 hover:text-white hover:border-gray-900'}`}
+              aria-label={t("common.prev_image")}
             >
+              <ChevronLeft size={20} />
+            </button>
+          )}
+
+          {/* Right Navigation Button */}
+          {units.length > itemsPerView && (
+            <button
+              onClick={handleNext}
+              disabled={!canGoNext}
+              className={`absolute right-0 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full border border-gray-300 bg-white/90 backdrop-blur-md flex items-center justify-center transition-all shadow-lg translate-x-4 lg:translate-x-14 ${!canGoNext ? 'opacity-30 cursor-not-allowed' : 'hover:bg-gray-900 hover:text-white hover:border-gray-900'}`}
+              aria-label={t("common.next_image")}
+            >
+              <ChevronRight size={20} />
+            </button>
+          )}
+
+          {/* Carousel Track */}
+          <div
+              className="overflow-hidden -mx-4 px-4 py-8"
+              onTouchStart={onTouchStart}
+              onTouchMove={onTouchMove}
+              onTouchEnd={onTouchEnd}
+          >
+              <div
+                  className="flex gap-8 transition-transform duration-500 ease-out"
+                  style={{ transform: `translateX(calc(-${currentIndex} * (100% + 32px) / ${itemsPerView}))` }}
+              >
                 {units.map((unit, index) => (
                     <div
                         key={index}
@@ -316,18 +322,31 @@ export default function UnitTypesSection({ units: propUnits, title, subtitle }: 
                     </div>
                 ))}
             </div>
+          </div>
         </div>
-        
+
         {/* Progress Indicator */}
         {units.length > itemsPerView && (
         <div className="flex justify-center gap-2 mt-8">
             {Array.from({ length: Math.max(1, units.length - itemsPerView + 1) }).map((_, idx) => (
-                <div 
+                <div
                     key={idx}
                     className={`h-1.5 rounded-full transition-all duration-300 ${idx === currentIndex ? 'w-8 bg-gray-900' : 'w-2 bg-gray-300'}`}
                 />
             ))}
         </div>
+        )}
+
+        {/* View All Properties Button */}
+        {showViewAllButton && (
+          <div className="flex justify-center mt-12">
+            <Link
+              href="/propiedades"
+              className="bg-gray-900 text-white rounded-full px-8 py-4 hover:bg-gray-800 transition-colors font-medium"
+            >
+              {t("unit_types.view_all_button")}
+            </Link>
+          </div>
         )}
 
       </div>

@@ -8,5 +8,106 @@
       { "value": "From €250,000", "text": "Initial investment in strategic areas." },
       { "value": "Up to 8% gross annually", "text": "Rental income in high-demand districts." }
     ]
+  },
+  "about": {
+    "title": "Madrid: European Capital for Real Estate Investment",
+    "description": "A solid, transparent market backed by one of Europe's most stable economies.\nMadrid combines legal security, a strong currency, and constant housing demand for both residential and rental purposes.",
+    "market_card": {
+      "title": "MADRID MARKET",
+      "subtitle": "Security, liquidity and steady growth in one of Europe's most resilient markets."
+    },
+    "benefits": {
+      "rental_demand": "High Rental Demand",
+      "euro_income": "Euro Income",
+      "legal_stability": "Legal Stability",
+      "international_capital": "International Capital"
+    }
+  },
+  "location": {
+    "projects": {
+      "puerta_hierro": {
+        "area": "PUERTA DE HIERRO · MADRID",
+        "title": "Prime Location — Puerta de Hierro",
+        "description": "Located in one of Madrid's most exclusive and established residential areas, Residencial Zenith combines privacy, natural surroundings and direct connection to the financial and cultural center of the city. Surrounded by green areas like Monte de El Pardo and minutes from major roads, this enclave represents one of the safest and most prestigious locations in the capital.",
+        "features": [
+          "10–15 min to Madrid center",
+          "Immediate access to M-30, M-40 and A-6",
+          "Close to international schools and universities",
+          "Near hospitals and private clubs"
+        ],
+        "market_insight": "Puerta de Hierro maintains constant demand for premium housing, with high value stability and strong appeal for executive profiles and international families."
+      },
+      "los_cerros": {
+        "area": "LOS CERROS · MADRID",
+        "title": "Strategic Location — Southeast Madrid",
+        "description": "The project is located in Los Cerros, one of the capital's largest urban developments, conceived as Madrid's future greenest neighborhood. It combines planned expansion, new infrastructure and a privileged natural environment within the Metropolitan Forest.",
+        "features": [
+          "05 Minutes to M-45",
+          "07 Minutes to M-50",
+          "15 Minutes to Madrid Center",
+          "10 Minutes to El Cañaveral"
+        ],
+        "market_insight": "Los Cerros is part of Madrid's structured growth towards the southeast, with low land occupancy and strong investment in infrastructure and green areas, projecting sustained appreciation in the medium and long term."
+      },
+      "arturo_soria": {
+        "area": "ARTURO SORIA · NORTH ZONE",
+        "title": "Prime Location — Arturo Soria, Madrid",
+        "description": "Reside Arturo Soria is located at Calle Bausá 13–15, next to the iconic Arturo Soria, one of the most prestigious and established residential arteries in northern Madrid. An enclave that combines exclusivity, high-level residential environment and immediate connection to the financial center and airport.",
+        "features": [
+          "02 Minutes to M-30",
+          "05 Minutes to Plaza de Castilla",
+          "10 Minutes to Paseo de la Castellana",
+          "12 Minutes to Madrid-Barajas Airport"
+        ],
+        "market_insight": "Arturo Soria is one of the areas with the highest stability and demand in northern Madrid, characterized by its premium residential profile, proximity to international schools and prestigious hospitals, guaranteeing asset protection and sustained real estate liquidity."
+      }
+    }
+  },
+  "unit_types": {
+    "title": "Spaces That Adapt to Your Lifestyle",
+    "subtitle": "From functional apartments to exclusive residences, each typology has been designed to offer comfort, design and sustained value in the Madrid market.",
+    "units": {
+      "residencial_zenith": {
+        "title": "Residencial Zenith",
+        "description": "Exclusive residential of 117 homes in Puerta de Hierro, with signature architecture and premium common areas in one of Madrid's most prestigious areas.",
+        "size": "Off-plan"
+      },
+      "residencial_ara": {
+        "title": "Residencial ARA",
+        "description": "Protected housing from 1 to 4 bedrooms in Los Cerros, Madrid's new sustainable neighborhood, with pool, green areas and garage included in price.",
+        "size": "Off-plan"
+      },
+      "reside_arturo_soria": {
+        "title": "Reside Arturo Soria",
+        "description": "Exclusive residential in Arturo Soria, with contemporary architecture, private pool and A energy rating in one of the most prestigious areas of northern Madrid.",
+        "size": "Off-plan"
+      }
+    }
+  },
+  "presentation": {
+    "badge": "EXCLUSIVE OFFER",
+    "title": "Receive the detailed project presentation",
+    "description": "We have prepared a detailed dossier with updated prices, real availability, quality specifications, floor plans and appreciation estimates in the Madrid market.\nIncludes strategic information for residential buyers and investors looking to protect capital in euros.",
+    "cta": "Schedule consultation",
+    "disclaimer": "We will send you the presentation immediately via WhatsApp or email.\nNo commitment · Clear information · Support in Spanish"
+  },
+  "why_choose": {
+    "title": "Why investors choose to invest in Madrid with us",
+    "description": "Madrid has established itself as one of the most stable and strategic real estate markets in Europe. Its combination of legal security, strong currency and constant demand makes the Spanish capital a solid destination to protect and grow wealth.",
+    "benefits": [
+      "Thorough analysis of each developer and project",
+      "Focus on stability, liquidity and sustained appreciation",
+      "Legal security under European regulations",
+      "Full support through resale or rental management"
+    ],
+    "quote": "Investing in Madrid is not a trend, it's a wealth strategy."
+  },
+  "developers": {
+    "title": "Strategic alliances with Madrid's leading developers",
+    "partner": "Strategic Development Partner",
+    "carousel_label": "Developer Partners Carousel",
+    "prev_slide": "Previous Slide",
+    "next_slide": "Next Slide",
+    "go_to_slide": "Go to slide"
   }
 }

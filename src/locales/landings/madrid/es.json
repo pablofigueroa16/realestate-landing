@@ -8,5 +8,106 @@
       { "value": "Desde €250.000", "text": "Inversión inicial en zonas estratégicas." },
       { "value": "Hasta 8% bruto anual", "text": "Ingresos por alquiler en distritos de alta demanda." }
     ]
+  },
+  "about": {
+    "title": "Madrid: Capital Europea de Inversión Inmobiliaria",
+    "description": "Un mercado sólido, transparente y respaldado por una de las economías más estables de Europa.\nMadrid combina seguridad jurídica, moneda fuerte y una demanda constante de vivienda tanto residencial como de alquiler.",
+    "market_card": {
+      "title": "MERCADO MADRID",
+      "subtitle": "Seguridad, liquidez y crecimiento constante en uno de los mercados más resilientes de Europa."
+    },
+    "benefits": {
+      "rental_demand": "Alta Demanda de Alquiler",
+      "euro_income": "Ingresos en Euros",
+      "legal_stability": "Estabilidad Jurídica",
+      "international_capital": "Capital Internacional"
+    }
+  },
+  "location": {
+    "projects": {
+      "puerta_hierro": {
+        "area": "PUERTA DE HIERRO · MADRID",
+        "title": "Prime Location — Puerta de Hierro",
+        "description": "Ubicado en una de las zonas residenciales más exclusivas y consolidadas de Madrid, Residencial Zenith combina privacidad, entorno natural y conexión directa con el centro financiero y cultural de la ciudad. Rodeado por áreas verdes como el Monte de El Pardo y a pocos minutos de las principales arterias viales, este enclave representa una de las ubicaciones más seguras y de mayor prestigio de la capital.",
+        "features": [
+          "10–15 min al centro de Madrid",
+          "Acceso inmediato a M-30, M-40 y A-6",
+          "Cercanía a colegios internacionales y universidades",
+          "Próximo a hospitales y clubes privados"
+        ],
+        "market_insight": "Puerta de Hierro mantiene una demanda constante de vivienda premium, con alta estabilidad de valor y fuerte atractivo para perfiles ejecutivos y familias internacionales."
+      },
+      "los_cerros": {
+        "area": "LOS CERROS · MADRID",
+        "title": "Ubicación Estratégica — Sureste de Madrid",
+        "description": "El proyecto se ubica en Los Cerros, uno de los mayores desarrollos urbanísticos de la capital, concebido como el futuro barrio más verde de Madrid. Combina expansión planificada, nuevas infraestructuras y un entorno natural privilegiado dentro del Bosque Metropolitano.",
+        "features": [
+          "05 Minutos a M-45",
+          "07 Minutos a M-50",
+          "15 Minutos al Centro de Madrid",
+          "10 Minutos a El Cañaveral"
+        ],
+        "market_insight": "Los Cerros forma parte del crecimiento estructurado de Madrid hacia el sureste, con baja ocupación del suelo y fuerte inversión en infraestructura y zonas verdes, lo que proyecta valorización sostenida a medio y largo plazo."
+      },
+      "arturo_soria": {
+        "area": "ARTURO SORIA · ZONA NORTE",
+        "title": "Ubicación Prime — Arturo Soria, Madrid",
+        "description": "Reside Arturo Soria se ubica en Calle Bausá 13–15, junto a la emblemática Arturo Soria, una de las arterias residenciales más prestigiosas y consolidadas del norte de Madrid. Un enclave que combina exclusividad, entorno residencial de alto nivel y conexión inmediata con el centro financiero y el aeropuerto.",
+        "features": [
+          "02 Minutos a M-30",
+          "05 Minutos a Plaza de Castilla",
+          "10 Minutos a Paseo de la Castellana",
+          "12 Minutos al Aeropuerto Madrid-Barajas"
+        ],
+        "market_insight": "Arturo Soria es una de las zonas con mayor estabilidad y demanda del norte de Madrid, caracterizada por su perfil residencial premium, proximidad a colegios internacionales y hospitales de prestigio, lo que garantiza protección patrimonial y liquidez inmobiliaria sostenida."
+      }
+    }
+  },
+  "unit_types": {
+    "title": "Espacios que Se Adaptan a Tu Estilo de Vida",
+    "subtitle": "Desde apartamentos funcionales hasta residencias exclusivas, cada tipología ha sido concebida para ofrecer confort, diseño y valor sostenido en el mercado madrileño.",
+    "units": {
+      "residencial_zenith": {
+        "title": "Residencial Zenith",
+        "description": "Exclusivo residencial de 117 viviendas en Puerta de Hierro, con arquitectura de autor y zonas comunes premium en una de las áreas más prestigiosas de Madrid.",
+        "size": "Off-plan"
+      },
+      "residencial_ara": {
+        "title": "Residencial ARA",
+        "description": "Viviendas protegidas de 1 a 4 dormitorios en Los Cerros, el nuevo barrio sostenible de Madrid, con piscina, zonas verdes y garaje incluido en precio.",
+        "size": "Off-plan"
+      },
+      "reside_arturo_soria": {
+        "title": "Reside Arturo Soria",
+        "description": "Residencial exclusivo en Arturo Soria, con arquitectura contemporánea, piscina privada y calificación energética A en una de las zonas más prestigiosas del norte de Madrid.",
+        "size": "Off-plan"
+      }
+    }
+  },
+  "presentation": {
+    "badge": "OFERTA EXCLUSIVA",
+    "title": "Recibe la presentación detallada del proyecto",
+    "description": "Hemos preparado un dossier detallado con precios actualizados, disponibilidad real, memoria de calidades, planos y estimaciones de valorización en el mercado madrileño.\nIncluye información estratégica para compradores residenciales e inversores que buscan proteger capital en euros.",
+    "cta": "Agendar consultoría",
+    "disclaimer": "Te enviaremos la presentación de forma inmediata por WhatsApp o email.\nSin compromiso · Información clara · Atención en español"
+  },
+  "why_choose": {
+    "title": "Por qué los inversionistas eligen invertir en Madrid con nosotros",
+    "description": "Madrid se ha consolidado como uno de los mercados inmobiliarios más estables y estratégicos de Europa. Su combinación de seguridad jurídica, moneda fuerte y demanda constante convierte a la capital española en un destino sólido para proteger y hacer crecer el patrimonio.",
+    "benefits": [
+      "Análisis exhaustivo de cada promotor y proyecto",
+      "Enfoque en estabilidad, liquidez y valorización sostenida",
+      "Seguridad jurídica bajo normativa europea",
+      "Acompañamiento integral hasta reventa o gestión de alquiler"
+    ],
+    "quote": "Invertir en Madrid no es una tendencia, es una estrategia patrimonial."
+  },
+  "developers": {
+    "title": "Alianzas estratégicas con los principales desarrolladores de Madrid",
+    "partner": "Socio Desarrollador Estratégico",
+    "carousel_label": "Carrusel de Socios Desarrolladores",
+    "prev_slide": "Diapositiva Anterior",
+    "next_slide": "Diapositiva Siguiente",
+    "go_to_slide": "Ir a la diapositiva"
   }
 }

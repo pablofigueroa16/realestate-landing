@@ -34,11 +34,12 @@ export interface AboutContent {
 }
 
 export interface WhyChooseContent {
-  videoSrc: string;
-  title: string;
-  description: string;
-  benefits: string[];
-  quote: string;
+  videoSrc?: string;
+  videoSrcEn?: string;
+  title?: string;
+  description?: string;
+  benefits?: string[];
+  quote?: string;
   hidden?: boolean;
 }
 
@@ -62,6 +63,12 @@ export interface PresentationContent {
 
 export interface DevelopersContent {
   hidden?: boolean;
+  title?: string;
+  partner?: string;
+  carouselLabel?: string;
+  prevSlide?: string;
+  nextSlide?: string;
+  goToSlide?: string;
 }
 
 export interface LandingContent {
@@ -114,6 +121,7 @@ export const landingContent: Record<string, LandingContent> = {
     },
     whyChoose: {
       videoSrc: "https://real-state-landing.s3.us-east-1.amazonaws.com/home/home_video.mp4",
+      videoSrcEn: "https://real-state-landing.s3.us-east-1.amazonaws.com/videos_en/home_en.mp4",
       title: "Por qué invertimos en mercados globales estratégicos",
       description: "Seleccionamos destinos con crecimiento sólido, estabilidad jurídica y alta demanda internacional, priorizando valorización a largo plazo y generación de ingresos sostenibles.",
       benefits: [
@@ -267,7 +275,9 @@ export const landingContent: Record<string, LandingContent> = {
   dubai: {
     hero: null, // Use default translations
     about: null, // Use default translations
-    whyChoose: null, // Use default translations
+    whyChoose: {
+      videoSrcEn: "https://real-state-landing.s3.us-east-1.amazonaws.com/videos_en/dubai_en.mp4",
+    },
     units: properties, // Use imported properties
     locationProjects: [], // Use default translations/logic inside component
     presentation: null, // Use default translations
@@ -311,6 +321,7 @@ export const landingContent: Record<string, LandingContent> = {
     },
     whyChoose: {
       videoSrc: "https://real-state-landing.s3.us-east-1.amazonaws.com/bali/Bali_video.mp4",
+      videoSrcEn: "https://real-state-landing.s3.us-east-1.amazonaws.com/videos_en/bali_en.mp4",
       title: "Bali: El nuevo hub inmobiliario de Asia",
       description: "Bali se consolida como un mercado emergente clave en Asia, impulsado por el turismo, la demanda global y los inversores digitales.",
       benefits: [
@@ -1132,16 +1143,331 @@ export const landingContent: Record<string, LandingContent> = {
         }
       ]
     },
-    about: null,
-    whyChoose: null,
-    units: [],
-    unitsConfig: {
-      title: "Formatos de inversión inmobiliaria",
-      subtitle: "Selecciona entre distintos tipos de unidades en Madrid según rentabilidad, plazo y objetivo de inversión."
+    about: {
+      imageSrc: "https://real-state-landing.s3.us-east-1.amazonaws.com/madrid/madrid.png",
+      title: "Madrid: Capital Europea de Inversión Inmobiliaria",
+      description: "Un mercado sólido, transparente y respaldado por una de las economías más estables de Europa.\nMadrid combina seguridad jurídica, moneda fuerte y una demanda constante de vivienda tanto residencial como de alquiler.",
+      marketCard: {
+        title: "MERCADO MADRID",
+        subtitle: "Seguridad, liquidez y crecimiento constante en uno de los mercados más resilientes de Europa."
+      },
+      benefits: [
+        { iconName: "TrendingUp", label: "Alta Demanda de Alquiler" },
+        { iconName: "Coins", label: "Ingresos en Euros" },
+        { iconName: "Building2", label: "Estabilidad Jurídica" },
+        { iconName: "Globe", label: "Capital Internacional" },
+      ]
     },
-    locationProjects: [],
-    presentation: { hidden: true },
-    developers: { hidden: true }
+    whyChoose: {
+      videoSrc: "https://real-state-landing.s3.us-east-1.amazonaws.com/madrid/madrid_video.mp4",
+      videoSrcEn: "https://real-state-landing.s3.us-east-1.amazonaws.com/videos_en/madrid_en.mp4",
+      title: "Por qué los inversionistas eligen invertir en Madrid con nosotros",
+      description: "Madrid se ha consolidado como uno de los mercados inmobiliarios más estables y estratégicos de Europa. Su combinación de seguridad jurídica, moneda fuerte y demanda constante convierte a la capital española en un destino sólido para proteger y hacer crecer el patrimonio.",
+      benefits: [
+        "Análisis exhaustivo de cada promotor y proyecto",
+        "Enfoque en estabilidad, liquidez y valorización sostenida",
+        "Seguridad jurídica bajo normativa europea",
+        "Acompañamiento integral hasta reventa o gestión de alquiler"
+      ],
+      quote: "Invertir en Madrid no es una tendencia, es una estrategia patrimonial."
+    },
+    units: [
+      {
+        id: "residencial-zenith",
+        slug: "residencial-zenith",
+        hero: {
+          title: "Residencial Zenith",
+          subtitle: "Puerta de Hierro · Arquitectura de Autor · Madrid",
+          description: "Un exclusivo proyecto de 117 viviendas de 1, 2 y 3 dormitorios en una de las zonas más prestigiosas de Madrid. Diseñado por el reconocido estudio Cano & Escario, Zenith redefine el concepto de elegancia contemporánea y vida residencial premium.",
+          badges: ["Puerta de Hierro", "117 Viviendas", "Energía A"],
+          bgImage: "https://real-state-landing.s3.us-east-1.amazonaws.com/madrid/proyecto1/01.jpg"
+        },
+        images: [
+          "https://real-state-landing.s3.us-east-1.amazonaws.com/madrid/proyecto1/01.jpg",
+          "https://real-state-landing.s3.us-east-1.amazonaws.com/madrid/proyecto1/02.jpg",
+          "https://real-state-landing.s3.us-east-1.amazonaws.com/madrid/proyecto1/03.jpg",
+          "https://real-state-landing.s3.us-east-1.amazonaws.com/madrid/proyecto1/05.jpg",
+          "https://real-state-landing.s3.us-east-1.amazonaws.com/madrid/proyecto1/06.jpg"
+        ],
+        description: "Exclusivo residencial de 117 viviendas en Puerta de Hierro, con arquitectura de autor y zonas comunes premium en una de las áreas más prestigiosas de Madrid.",
+        size: "Off-plan",
+        summary: {
+          title: "Un Nuevo Referente Residencial en Madrid",
+          text: "Residencial Zenith nace junto a Puerta de Hierro, combinando privacidad, naturaleza y proximidad al centro urbano. Su arquitectura de líneas rectas y depuradas crea una estética moderna y sofisticada que se integra perfectamente con el entorno verde que lo rodea. Zenith no es solo un conjunto de viviendas: es una propuesta de estilo de vida diseñada para quienes valoran diseño, confort y exclusividad."
+        },
+        concept: {
+          title: "Viviendas & Personalización",
+          text: "117 viviendas de 1, 2 y 3 dormitorios con posibilidad de personalización: elección de acabados, ajustes en distribución, diferentes líneas de diseño interior y materiales de alta calidad. Cada unidad ha sido diseñada para maximizar luminosidad, amplitud y eficiencia."
+        },
+        community: {
+          title: "Inversión en Madrid",
+          text: "Invertir en Zenith significa posicionarse en una de las zonas más exclusivas de Madrid, un mercado respaldado por estabilidad jurídica europea, activos en euros, alta liquidez inmobiliaria y fuerte demanda residencial premium."
+        },
+        privacy: {
+          title: "Sostenibilidad & Eficiencia",
+          text: "Preparado para obtener Calificación Energética A. Menor impacto ambiental, reducción en consumo energético, ahorro en facturas y mayor atractivo en reventa futura. La sostenibilidad no es un complemento, es parte del diseño."
+        },
+        views: { title: "", text: "" },
+        design: { title: "", text: "" },
+        location: {
+          title: "Prime Location — Puerta de Hierro",
+          intro: "Ubicado en la Calle Cantalejo, dentro de uno de los enclaves más consolidados y exclusivos de Madrid. Rodeado de naturaleza, junto al Monte de El Pardo.",
+          latitude: 40.4750,
+          longitude: -3.7350,
+          nearby: [
+            { name: "Centro de Madrid", latitude: 40.4168, longitude: -3.7038, category: "Ciudad" },
+            { name: "Real Club Puerta de Hierro", latitude: 40.4680, longitude: -3.7520, category: "Club Privado" },
+            { name: "Monte de El Pardo", latitude: 40.5200, longitude: -3.7700, category: "Naturaleza" }
+          ]
+        },
+        project: {
+          title: "Entorno Estratégico",
+          text: "10–15 minutos al centro de Madrid. Acceso directo a M-30, M-40 y A-6. Cercanía a colegios internacionales y universidades. Próximo al Real Club de Puerta de Hierro."
+        },
+        subCommunities: [
+          { title: "1 Dormitorio", text: "Viviendas de 1 dormitorio con diseño optimizado, acabados premium y máxima luminosidad." },
+          { title: "2 Dormitorios", text: "Viviendas de 2 dormitorios ideales para parejas o inversión, con distribución funcional y zonas comunes premium." },
+          { title: "3 Dormitorios", text: "Viviendas de 3 dormitorios para familias, con amplios espacios, personalización de acabados y calificación energética A." }
+        ],
+        amenities: {
+          title: "El Arte de Vivir — Zonas Comunes Premium",
+          intro: "Zenith ha sido concebido como un oasis privado dentro de la ciudad. Cada espacio ha sido diseñado bajo estándares de confort, privacidad y funcionalidad contemporánea.",
+          categories: [
+            {
+              name: "WELLNESS & LIFESTYLE",
+              items: ["Piscina desbordante y solárium", "Rooftop con terraza panorámica y gastroteca", "Gimnasio interior y exterior", "Sauna"]
+            },
+            {
+              name: "SERVICIOS & COMUNIDAD",
+              items: ["Sala Club para celebraciones privadas", "Espacio Coworking", "Zona infantil interior y exterior", "Aparcamiento para bicicletas", "Buzones inteligentes para paquetería"]
+            }
+          ]
+        },
+        developer: {
+          title: "Cano & Escario Arquitectura",
+          intro: "Diseñado por el reconocido estudio Cano & Escario, Zenith redefine el concepto de elegancia contemporánea y vida residencial premium en Madrid.",
+          bullets: ["Arquitectura de autor", "Diseño contemporáneo", "Líneas depuradas", "Integración con el entorno"]
+        },
+        faq: [],
+        disclaimers: {
+          renders: "Las imágenes son orientativas y pueden no representar el resultado final.",
+          availability: "Precios y disponibilidad sujetos a cambios sin previo aviso."
+        }
+      },
+      {
+        id: "residencial-ara",
+        slug: "residencial-ara",
+        hero: {
+          title: "Residencial ARA",
+          subtitle: "Los Cerros · Vivienda Protegida · Nuevo Desarrollo Madrid",
+          description: "Un proyecto de Vivienda Protegida de Precio Limitado en el nuevo barrio de Los Cerros, uno de los mayores desarrollos urbanísticos del sureste de Madrid. Viviendas de 1, 2, 3 y 4 dormitorios con garaje y trastero incluidos.",
+          badges: ["Los Cerros", "Vivienda Protegida", "Energía A"],
+          bgImage: "https://real-state-landing.s3.us-east-1.amazonaws.com/madrid/proyecto2/1.jpg"
+        },
+        images: [
+          "https://real-state-landing.s3.us-east-1.amazonaws.com/madrid/proyecto2/1.jpg",
+          "https://real-state-landing.s3.us-east-1.amazonaws.com/madrid/proyecto2/2.jpg",
+          "https://real-state-landing.s3.us-east-1.amazonaws.com/madrid/proyecto2/3.jpg",
+          "https://real-state-landing.s3.us-east-1.amazonaws.com/madrid/proyecto2/4.jpg",
+          "https://real-state-landing.s3.us-east-1.amazonaws.com/madrid/proyecto2/5.jpg"
+        ],
+        description: "Viviendas protegidas de 1 a 4 dormitorios en Los Cerros, el nuevo barrio sostenible de Madrid, con piscina, zonas verdes y garaje incluido en precio.",
+        size: "Off-plan",
+        summary: {
+          title: "El Nuevo Madrid — Los Cerros",
+          text: "Los Cerros es uno de los cinco grandes desarrollos urbanísticos del sureste de la capital. Un barrio concebido bajo criterios de sostenibilidad, baja ocupación del suelo y conexión directa con la naturaleza. Ubicado junto a El Cañaveral, Coslada y San Fernando, el proyecto se integra dentro del futuro Bosque Metropolitano, el gran cinturón verde que rodeará Madrid."
+        },
+        concept: {
+          title: "Diseño Arquitectónico",
+          text: "ARA destaca por un diseño moderno y funcional, donde cada vivienda ha sido concebida para maximizar luz natural, amplitud y eficiencia del espacio. Urbanización cerrada con amplias zonas comunes pensadas para la vida familiar y comunitaria."
+        },
+        community: {
+          title: "Modelo Cooperativa — Precio de Coste",
+          text: "Residencial ARA se desarrolla bajo régimen de cooperativa gestionada por Grupo Ibosa. Esto significa: promoción a precio de coste, sin margen promotor tradicional, participación activa del socio cooperativista y mayor control en decisiones del proyecto."
+        },
+        privacy: {
+          title: "Eficiencia Energética & Confort",
+          text: "Calificación Energética A. Sistema de climatización centralizado con aerotermia, ventilación mecánica, menor consumo energético y ahorro en costes operativos."
+        },
+        views: {
+          title: "Naturaleza & Sostenibilidad",
+          text: "Residencial ARA se integra en un entorno privilegiado: 1,7 millones de m² de espacios naturales, más de 7.000 árboles y 100.000 arbustos, reforestación del Cerro de la Herradura e integración en el Bosque Metropolitano."
+        },
+        design: { title: "", text: "" },
+        location: {
+          title: "Ubicación Estratégica — Sureste de Madrid",
+          intro: "Los Cerros está proyectado como el barrio más verde de Madrid, con fuerte potencial de revalorización a largo plazo por expansión urbana planificada.",
+          latitude: 40.4100,
+          longitude: -3.5800,
+          nearby: [
+            { name: "El Cañaveral", latitude: 40.4200, longitude: -3.5600, category: "Barrio" },
+            { name: "Coslada", latitude: 40.4239, longitude: -3.5617, category: "Ciudad" },
+            { name: "Bosque Metropolitano", latitude: 40.4000, longitude: -3.6000, category: "Naturaleza" }
+          ]
+        },
+        project: {
+          title: "Conectividad Estratégica",
+          text: "Acceso directo a M-50, M-45 y R-3. Proyecto de ampliación Línea 7 de Metro. Conexión rápida con centro de Madrid. Cercanía a zonas consolidadas del este de la capital."
+        },
+        subCommunities: [
+          { title: "1 Dormitorio", text: "Viviendas de 1 dormitorio con plaza de garaje y trastero incluidos. Distribución optimizada para primera vivienda o inversión." },
+          { title: "2 Dormitorios", text: "Viviendas de 2 dormitorios con garaje y trastero. Ideales para parejas jóvenes o familias pequeñas." },
+          { title: "3 Dormitorios", text: "Viviendas de 3 dormitorios con amplios espacios, garaje y trastero incluidos. Perfectas para familias." },
+          { title: "4 Dormitorios", text: "Viviendas de 4 dormitorios para familias numerosas. Máxima amplitud con garaje y trastero incluidos en precio." }
+        ],
+        amenities: {
+          title: "Disfruta Tu Tiempo Libre",
+          intro: "Las zonas comunes han sido diseñadas para ofrecer calidad de vida y bienestar en una urbanización cerrada.",
+          categories: [
+            {
+              name: "ZONAS COMUNES",
+              items: ["Piscina comunitaria", "Zonas verdes", "Área infantil", "Local comunitario para celebraciones", "Espacios pensados para convivencia familiar"]
+            }
+          ]
+        },
+        developer: {
+          title: "Grupo Ibosa",
+          intro: "Grupo Ibosa es uno de los cinco principales operadores activos del sector inmobiliario en la Comunidad de Madrid, con amplia experiencia en desarrollos cooperativos.",
+          bullets: ["Promoción a precio de coste", "Sin margen promotor", "Amplia experiencia", "Desarrollos cooperativos"]
+        },
+        faq: [],
+        disclaimers: {
+          renders: "Las imágenes son orientativas y pueden no representar el resultado final.",
+          availability: "Para acceder a vivienda protegida se requiere cumplir requisitos específicos (mayor de edad, residente en España, límites de ingresos IPREM, no ser titular de otra vivienda)."
+        }
+      },
+      {
+        id: "reside-arturo-soria",
+        slug: "reside-arturo-soria",
+        hero: {
+          title: "Reside Arturo Soria",
+          subtitle: "Exclusividad Sostenible · Zona Norte de Madrid",
+          description: "Un residencial contemporáneo ubicado en Calle Bausá 13–15, junto a Arturo Soria, una de las arterias más prestigiosas y demandadas de Madrid. Elegancia, diseño y sostenibilidad se integran en un proyecto concebido para quienes buscan calidad de vida en el Madrid más exclusivo.",
+          badges: ["Arturo Soria", "Energía A", "Premium"],
+          bgImage: "https://real-state-landing.s3.us-east-1.amazonaws.com/madrid/proyecto3/1.jpg"
+        },
+        images: [
+          "https://real-state-landing.s3.us-east-1.amazonaws.com/madrid/proyecto3/1.jpg",
+          "https://real-state-landing.s3.us-east-1.amazonaws.com/madrid/proyecto3/2.jpg",
+          "https://real-state-landing.s3.us-east-1.amazonaws.com/madrid/proyecto3/3.jpg",
+          "https://real-state-landing.s3.us-east-1.amazonaws.com/madrid/proyecto3/4.jpg",
+          "https://real-state-landing.s3.us-east-1.amazonaws.com/madrid/proyecto3/5.jpg"
+        ],
+        description: "Residencial exclusivo en Arturo Soria, con arquitectura contemporánea, piscina privada y calificación energética A en una de las zonas más prestigiosas del norte de Madrid.",
+        size: "Off-plan",
+        summary: {
+          title: "Elegante Arquitectura Contemporánea",
+          text: "Un edificio icónico que fusiona líneas limpias y materiales vanguardistas con integración armónica en el entorno urbano. Diseño moderno y exclusivo, fachada con sistema SATE y detalles en aluminio, amplios ventanales que maximizan luz natural y estética sofisticada y atemporal. Reside Arturo Soria redefine la arquitectura residencial de alta gama en Madrid."
+        },
+        concept: {
+          title: "Viviendas que Hablan de Ti",
+          text: "Distribuciones adaptadas al estilo de vida contemporáneo, con especial atención al confort, eficiencia y tecnología. Grandes ventanales, domótica integrada con control remoto, aislamiento térmico y acústico de última generación, materiales nobles y acabados actuales. Cada vivienda ha sido diseñada como un espacio luminoso, funcional y elegante."
+        },
+        community: {
+          title: "Inversión en Arturo Soria",
+          text: "Invertir en Reside Arturo Soria significa posicionarse en una de las zonas más consolidadas del norte de Madrid, mercado premium con baja oferta y alta demanda, activos en euros, estabilidad patrimonial a largo plazo y alta liquidez inmobiliaria. Arturo Soria es sinónimo de prestigio, estabilidad y valor sostenido."
+        },
+        privacy: {
+          title: "Sostenibilidad & Eficiencia Energética",
+          text: "El edificio contará con Calificación Energética A. Tecnología y eficiencia integradas: sistema de aerotermia para frío y calor, ventilación mecánica regulada, carpinterías con rotura de puente térmico, doble acristalamiento tipo Climalit, griferías termostáticas y dispositivos de ahorro de agua, sensores de iluminación en zonas comunes."
+        },
+        views: {
+          title: "Memoria de Calidades",
+          text: "Materiales seleccionados con máxima exigencia: puerta de entrada acorazada, solados porcelánicos o tarima laminada, instalación domótica con alarmas técnicas (incendio e inundación), aislamientos de alta eficiencia. Cada detalle ha sido concebido para garantizar calidad superior y durabilidad."
+        },
+        design: { title: "", text: "" },
+        location: {
+          title: "Prime Location — Arturo Soria",
+          intro: "Ubicado en la zona norte de Madrid, en un enclave consolidado rodeado de colegios internacionales, hospitales, embajadas y zonas residenciales premium. Reside Arturo Soria combina entorno natural y conexión urbana estratégica.",
+          latitude: 40.4550,
+          longitude: -3.6400,
+          nearby: [
+            { name: "Plaza de Castilla", latitude: 40.4656, longitude: -3.6889, category: "Centro Urbano" },
+            { name: "Paseo de la Castellana", latitude: 40.4500, longitude: -3.6900, category: "Financiero" },
+            { name: "Aeropuerto Madrid-Barajas", latitude: 40.4719, longitude: -3.5626, category: "Transporte" },
+            { name: "Conde Orgaz", latitude: 40.4600, longitude: -3.6300, category: "Residencial Premium" }
+          ]
+        },
+        project: {
+          title: "Conectividad Estratégica",
+          text: "Acceso inmediato a M-30 y M-40. Rápida conexión al Aeropuerto. Cercanía a Plaza de Castilla y Paseo de la Castellana. Entorno residencial de alto nivel (Conde Orgaz, Pio XII, Hortaleza)."
+        },
+        subCommunities: [],
+        amenities: {
+          title: "Exclusividad & Espacios Comunes",
+          intro: "El proyecto ofrece zonas comunes diseñadas para el bienestar. Un oasis urbano en una de las áreas más consolidadas de Madrid.",
+          categories: [
+            {
+              name: "EXTERIOR",
+              items: ["Piscina privada", "Zonas ajardinadas con paisajismo cuidado", "Espacios exteriores de relax", "Entorno íntimo y exclusivo"]
+            }
+          ]
+        },
+        developer: {
+          title: "Inversión Premium",
+          intro: "Arturo Soria mantiene una demanda sostenida de vivienda premium, con alta estabilidad de valor y fuerte atractivo para familias, directivos y compradores patrimoniales.",
+          bullets: ["Zona consolidada", "Alta demanda", "Estabilidad de valor", "Perfil premium"]
+        },
+        faq: [],
+        disclaimers: {
+          renders: "Las imágenes son orientativas y pueden no representar el resultado final.",
+          availability: "Precios y disponibilidad sujetos a cambios sin previo aviso."
+        }
+      }
+    ],
+    unitsConfig: {
+      title: "Espacios que Se Adaptan a Tu Estilo de Vida",
+      subtitle: "Desde apartamentos funcionales hasta residencias exclusivas, cada tipología ha sido concebida para ofrecer confort, diseño y valor sostenido en el mercado madrileño."
+    },
+    locationProjects: [
+      {
+        area: "PUERTA DE HIERRO · MADRID",
+        title: "Prime Location — Puerta de Hierro",
+        description: "Ubicado en una de las zonas residenciales más exclusivas y consolidadas de Madrid, Residencial Zenith combina privacidad, entorno natural y conexión directa con el centro financiero y cultural de la ciudad. Rodeado por áreas verdes como el Monte de El Pardo y a pocos minutos de las principales arterias viales, este enclave representa una de las ubicaciones más seguras y de mayor prestigio de la capital.",
+        features: [
+          "10–15 min al centro de Madrid",
+          "Acceso inmediato a M-30, M-40 y A-6",
+          "Cercanía a colegios internacionales y universidades",
+          "Próximo a hospitales y clubes privados"
+        ],
+        marketInsight: "Puerta de Hierro mantiene una demanda constante de vivienda premium, con alta estabilidad de valor y fuerte atractivo para perfiles ejecutivos y familias internacionales.",
+        image: "https://real-state-landing.s3.us-east-1.amazonaws.com/madrid/proyecto1/01.jpg"
+      },
+      {
+        area: "LOS CERROS · MADRID",
+        title: "Ubicación Estratégica — Sureste de Madrid",
+        description: "El proyecto se ubica en Los Cerros, uno de los mayores desarrollos urbanísticos de la capital, concebido como el futuro barrio más verde de Madrid. Combina expansión planificada, nuevas infraestructuras y un entorno natural privilegiado dentro del Bosque Metropolitano.",
+        features: [
+          "05 Minutos a M-45",
+          "07 Minutos a M-50",
+          "15 Minutos al Centro de Madrid",
+          "10 Minutos a El Cañaveral"
+        ],
+        marketInsight: "Los Cerros forma parte del crecimiento estructurado de Madrid hacia el sureste, con baja ocupación del suelo y fuerte inversión en infraestructura y zonas verdes, lo que proyecta valorización sostenida a medio y largo plazo.",
+        image: "https://real-state-landing.s3.us-east-1.amazonaws.com/madrid/proyecto2/1.jpg"
+      },
+      {
+        area: "ARTURO SORIA · ZONA NORTE",
+        title: "Ubicación Prime — Arturo Soria, Madrid",
+        description: "Reside Arturo Soria se ubica en Calle Bausá 13–15, junto a la emblemática Arturo Soria, una de las arterias residenciales más prestigiosas y consolidadas del norte de Madrid. Un enclave que combina exclusividad, entorno residencial de alto nivel y conexión inmediata con el centro financiero y el aeropuerto.",
+        features: [
+          "02 Minutos a M-30",
+          "05 Minutos a Plaza de Castilla",
+          "10 Minutos a Paseo de la Castellana",
+          "12 Minutos al Aeropuerto Madrid-Barajas"
+        ],
+        marketInsight: "Arturo Soria es una de las zonas con mayor estabilidad y demanda del norte de Madrid, caracterizada por su perfil residencial premium, proximidad a colegios internacionales y hospitales de prestigio, lo que garantiza protección patrimonial y liquidez inmobiliaria sostenida.",
+        image: "https://real-state-landing.s3.us-east-1.amazonaws.com/madrid/proyecto3/1.jpg"
+      }
+    ],
+    presentation: {
+      badge: "OFERTA EXCLUSIVA",
+      title: "Recibe la presentación detallada del proyecto",
+      description: "Hemos preparado un dossier detallado con precios actualizados, disponibilidad real, memoria de calidades, planos y estimaciones de valorización en el mercado madrileño.\nIncluye información estratégica para compradores residenciales e inversores que buscan proteger capital en euros.",
+      cta: "Agendar consultoría",
+      disclaimer: "Te enviaremos la presentación de forma inmediata por WhatsApp o email.\nSin compromiso · Información clara · Atención en español"
+    },
+    developers: null
   },
   cdmx: {
     hero: {
@@ -1162,15 +1488,48 @@ export const landingContent: Record<string, LandingContent> = {
         }
       ]
     },
-    about: null,
-    whyChoose: null,
+    about: {
+      imageSrc: "https://real-state-landing.s3.us-east-1.amazonaws.com/cdmx/cdmx.png",
+      title: "¿Por qué invertir en Ciudad de México?",
+      description: "Ciudad de México es el principal centro financiero y corporativo de Latinoamérica. Su tamaño, actividad económica y alta demanda habitacional la convierten en un mercado inmobiliario sólido y constante.\n\nInvertir en zonas estratégicas significa acceder a liquidez, renta estable y potencial de plusvalía.",
+      marketCard: {
+        title: "ENTORNO DE INVERSIÓN",
+        subtitle: "Demanda constante + economía activa + ubicación estratégica."
+      },
+      benefits: [
+        { iconName: "CheckCircle", label: "Alta demanda de renta" },
+        { iconName: "CheckCircle", label: "Mercado amplio y líquido" },
+        { iconName: "CheckCircle", label: "Crecimiento urbano continuo" },
+        { iconName: "CheckCircle", label: "Zonas prime consolidadas" },
+        { iconName: "CheckCircle", label: "Potencial de plusvalía" }
+      ]
+    },
+    whyChoose: {
+      videoSrc: "https://real-state-landing.s3.us-east-1.amazonaws.com/cdmx/cdmx_video.mp4",
+      videoSrcEn: "https://real-state-landing.s3.us-east-1.amazonaws.com/videos_en/cdmx_en.mp4",
+      title: "¿Por Qué Invertir con Nosotros en Ciudad de México?",
+      description: "Trabajamos exclusivamente con desarrolladores sólidos y proyectos ubicados en zonas estratégicas de CDMX. Nuestro objetivo es ayudarte a tomar decisiones de inversión claras, seguras y rentables.\nSeleccionamos oportunidades en Polanco, Roma, Condesa, Santa Fe y otras áreas con alta demanda y liquidez comprobada.",
+      benefits: [
+        "Análisis riguroso de cada desarrollador",
+        "Enfoque en renta estable y plusvalía",
+        "Transparencia legal y acompañamiento notarial",
+        "Asesoría integral hasta renta o reventa"
+      ],
+      quote: "No buscamos cerrar operaciones rápidas, buscamos construir patrimonio sólido."
+    },
     units: [],
     unitsConfig: {
       title: "Formatos de inversión inmobiliaria",
       subtitle: "Selecciona entre distintos tipos de unidades en Ciudad de México según rentabilidad, plazo y objetivo de inversión."
     },
     locationProjects: [],
-    presentation: { hidden: true },
-    developers: { hidden: true }
+    presentation: {
+      badge: "OFERTA EXCLUSIVA",
+      title: "Recibe la presentación detallada del proyecto",
+      description: "Accede al dossier con precios actualizados, planes de pago disponibles y estimaciones reales de renta en las principales zonas de Ciudad de México.\nIncluye análisis de plusvalía, demanda de alquiler y perfil ideal de inversión en áreas como Polanco, Roma, Condesa y Santa Fe.",
+      cta: "Agendar consultoría",
+      disclaimer: "Te enviaremos la presentación de forma inmediata por WhatsApp o email.\nSin compromiso · Información clara · Atención en español"
+    },
+    developers: null
   }
 };

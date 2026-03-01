@@ -8,5 +8,46 @@
       { "value": "20% – 30%", "text": "Initial down payment. Flexible payment plans during construction." },
       { "value": "8% – 12%", "text": "Estimated annual yield in traditional or executive rental." }
     ]
+  },
+  "about": {
+    "title": "Why invest in Mexico City?",
+    "description": "Mexico City is Latin America's main financial and corporate center. Its size, economic activity, and high housing demand make it a solid and consistent real estate market.\n\nInvesting in strategic areas means accessing liquidity, stable rental income, and appreciation potential.",
+    "market_card": {
+      "title": "INVESTMENT ENVIRONMENT",
+      "subtitle": "Constant demand + active economy + strategic location."
+    },
+    "benefits": {
+      "rental_demand": "High rental demand",
+      "liquid_market": "Large and liquid market",
+      "urban_growth": "Continuous urban growth",
+      "prime_zones": "Consolidated prime zones",
+      "appreciation": "Appreciation potential"
+    }
+  },
+  "presentation": {
+    "badge": "EXCLUSIVE OFFER",
+    "title": "Receive the detailed project presentation",
+    "description": "Access the dossier with updated prices, available payment plans and real rental estimates in Mexico City's main areas.\nIncludes appreciation analysis, rental demand and ideal investment profile in areas such as Polanco, Roma, Condesa and Santa Fe.",
+    "cta": "Schedule consultation",
+    "disclaimer": "We will send you the presentation immediately via WhatsApp or email.\nNo commitment · Clear information · Support in Spanish"
+  },
+  "why_choose": {
+    "title": "Why Invest with Us in Mexico City?",
+    "description": "We work exclusively with solid developers and projects located in strategic areas of CDMX. Our goal is to help you make clear, safe and profitable investment decisions.\nWe select opportunities in Polanco, Roma, Condesa, Santa Fe and other areas with high demand and proven liquidity.",
+    "benefits": [
+      "Rigorous analysis of each developer",
+      "Focus on stable rental income and appreciation",
+      "Legal transparency and notarial support",
+      "Full advisory through rental or resale"
+    ],
+    "quote": "We don't seek quick deals, we seek to build solid wealth."
+  },
+  "developers": {
+    "title": "Strategic alliances with Mexico City's leading developers",
+    "partner": "Strategic Development Partner",
+    "carousel_label": "Developer Partners Carousel",
+    "prev_slide": "Previous Slide",
+    "next_slide": "Next Slide",
+    "go_to_slide": "Go to slide"
   }
 }

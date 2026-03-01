@@ -10,13 +10,14 @@ interface WhyChooseSectionProps {
 }
 
 export default function WhyChooseSection({ content }: WhyChooseSectionProps) {
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
   const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   if (content?.hidden) return null;
 
-  const videoSrc = content?.videoSrc || "/video_why.mp4";
+  const defaultVideoSrc = content?.videoSrc || "/video_why.mp4";
+  const videoSrc = locale === "en" && content?.videoSrcEn ? content.videoSrcEn : defaultVideoSrc;
   const title = content?.title || t("why_choose.title");
   const description = content?.description || t("why_choose.description");
   const benefits = content?.benefits || (t("why_choose.benefits") as unknown as string[]);

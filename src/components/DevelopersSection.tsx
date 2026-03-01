@@ -14,11 +14,17 @@ export default function DevelopersSection({ content }: DevelopersSectionProps) {
 
   if (content?.hidden) return null;
 
+  // Use content props when available, fall back to translations
+  const title = content?.title || t("developers.title");
+  const partner = content?.partner || t("developers.partner");
+  const carouselLabel = content?.carouselLabel || t("developers.carousel_label");
+  const goToSlideLabel = content?.goToSlide || t("developers.go_to_slide");
+
   // Generate array of 10 developer images
   const developers = Array.from({ length: 10 }, (_, i) => ({
     id: i + 1,
     src: `/developer/developer${i + 1}.png`,
-    alt: `${t("developers.partner")} ${i + 1}`,
+    alt: `${partner} ${i + 1}`,
   }));
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -102,7 +108,7 @@ export default function DevelopersSection({ content }: DevelopersSectionProps) {
 
         <div className="relative z-10 max-w-6xl mx-auto flex flex-col items-center justify-center h-full w-full">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-sans font-medium text-gray-900 mb-12 leading-tight">
-            {t("developers.title")}
+            {title}
           </h2>
           
           {/* Carousel Container */}
@@ -113,7 +119,7 @@ export default function DevelopersSection({ content }: DevelopersSectionProps) {
             onKeyDown={handleKeyDown}
             tabIndex={0}
             role="region"
-            aria-label={t("developers.carousel_label")}
+            aria-label={carouselLabel}
           >
             {/* Slides Track */}
             <div className="overflow-hidden rounded-2xl">
@@ -182,7 +188,7 @@ export default function DevelopersSection({ content }: DevelopersSectionProps) {
                   className={`h-1.5 rounded-full transition-all duration-300 ${
                     currentIndex === idx ? "w-8 bg-gray-900" : "w-2 bg-gray-300 hover:bg-gray-400"
                   }`}
-                  aria-label={`${t("developers.go_to_slide")} ${idx + 1}`}
+                  aria-label={`${goToSlideLabel} ${idx + 1}`}
                   aria-current={currentIndex === idx}
                 />
               ))}

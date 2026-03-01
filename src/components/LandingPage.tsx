@@ -380,7 +380,7 @@ export default function LandingPage({ destination }: LandingPageProps) {
     };
   }
 
-  if (destination === "madrid" && staticContent.hero) {
+  if (destination === "madrid" && staticContent.hero && staticContent.about) {
     content = {
       ...staticContent,
       hero: {
@@ -401,10 +401,103 @@ export default function LandingPage({ destination }: LandingPageProps) {
           },
         ],
       },
+      about: {
+        ...staticContent.about,
+        title: t("madrid.about.title"),
+        description: t("madrid.about.description"),
+        marketCard: {
+          ...staticContent.about.marketCard,
+          title: t("madrid.about.market_card.title"),
+          subtitle: t("madrid.about.market_card.subtitle"),
+        },
+        benefits: staticContent.about.benefits.map((b, i) => {
+          const keys = [
+            "rental_demand",
+            "euro_income",
+            "legal_stability",
+            "international_capital",
+          ];
+          return {
+            ...b,
+            label: t(`madrid.about.benefits.${keys[i]}`) || b.label,
+          };
+        }),
+      },
+      locationProjects: staticContent.locationProjects.map((proj, i) => {
+        const keys = ["puerta_hierro", "los_cerros", "arturo_soria"];
+        const key = keys[i];
+        if (!key) return proj;
+        return {
+          ...proj,
+          area: t(`madrid.location.projects.${key}.area`),
+          title: t(`madrid.location.projects.${key}.title`),
+          description: t(`madrid.location.projects.${key}.description`),
+          marketInsight: t(`madrid.location.projects.${key}.market_insight`),
+          features: [
+            t(`madrid.location.projects.${key}.features.0`),
+            t(`madrid.location.projects.${key}.features.1`),
+            t(`madrid.location.projects.${key}.features.2`),
+            t(`madrid.location.projects.${key}.features.3`),
+          ],
+        };
+      }),
+      units: staticContent.units.map((unit) => {
+        const keyById: Record<string, string> = {
+          "residencial-zenith": "residencial_zenith",
+          "residencial-ara": "residencial_ara",
+          "reside-arturo-soria": "reside_arturo_soria",
+        };
+
+        const key = keyById[unit.id];
+        if (!key) return unit;
+
+        return {
+          ...unit,
+          hero: {
+            ...unit.hero,
+            title: t(`madrid.unit_types.units.${key}.title`),
+            description: t(`madrid.unit_types.units.${key}.description`),
+          },
+          description: t(`madrid.unit_types.units.${key}.description`),
+          size: t(`madrid.unit_types.units.${key}.size`),
+        };
+      }),
+      unitsConfig: {
+        title: t("madrid.unit_types.title"),
+        subtitle: t("madrid.unit_types.subtitle"),
+      },
+      presentation: staticContent.presentation ? {
+        ...staticContent.presentation,
+        badge: t("madrid.presentation.badge"),
+        title: t("madrid.presentation.title"),
+        description: t("madrid.presentation.description"),
+        cta: t("madrid.presentation.cta"),
+        disclaimer: t("madrid.presentation.disclaimer"),
+      } : null,
+      whyChoose: staticContent.whyChoose ? {
+        ...staticContent.whyChoose,
+        title: t("madrid.why_choose.title"),
+        description: t("madrid.why_choose.description"),
+        quote: t("madrid.why_choose.quote"),
+        benefits: [
+          t("madrid.why_choose.benefits.0"),
+          t("madrid.why_choose.benefits.1"),
+          t("madrid.why_choose.benefits.2"),
+          t("madrid.why_choose.benefits.3"),
+        ],
+      } : null,
+      developers: {
+        title: t("madrid.developers.title"),
+        partner: t("madrid.developers.partner"),
+        carouselLabel: t("madrid.developers.carousel_label"),
+        prevSlide: t("madrid.developers.prev_slide"),
+        nextSlide: t("madrid.developers.next_slide"),
+        goToSlide: t("madrid.developers.go_to_slide"),
+      },
     };
   }
 
-  if (destination === "cdmx" && staticContent.hero) {
+  if (destination === "cdmx" && staticContent.hero && staticContent.about) {
     content = {
       ...staticContent,
       hero: {
@@ -429,6 +522,57 @@ export default function LandingPage({ destination }: LandingPageProps) {
           },
         ],
       },
+      about: {
+        ...staticContent.about,
+        title: t("cdmx.about.title"),
+        description: t("cdmx.about.description"),
+        marketCard: {
+          ...staticContent.about.marketCard,
+          title: t("cdmx.about.market_card.title"),
+          subtitle: t("cdmx.about.market_card.subtitle"),
+        },
+        benefits: staticContent.about.benefits.map((b, i) => {
+          const keys = [
+            "rental_demand",
+            "liquid_market",
+            "urban_growth",
+            "prime_zones",
+            "appreciation",
+          ];
+          return {
+            ...b,
+            label: t(`cdmx.about.benefits.${keys[i]}`) || b.label,
+          };
+        }),
+      },
+      presentation: staticContent.presentation ? {
+        ...staticContent.presentation,
+        badge: t("cdmx.presentation.badge"),
+        title: t("cdmx.presentation.title"),
+        description: t("cdmx.presentation.description"),
+        cta: t("cdmx.presentation.cta"),
+        disclaimer: t("cdmx.presentation.disclaimer"),
+      } : null,
+      whyChoose: staticContent.whyChoose ? {
+        ...staticContent.whyChoose,
+        title: t("cdmx.why_choose.title"),
+        description: t("cdmx.why_choose.description"),
+        quote: t("cdmx.why_choose.quote"),
+        benefits: [
+          t("cdmx.why_choose.benefits.0"),
+          t("cdmx.why_choose.benefits.1"),
+          t("cdmx.why_choose.benefits.2"),
+          t("cdmx.why_choose.benefits.3"),
+        ],
+      } : null,
+      developers: {
+        title: t("cdmx.developers.title"),
+        partner: t("cdmx.developers.partner"),
+        carouselLabel: t("cdmx.developers.carousel_label"),
+        prevSlide: t("cdmx.developers.prev_slide"),
+        nextSlide: t("cdmx.developers.next_slide"),
+        goToSlide: t("cdmx.developers.go_to_slide"),
+      },
     };
   }
 
@@ -452,6 +596,7 @@ export default function LandingPage({ destination }: LandingPageProps) {
         units={content.units}
         title={content.unitsConfig?.title}
         subtitle={content.unitsConfig?.subtitle}
+        showViewAllButton={true}
       />
       <PresentationSection content={content.presentation} />
       <WhyChooseSection content={content.whyChoose} />
