@@ -591,7 +591,7 @@ export default function LandingPage({ destination }: LandingPageProps) {
       {destination === "home" ? <HomeFundCapitalSection /> : null}
       {destination === "home" ? <HomeGlobalAgentSection /> : null}
       <AboutSection content={content.about} />
-      <LocationSection projects={locationProjectsForSection} />
+      {destination !== "home" && <LocationSection projects={locationProjectsForSection} />}
       <UnitTypesSection
         units={content.units}
         title={content.unitsConfig?.title}
