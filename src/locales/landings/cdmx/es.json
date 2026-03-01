@@ -1,0 +1,12 @@
+{
+  "hero": {
+    "title": "Invierte en México con Alto Potencial de Valorización",
+    "subtitle": "Invierte en una de las capitales más dinámicas de Latinoamérica. Proyectos seleccionados en zonas prime con fuerte demanda de renta.",
+    "badges": ["POLANCO", "ROMA", "SANTA FE"],
+    "cta": "Ver Proyectos",
+    "stats": [
+      { "value": "20% – 30%", "text": "Enganche inicial. Planes de pago flexibles durante construcción." },
+      { "value": "8% – 12%", "text": "Rendimiento anual estimado en renta tradicional o ejecutiva." }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "hero": {
+    "title": "Apartments in Mexico City with High Appreciation Potential",
+    "subtitle": "Invest in one of Latin America's most dynamic capitals. Selected projects in prime zones with strong rental demand.",
+    "badges": ["POLANCO", "ROMA", "SANTA FE"],
+    "cta": "View Projects",
+    "stats": [
+      { "value": "20% – 30%", "text": "Initial down payment. Flexible payment plans during construction." },
+      { "value": "8% – 12%", "text": "Estimated annual yield in traditional or executive rental." }
+    ]
+  }
+}

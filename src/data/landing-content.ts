@@ -1112,5 +1112,65 @@ export const landingContent: Record<string, LandingContent> = {
     ],
     presentation: null,
     developers: null
+  },
+  madrid: {
+    hero: {
+      videoSrc: "https://real-state-landing.s3.us-east-1.amazonaws.com/madrid/madrid_hero.mp4",
+      badge: "Hasta +8–30% anual en zonas prime",
+      title: "Invierte en Madrid con Rentabilidad en Euros.",
+      subtitle: "Bienes raíces en una de las capitales más sólidas de Europa.\nAlta demanda de alquiler, estabilidad jurídica y valorización a largo plazo.",
+      stats: [
+        {
+          value: "Desde €250.000",
+          iconName: "Building2",
+          text: "Inversión inicial en zonas estratégicas."
+        },
+        {
+          value: "Hasta 8% bruto anual",
+          iconName: "TrendingUp",
+          text: "Ingresos por alquiler en distritos de alta demanda."
+        }
+      ]
+    },
+    about: null,
+    whyChoose: null,
+    units: [],
+    unitsConfig: {
+      title: "Formatos de inversión inmobiliaria",
+      subtitle: "Selecciona entre distintos tipos de unidades en Madrid según rentabilidad, plazo y objetivo de inversión."
+    },
+    locationProjects: [],
+    presentation: { hidden: true },
+    developers: { hidden: true }
+  },
+  cdmx: {
+    hero: {
+      videoSrc: "https://real-state-landing.s3.us-east-1.amazonaws.com/cdmx/cdmx_hero.mp4",
+      badges: ["POLANCO", "ROMA", "SANTA FE"],
+      title: "Departamentos en Ciudad de México con Alto Potencial de Valorización",
+      subtitle: "Invierte en una de las capitales más dinámicas de Latinoamérica. Proyectos seleccionados en zonas prime con fuerte demanda de renta y crecimiento sostenido del mercado inmobiliario.",
+      stats: [
+        {
+          value: "20% – 30%",
+          iconName: "Coins",
+          text: "Enganche inicial. Planes de pago flexibles durante construcción."
+        },
+        {
+          value: "8% – 12%",
+          iconName: "TrendingUp",
+          text: "Rendimiento anual estimado en renta tradicional o ejecutiva."
+        }
+      ]
+    },
+    about: null,
+    whyChoose: null,
+    units: [],
+    unitsConfig: {
+      title: "Formatos de inversión inmobiliaria",
+      subtitle: "Selecciona entre distintos tipos de unidades en Ciudad de México según rentabilidad, plazo y objetivo de inversión."
+    },
+    locationProjects: [],
+    presentation: { hidden: true },
+    developers: { hidden: true }
   }
 };

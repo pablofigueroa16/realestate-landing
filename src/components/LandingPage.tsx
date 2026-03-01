@@ -18,7 +18,7 @@ import { landingContent } from "@/data/landing-content";
 import { useTranslation } from "@/hooks/useTranslation";
 
 interface LandingPageProps {
-  destination: "dubai" | "bali" | "home" | "miami";
+  destination: "dubai" | "bali" | "home" | "miami" | "madrid" | "cdmx";
 }
 
 export default function LandingPage({ destination }: LandingPageProps) {
@@ -376,6 +376,58 @@ export default function LandingPage({ destination }: LandingPageProps) {
       unitsConfig: {
         title: t("miami.unit_types.title"),
         subtitle: t("miami.unit_types.subtitle"),
+      },
+    };
+  }
+
+  if (destination === "madrid" && staticContent.hero) {
+    content = {
+      ...staticContent,
+      hero: {
+        ...staticContent.hero,
+        title: t("madrid.hero.title"),
+        subtitle: t("madrid.hero.subtitle"),
+        badge: t("madrid.hero.badge"),
+        stats: [
+          {
+            value: t("madrid.hero.stats.0.value"),
+            text: t("madrid.hero.stats.0.text"),
+            iconName: staticContent.hero.stats[0]?.iconName,
+          },
+          {
+            value: t("madrid.hero.stats.1.value"),
+            text: t("madrid.hero.stats.1.text"),
+            iconName: staticContent.hero.stats[1]?.iconName,
+          },
+        ],
+      },
+    };
+  }
+
+  if (destination === "cdmx" && staticContent.hero) {
+    content = {
+      ...staticContent,
+      hero: {
+        ...staticContent.hero,
+        title: t("cdmx.hero.title"),
+        subtitle: t("cdmx.hero.subtitle"),
+        badges: [
+          t("cdmx.hero.badges.0"),
+          t("cdmx.hero.badges.1"),
+          t("cdmx.hero.badges.2"),
+        ],
+        stats: [
+          {
+            value: t("cdmx.hero.stats.0.value"),
+            text: t("cdmx.hero.stats.0.text"),
+            iconName: staticContent.hero.stats[0]?.iconName,
+          },
+          {
+            value: t("cdmx.hero.stats.1.value"),
+            text: t("cdmx.hero.stats.1.text"),
+            iconName: staticContent.hero.stats[1]?.iconName,
+          },
+        ],
       },
     };
   }

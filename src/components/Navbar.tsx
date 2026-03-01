@@ -15,7 +15,7 @@ import { useSmoothScroll } from "@/hooks/useSmoothScroll";
 import { useTranslation } from "@/hooks/useTranslation";
 
 interface NavbarProps {
-  currentDestination?: "dubai" | "bali" | "home" | "miami";
+  currentDestination?: "dubai" | "bali" | "home" | "miami" | "madrid" | "cdmx";
 }
 
 interface NavLinkItem {
@@ -77,6 +77,8 @@ export default function Navbar({ currentDestination = "home" }: NavbarProps) {
     { name: "DUBAI", path: "/dubai" },
     { name: "BALI", path: "/bali" },
     { name: "MIAMI", path: "/miami" },
+    { name: "MADRID", path: "/madrid" },
+    { name: "CDMX", path: "/cdmx" },
   ];
 
   return (

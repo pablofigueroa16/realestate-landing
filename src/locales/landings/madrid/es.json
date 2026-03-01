@@ -1,0 +1,12 @@
+{
+  "hero": {
+    "title": "Invierte en Madrid con Rentabilidad en Euros.",
+    "subtitle": "Bienes raíces en una de las capitales más sólidas de Europa.\nAlta demanda de alquiler, estabilidad jurídica y valorización a largo plazo.",
+    "badge": "Hasta +8–30% anual en zonas prime",
+    "cta": "Ver Proyectos",
+    "stats": [
+      { "value": "Desde €250.000", "text": "Inversión inicial en zonas estratégicas." },
+      { "value": "Hasta 8% bruto anual", "text": "Ingresos por alquiler en distritos de alta demanda." }
+    ]
+  }
+}

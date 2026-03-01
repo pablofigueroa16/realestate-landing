@@ -1,0 +1,12 @@
+{
+  "hero": {
+    "title": "Invest in Madrid with Euro Returns.",
+    "subtitle": "Real estate in one of Europe's most solid capitals.\nHigh rental demand, legal stability and long-term appreciation.",
+    "badge": "Up to +8–30% annually in prime zones",
+    "cta": "View Projects",
+    "stats": [
+      { "value": "From €250,000", "text": "Initial investment in strategic areas." },
+      { "value": "Up to 8% gross annually", "text": "Rental income in high-demand districts." }
+    ]
+  }
+}
