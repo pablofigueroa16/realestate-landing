@@ -120,7 +120,7 @@ export const landingContent: Record<string, LandingContent> = {
       ]
     },
     whyChoose: {
-      videoSrc: "https://real-state-landing.s3.us-east-1.amazonaws.com/home/home_video.mp4",
+      videoSrc: "https://real-state-landing.s3.us-east-1.amazonaws.com/home/home_video_es.mp4",
       videoSrcEn: "https://real-state-landing.s3.us-east-1.amazonaws.com/videos_en/home_en.mp4",
       title: "Por qué invertimos en mercados globales estratégicos",
       description: "Seleccionamos destinos con crecimiento sólido, estabilidad jurídica y alta demanda internacional, priorizando valorización a largo plazo y generación de ingresos sostenibles.",
@@ -743,6 +743,7 @@ export const landingContent: Record<string, LandingContent> = {
     },
     whyChoose: {
       videoSrc: "https://real-state-landing.s3.us-east-1.amazonaws.com/miami/miami_video.mp4",
+      videoSrcEn: "https://real-state-landing.s3.us-east-1.amazonaws.com/videos_en/miami_en.mp4",
       title: "Por qué los inversionistas eligen invertir en Miami",
       description: "Miami se ha consolidado como uno de los mercados inmobiliarios más dinámicos y resilientes de Estados Unidos, impulsado por migración constante, crecimiento financiero y demanda internacional sostenida.",
       benefits: [

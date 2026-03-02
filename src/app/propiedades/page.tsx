@@ -236,13 +236,13 @@ export default function PropertiesPage() {
       <Navbar currentDestination="home" />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gray-50">
+      <section className="pt-32 pb-16 bg-gray-900">
         <div className="container mx-auto px-6 md:px-12 lg:px-20">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium text-gray-900 mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium text-white mb-6">
               {t("properties_page.title")}
             </h1>
-            <p className="text-gray-500 text-lg leading-relaxed">
+            <p className="text-gray-400 text-lg leading-relaxed">
               {t("properties_page.subtitle")}
             </p>
           </div>
