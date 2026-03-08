@@ -38,15 +38,9 @@
       "phone_label": "Teléfono"
     },
     "form": {
-      "name_label": "Nombre",
-      "name_placeholder": "Juan",
-      "lastname_label": "Apellido",
-      "lastname_placeholder": "Pérez",
-      "email_label": "Correo electrónico",
-      "email_placeholder": "juan@ejemplo.com",
-      "phone_label": "Teléfono",
-      "phone_placeholder": "+1 (555) 000-0000",
-      "submit": "Recibir presentación del proyecto"
+      "message_label": "Mensaje",
+      "message_placeholder": "Hola, estoy interesado en recibir información sobre sus propiedades de inversión...",
+      "submit": "Consultar por WhatsApp"
     },
     "copyright": "Estetico Estate."
   },

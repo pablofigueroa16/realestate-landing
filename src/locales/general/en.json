@@ -38,15 +38,9 @@
       "phone_label": "Phone"
     },
     "form": {
-      "name_label": "Name",
-      "name_placeholder": "John",
-      "lastname_label": "Last Name",
-      "lastname_placeholder": "Doe",
-      "email_label": "Email",
-      "email_placeholder": "john@example.com",
-      "phone_label": "Phone",
-      "phone_placeholder": "+1 (555) 000-0000",
-      "submit": "Receive Project Presentation"
+      "message_label": "Message",
+      "message_placeholder": "Hello, I am interested in receiving information about your investment properties...",
+      "submit": "Enquire via WhatsApp"
     },
     "copyright": "Estetico Estate."
   },

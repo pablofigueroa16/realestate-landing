@@ -10,6 +10,7 @@ import { landingContent } from "@/data/landing-content";
 import { useTranslation } from "@/hooks/useTranslation";
 import { Building2 } from "lucide-react";
 import PropertyMap from "@/components/PropertyMap";
+import PropertyGallery from "@/components/PropertyGallery";
 
 export default function PropertyDetailsPage() {
   const params = useParams();
@@ -325,7 +326,7 @@ export default function PropertyDetailsPage() {
         </div>
       </section>
 
-      {/* 11) AMENITIES */}
+      {/* 12) AMENITIES */}
       {property.amenities.title && (
         <section className="py-24 bg-gray-900 text-white">
           <div className="container mx-auto px-6 md:px-12">
@@ -359,20 +360,22 @@ export default function PropertyDetailsPage() {
         </section>
       )}
 
+            {/* 11) GALERÍA */}
+      {property.images && property.images.length > 0 && (
+        <section className="pb-12 bg-gray-900 md:pb-16 container mx-auto px-6 md:px-12">
+          <PropertyGallery images={property.images} title={property.hero.title} />
+        </section>
+      )}
+
       {/* 12) DEVELOPER */}
       {property.developer.title && (
         <section className="py-24 container mx-auto px-6 md:px-12">
           <div className="flex flex-col md:flex-row gap-16 items-center">
-            <div className="w-full md:w-1/3 flex justify-center">
-               <div className="w-32 h-32 border border-gray-200 flex items-center justify-center">
-                  <Building2 size={48} className="text-gray-400" />
-               </div>
-            </div>
-            <div className="w-full md:w-2/3">
+            <div className="w-full flex flex-col items-center">
               <h2 className="text-3xl md:text-4xl font-sans font-medium text-gray-900 mb-6">
                 {property.developer.title}
               </h2>
-              <p className="text-gray-600 font-light mb-8 leading-relaxed">
+              <p className="text-gray-600 font-light mb-8">
                 {property.developer.intro}
               </p>
               <div className="grid sm:grid-cols-2 gap-4">
