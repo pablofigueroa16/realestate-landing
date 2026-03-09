@@ -100,8 +100,7 @@ export default function Hero({ content, destination = "dubai" }: HeroProps) {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href="#proyectos"
-                onClick={(e) => scrollToId(e, "#proyectos")}
+                href="/propiedades"
                 scroll={false}
                 className="group flex items-center gap-3 bg-white text-black pl-6 pr-1.5 py-2 rounded-full text-base font-medium hover:bg-gray-100 transition-all hover:scale-105 active:scale-95 w-fit"
               >
