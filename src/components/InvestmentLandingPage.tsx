@@ -32,11 +32,8 @@ function HeroSection() {
         <div className="absolute top-1/4 right-1/4 w-96 h-96 rounded-full bg-amber-400 blur-[150px]" />
       </div>
 
-      <div className="relative container mx-auto px-6 md:px-12 py-32 md:py-40">
+      <div className="relative container mx-auto px-6 md:px-12 py-32 md:py-32">
         <div className="max-w-4xl">
-          <span className="inline-block bg-amber-400/10 border border-amber-400/20 text-amber-400 text-[10px] font-bold tracking-[0.2em] px-4 py-2 rounded-full uppercase mb-8">
-            {t("inversiones.hero.badge")}
-          </span>
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-medium text-white leading-[1.05] mb-6">
             {t("inversiones.hero.title")}
@@ -115,14 +112,22 @@ function RealitySection() {
             })}
           </div>
 
-          <div className="text-center">
-            <p className="text-2xl md:text-3xl font-medium text-gray-900 leading-snug">
-              {t("inversiones.reality.conclusion_1")}
-              <br />
-              <span className="text-gray-400">{t("inversiones.reality.conclusion_2")}</span>
-              <br />
-              <span className="text-gray-300">{t("inversiones.reality.conclusion_3")}</span>
-            </p>
+          <div className="border-t border-gray-100 pt-10 grid sm:grid-cols-3 gap-6 text-center">
+            <div>
+              <p className="text-2xl md:text-3xl font-medium text-gray-900 leading-snug">
+                {t("inversiones.reality.conclusion_1")}
+              </p>
+            </div>
+            <div className="border-x border-gray-100 px-4">
+              <p className="text-2xl md:text-3xl font-medium text-gray-900 leading-snug">
+                {t("inversiones.reality.conclusion_2")}
+              </p>
+            </div>
+            <div>
+              <p className="text-2xl md:text-3xl font-medium text-gray-900 leading-snug">
+                {t("inversiones.reality.conclusion_3")}
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -159,13 +164,13 @@ function SolutionSection() {
             tagline={t("inversiones.model_individual.tagline")}
             price={t("inversiones.model_individual.price")}
             icon={<Building2 size={24} />}
-            accent="amber"
+            accent="stone"
           >
             <p className="text-gray-500 mb-4">{t("inversiones.model_individual.intro")}</p>
             <ul className="space-y-2 mb-6">
               {[0, 1, 2, 3].map((i) => (
-                <li key={i} className="flex items-start gap-2 text-gray-700">
-                  <span className="mt-1.5 block w-1.5 h-1.5 rounded-full bg-amber-500 shrink-0" />
+                <li key={i} className="flex items-center gap-2 text-gray-700">
+                  <span className="block w-1.5 h-1.5 rounded-full bg-gray-400 shrink-0" />
                   {t(`inversiones.model_individual.benefits.${i}`)}
                 </li>
               ))}
@@ -193,13 +198,13 @@ function SolutionSection() {
             title={t("inversiones.model_coproperty.title")}
             price={t("inversiones.model_coproperty.price")}
             icon={<Users size={24} />}
-            accent="blue"
+            accent="slate"
           >
             <p className="text-gray-500 mb-4">{t("inversiones.model_coproperty.description")}</p>
             <ul className="space-y-2 mb-6">
               {[0, 1, 2, 3].map((i) => (
-                <li key={i} className="flex items-start gap-2 text-gray-700">
-                  <span className="mt-1.5 block w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0" />
+                <li key={i} className="flex items-center gap-2 text-gray-700">
+                  <span className="block w-1.5 h-1.5 rounded-full bg-slate-400 shrink-0" />
                   {t(`inversiones.model_coproperty.benefits.${i}`)}
                 </li>
               ))}
@@ -216,39 +221,39 @@ function SolutionSection() {
             tagline={t("inversiones.model_fund.tagline")}
             price={t("inversiones.model_fund.price")}
             icon={<TrendingUp size={24} />}
-            accent="emerald"
+            accent="dark"
           >
-            <p className="text-gray-500 mb-4">{t("inversiones.model_fund.description")}</p>
+            <p className="text-white/50 mb-4">{t("inversiones.model_fund.description")}</p>
 
-            <div className="bg-gray-50 rounded-2xl p-5 mb-5 border border-gray-100">
+            <div className="bg-white/5 rounded-2xl p-5 mb-5 border border-white/10">
               {[0, 1, 2].map((i) => (
-                <p key={i} className="text-gray-600 text-sm leading-relaxed">
+                <p key={i} className="text-white/60 text-sm leading-relaxed">
                   {t(`inversiones.model_fund.allocation.${i}`)}
                 </p>
               ))}
             </div>
 
-            <div className="bg-amber-50 border border-amber-100 rounded-xl px-5 py-3 mb-5">
-              <p className="text-amber-800 font-semibold text-sm">
+            <div className="bg-white/10 border border-white/20 rounded-xl px-5 py-3 mb-5">
+              <p className="text-white font-semibold text-sm">
                 {t("inversiones.model_fund.target_roi")}
               </p>
             </div>
 
-            <p className="text-gray-500 mb-3 text-sm">{t("inversiones.model_fund.benefits_title")}</p>
+            <p className="text-white/40 mb-3 text-sm">{t("inversiones.model_fund.benefits_title")}</p>
             <ul className="space-y-2 mb-6">
               {[0, 1, 2, 3].map((i) => (
-                <li key={i} className="flex items-start gap-2 text-gray-700">
-                  <span className="mt-1.5 block w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0" />
+                <li key={i} className="flex items-center gap-2 text-white/70">
+                  <span className="block w-1.5 h-1.5 rounded-full bg-white/40 shrink-0" />
                   {t(`inversiones.model_fund.benefits.${i}`)}
                 </li>
               ))}
             </ul>
 
-            <div className="pt-4 border-t border-gray-100">
-              <p className="text-gray-900 font-medium">
+            <div className="pt-4 border-t border-white/10">
+              <p className="text-white font-medium">
                 {t("inversiones.model_fund.closing_1")}
               </p>
-              <p className="text-gray-500 italic">
+              <p className="text-white/40 italic">
                 {t("inversiones.model_fund.closing_2")}
               </p>
             </div>
@@ -273,38 +278,57 @@ function ModelCard({
   tagline?: string;
   price: string;
   icon: React.ReactNode;
-  accent: "amber" | "blue" | "emerald";
+  accent: "stone" | "slate" | "dark";
   children: React.ReactNode;
 }) {
   const accentMap = {
-    amber: { bg: "bg-amber-50", border: "border-amber-100", text: "text-amber-600", iconBg: "bg-amber-100" },
-    blue: { bg: "bg-blue-50", border: "border-blue-100", text: "text-blue-600", iconBg: "bg-blue-100" },
-    emerald: { bg: "bg-emerald-50", border: "border-emerald-100", text: "text-emerald-600", iconBg: "bg-emerald-100" },
+    stone: {
+      wrapper: "bg-white border-gray-200",
+      header: "bg-stone-50 border-stone-200",
+      iconBg: "bg-stone-100 text-stone-700",
+      tag: "text-stone-600",
+      priceBg: "bg-white border-stone-200 text-gray-900",
+    },
+    slate: {
+      wrapper: "bg-white border-gray-200",
+      header: "bg-slate-50 border-slate-200",
+      iconBg: "bg-slate-100 text-slate-700",
+      tag: "text-slate-600",
+      priceBg: "bg-white border-slate-200 text-gray-900",
+    },
+    dark: {
+      wrapper: "bg-gray-950 border-gray-800",
+      header: "bg-black border-gray-800",
+      iconBg: "bg-white/10 text-white",
+      tag: "text-white/50",
+      priceBg: "bg-white/10 border-white/20 text-white",
+    },
   };
   const a = accentMap[accent];
+  const isDark = accent === "dark";
 
   return (
-    <article className="bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden">
-      <div className={`${a.bg} ${a.border} border-b px-8 py-5 flex items-center justify-between`}>
+    <article className={`rounded-3xl border shadow-sm overflow-hidden ${a.wrapper}`}>
+      <div className={`${a.header} border-b px-8 py-5 flex items-center justify-between`}>
         <div className="flex items-center gap-4">
-          <div className={`w-12 h-12 ${a.iconBg} rounded-xl flex items-center justify-center ${a.text}`}>
+          <div className={`w-12 h-12 rounded-xl flex items-center justify-center shrink-0 ${a.iconBg}`}>
             {icon}
           </div>
           <div>
-            <p className={`text-xs font-bold tracking-widest ${a.text} uppercase`}>{tag}</p>
-            <h3 className="text-xl font-medium text-gray-900">{title}</h3>
+            <p className={`text-xs font-bold tracking-widest uppercase ${a.tag}`}>{tag}</p>
+            <h3 className={`text-xl font-medium ${isDark ? "text-white" : "text-gray-900"}`}>{title}</h3>
           </div>
         </div>
-        <span className="hidden sm:block text-sm font-semibold text-gray-900 bg-white/80 border border-gray-200 px-4 py-2 rounded-full">
+        <span className={`hidden sm:block text-sm font-semibold border px-4 py-2 rounded-full ${a.priceBg}`}>
           {price}
         </span>
       </div>
 
       <div className="p-8">
         {tagline && (
-          <p className="text-gray-900 font-medium text-lg mb-4">{tagline}</p>
+          <p className={`font-medium text-lg mb-4 ${isDark ? "text-white" : "text-gray-900"}`}>{tagline}</p>
         )}
-        <span className="sm:hidden inline-block text-sm font-semibold text-gray-900 bg-gray-50 border border-gray-200 px-4 py-2 rounded-full mb-4">
+        <span className={`sm:hidden inline-block text-sm font-semibold border px-4 py-2 rounded-full mb-4 ${a.priceBg}`}>
           {price}
         </span>
         {children}
@@ -375,11 +399,11 @@ function InstitutionalSection() {
             })}
           </div>
 
-          <div className="border-t border-gray-100 pt-8 text-center">
-            <p className="text-xl md:text-2xl text-gray-400 font-light">
+          <div className="border-t border-gray-100 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p className="text-lg text-gray-500 font-light max-w-sm">
               {t("inversiones.institutional.closing_1")}
             </p>
-            <p className="text-2xl md:text-3xl font-medium text-gray-900 mt-1">
+            <p className="text-2xl md:text-3xl font-medium text-gray-900 text-right">
               {t("inversiones.institutional.closing_2")}
             </p>
           </div>
@@ -400,20 +424,22 @@ function ClosingSection() {
 
       <div className="relative container mx-auto px-6 md:px-12">
         <div className="max-w-3xl mx-auto text-center">
-          <p className="text-2xl md:text-4xl text-white/50 font-light mb-2 leading-snug">
+          <p className="text-xs font-bold tracking-[0.25em] text-white/40 uppercase mb-6">
             {t("inversiones.closing.line_1")}
           </p>
           <h2 className="text-3xl md:text-5xl font-medium text-white leading-tight mb-10">
             {t("inversiones.closing.line_2")}
           </h2>
 
-          <p className="text-white/50 text-lg mb-2">
-            {t("inversiones.closing.intro")}
-          </p>
-          <p className="text-white/30 mb-2">{t("inversiones.closing.option_1")}</p>
-          <p className="text-white text-xl font-medium mb-12">
-            {t("inversiones.closing.option_2")}
-          </p>
+          <div className="border-t border-white/10 pt-8 mb-12 space-y-3">
+            <p className="text-white/60 text-base">{t("inversiones.closing.intro")}</p>
+            <div className="flex items-center justify-center gap-4">
+              <span className="h-px w-12 bg-white/20" />
+              <p className="text-white/40 text-sm">{t("inversiones.closing.option_1")}</p>
+              <span className="h-px w-12 bg-white/20" />
+            </div>
+            <p className="text-white text-lg font-medium">{t("inversiones.closing.option_2")}</p>
+          </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

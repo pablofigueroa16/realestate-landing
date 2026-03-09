@@ -38,7 +38,6 @@ export default function HomeInvestmentModelsSection() {
               key={model.title}
               className="relative bg-gray-50 rounded-3xl border border-gray-100 p-7 md:p-8"
             >
-              <div className="absolute -top-2 left-8 right-8 h-px bg-gray-300 hidden md:block" />
               <h3 className="text-2xl font-medium text-gray-900 mb-4">{model.title}</h3>
               <p className="text-gray-600 leading-relaxed mb-0 whitespace-pre-line">
                 {model.description}

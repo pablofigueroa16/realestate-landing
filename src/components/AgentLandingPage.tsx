@@ -37,21 +37,14 @@ function HeroSection() {
         <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] rounded-full bg-emerald-400 blur-[180px]" />
       </div>
 
-      <div className="relative container mx-auto px-6 md:px-12 py-32 md:py-40">
+      <div className="relative container mx-auto px-6 md:px-12 py-32 md:py-30">
         <div className="max-w-4xl">
-          <span className="inline-block bg-emerald-400/10 border border-emerald-400/20 text-emerald-400 text-[10px] font-bold tracking-[0.2em] px-4 py-2 rounded-full uppercase mb-8">
-            {t("agentes.hero.badge")}
-          </span>
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-medium text-white leading-[1.05] mb-3">
             {t("agentes.hero.title")}
           </h1>
-          <p className="text-3xl md:text-5xl lg:text-6xl font-medium text-emerald-400/90 leading-[1.1] mb-8">
+          <p className="text-2xl md:text-4xl lg:text-5xl font-medium text-emerald-400/90 leading-[1.1] mb-8">
             {t("agentes.hero.title_highlight")}
-          </p>
-
-          <p className="text-white/60 text-lg md:text-xl max-w-2xl mb-8 leading-relaxed font-light">
-            {t("agentes.hero.description")}
           </p>
 
           <div className="flex items-start gap-3 mb-10">
@@ -158,12 +151,12 @@ function StarterKitSection() {
               tag={t("agentes.kit_landing.tag")}
               title={t("agentes.kit_landing.title")}
               icon={<Layout size={22} />}
-              accent="emerald"
+              accent="stone"
             >
               <ul className="space-y-2 mb-5">
                 {[0, 1, 2, 3, 4].map((i) => (
-                  <li key={i} className="flex items-start gap-2 text-gray-700">
-                    <CheckCircle2 size={16} className="text-emerald-500 mt-0.5 shrink-0" />
+                  <li key={i} className="flex items-center gap-2 text-gray-700">
+                    <CheckCircle2 size={16} className="text-gray-400 shrink-0" />
                     {t(`agentes.kit_landing.features.${i}`)}
                   </li>
                 ))}
@@ -176,14 +169,14 @@ function StarterKitSection() {
               tag={t("agentes.kit_portfolio.tag")}
               title={t("agentes.kit_portfolio.title")}
               icon={<Globe size={22} />}
-              accent="blue"
+              accent="slate"
             >
               <p className="text-gray-500 mb-4 text-sm">{t("agentes.kit_portfolio.subtitle")}</p>
               <div className="flex flex-wrap gap-2 mb-5">
                 {[0, 1, 2, 3, 4, 5, 6].map((i) => (
                   <span
                     key={i}
-                    className="bg-blue-50 border border-blue-100 text-blue-700 text-xs font-semibold px-3 py-1.5 rounded-lg"
+                    className="bg-gray-100 border border-gray-200 text-gray-700 text-xs font-semibold px-3 py-1.5 rounded-lg"
                   >
                     {t(`agentes.kit_portfolio.destinations.${i}`)}
                   </span>
@@ -197,12 +190,12 @@ function StarterKitSection() {
               tag={t("agentes.kit_developers.tag")}
               title={t("agentes.kit_developers.title")}
               icon={<Building2 size={22} />}
-              accent="amber"
+              accent="zinc"
             >
               <ul className="space-y-2 mb-5">
                 {[0, 1, 2, 3].map((i) => (
-                  <li key={i} className="flex items-start gap-2 text-gray-700">
-                    <CheckCircle2 size={16} className="text-amber-500 mt-0.5 shrink-0" />
+                  <li key={i} className="flex items-center gap-2 text-gray-700">
+                    <CheckCircle2 size={16} className="text-gray-400 shrink-0" />
                     {t(`agentes.kit_developers.features.${i}`)}
                   </li>
                 ))}
@@ -216,22 +209,22 @@ function StarterKitSection() {
               tag={t("agentes.kit_training.tag")}
               title={t("agentes.kit_training.title")}
               icon={<GraduationCap size={22} />}
-              accent="purple"
+              accent="dark"
             >
-              <p className="text-gray-500 mb-3 text-sm">{t("agentes.kit_training.subtitle")}</p>
+              <p className="text-white/50 mb-3 text-sm">{t("agentes.kit_training.subtitle")}</p>
               <ul className="space-y-2 mb-6">
                 {[0, 1, 2, 3, 4].map((i) => (
-                  <li key={i} className="flex items-start gap-2 text-gray-700">
-                    <CheckCircle2 size={16} className="text-purple-500 mt-0.5 shrink-0" />
+                  <li key={i} className="flex items-center gap-2 text-white/70">
+                    <CheckCircle2 size={16} className="text-white/40 shrink-0" />
                     {t(`agentes.kit_training.topics.${i}`)}
                   </li>
                 ))}
               </ul>
-              <p className="text-gray-500 text-sm font-semibold mb-2">{t("agentes.kit_training.extras_title")}</p>
+              <p className="text-white/40 text-sm font-semibold mb-2">{t("agentes.kit_training.extras_title")}</p>
               <ul className="space-y-1.5">
                 {[0, 1, 2].map((i) => (
-                  <li key={i} className="flex items-start gap-2 text-gray-600 text-sm">
-                    <span className="mt-1.5 block w-1.5 h-1.5 rounded-full bg-purple-400 shrink-0" />
+                  <li key={i} className="flex items-center gap-2 text-white/60 text-sm">
+                    <span className="block w-1.5 h-1.5 rounded-full bg-white/30 shrink-0" />
                     {t(`agentes.kit_training.extras.${i}`)}
                   </li>
                 ))}
@@ -243,12 +236,12 @@ function StarterKitSection() {
               tag={t("agentes.kit_commission.tag")}
               title={t("agentes.kit_commission.title")}
               icon={<DollarSign size={22} />}
-              accent="emerald"
+              accent="stone"
             >
               <ul className="space-y-2 mb-5">
                 {[0, 1, 2].map((i) => (
-                  <li key={i} className="flex items-start gap-2 text-gray-700">
-                    <CheckCircle2 size={16} className="text-emerald-500 mt-0.5 shrink-0" />
+                  <li key={i} className="flex items-center gap-2 text-gray-700">
+                    <CheckCircle2 size={16} className="text-gray-400 shrink-0" />
                     {t(`agentes.kit_commission.features.${i}`)}
                   </li>
                 ))}
@@ -276,26 +269,27 @@ function KitCard({
   tag: string;
   title: string;
   icon: React.ReactNode;
-  accent: "emerald" | "blue" | "amber" | "purple";
+  accent: "stone" | "slate" | "zinc" | "dark";
   children: React.ReactNode;
 }) {
   const styles = {
-    emerald: { headerBg: "bg-emerald-50", headerBorder: "border-emerald-100", iconBg: "bg-emerald-100", text: "text-emerald-600" },
-    blue:    { headerBg: "bg-blue-50",    headerBorder: "border-blue-100",    iconBg: "bg-blue-100",    text: "text-blue-600" },
-    amber:   { headerBg: "bg-amber-50",   headerBorder: "border-amber-100",   iconBg: "bg-amber-100",   text: "text-amber-600" },
-    purple:  { headerBg: "bg-purple-50",  headerBorder: "border-purple-100",  iconBg: "bg-purple-100",  text: "text-purple-600" },
+    stone: { wrapper: "bg-white border-gray-200",    headerBg: "bg-stone-50",  headerBorder: "border-stone-200",  iconBg: "bg-stone-100 text-stone-700",  tag: "text-stone-600" },
+    slate: { wrapper: "bg-white border-gray-200",    headerBg: "bg-slate-50",  headerBorder: "border-slate-200",  iconBg: "bg-slate-100 text-slate-700",  tag: "text-slate-600" },
+    zinc:  { wrapper: "bg-white border-gray-200",    headerBg: "bg-zinc-50",   headerBorder: "border-zinc-200",   iconBg: "bg-zinc-100 text-zinc-700",    tag: "text-zinc-600"  },
+    dark:  { wrapper: "bg-gray-950 border-gray-800", headerBg: "bg-black",     headerBorder: "border-gray-800",   iconBg: "bg-white/10 text-white",       tag: "text-white/50"  },
   };
   const s = styles[accent];
+  const isDark = accent === "dark";
 
   return (
-    <article className="bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden">
+    <article className={`rounded-3xl border shadow-sm overflow-hidden ${s.wrapper}`}>
       <div className={`${s.headerBg} ${s.headerBorder} border-b px-8 py-5 flex items-center gap-4`}>
-        <div className={`w-12 h-12 ${s.iconBg} rounded-xl flex items-center justify-center ${s.text}`}>
+        <div className={`w-12 h-12 rounded-xl flex items-center justify-center shrink-0 ${s.iconBg}`}>
           {icon}
         </div>
         <div className="flex items-center gap-3">
-          <span className={`${s.text} text-xs font-bold tracking-widest`}>{tag}</span>
-          <h3 className="text-xl font-medium text-gray-900">{title}</h3>
+          <span className={`text-xs font-bold tracking-widest ${s.tag}`}>{tag}</span>
+          <h3 className={`text-xl font-medium ${isDark ? "text-white" : "text-gray-900"}`}>{title}</h3>
         </div>
       </div>
       <div className="p-8">{children}</div>

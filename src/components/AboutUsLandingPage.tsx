@@ -68,9 +68,9 @@ function HeroSection() {
                 return (
                   <div
                     key={idx}
-                    className="flex items-center gap-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl px-4 py-3"
+                    className="flex items-start gap-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl px-4 py-3"
                   >
-                    <Icon size={16} className="text-white/40 shrink-0" />
+                    <Icon size={16} className="text-white/40 mt-0.5 shrink-0" />
                     <p className="text-white/70 text-sm">{item}</p>
                   </div>
                 );
@@ -311,7 +311,7 @@ function AudienceSection() {
               return (
                 <div
                   key={idx}
-                  className="flex items-center gap-4 bg-gray-50 border border-gray-100 rounded-2xl p-5"
+                  className="flex items-start gap-4 bg-gray-50 border border-gray-100 rounded-2xl p-5"
                 >
                   <div className="w-10 h-10 rounded-xl bg-white border border-gray-200 flex items-center justify-center shrink-0">
                     <Icon size={18} className="text-gray-600" />
