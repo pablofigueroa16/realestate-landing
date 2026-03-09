@@ -59,30 +59,28 @@ export default function AboutSection({ content }: AboutSectionProps) {
   return (
     <section
       id="nosotros"
-      className="lg:h-screen w-full flex items-center justify-center bg-gray-50 py-20 lg:py-0 overflow-hidden"
+      className="w-full bg-gray-50 py-16 lg:py-0 lg:h-screen lg:flex lg:items-center lg:justify-center"
     >
-      <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center h-full">
+      <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 lg:items-center lg:h-full">
         {/* Left Column: Text & Benefits */}
-        <div className="px-4 flex flex-col justify-center h-full max-w-xl">
-          <h2 className="text-4xl md:text-5xl lg:text-5xl font-medium text-gray-900 mb-6 leading-tight">
+        <div className="flex flex-col justify-center max-w-xl">
+          <h2 className="text-3xl md:text-5xl font-medium text-gray-900 mb-4 md:mb-6 leading-tight">
             {title}
           </h2>
 
-          <div className="space-y-6 text-gray-500 text-lg font-light leading-relaxed">
-            <p className="whitespace-pre-line">
-              {description}
-            </p>
-          </div>
+          <p className="text-gray-500 text-base md:text-lg font-light leading-relaxed mb-6 whitespace-pre-line">
+            {description}
+          </p>
 
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-3 md:gap-4">
             {benefits.map((item, index) => {
               const IconComponent = item.iconName ? ICON_MAP[item.iconName] : null;
               return (
                 <div key={index} className="flex items-center gap-3 text-gray-700">
-                  <div className="min-w-6">
-                    {IconComponent && <IconComponent size={24} strokeWidth={1.5} className="text-gray-900" />}
+                  <div className="min-w-6 shrink-0">
+                    {IconComponent && <IconComponent size={22} strokeWidth={1.5} className="text-gray-900" />}
                   </div>
-                  <span className="text-base font-medium">{item.label}</span>
+                  <span className="text-sm md:text-base font-medium">{item.label}</span>
                 </div>
               );
             })}
@@ -90,23 +88,20 @@ export default function AboutSection({ content }: AboutSectionProps) {
         </div>
 
         {/* Right Column: Image */}
-        <div className="relative h-[60vh] lg:h-[85vh] w-full">
-          <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden shadow-2xl">
-            <img
-              src={imageSrc}
-              alt="Skyline"
-              className="w-full h-full object-cover"
-            />
-            {/* Dark overlay for mood (optional, based on reference image style) */}
-            <div className="absolute inset-0 bg-blue-900/20 mix-blend-multiply"></div>
-          </div>
+        <div className="relative w-full rounded-[2rem] md:rounded-[2.5rem] overflow-hidden shadow-2xl aspect-[4/3] lg:aspect-auto lg:h-[85vh]">
+          <img
+            src={imageSrc}
+            alt="Skyline"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-blue-900/20 mix-blend-multiply" />
 
           {/* Floating Concept Card */}
-          <div className="absolute bottom-8 left-8 bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg max-w-xs">
+          <div className="absolute bottom-5 left-5 md:bottom-8 md:left-8 bg-white/90 backdrop-blur-sm rounded-xl md:rounded-2xl p-4 md:p-6 shadow-lg max-w-[200px] md:max-w-xs">
             <p className="text-xs text-gray-500 font-bold tracking-wider uppercase mb-1">
               {marketCardTitle}
             </p>
-            <p className="text-gray-900 font-medium text-lg leading-snug">
+            <p className="text-gray-900 font-medium text-sm md:text-lg leading-snug">
               {marketCardSubtitle}
             </p>
           </div>
