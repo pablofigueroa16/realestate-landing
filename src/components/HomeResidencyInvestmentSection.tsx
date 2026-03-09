@@ -16,7 +16,7 @@ export default function HomeResidencyInvestmentSection() {
 
   const options = [
     {
-      flag: "🇦🇪",
+      flagCode: "ae",
       country: t("home.residency_investment.options.0.country"),
       program: t("home.residency_investment.options.0.program"),
       investment: t("home.residency_investment.options.0.investment"),
@@ -29,7 +29,7 @@ export default function HomeResidencyInvestmentSection() {
       idealFor: t("home.residency_investment.options.0.ideal_for"),
     },
     {
-      flag: "🇺🇸",
+      flagCode: "us",
       country: t("home.residency_investment.options.1.country"),
       program: t("home.residency_investment.options.1.program"),
       investment: t("home.residency_investment.options.1.investment"),
@@ -41,7 +41,7 @@ export default function HomeResidencyInvestmentSection() {
       idealFor: t("home.residency_investment.options.1.ideal_for"),
     },
     {
-      flag: "🇨🇱",
+      flagCode: "cl",
       country: t("home.residency_investment.options.2.country"),
       program: t("home.residency_investment.options.2.program"),
       investment: t("home.residency_investment.options.2.investment"),
@@ -54,7 +54,7 @@ export default function HomeResidencyInvestmentSection() {
       idealFor: t("home.residency_investment.options.2.ideal_for"),
     },
     {
-      flag: "🇲🇽",
+      flagCode: "mx",
       country: t("home.residency_investment.options.3.country"),
       program: t("home.residency_investment.options.3.program"),
       investment: t("home.residency_investment.options.3.investment"),
@@ -66,7 +66,7 @@ export default function HomeResidencyInvestmentSection() {
       idealFor: t("home.residency_investment.options.3.ideal_for"),
     },
     {
-      flag: "🇮🇩",
+      flagCode: "id",
       country: t("home.residency_investment.options.4.country"),
       program: t("home.residency_investment.options.4.program"),
       investment: t("home.residency_investment.options.4.investment"),
@@ -78,7 +78,7 @@ export default function HomeResidencyInvestmentSection() {
       idealFor: t("home.residency_investment.options.4.ideal_for"),
     },
     {
-      flag: "🇪🇸",
+      flagCode: "es",
       country: t("home.residency_investment.options.5.country"),
       program: t("home.residency_investment.options.5.program"),
       investment: t("home.residency_investment.options.5.investment"),
@@ -90,7 +90,7 @@ export default function HomeResidencyInvestmentSection() {
       idealFor: t("home.residency_investment.options.5.ideal_for"),
     },
     {
-      flag: "🇩🇴",
+      flagCode: "do",
       country: t("home.residency_investment.options.6.country"),
       program: t("home.residency_investment.options.6.program"),
       investment: t("home.residency_investment.options.6.investment"),
@@ -236,7 +236,13 @@ export default function HomeResidencyInvestmentSection() {
                 onDragStart={(e) => e.preventDefault()}
               >
                 <div className="flex items-center gap-3 mb-4">
-                  <span className="text-2xl">{option.flag}</span>
+                  <img
+                    src={`https://flagcdn.com/w40/${option.flagCode}.png`}
+                    alt={option.country}
+                    width={28}
+                    height={20}
+                    className="rounded-sm object-cover shrink-0"
+                  />
                   <h3 className="text-xl font-medium">{option.country}</h3>
                 </div>
 
@@ -258,20 +264,31 @@ export default function HomeResidencyInvestmentSection() {
           </div>
         </div>
 
-        {maxIndex > 0 ? (
-          <div className="flex justify-center gap-2 mt-8">
-            {Array.from({ length: maxIndex + 1 }).map((_, idx) => (
+        <div className="flex flex-wrap justify-center gap-2 mt-10">
+          {options.map((option, idx) => {
+            const isActive = idx >= displayedIndex && idx < displayedIndex + itemsPerView;
+            return (
               <button
-                key={idx}
-                onClick={() => setCurrentIndex(idx)}
-                className={`h-1.5 rounded-full transition-all duration-300 ${
-                  displayedIndex === idx ? "w-8 bg-white" : "w-2 bg-white/40"
+                key={option.country}
+                onClick={() => setCurrentIndex(Math.min(idx, maxIndex))}
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-300 border ${
+                  isActive
+                    ? "bg-white text-gray-900 border-white"
+                    : "bg-white/5 text-white/50 border-white/10 hover:bg-white/10 hover:text-white/80"
                 }`}
-                aria-label={`Slide ${idx + 1}`}
-              />
-            ))}
-          </div>
-        ) : null}
+              >
+                <img
+                  src={`https://flagcdn.com/w20/${option.flagCode}.png`}
+                  alt={option.country}
+                  width={18}
+                  height={13}
+                  className="rounded-sm object-cover shrink-0"
+                />
+                {option.country}
+              </button>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

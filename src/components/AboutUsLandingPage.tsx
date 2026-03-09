@@ -16,7 +16,6 @@ import {
   Scale,
   Eye,
   Handshake,
-  MapPin,
   CheckCircle2,
   Sparkles,
 } from "lucide-react";
@@ -204,7 +203,15 @@ function CapitalSection() {
 function PresenceSection() {
   const { t } = useTranslation();
 
-  const markets = [0, 1, 2, 3, 4, 5, 6].map((i) => t(`nosotros.presence.markets.${i}`));
+  const markets = [
+    { key: 0, flagCode: "ae" },
+    { key: 1, flagCode: "us" },
+    { key: 2, flagCode: "es" },
+    { key: 3, flagCode: "id" },
+    { key: 4, flagCode: "do" },
+    { key: 5, flagCode: "cl" },
+    { key: 6, flagCode: "mx" },
+  ].map(({ key, flagCode }) => ({ name: t(`nosotros.presence.markets.${key}`), flagCode }));
 
   return (
     <section className="py-24 bg-white border-b border-gray-100">
@@ -226,8 +233,14 @@ function PresenceSection() {
                 key={idx}
                 className="flex items-center gap-2 bg-gray-50 border border-gray-100 rounded-xl px-5 py-3"
               >
-                <MapPin size={14} className="text-gray-400" />
-                <span className="text-gray-800 font-semibold text-sm">{market}</span>
+                <img
+                  src={`https://flagcdn.com/w40/${market.flagCode}.png`}
+                  alt={market.name}
+                  width={26}
+                  height={19}
+                  className="rounded-sm object-cover shrink-0"
+                />
+                <span className="text-gray-800 font-semibold">{market.name}</span>
               </div>
             ))}
           </div>
