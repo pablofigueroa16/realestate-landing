@@ -12,6 +12,8 @@ import { Building2 } from "lucide-react";
 import PropertyMap from "@/components/PropertyMap";
 import PropertyGallery from "@/components/PropertyGallery";
 
+const WHATSAPP_NUMBER = "971543034346";
+
 export default function PropertyDetailsPage() {
   const params = useParams();
   const router = useRouter();
@@ -184,13 +186,25 @@ export default function PropertyDetailsPage() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="group flex items-center gap-3 bg-white text-black pl-6 pr-1.5 py-2 rounded-full text-base font-medium hover:bg-gray-100 transition-all hover:scale-105 active:scale-95 w-fit">
+                <button
+                  onClick={() => {
+                    const msg = `Hola, me interesa la propiedad "${property.hero.title}". ¿Podría darme más información sobre disponibilidad?`;
+                    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`, "_blank");
+                  }}
+                  className="group flex items-center gap-3 bg-white text-black pl-6 pr-1.5 py-2 rounded-full text-base font-medium hover:bg-gray-100 transition-all hover:scale-105 active:scale-95 w-fit"
+                >
                   {t("property_details.request_availability")}
                   <div className="w-9 h-9 bg-black rounded-full flex items-center justify-center text-white group-hover:bg-gray-800 transition-colors">
                     <ArrowRight size={18} />
                   </div>
                 </button>
-                <button className="group flex items-center gap-3 bg-white/10 backdrop-blur-md border border-white/20 text-white pl-6 pr-6 py-2 rounded-full text-base font-medium hover:bg-white/20 transition-all hover:scale-105 active:scale-95 w-fit">
+                <button
+                  onClick={() => {
+                    const msg = `Hola, me gustaría recibir el brochure de "${property.hero.title}".`;
+                    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`, "_blank");
+                  }}
+                  className="group flex items-center gap-3 bg-white/10 backdrop-blur-md border border-white/20 text-white pl-6 pr-6 py-2 rounded-full text-base font-medium hover:bg-white/20 transition-all hover:scale-105 active:scale-95 w-fit"
+                >
                   {t("property_details.whatsapp_brochure")}
                   <ExternalLink size={18} />
                 </button>

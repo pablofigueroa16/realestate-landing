@@ -103,17 +103,20 @@ export default function Footer() {
         </div>
 
         <nav className="flex gap-8 mb-4 md:mb-0 text-xs font-medium uppercase tracking-wide">
-          <Link href="#nosotros" onClick={(e) => scrollToId(e, "#nosotros")} scroll={false} className="hover:text-gray-900 transition-colors">
-            {t("nav.about")}
+          <Link href="/" className="hover:text-gray-900 transition-colors">
+            {t("nav.home")}
           </Link>
-          <Link href="#proyectos" onClick={(e) => scrollToId(e, "#proyectos")} scroll={false} className="hover:text-gray-900 transition-colors">
+          <Link href="/inversiones" className="hover:text-gray-900 transition-colors">
+            {t("nav.investments")}
+          </Link>
+          <Link href="/propiedades" className="hover:text-gray-900 transition-colors">
             {t("nav.projects")}
           </Link>
-          <Link href="#unidades" onClick={(e) => scrollToId(e, "#unidades")} scroll={false} className="hover:text-gray-900 transition-colors">
-            {t("nav.units")}
+          <Link href="/agentes" className="hover:text-gray-900 transition-colors">
+            {t("nav.agent")}
           </Link>
-          <Link href="#video" onClick={(e) => scrollToId(e, "#video")} scroll={false} className="hover:text-gray-900 transition-colors">
-            {t("nav.video")}
+          <Link href="/nosotros" className="hover:text-gray-900 transition-colors">
+            {t("nav.about")}
           </Link>
           <Link href="#contacto" onClick={(e) => scrollToId(e, "#contacto")} scroll={false} className="hover:text-gray-900 transition-colors">
             {t("nav.contact")}

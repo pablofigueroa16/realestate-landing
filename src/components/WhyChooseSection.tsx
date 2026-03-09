@@ -41,35 +41,41 @@ export default function WhyChooseSection({ content }: WhyChooseSectionProps) {
     <section id="video" className="h-screen w-full flex items-center justify-center bg-gray-50 py-10 lg:py-0 overflow-hidden">
       <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20 items-center h-full">
         {/* Left Column: Image/Video */}
-        <div className="relative h-[40vh] lg:h-[60vh] w-full group">
-          <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden shadow-2xl bg-black">
-            <video
-              key={videoSrc} // Force re-render on video change
-              ref={videoRef}
-              className="w-full h-full object-cover"
-              playsInline
-              onEnded={handleVideoEnd}
-              controls={isPlaying}
-            >
-              <source src={videoSrc} type="video/mp4" />
-            </video>
-            
-            {/* Play Button Overlay */}
-            {!isPlaying && (
-              <div 
-                className="absolute inset-0 z-20 flex items-center justify-center cursor-pointer group-hover:bg-black/10 transition-colors"
-                onClick={handlePlay}
+        <div className="flex flex-col gap-4">
+          <div className="relative h-[40vh] lg:h-[60vh] w-full group">
+            <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden shadow-2xl bg-black">
+              <video
+                key={videoSrc} // Force re-render on video change
+                ref={videoRef}
+                className="w-full h-full object-cover"
+                playsInline
+                onEnded={handleVideoEnd}
+                controls={isPlaying}
               >
-                {/* Dark overlay for contrast */}
-                <div className="absolute inset-0 bg-black/20"></div>
-                
-                {/* YouTube-style Play Button */}
-                <div className="relative z-30 w-20 h-14 bg-red-600 rounded-2xl flex items-center justify-center shadow-2xl transition-transform duration-300 hover:scale-110 hover:bg-red-700">
-                  <Play size={32} className="text-white fill-white ml-1" />
+                <source src={videoSrc} type="video/mp4" />
+              </video>
+
+              {/* Play Button Overlay */}
+              {!isPlaying && (
+                <div
+                  className="absolute inset-0 z-20 flex items-center justify-center cursor-pointer group-hover:bg-black/10 transition-colors"
+                  onClick={handlePlay}
+                >
+                  {/* Dark overlay for contrast */}
+                  <div className="absolute inset-0 bg-black/20"></div>
+
+                  {/* YouTube-style Play Button */}
+                  <div className="relative z-30 w-20 h-14 bg-red-600 rounded-2xl flex items-center justify-center shadow-2xl transition-transform duration-300 hover:scale-110 hover:bg-red-700">
+                    <Play size={32} className="text-white fill-white ml-1" />
+                  </div>
                 </div>
-              </div>
-            )}
+              )}
+            </div>
           </div>
+
+          <p className="text-gray-900 font-medium italic text-base lg:text-lg border-l-4 border-gray-900 pl-4 py-6">
+            &rdquo;{quote}&rdquo;
+          </p>
         </div>
 
         {/* Right Column: Text Content */}
@@ -77,7 +83,7 @@ export default function WhyChooseSection({ content }: WhyChooseSectionProps) {
           <h2 className="text-3xl md:text-4xl lg:text-4xl font-medium text-gray-900 mb-6 leading-tight">
             {title}
           </h2>
-          
+
           <p className="text-gray-500 text-base lg:text-lg font-light mb-6 leading-relaxed whitespace-pre-line">
             {description}
           </p>
@@ -90,10 +96,6 @@ export default function WhyChooseSection({ content }: WhyChooseSectionProps) {
               </div>
             ))}
           </div>
-
-          <p className="text-gray-900 font-medium italic text-base lg:text-lg border-l-4 border-gray-900 pl-4 py-1">
-            &rdquo;{quote}&rdquo;
-          </p>
         </div>
       </div>
     </section>
