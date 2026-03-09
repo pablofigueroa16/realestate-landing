@@ -108,7 +108,7 @@ function WhatIsSection() {
               return (
                 <div
                   key={idx}
-                  className="flex items-center gap-4 bg-gray-50 border border-gray-100 rounded-2xl p-5"
+                  className="flex items-start gap-4 bg-gray-50 border border-gray-100 rounded-2xl p-5"
                 >
                   <div className="w-10 h-10 rounded-xl bg-emerald-50 border border-emerald-100 flex items-center justify-center shrink-0">
                     <Icon size={18} className="text-emerald-600" />
@@ -372,7 +372,7 @@ function WhoSection() {
               return (
                 <div
                   key={i}
-                  className="flex items-center gap-4 bg-gray-50 border border-gray-100 rounded-2xl p-5"
+                  className="flex items-start gap-4 bg-gray-50 border border-gray-100 rounded-2xl p-5"
                 >
                   <div className="w-10 h-10 rounded-xl bg-white border border-gray-200 flex items-center justify-center shrink-0">
                     <Icon size={18} className="text-gray-600" />

@@ -65,6 +65,10 @@ p {
   margin-bottom: 1.5rem;
 }
 
+button, [role="button"] {
+  cursor: pointer;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
