@@ -17,11 +17,14 @@ import HomeGlobalAgentSection from "@/components/HomeGlobalAgentSection";
 import { landingContent } from "@/data/landing-content";
 import { useTranslation } from "@/hooks/useTranslation";
 
+import { Property } from "@/data/properties";
+
 interface LandingPageProps {
   destination: "dubai" | "bali" | "home" | "miami" | "madrid" | "cdmx";
+  dynamicUnits?: Property[];
 }
 
-export default function LandingPage({ destination }: LandingPageProps) {
+export default function LandingPage({ destination, dynamicUnits }: LandingPageProps) {
   const { t } = useTranslation();
   const staticContent = landingContent[destination];
 
@@ -593,7 +596,7 @@ export default function LandingPage({ destination }: LandingPageProps) {
       <AboutSection content={content.about} />
       {destination !== "home" && <LocationSection projects={locationProjectsForSection} />}
       <UnitTypesSection
-        units={content.units}
+        units={dynamicUnits && dynamicUnits.length > 0 ? dynamicUnits : content.units}
         title={content.unitsConfig?.title}
         subtitle={content.unitsConfig?.subtitle}
         showViewAllButton={true}

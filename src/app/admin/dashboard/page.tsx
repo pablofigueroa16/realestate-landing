@@ -1,37 +1,159 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
+import { Plus, Pencil, Trash2, LogOut, Building2 } from "lucide-react";
+
+interface PropertyItem {
+  slug: string;
+  city: string;
+  hero: { title: string };
+  images?: string[];
+  description?: string;
+}
+
+const cityLabels: Record<string, string> = {
+  dubai: "Dubai",
+  bali: "Bali",
+  miami: "Miami",
+  madrid: "Madrid",
+  cdmx: "CDMX",
+};
+
+const cityColors: Record<string, string> = {
+  dubai: "bg-amber-100 text-amber-700",
+  bali: "bg-emerald-100 text-emerald-700",
+  miami: "bg-sky-100 text-sky-700",
+  madrid: "bg-red-100 text-red-700",
+  cdmx: "bg-purple-100 text-purple-700",
+};
 
 export default function AdminDashboardPage() {
   const router = useRouter();
+  const [properties, setProperties] = useState<PropertyItem[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [deleting, setDeleting] = useState<string | null>(null);
+
+  async function loadProperties() {
+    setLoading(true);
+    const res = await fetch("/api/properties");
+    const data = await res.json();
+    setProperties(data);
+    setLoading(false);
+  }
+
+  useEffect(() => { loadProperties(); }, []);
 
   async function handleLogout() {
     await fetch("/api/admin/logout", { method: "POST" });
     router.push("/admin");
   }
 
+  async function handleDelete(city: string, slug: string) {
+    if (!confirm(`¿Eliminar la propiedad "${slug}"?`)) return;
+    setDeleting(slug);
+    await fetch(`/api/properties/${slug}?city=${city}`, { method: "DELETE" });
+    await loadProperties();
+    setDeleting(null);
+  }
+
+  const grouped = properties.reduce<Record<string, PropertyItem[]>>((acc, p) => {
+    const key = p.city ?? "sin-ciudad";
+    if (!acc[key]) acc[key] = [];
+    acc[key].push(p);
+    return acc;
+  }, {});
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#f5f0e8] to-[#e8e4dc]">
-      <header className="bg-white border-b border-gray-200 px-6 py-4 flex items-center justify-between">
-        <div>
-          <h1 className="text-lg font-bold text-gray-900">Panel Admin</h1>
-          <p className="text-xs text-gray-500">Estetico Estate</p>
+    <div className="min-h-screen bg-gray-50">
+      <header className="bg-white border-b border-gray-200 px-6 py-4 flex items-center justify-between sticky top-0 z-10">
+        <div className="flex items-center gap-3">
+          <Building2 size={20} className="text-gray-700" />
+          <div>
+            <p className="text-sm font-bold text-gray-900">Panel Admin</p>
+            <p className="text-xs text-gray-400">Estetico Estate</p>
+          </div>
         </div>
-        <button
-          onClick={handleLogout}
-          className="text-sm text-gray-500 hover:text-gray-900 transition-colors"
-        >
-          Cerrar sesión
-        </button>
+        <div className="flex items-center gap-4">
+          <Link
+            href="/admin/dashboard/propiedades/nueva"
+            className="flex items-center gap-2 bg-gray-900 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-700 transition-colors"
+          >
+            <Plus size={16} />
+            Nueva propiedad
+          </Link>
+          <button onClick={handleLogout} className="flex items-center gap-2 text-sm text-gray-500 hover:text-gray-900 transition-colors">
+            <LogOut size={16} />
+            Salir
+          </button>
+        </div>
       </header>
 
-      <main className="p-8">
-        <h2 className="text-xl font-semibold text-gray-700">
-          Gestión de Propiedades
-        </h2>
-        <p className="text-sm text-gray-400 mt-1">
-          Próximamente podrás modificar las propiedades desde aquí.
-        </p>
+      <main className="p-8 max-w-5xl mx-auto">
+        <h1 className="text-xl font-semibold text-gray-800 mb-6">Propiedades</h1>
+
+        {loading ? (
+          <div className="space-y-3">
+            {[...Array(4)].map((_, i) => (
+              <div key={i} className="h-16 bg-gray-200 rounded-xl animate-pulse" />
+            ))}
+          </div>
+        ) : properties.length === 0 ? (
+          <div className="text-center py-20 bg-white rounded-2xl border border-gray-100">
+            <Building2 size={40} className="text-gray-300 mx-auto mb-4" />
+            <p className="text-gray-500 mb-4">No hay propiedades en la base de datos</p>
+            <Link href="/admin/dashboard/propiedades/nueva" className="inline-flex items-center gap-2 bg-gray-900 text-white px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-gray-700 transition-colors">
+              <Plus size={16} />
+              Agregar primera propiedad
+            </Link>
+          </div>
+        ) : (
+          <div className="space-y-8">
+            {Object.entries(grouped).map(([city, items]) => (
+              <div key={city}>
+                <h2 className="text-xs font-bold tracking-widest uppercase text-gray-400 mb-3">
+                  {cityLabels[city] ?? city}
+                </h2>
+                <div className="bg-white rounded-2xl border border-gray-100 overflow-hidden">
+                  {items.map((p, idx) => (
+                    <div key={p.slug} className={`flex items-center gap-4 px-5 py-4 ${idx < items.length - 1 ? "border-b border-gray-50" : ""}`}>
+                      {p.images?.[0] ? (
+                        <img src={p.images[0]} alt={p.hero.title} className="w-12 h-12 rounded-lg object-cover shrink-0" />
+                      ) : (
+                        <div className="w-12 h-12 rounded-lg bg-gray-100 flex items-center justify-center shrink-0">
+                          <Building2 size={20} className="text-gray-400" />
+                        </div>
+                      )}
+                      <div className="grow min-w-0">
+                        <p className="font-medium text-gray-900 truncate">{p.hero.title}</p>
+                        <p className="text-xs text-gray-400 truncate">{p.slug}</p>
+                      </div>
+                      <span className={`text-xs font-medium px-2.5 py-1 rounded-full shrink-0 ${cityColors[city] ?? "bg-gray-100 text-gray-600"}`}>
+                        {cityLabels[city] ?? city}
+                      </span>
+                      <div className="flex items-center gap-2 shrink-0">
+                        <Link
+                          href={`/admin/dashboard/propiedades/${p.slug}/editar?city=${city}`}
+                          className="p-2 text-gray-400 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors"
+                        >
+                          <Pencil size={15} />
+                        </Link>
+                        <button
+                          onClick={() => handleDelete(city, p.slug)}
+                          disabled={deleting === p.slug}
+                          className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors disabled:opacity-40"
+                        >
+                          <Trash2 size={15} />
+                        </button>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
       </main>
     </div>
   );

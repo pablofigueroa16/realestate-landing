@@ -1,0 +1,35 @@
+- generic [active] [ref=e1]:
+  - button "Open Next.js Dev Tools" [ref=e20] [cursor=pointer]:
+    - img [ref=e21]
+  - alert [ref=e24]
+  - generic [ref=e309]:
+    - banner [ref=e310]:
+      - generic [ref=e311]:
+        - img [ref=e312]
+        - generic [ref=e316]:
+          - paragraph [ref=e317]: Panel Admin
+          - paragraph [ref=e318]: Estetico Estate
+      - generic [ref=e319]:
+        - link "Nueva propiedad" [ref=e320] [cursor=pointer]:
+          - /url: /admin/dashboard/propiedades/nueva
+          - img [ref=e321]
+          - text: Nueva propiedad
+        - button "Salir" [ref=e322] [cursor=pointer]:
+          - img [ref=e323]
+          - text: Salir
+    - main [ref=e326]:
+      - heading "Propiedades" [level=1] [ref=e327]
+      - generic [ref=e329]:
+        - heading "Dubai" [level=2] [ref=e330]
+        - generic [ref=e332]:
+          - img [ref=e334]
+          - generic [ref=e338]:
+            - paragraph [ref=e339]: Torre Marina Dubai
+            - paragraph [ref=e340]: torre-marina-dubai
+          - generic [ref=e341]: Dubai
+          - generic [ref=e342]:
+            - link [ref=e343] [cursor=pointer]:
+              - /url: /admin/dashboard/propiedades/torre-marina-dubai/editar?city=Dubai
+              - img [ref=e344]
+            - button [ref=e347] [cursor=pointer]:
+              - img [ref=e348]
