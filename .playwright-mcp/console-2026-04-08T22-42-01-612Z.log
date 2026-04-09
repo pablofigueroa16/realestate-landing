@@ -1,0 +1,29 @@
+[     137ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[    2473ms] [LOG] [Fast Refresh] done in 2441ms @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[    4779ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[    4834ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[    5055ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[    6294ms] [LOG] [Fast Refresh] done in 1346ms @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[    8057ms] [ERROR] Failed to load resource: the server responded with a status of 403 (Forbidden) @ http://localhost:3000/_next/image?url=https%3A%2F%2Freal-state-landing.s3.us-east-1.amazonaws.com%2Fproperties%2Fdubai-marina.jpg&w=1080&q=75:0
+[   13177ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[   13208ms] [LOG] [Fast Refresh] done in 138ms @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[   28365ms] [ERROR] Failed to load resource: the server responded with a status of 403 (Forbidden) @ http://localhost:3000/_next/image?url=https%3A%2F%2Freal-state-landing.s3.us-east-1.amazonaws.com%2Fproperties%2Fdubai-marina.jpg&w=1920&q=75:0
+[   54517ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[   55846ms] [LOG] [Fast Refresh] done in 1440ms @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[   56659ms] [WARNING] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[   65897ms] [ERROR] Failed to load resource: the server responded with a status of 403 (Forbidden) @ http://localhost:3000/_next/image?url=https%3A%2F%2Freal-state-landing.s3.us-east-1.amazonaws.com%2Fproperties%2Fdubai-marina.jpg&w=1920&q=75:0
+[   86292ms] [ERROR] Failed to load resource: the server responded with a status of 403 (Forbidden) @ http://localhost:3000/_next/image?url=https%3A%2F%2Freal-state-landing.s3.us-east-1.amazonaws.com%2Fproperties%2Fdubai-marina.jpg&w=1920&q=75:0
+[   89932ms] [ERROR] Failed to load resource: the server responded with a status of 403 (Forbidden) @ http://localhost:3000/_next/image?url=https%3A%2F%2Freal-state-landing.s3.us-east-1.amazonaws.com%2Fproperties%2Fdubai-marina.jpg&w=1920&q=75:0
+[  105702ms] [ERROR] Failed to load resource: the server responded with a status of 403 (Forbidden) @ http://localhost:3000/_next/image?url=https%3A%2F%2Freal-state-landing.s3.us-east-1.amazonaws.com%2Fproperties%2Fdubai-marina.jpg&w=1920&q=75:0
+[  106358ms] [ERROR] Failed to load resource: the server responded with a status of 403 (Forbidden) @ http://localhost:3000/_next/image?url=https%3A%2F%2Freal-state-landing.s3.us-east-1.amazonaws.com%2Fproperties%2Fdubai-marina.jpg&w=1920&q=75:0
+[  112461ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[  112512ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[  114664ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[  116578ms] [LOG] [Fast Refresh] done in 2019ms @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[  116684ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[  116810ms] [LOG] [Fast Refresh] done in 231ms @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[  117812ms] [WARNING] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[  117856ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[  117982ms] [LOG] [Fast Refresh] done in 236ms @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[  368529ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[  368560ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297

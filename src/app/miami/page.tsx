@@ -1,5 +1,7 @@
 import LandingPage from "@/components/LandingPage";
+import { getPropertiesByCity } from "@/lib/properties-db";
 
-export default function Miami() {
-  return <LandingPage destination="miami" />;
+export default async function Miami() {
+  const units = await getPropertiesByCity("miami").catch(() => []);
+  return <LandingPage destination="miami" dynamicUnits={units.length > 0 ? units : undefined} />;
 }

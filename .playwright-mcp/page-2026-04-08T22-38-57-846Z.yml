@@ -1,0 +1,15 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e4]:
+    - paragraph [ref=e6]: Panel de Administración
+    - generic [ref=e7]:
+      - generic [ref=e8]:
+        - generic [ref=e9]: Correo electrónico
+        - textbox "Correo electrónico" [ref=e10]:
+          - /placeholder: admin@ejemplo.com
+      - generic [ref=e11]:
+        - generic [ref=e12]: Contraseña
+        - textbox "Contraseña" [ref=e13]:
+          - /placeholder: ••••••••
+      - button "Iniciar sesión" [ref=e14] [cursor=pointer]
+  - button "Open Next.js Dev Tools" [ref=e20] [cursor=pointer]:
+    - img [ref=e21]

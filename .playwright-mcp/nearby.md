@@ -1,0 +1,257 @@
+- generic [ref=e1]:
+  - button "Open Next.js Dev Tools" [ref=e20] [cursor=pointer]:
+    - img [ref=e21]
+  - alert [ref=e24]
+  - generic [ref=e52]:
+    - banner [ref=e53]:
+      - link [ref=e54] [cursor=pointer]:
+        - /url: /admin/dashboard
+        - img [ref=e55]
+      - generic [ref=e57]:
+        - paragraph [ref=e58]: Nueva propiedad
+        - paragraph [ref=e59]: Completa todos los campos y guarda
+    - main [ref=e60]:
+      - generic [ref=e61]:
+        - generic [ref=e62]:
+          - heading "Básico" [level=3] [ref=e63]
+          - generic [ref=e64]:
+            - generic [ref=e65]:
+              - generic [ref=e66]:
+                - generic [ref=e67]: País
+                - combobox [ref=e68]:
+                  - option "Dubai" [selected]
+                  - option "Bali"
+                  - option "Miami"
+                  - option "Madrid"
+                  - option "CDMX"
+              - generic [ref=e69]:
+                - generic [ref=e70]: ID
+                - textbox "sobha-hartland-ii" [ref=e71]: torre-marina-dubai
+            - generic [ref=e72]:
+              - generic [ref=e73]:
+                - generic [ref=e74]: Slug (URL)
+                - textbox "sobha-hartland-ii" [ref=e75]: torre-marina-dubai
+              - generic [ref=e76]:
+                - generic [ref=e77]: Tamaño
+                - textbox "Desde 500 ft²" [ref=e78]: Desde 800 ft²
+            - generic [ref=e79]:
+              - generic [ref=e80]: Descripción corta (listado)
+              - textbox "Descripción breve para la lista de propiedades" [ref=e81]: Residencias de lujo frente al mar en Dubai Marina con vistas panorámicas.
+        - generic [ref=e82]:
+          - heading "Imágenes" [level=3] [ref=e83]
+          - generic [ref=e84]:
+            - button "Subir" [ref=e86] [cursor=pointer]:
+              - img [ref=e87]
+              - text: Subir
+            - generic [ref=e90]:
+              - generic [ref=e91]: O pega URLs de imágenes (una por línea)
+              - textbox "https://..." [ref=e92]
+        - generic [ref=e93]:
+          - heading "Hero" [level=3] [ref=e94]
+          - generic [ref=e95]:
+            - generic [ref=e96]:
+              - generic [ref=e97]: Título
+              - textbox "Sobha Hartland II" [ref=e98]: Torre Marina Dubai
+            - generic [ref=e99]:
+              - generic [ref=e100]: Subtítulo
+              - textbox "Lujo moderno en el corazón de Dubai" [ref=e101]: Residencias de ultra lujo con vistas al mar
+            - generic [ref=e102]:
+              - generic [ref=e103]: Descripción
+              - textbox [ref=e104]: Un proyecto único en Dubai Marina que redefine el concepto de vida de lujo.
+            - generic [ref=e105]:
+              - generic [ref=e106]: Imagen de fondo (URL)
+              - textbox "https://..." [ref=e107]: https://real-state-landing.s3.us-east-1.amazonaws.com/properties/dubai-marina.jpg
+            - generic [ref=e108]:
+              - generic [ref=e109]: Video de fondo (URL)
+              - textbox "https://..." [ref=e110]
+            - generic [ref=e111]:
+              - generic [ref=e112]: Badges
+              - generic [ref=e297]:
+                - textbox "LUXURY" [ref=e298]
+                - button [ref=e299] [cursor=pointer]:
+                  - img [ref=e300]
+              - button "Agregar badge" [ref=e113] [cursor=pointer]:
+                - img [ref=e114]
+                - text: Agregar badge
+        - generic [ref=e115]:
+          - heading "Summary" [level=3] [ref=e116]
+          - generic [ref=e117]:
+            - generic [ref=e118]:
+              - generic [ref=e119]: Título
+              - textbox [ref=e120]: Una visión de lujo contemporáneo
+            - generic [ref=e121]:
+              - generic [ref=e122]: Texto
+              - textbox [ref=e123]: Torre Marina Dubai ofrece residencias exclusivas con acabados de primera, desde estudios hasta penthouses con terraza privada y piscina.
+        - generic [ref=e124]:
+          - heading "Concept" [level=3] [ref=e125]
+          - generic [ref=e126]:
+            - generic [ref=e127]:
+              - generic [ref=e128]: Título
+              - textbox [ref=e129]: Vivir entre el cielo y el mar
+            - generic [ref=e130]:
+              - generic [ref=e131]: Texto
+              - textbox [ref=e132]: Cada residencia está diseñada para maximizar las vistas y la conexión con el entorno marino de Dubai Marina.
+        - generic [ref=e133]:
+          - heading "Community" [level=3] [ref=e134]
+          - generic [ref=e135]:
+            - generic [ref=e136]:
+              - generic [ref=e137]: Título
+              - textbox [ref=e138]: Comunidad vibrante
+            - generic [ref=e139]:
+              - generic [ref=e140]: Texto
+              - textbox [ref=e141]: Un entorno social activo con acceso directo al paseo marítimo, restaurantes y centros culturales.
+        - generic [ref=e142]:
+          - heading "Privacy" [level=3] [ref=e143]
+          - generic [ref=e144]:
+            - generic [ref=e145]:
+              - generic [ref=e146]: Título
+              - textbox [ref=e147]: Privacidad total
+            - generic [ref=e148]:
+              - generic [ref=e149]: Texto
+              - textbox [ref=e150]: Acceso controlado, lobby privado y concierge 24/7 para garantizar la tranquilidad de cada residente.
+        - generic [ref=e151]:
+          - heading "Views" [level=3] [ref=e152]
+          - generic [ref=e153]:
+            - generic [ref=e154]:
+              - generic [ref=e155]: Título
+              - textbox [ref=e156]: Vistas únicas al marina
+            - generic [ref=e157]:
+              - generic [ref=e158]: Texto
+              - textbox [ref=e159]: Panoramas de 270 grados sobre Dubai Marina, Palm Jumeirah y el Golfo Pérsico.
+        - generic [ref=e160]:
+          - heading "Design" [level=3] [ref=e161]
+          - generic [ref=e162]:
+            - generic [ref=e163]:
+              - generic [ref=e164]: Título
+              - textbox [ref=e165]: Arquitectura de vanguardia
+            - generic [ref=e166]:
+              - generic [ref=e167]: Texto
+              - textbox [ref=e168]: "Diseñado por estudio internacional con materiales premium: mármol italiano, vidrio de piso a techo y madera natural."
+        - generic [ref=e169]:
+          - heading "Project" [level=3] [ref=e170]
+          - generic [ref=e171]:
+            - generic [ref=e172]:
+              - generic [ref=e173]: Título
+              - textbox [ref=e174]: Torre Marina Dubai
+            - generic [ref=e175]:
+              - generic [ref=e176]: Texto
+              - textbox [ref=e177]: Un proyecto de 42 plantas con 350 unidades residenciales. Entrega prevista Q4 2027.
+        - generic [ref=e178]:
+          - heading "Ubicación" [level=3] [ref=e179]
+          - generic [ref=e180]:
+            - generic [ref=e181]:
+              - generic [ref=e182]:
+                - generic [ref=e183]: Título
+                - textbox [ref=e184]: Dubai Marina
+              - generic [ref=e185]:
+                - generic [ref=e186]: Intro
+                - textbox [ref=e187]: Ubicado en el corazón de Dubai Marina, a pasos del agua y conectado con toda la ciudad.
+            - generic [ref=e188]:
+              - generic [ref=e189]:
+                - generic [ref=e190]: Latitud
+                - spinbutton [ref=e191]: "25.0819"
+              - generic [ref=e192]:
+                - generic [ref=e193]: Longitud
+                - spinbutton [ref=e194]: "55.1367"
+            - generic [ref=e195]:
+              - generic [ref=e196]: Lugares cercanos (nombre o JSON con lat/lng)
+              - generic [ref=e303]:
+                - textbox "Dubai Mall - 5 min" [ref=e304]
+                - button [ref=e305] [cursor=pointer]:
+                  - img [ref=e306]
+              - button "Agregar lugar" [active] [ref=e197] [cursor=pointer]:
+                - img [ref=e198]
+                - text: Agregar lugar
+        - generic [ref=e199]:
+          - heading "Sub-comunidades" [level=3] [ref=e200]
+          - generic [ref=e201]:
+            - generic [ref=e202]:
+              - generic [ref=e203]:
+                - generic [ref=e204]: Sub-comunidad 1
+                - button [ref=e205] [cursor=pointer]:
+                  - img [ref=e206]
+              - generic [ref=e209]:
+                - generic [ref=e210]: Título
+                - textbox [ref=e211]
+              - generic [ref=e212]:
+                - generic [ref=e213]: Texto
+                - textbox [ref=e214]
+            - button "Agregar sub-comunidad" [ref=e215] [cursor=pointer]:
+              - img [ref=e216]
+              - text: Agregar sub-comunidad
+        - generic [ref=e217]:
+          - heading "Amenidades" [level=3] [ref=e218]
+          - generic [ref=e219]:
+            - generic [ref=e220]:
+              - generic [ref=e221]: Título
+              - textbox [ref=e222]
+            - generic [ref=e223]:
+              - generic [ref=e224]: Intro
+              - textbox [ref=e225]
+            - generic [ref=e226]:
+              - generic [ref=e227]:
+                - generic [ref=e228]: Categoría 1
+                - button [ref=e229] [cursor=pointer]:
+                  - img [ref=e230]
+              - generic [ref=e233]:
+                - generic [ref=e234]: Nombre categoría
+                - textbox [ref=e235]
+              - generic [ref=e236]:
+                - generic [ref=e237]: Items
+                - generic [ref=e238]:
+                  - textbox "Piscina infinita" [ref=e239]
+                  - button [ref=e240] [cursor=pointer]:
+                    - img [ref=e241]
+                - button "Agregar item" [ref=e244] [cursor=pointer]:
+                  - img [ref=e245]
+                  - text: Agregar item
+            - button "Agregar categoría" [ref=e246] [cursor=pointer]:
+              - img [ref=e247]
+              - text: Agregar categoría
+        - generic [ref=e248]:
+          - heading "Desarrollador" [level=3] [ref=e249]
+          - generic [ref=e250]:
+            - generic [ref=e251]:
+              - generic [ref=e252]: Título
+              - textbox [ref=e253]
+            - generic [ref=e254]:
+              - generic [ref=e255]: Intro
+              - textbox [ref=e256]
+            - generic [ref=e257]:
+              - generic [ref=e258]: Puntos clave
+              - generic [ref=e259]:
+                - textbox "20 años de experiencia" [ref=e260]
+                - button [ref=e261] [cursor=pointer]:
+                  - img [ref=e262]
+              - button "Agregar punto" [ref=e265] [cursor=pointer]:
+                - img [ref=e266]
+                - text: Agregar punto
+        - generic [ref=e267]:
+          - heading "FAQ" [level=3] [ref=e268]
+          - generic [ref=e269]:
+            - generic [ref=e270]:
+              - generic [ref=e271]:
+                - generic [ref=e272]: Pregunta 1
+                - button [ref=e273] [cursor=pointer]:
+                  - img [ref=e274]
+              - generic [ref=e277]:
+                - generic [ref=e278]: Pregunta
+                - textbox [ref=e279]
+              - generic [ref=e280]:
+                - generic [ref=e281]: Respuesta
+                - textbox [ref=e282]
+            - button "Agregar pregunta" [ref=e283] [cursor=pointer]:
+              - img [ref=e284]
+              - text: Agregar pregunta
+        - generic [ref=e285]:
+          - heading "Disclaimers" [level=3] [ref=e286]
+          - generic [ref=e287]:
+            - generic [ref=e288]:
+              - generic [ref=e289]: Renders
+              - textbox [ref=e290]
+            - generic [ref=e291]:
+              - generic [ref=e292]: Disponibilidad
+              - textbox [ref=e293]
+        - generic [ref=e294]:
+          - button "Cancelar" [ref=e295] [cursor=pointer]
+          - button "Crear propiedad" [ref=e296] [cursor=pointer]
