@@ -7,6 +7,16 @@ export async function POST(req: NextRequest) {
   const adminPassword = process.env.ADMIN_PASSWORD?.trim();
   const adminSecret = process.env.ADMIN_SECRET?.trim();
 
+  console.log("[admin/login] ENV:", {
+    ADMIN_EMAIL: adminEmail ?? "UNDEFINED",
+    ADMIN_PASSWORD: adminPassword ? `SET(${adminPassword.length} chars)` : "UNDEFINED",
+    ADMIN_SECRET: adminSecret ? "SET" : "UNDEFINED",
+  });
+  console.log("[admin/login] INPUT:", {
+    email: email ?? "UNDEFINED",
+    passwordLength: password?.length ?? 0,
+  });
+
   if (email?.trim() === adminEmail && password?.trim() === adminPassword) {
     const response = NextResponse.json({ success: true });
     response.cookies.set("admin_token", adminSecret!, {
