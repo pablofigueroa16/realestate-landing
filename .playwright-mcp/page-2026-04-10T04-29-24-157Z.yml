@@ -1,0 +1,21 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e4]:
+        - img [ref=e5]
+        - generic [ref=e9]:
+          - paragraph [ref=e10]: Panel Admin
+          - paragraph [ref=e11]: Estetico Estate
+      - generic [ref=e12]:
+        - link "Nueva propiedad" [ref=e13] [cursor=pointer]:
+          - /url: /admin/dashboard/propiedades/nueva
+          - img [ref=e14]
+          - text: Nueva propiedad
+        - button "Salir" [ref=e15] [cursor=pointer]:
+          - img [ref=e16]
+          - text: Salir
+    - main [ref=e19]:
+      - heading "Propiedades" [level=1] [ref=e20]
+  - button "Open Next.js Dev Tools" [ref=e31] [cursor=pointer]:
+    - img [ref=e32]
+  - alert [ref=e35]

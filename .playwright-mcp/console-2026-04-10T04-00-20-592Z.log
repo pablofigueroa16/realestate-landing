@@ -1,0 +1,40 @@
+[     135ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[     744ms] [LOG] [Fast Refresh] done in 716ms @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[    1153ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[    1181ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[    1471ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[    1536ms] [LOG] [Fast Refresh] done in 165ms @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[    4362ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[    4425ms] [LOG] [Fast Refresh] done in 176ms @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[   19784ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[   19847ms] [LOG] [Fast Refresh] done in 177ms @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[   28226ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[   28290ms] [LOG] [Fast Refresh] done in 165ms @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[  149500ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[  149611ms] [LOG] [Fast Refresh] done in 222ms @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[  168850ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[  168864ms] [LOG] [Fast Refresh] done in 118ms @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[  168951ms] [WARNING] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[  175151ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[  175215ms] [LOG] [Fast Refresh] done in 177ms @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[  192861ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[  192870ms] [LOG] [Fast Refresh] done in 111ms @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[  273244ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[  273772ms] [LOG] [Fast Refresh] done in 615ms @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[  278518ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[  278861ms] [LOG] [Fast Refresh] done in 427ms @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[  282681ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[  282936ms] [LOG] [Fast Refresh] done in 311ms @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[  290240ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[  291341ms] [LOG] [Fast Refresh] done in 1118ms @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[  293573ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[  293909ms] [LOG] [Fast Refresh] done in 427ms @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[  928245ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[  928475ms] [LOG] [Fast Refresh] done in 337ms @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[ 1072729ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/api/properties:0
+[ 1073156ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/api/properties:0
+[ 1073483ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/api/properties:0
+[ 1073801ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/api/properties:0
+[ 1074129ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/api/properties:0
+[ 1074462ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/api/properties:0
+[ 1074779ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/api/properties:0

@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { Plus, Pencil, Trash2, LogOut, Building2 } from "lucide-react";
+import { Plus, Pencil, Trash2, LogOut, Building2, AlertTriangle } from "lucide-react";
 
 interface PropertyItem {
   slug: string;
@@ -30,11 +30,18 @@ const cityColors: Record<string, string> = {
   cdmx: "bg-purple-100 text-purple-700",
 };
 
+interface ConfirmState {
+  slug: string;
+  city: string;
+  title: string;
+}
+
 export default function AdminDashboardPage() {
   const router = useRouter();
   const [properties, setProperties] = useState<PropertyItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [deleting, setDeleting] = useState<string | null>(null);
+  const [confirm, setConfirm] = useState<ConfirmState | null>(null);
 
   async function loadProperties() {
     setLoading(true);
@@ -51,10 +58,15 @@ export default function AdminDashboardPage() {
     router.push("/admin");
   }
 
-  async function handleDelete(city: string, slug: string) {
-    if (!confirm(`¿Eliminar la propiedad "${slug}"?`)) return;
-    setDeleting(slug);
-    await fetch(`/api/properties/${slug}?city=${city}`, { method: "DELETE" });
+  async function handleDelete(city: string, slug: string, title: string) {
+    setConfirm({ city, slug, title });
+  }
+
+  async function confirmDelete() {
+    if (!confirm) return;
+    setDeleting(confirm.slug);
+    setConfirm(null);
+    await fetch(`/api/properties/${confirm.slug}?city=${confirm.city}`, { method: "DELETE" });
     await loadProperties();
     setDeleting(null);
   }
@@ -68,6 +80,39 @@ export default function AdminDashboardPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      {confirm && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm">
+          <div className="bg-white rounded-2xl shadow-xl p-6 w-full max-w-sm mx-4">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-10 rounded-full bg-red-50 flex items-center justify-center shrink-0">
+                <AlertTriangle size={18} className="text-red-500" />
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 text-sm">Eliminar propiedad</p>
+                <p className="text-xs text-gray-400">Esta acción no se puede deshacer</p>
+              </div>
+            </div>
+            <p className="text-sm text-gray-600 mb-6">
+              ¿Estás seguro de que quieres eliminar{" "}
+              <span className="font-medium text-gray-900">{confirm.title}</span>?
+            </p>
+            <div className="flex gap-3">
+              <button
+                onClick={() => setConfirm(null)}
+                className="flex-1 px-4 py-2 rounded-lg border border-gray-200 text-sm font-medium text-gray-600 hover:bg-gray-50 transition-colors"
+              >
+                Cancelar
+              </button>
+              <button
+                onClick={confirmDelete}
+                className="flex-1 px-4 py-2 rounded-lg bg-red-600 text-white text-sm font-medium hover:bg-red-700 transition-colors"
+              >
+                Eliminar
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
       <header className="bg-white border-b border-gray-200 px-6 py-4 flex items-center justify-between sticky top-0 z-10">
         <div className="flex items-center gap-3">
           <Building2 size={20} className="text-gray-700" />
@@ -141,7 +186,7 @@ export default function AdminDashboardPage() {
                           <Pencil size={15} />
                         </Link>
                         <button
-                          onClick={() => handleDelete(p.citySlug ?? city, p.slug)}
+                          onClick={() => handleDelete(p.citySlug ?? city, p.slug, p.hero.title)}
                           disabled={deleting === p.slug}
                           className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors disabled:opacity-40"
                         >

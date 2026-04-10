@@ -1,0 +1,16 @@
+[     395ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[     454ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[     584ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[     822ms] [LOG] [Fast Refresh] done in 352ms @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[  561605ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[  561751ms] [LOG] [Fast Refresh] done in 237ms @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[  563378ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[  563442ms] [LOG] [Fast Refresh] done in 168ms @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[  564767ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[  564831ms] [LOG] [Fast Refresh] done in 168ms @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[  565923ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[  565988ms] [LOG] [Fast Refresh] done in 170ms @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[  567745ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[  567870ms] [LOG] [Fast Refresh] done in 231ms @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[  569736ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297
+[  569800ms] [LOG] [Fast Refresh] done in 168ms @ http://localhost:3000/_next/static/chunks/bf1cb_next_dist_1799a1ed._.js:2297

@@ -1,0 +1,106 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - link [ref=e4] [cursor=pointer]:
+        - /url: /admin/dashboard
+        - img [ref=e5]
+      - generic [ref=e7]:
+        - paragraph [ref=e8]: Nueva propiedad
+        - paragraph [ref=e9]: Completa todos los campos y guarda
+    - main [ref=e10]:
+      - generic [ref=e11]:
+        - generic [ref=e12]:
+          - heading "Básico" [level=3] [ref=e13]
+          - generic [ref=e14]:
+            - generic [ref=e15]
+            - generic [ref=e22]
+            - generic [ref=e29]
+        - generic [ref=e32]:
+          - heading "Imágenes" [level=3] [ref=e33]
+          - generic [ref=e34]:
+            - button "Subir" [ref=e36] [cursor=pointer]
+            - generic [ref=e40]
+        - generic [ref=e43]:
+          - heading "Hero" [level=3] [ref=e44]
+          - generic [ref=e45]:
+            - generic [ref=e46]
+            - generic [ref=e49]
+            - generic [ref=e52]
+            - generic [ref=e55]
+            - generic [ref=e58]
+            - generic [ref=e61]
+        - generic [ref=e65]:
+          - heading "Summary" [level=3] [ref=e66]
+          - generic [ref=e67]:
+            - generic [ref=e68]
+            - generic [ref=e71]
+        - generic [ref=e74]:
+          - heading "Concept" [level=3] [ref=e75]
+          - generic [ref=e76]:
+            - generic [ref=e77]
+            - generic [ref=e80]
+        - generic [ref=e83]:
+          - heading "Community" [level=3] [ref=e84]
+          - generic [ref=e85]:
+            - generic [ref=e86]
+            - generic [ref=e89]
+        - generic [ref=e92]:
+          - heading "Privacy" [level=3] [ref=e93]
+          - generic [ref=e94]:
+            - generic [ref=e95]
+            - generic [ref=e98]
+        - generic [ref=e101]:
+          - heading "Views" [level=3] [ref=e102]
+          - generic [ref=e103]:
+            - generic [ref=e104]
+            - generic [ref=e107]
+        - generic [ref=e110]:
+          - heading "Design" [level=3] [ref=e111]
+          - generic [ref=e112]:
+            - generic [ref=e113]
+            - generic [ref=e116]
+        - generic [ref=e119]:
+          - heading "Project" [level=3] [ref=e120]
+          - generic [ref=e121]:
+            - generic [ref=e122]
+            - generic [ref=e125]
+        - generic [ref=e128]:
+          - heading "Ubicación" [level=3] [ref=e129]
+          - generic [ref=e130]:
+            - generic [ref=e131]
+            - generic [ref=e138]
+            - generic [ref=e145]
+        - generic [ref=e149]:
+          - heading "Sub-comunidades" [level=3] [ref=e150]
+          - generic [ref=e151]:
+            - generic [ref=e152]
+            - button "Agregar sub-comunidad" [ref=e165] [cursor=pointer]
+        - generic [ref=e167]:
+          - heading "Amenidades" [level=3] [ref=e168]
+          - generic [ref=e169]:
+            - generic [ref=e170]
+            - generic [ref=e173]
+            - generic [ref=e176]
+            - button "Agregar categoría" [ref=e196] [cursor=pointer]
+        - generic [ref=e198]:
+          - heading "Desarrollador" [level=3] [ref=e199]
+          - generic [ref=e200]:
+            - generic [ref=e201]
+            - generic [ref=e204]
+            - generic [ref=e207]
+        - generic [ref=e217]:
+          - heading "FAQ" [level=3] [ref=e218]
+          - generic [ref=e219]:
+            - generic [ref=e220]
+            - button "Agregar pregunta" [ref=e233] [cursor=pointer]
+        - generic [ref=e235]:
+          - heading "Disclaimers" [level=3] [ref=e236]
+          - generic [ref=e237]:
+            - generic [ref=e238]
+            - generic [ref=e241]
+        - generic [ref=e244]:
+          - button "Cancelar" [ref=e245] [cursor=pointer]
+          - button "Crear propiedad" [ref=e246] [cursor=pointer]
+  - button "Open Next.js Dev Tools" [ref=e252] [cursor=pointer]:
+    - img [ref=e253]
+  - alert [ref=e256]
