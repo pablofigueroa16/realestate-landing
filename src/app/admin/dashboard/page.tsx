@@ -8,6 +8,7 @@ import { Plus, Pencil, Trash2, LogOut, Building2 } from "lucide-react";
 interface PropertyItem {
   slug: string;
   city: string;
+  citySlug: string;
   hero: { title: string };
   images?: string[];
   description?: string;
@@ -59,7 +60,7 @@ export default function AdminDashboardPage() {
   }
 
   const grouped = properties.reduce<Record<string, PropertyItem[]>>((acc, p) => {
-    const key = p.city ?? "sin-ciudad";
+    const key = p.citySlug ?? p.city ?? "sin-ciudad";
     if (!acc[key]) acc[key] = [];
     acc[key].push(p);
     return acc;
@@ -134,13 +135,13 @@ export default function AdminDashboardPage() {
                       </span>
                       <div className="flex items-center gap-2 shrink-0">
                         <Link
-                          href={`/admin/dashboard/propiedades/${p.slug}/editar?city=${city}`}
+                          href={`/admin/dashboard/propiedades/${p.slug}/editar?city=${p.citySlug ?? city}`}
                           className="p-2 text-gray-400 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors"
                         >
                           <Pencil size={15} />
                         </Link>
                         <button
-                          onClick={() => handleDelete(city, p.slug)}
+                          onClick={() => handleDelete(p.citySlug ?? city, p.slug)}
                           disabled={deleting === p.slug}
                           className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors disabled:opacity-40"
                         >
