@@ -65,7 +65,18 @@ export async function createProperty(city: string, property: Property): Promise<
 }
 
 export async function updateProperty(city: string, slug: string, property: Property): Promise<void> {
-  // Delete old item (in case city or slug changed) then put new one
+  // Find the existing item to get its real PK city value
+  const existing = await getPropertyBySlug(slug);
+  if (existing) {
+    // Delete the old item using its actual PK (handles city/slug changes)
+    await docClient.send(
+      new DeleteCommand({
+        TableName: TABLE_NAME,
+        Key: { city: existing.city, slug: existing.slug },
+      })
+    );
+  }
+  // Insert the updated item
   await docClient.send(
     new PutCommand({
       TableName: TABLE_NAME,
