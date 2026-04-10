@@ -118,7 +118,7 @@ export default function AdminDashboardPage() {
           <Building2 size={20} className="text-gray-700" />
           <div>
             <p className="text-sm font-bold text-gray-900">Panel Admin</p>
-            <p className="text-xs text-gray-400">Estetico Estate</p>
+            <p className="text-xs text-gray-400">Beliving Property</p>
           </div>
         </div>
         <div className="flex items-center gap-4">

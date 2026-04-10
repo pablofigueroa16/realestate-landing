@@ -95,7 +95,7 @@ export default function Navbar({ currentDestination = "home" }: NavbarProps) {
         >
           <img
             src="/logo.png"
-            alt="Estetico Estate"
+            alt="Beliving Property"
             className="h-10 w-auto"
           />
         </Link>
