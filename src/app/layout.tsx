@@ -13,6 +13,9 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: "Estetico Estate | Inversión Inmobiliaria Premium en Dubái",
   description: "Descubre oportunidades exclusivas de inversión inmobiliaria en Dubái. Proyectos verificados, alta rentabilidad y asesoría personalizada.",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({

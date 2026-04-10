@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import {
-  Building2,
   Instagram,
   Phone,
   ArrowUpRight,
@@ -92,16 +91,13 @@ export default function Navbar({ currentDestination = "home" }: NavbarProps) {
         <Link
           href="/"
           onClick={(e) => handleAnchorClick(e, "#inicio")}
-          className={`flex items-center gap-2 z-50 relative transition-colors duration-300 ${isScrolled && !isMobileMenuOpen ? "text-gray-900" : "text-white"
-            }`}
+          className="z-50 relative"
         >
-          <div className={`w-8 h-8 border rounded-lg flex items-center justify-center transition-colors duration-300 ${isScrolled && !isMobileMenuOpen ? "border-gray-900" : "border-white"
-            }`}>
-            <Building2 size={16} />
-          </div>
-          <span className="text-xl font-sans font-bold tracking-wide">
-            Estetico.
-          </span>
+          <img
+            src="/logo.png"
+            alt="Estetico Estate"
+            className="h-10 w-auto"
+          />
         </Link>
 
         {/* Desktop Navigation */}
