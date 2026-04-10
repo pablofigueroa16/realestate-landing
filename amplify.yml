@@ -7,6 +7,14 @@ frontend:
         - pnpm install
     build:
       commands:
+        - echo "ADMIN_EMAIL=$ADMIN_EMAIL" > .env.production
+        - echo "ADMIN_PASSWORD=$ADMIN_PASSWORD" >> .env.production
+        - echo "ADMIN_SECRET=$ADMIN_SECRET" >> .env.production
+        - echo "ACCESS_KEY_ID=$ACCESS_KEY_ID" >> .env.production
+        - echo "SECRET_ACCESS_KEY=$SECRET_ACCESS_KEY" >> .env.production
+        - echo "REGION=$REGION" >> .env.production
+        - echo "DYNAMODB_TABLE_NAME=$DYNAMODB_TABLE_NAME" >> .env.production
+        - echo "S3_BUCKET_NAME=$S3_BUCKET_NAME" >> .env.production
         - pnpm build
   artifacts:
     baseDirectory: .next
