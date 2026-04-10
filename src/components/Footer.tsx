@@ -42,7 +42,7 @@ export default function Footer() {
                     {t("footer.contact.email_label")}
                   </p>
                   <p className="text-gray-900 font-medium text-sm md:text-lg">
-                    office@estetico.estate
+                    office@beliving.property
                   </p>
                 </div>
               </div>
@@ -99,7 +99,7 @@ export default function Footer() {
           <div className="w-6 h-6 border border-gray-400 rounded-md flex items-center justify-center text-gray-900">
             <Building2 size={14} />
           </div>
-          <span className="font-bold text-gray-900">Estetico.</span>
+          <span className="font-bold text-gray-900">Beliving.</span>
         </div>
 
         <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs font-medium uppercase tracking-wide">
