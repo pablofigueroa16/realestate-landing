@@ -1,0 +1,249 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - link [ref=e4] [cursor=pointer]:
+        - /url: /admin/dashboard
+        - img [ref=e5]
+      - generic [ref=e7]:
+        - paragraph [ref=e8]: Nueva propiedad
+        - paragraph [ref=e9]: Completa todos los campos y guarda
+    - main [ref=e10]:
+      - generic [ref=e11]:
+        - generic [ref=e12]:
+          - heading "Básico" [level=3] [ref=e13]
+          - generic [ref=e14]:
+            - generic [ref=e15]:
+              - generic [ref=e16]:
+                - generic [ref=e17]: País
+                - combobox [ref=e18]:
+                  - option "Dubai"
+                  - option "Bali"
+                  - option "Miami" [selected]
+                  - option "Madrid"
+                  - option "CDMX"
+              - generic [ref=e19]:
+                - generic [ref=e20]: ID
+                - textbox "sobha-hartland-ii" [ref=e21]
+            - generic [ref=e22]:
+              - generic [ref=e23]:
+                - generic [ref=e24]: Slug (URL)
+                - textbox "sobha-hartland-ii" [ref=e25]
+              - generic [ref=e26]:
+                - generic [ref=e27]: Tamaño
+                - textbox "Desde 500 ft²" [ref=e28]
+            - generic [ref=e29]:
+              - generic [ref=e30]: Descripción corta (listado)
+              - textbox "Descripción breve para la lista de propiedades" [ref=e31]
+        - generic [ref=e32]:
+          - heading "Imágenes" [level=3] [ref=e33]
+          - generic [ref=e34]:
+            - button "Subir" [ref=e36] [cursor=pointer]:
+              - img [ref=e37]
+              - text: Subir
+            - generic [ref=e40]:
+              - generic [ref=e41]: O pega URLs de imágenes (una por línea)
+              - textbox "https://..." [ref=e42]
+        - generic [ref=e43]:
+          - heading "Hero" [level=3] [ref=e44]
+          - generic [ref=e45]:
+            - generic [ref=e46]:
+              - generic [ref=e47]: Título
+              - textbox "Sobha Hartland II" [ref=e48]
+            - generic [ref=e49]:
+              - generic [ref=e50]: Subtítulo
+              - textbox "Lujo moderno en el corazón de Dubai" [ref=e51]
+            - generic [ref=e52]:
+              - generic [ref=e53]: Descripción
+              - textbox [ref=e54]
+            - generic [ref=e55]:
+              - generic [ref=e56]: Imagen de fondo (URL)
+              - textbox "https://..." [ref=e57]
+            - generic [ref=e58]:
+              - generic [ref=e59]: Video de fondo (URL)
+              - textbox "https://..." [ref=e60]
+            - generic [ref=e61]:
+              - generic [ref=e62]: Badges
+              - button "Agregar badge" [ref=e63] [cursor=pointer]:
+                - img [ref=e64]
+                - text: Agregar badge
+        - generic [ref=e65]:
+          - heading "Summary" [level=3] [ref=e66]
+          - generic [ref=e67]:
+            - generic [ref=e68]:
+              - generic [ref=e69]: Título
+              - textbox [ref=e70]
+            - generic [ref=e71]:
+              - generic [ref=e72]: Texto
+              - textbox [ref=e73]
+        - generic [ref=e74]:
+          - heading "Concept" [level=3] [ref=e75]
+          - generic [ref=e76]:
+            - generic [ref=e77]:
+              - generic [ref=e78]: Título
+              - textbox [ref=e79]
+            - generic [ref=e80]:
+              - generic [ref=e81]: Texto
+              - textbox [ref=e82]
+        - generic [ref=e83]:
+          - heading "Community" [level=3] [ref=e84]
+          - generic [ref=e85]:
+            - generic [ref=e86]:
+              - generic [ref=e87]: Título
+              - textbox [ref=e88]
+            - generic [ref=e89]:
+              - generic [ref=e90]: Texto
+              - textbox [ref=e91]
+        - generic [ref=e92]:
+          - heading "Privacy" [level=3] [ref=e93]
+          - generic [ref=e94]:
+            - generic [ref=e95]:
+              - generic [ref=e96]: Título
+              - textbox [ref=e97]
+            - generic [ref=e98]:
+              - generic [ref=e99]: Texto
+              - textbox [ref=e100]
+        - generic [ref=e101]:
+          - heading "Views" [level=3] [ref=e102]
+          - generic [ref=e103]:
+            - generic [ref=e104]:
+              - generic [ref=e105]: Título
+              - textbox [ref=e106]
+            - generic [ref=e107]:
+              - generic [ref=e108]: Texto
+              - textbox [ref=e109]
+        - generic [ref=e110]:
+          - heading "Design" [level=3] [ref=e111]
+          - generic [ref=e112]:
+            - generic [ref=e113]:
+              - generic [ref=e114]: Título
+              - textbox [ref=e115]
+            - generic [ref=e116]:
+              - generic [ref=e117]: Texto
+              - textbox [ref=e118]
+        - generic [ref=e119]:
+          - heading "Project" [level=3] [ref=e120]
+          - generic [ref=e121]:
+            - generic [ref=e122]:
+              - generic [ref=e123]: Título
+              - textbox [ref=e124]
+            - generic [ref=e125]:
+              - generic [ref=e126]: Texto
+              - textbox [ref=e127]
+        - generic [ref=e128]:
+          - heading "Ubicación" [level=3] [ref=e129]
+          - generic [ref=e130]:
+            - generic [ref=e131]:
+              - generic [ref=e132]:
+                - generic [ref=e133]: Título
+                - textbox [ref=e134]
+              - generic [ref=e135]:
+                - generic [ref=e136]: Intro
+                - textbox [ref=e137]
+            - generic [ref=e138]:
+              - generic [ref=e139]:
+                - generic [ref=e140]: Latitud
+                - spinbutton [ref=e141]
+              - generic [ref=e142]:
+                - generic [ref=e143]: Longitud
+                - spinbutton [ref=e144]
+            - generic [ref=e145]:
+              - generic [ref=e146]: Lugares cercanos (nombre o JSON con lat/lng)
+              - button "Agregar lugar" [ref=e147] [cursor=pointer]:
+                - img [ref=e148]
+                - text: Agregar lugar
+        - generic [ref=e149]:
+          - heading "Sub-comunidades" [level=3] [ref=e150]
+          - generic [ref=e151]:
+            - generic [ref=e152]:
+              - generic [ref=e153]:
+                - generic [ref=e154]: Sub-comunidad 1
+                - button [ref=e155] [cursor=pointer]:
+                  - img [ref=e156]
+              - generic [ref=e159]:
+                - generic [ref=e160]: Título
+                - textbox [ref=e161]
+              - generic [ref=e162]:
+                - generic [ref=e163]: Texto
+                - textbox [ref=e164]
+            - button "Agregar sub-comunidad" [ref=e165] [cursor=pointer]:
+              - img [ref=e166]
+              - text: Agregar sub-comunidad
+        - generic [ref=e167]:
+          - heading "Amenidades" [level=3] [ref=e168]
+          - generic [ref=e169]:
+            - generic [ref=e170]:
+              - generic [ref=e171]: Título
+              - textbox [ref=e172]
+            - generic [ref=e173]:
+              - generic [ref=e174]: Intro
+              - textbox [ref=e175]
+            - generic [ref=e176]:
+              - generic [ref=e177]:
+                - generic [ref=e178]: Categoría 1
+                - button [ref=e179] [cursor=pointer]:
+                  - img [ref=e180]
+              - generic [ref=e183]:
+                - generic [ref=e184]: Nombre categoría
+                - textbox [ref=e185]
+              - generic [ref=e186]:
+                - generic [ref=e187]: Items
+                - generic [ref=e188]:
+                  - textbox "Piscina infinita" [ref=e189]
+                  - button [ref=e190] [cursor=pointer]:
+                    - img [ref=e191]
+                - button "Agregar item" [ref=e194] [cursor=pointer]:
+                  - img [ref=e195]
+                  - text: Agregar item
+            - button "Agregar categoría" [ref=e196] [cursor=pointer]:
+              - img [ref=e197]
+              - text: Agregar categoría
+        - generic [ref=e198]:
+          - heading "Desarrollador" [level=3] [ref=e199]
+          - generic [ref=e200]:
+            - generic [ref=e201]:
+              - generic [ref=e202]: Título
+              - textbox [ref=e203]
+            - generic [ref=e204]:
+              - generic [ref=e205]: Intro
+              - textbox [ref=e206]
+            - generic [ref=e207]:
+              - generic [ref=e208]: Puntos clave
+              - generic [ref=e209]:
+                - textbox "20 años de experiencia" [ref=e210]
+                - button [ref=e211] [cursor=pointer]:
+                  - img [ref=e212]
+              - button "Agregar punto" [ref=e215] [cursor=pointer]:
+                - img [ref=e216]
+                - text: Agregar punto
+        - generic [ref=e217]:
+          - heading "FAQ" [level=3] [ref=e218]
+          - generic [ref=e219]:
+            - generic [ref=e220]:
+              - generic [ref=e221]:
+                - generic [ref=e222]: Pregunta 1
+                - button [ref=e223] [cursor=pointer]:
+                  - img [ref=e224]
+              - generic [ref=e227]:
+                - generic [ref=e228]: Pregunta
+                - textbox [ref=e229]
+              - generic [ref=e230]:
+                - generic [ref=e231]: Respuesta
+                - textbox [ref=e232]
+            - button "Agregar pregunta" [ref=e233] [cursor=pointer]:
+              - img [ref=e234]
+              - text: Agregar pregunta
+        - generic [ref=e235]:
+          - heading "Disclaimers" [level=3] [ref=e236]
+          - generic [ref=e237]:
+            - generic [ref=e238]:
+              - generic [ref=e239]: Renders
+              - textbox [ref=e240]
+            - generic [ref=e241]:
+              - generic [ref=e242]: Disponibilidad
+              - textbox [ref=e243]
+        - generic [ref=e244]:
+          - button "Cancelar" [ref=e245] [cursor=pointer]
+          - button "Crear propiedad" [ref=e246] [cursor=pointer]
+  - button "Open Next.js Dev Tools" [ref=e252] [cursor=pointer]:
+    - img [ref=e253]
+  - alert [ref=e256]

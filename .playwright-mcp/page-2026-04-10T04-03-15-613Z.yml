@@ -1,0 +1,50 @@
+- generic [active] [ref=e1]:
+  - button "Open Next.js Dev Tools" [ref=e252] [cursor=pointer]:
+    - img [ref=e253]
+  - alert [ref=e256]
+  - generic [ref=e257]:
+    - banner [ref=e258]:
+      - generic [ref=e259]:
+        - img [ref=e260]
+        - generic [ref=e264]:
+          - paragraph [ref=e265]: Panel Admin
+          - paragraph [ref=e266]: Estetico Estate
+      - generic [ref=e267]:
+        - link "Nueva propiedad" [ref=e268] [cursor=pointer]:
+          - /url: /admin/dashboard/propiedades/nueva
+          - img [ref=e269]
+          - text: Nueva propiedad
+        - button "Salir" [ref=e270] [cursor=pointer]:
+          - img [ref=e271]
+          - text: Salir
+    - main [ref=e274]:
+      - heading "Propiedades" [level=1] [ref=e275]
+      - generic [ref=e276]:
+        - generic [ref=e277]:
+          - heading "Dubai" [level=2] [ref=e278]
+          - generic [ref=e280]:
+            - img "Torre Marina Dubai" [ref=e281]
+            - generic [ref=e282]:
+              - paragraph [ref=e283]: Torre Marina Dubai
+              - paragraph [ref=e284]: torre-marina-dubai
+            - generic [ref=e285]: Dubai
+            - generic [ref=e286]:
+              - link [ref=e287] [cursor=pointer]:
+                - /url: /admin/dashboard/propiedades/torre-marina-dubai/editar?city=dubai
+                - img [ref=e288]
+              - button [ref=e291] [cursor=pointer]:
+                - img [ref=e292]
+        - generic [ref=e295]:
+          - heading "Miami" [level=2] [ref=e296]
+          - generic [ref=e298]:
+            - img [ref=e300]
+            - generic [ref=e304]:
+              - paragraph [ref=e305]: Brickell Heights Miami
+              - paragraph [ref=e306]: brickell-heights-miami
+            - generic [ref=e307]: Miami
+            - generic [ref=e308]:
+              - link [ref=e309] [cursor=pointer]:
+                - /url: /admin/dashboard/propiedades/brickell-heights-miami/editar?city=miami
+                - img [ref=e310]
+              - button [ref=e313] [cursor=pointer]:
+                - img [ref=e314]
